@@ -1,0 +1,180 @@
+# Embedded Git Repositories
+AIR-PI_Adaptive_Insight_Recognition-Pattern_Interface/
+Archetypen-Voice-Web/
+CookieGuard/
+MARSAP/
+ORSAL-Blick/
+Visualizer_RePatAl/
+Cookie-Forensik-Tools/
+dyai-space/
+chat_chunker/
+no-cookie-anymore/
+multi-ai-desktop*/
+the_mind_system/hive_mind/
+backend/
+SEMBO_Semantic_marker_book/
+inpricer/
+Clone-Brief-Builder/
+TOOLIVERSUM/
+zoe_website*/
+clone_brief_builder/
+CookieGUARD-Clean/
+
+# Large Files and Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.DS_Store
+
+# Model Files
+LLM_LOCAL_MODELLS/
+*.safetensors
+*.bin
+*.gguf
+*.ggml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Data files
+*.json
+*.csv
+*.xml
+*.txt
+!requirements*.txt
+!README*.txt
+!ANLEITUNG*.txt
+!*.md
+
+# Learning data
+ordo_learning_data.json
+otto_learning_data.yaml
+otto_kristalle.yaml
+
+# Audio/Video
+*.wav
+*.mp3
+*.mp4
+*.avi
+*.mov
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.ico
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Application specific
+*.encrypted
+*.dat
+test_*.csv
+test_*.sip
+test_*.json
+test_*.xml
+test_*.txt
+learned_mappings.json
+temp_*.csv
+*_temp.*
+
+# Compiled executables
+TaxCalculatorStorage.exe
+TaxCalculatorStorage.app
+TaxCalculatorStorage
+
+# API keys and secrets
+.env
+config.local.py
+secrets.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Backup files
+*.backup
+*.bak
+
+# Project specific
+test_output/
+temp_files/ 
