@@ -2,19 +2,19 @@
 resonanz_trichord_router:
   metadata:
     description: >-
-      Event‑router orchestrating Quen‑3‑8B (Executor), Phi‑4‑Mini (Observer),
+      Event‑router orchestrating Qwen3, 8B (Executor), Phi-4-Mini Reasoning (Observer),
       and GPT‑4.1 (Deep_Context) in a metabolic Divergenz–Resonanz–Integration loop.
     author: Anonymous Developer
     created: 2025-07-05
 
   models:
     primary:
-      name: Qwen-3-8B
+      name: qwen3:8b
       role: executor
       endpoint: "http://localhost:11434/api/generate"
       tasks: [dialogue, everyday_reasoning, fast_responses]
     reflective:
-      name: Phi-4-Mini
+      name: phi-4-mini:reasoning
       role: observer
       endpoint: "http://localhost:11434/api/generate"
       tasks: [semantic_tagging, feedback_loop, contradiction_check]

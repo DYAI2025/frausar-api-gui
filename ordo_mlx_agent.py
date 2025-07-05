@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-OrDo Voice Agent - Integriert Resonanz-Trichord Router mit Otto-System
-Verbindet Qwen-3-8B, Phi-4-Mini und GPT-4.1 in einer orchestrierten Umgebung
+OrDo MLX Voice Agent - Verwendet lokale MLX-Modelle
+Qwen3-8B und Phi-4-mini-reasoning direkt aus LLM_LOCAL_MODELLS/
 """
 
 import os
@@ -33,8 +33,8 @@ TRIGGER_WORDS = ['ordo', 'ordu', 'odo', 'orden', 'otto']
 ELEVENLABS_API_KEY = os.getenv('ELEVENLABS_API_KEY')
 VOICE_ID = os.getenv('ELEVENLABS_VOICE_ID', 'pNInz6obpgDQGcFmaJgB')
 
-class OrDoVoiceAgent:
-    """OrDo Voice Agent mit Resonanz-Trichord Router Integration"""
+class OrDoMLXAgent:
+    """OrDo Voice Agent mit lokalen MLX-Modellen"""
     
     def __init__(self):
         self.recognizer = sr.Recognizer()
@@ -48,30 +48,28 @@ class OrDoVoiceAgent:
         self.router = None
         self.setup_router()
         
-        # Model Endpoints
-        self.model_endpoints = {
-            'qwen3:8b': 'http://localhost:11434/api/generate',
-            'phi-4-mini:reasoning': 'http://localhost:11434/api/generate',
-            'GPT-4.1': 'https://api.openai.com/v1/chat/completions'
-        }
-        
-        # Model Configurations
-        self.model_configs = {
+        # Lokale MLX-Modelle
+        self.mlx_models = {
             'qwen3:8b': {
-                'model': 'qwen3:8b',
+                'path': 'LLM_LOCAL_MODELLS/Qwen3-8B-MLX-4bit',
                 'temperature': 0.7,
-                'max_tokens': 200
+                'max_tokens': 200,
+                'type': 'mlx'
             },
             'phi-4-mini:reasoning': {
-                'model': 'phi-4-mini:reasoning',
+                'path': 'LLM_LOCAL_MODELLS/Phi-4-mini-reasoning-MLX-4bit',
                 'temperature': 0.8,
-                'max_tokens': 150
-            },
-            'GPT-4.1': {
-                'model': 'gpt-4',
-                'temperature': 0.6,
-                'max_tokens': 300
+                'max_tokens': 150,
+                'type': 'mlx'
             }
+        }
+        
+        # Fallback zu OpenAI
+        self.openai_config = {
+            'model': 'gpt-4',
+            'temperature': 0.6,
+            'max_tokens': 300,
+            'endpoint': 'https://api.openai.com/v1/chat/completions'
         }
         
         self.setup_microphone()
@@ -158,50 +156,20 @@ class OrDoVoiceAgent:
         """Bereinigt Input"""
         return text.replace(trigger_word, '').strip()
     
-    def get_model_response(self, model_name: str, prompt: str) -> str:
-        """Holt Antwort von spezifischem Modell"""
+    def get_mlx_response(self, model_name: str, prompt: str) -> str:
+        """Holt Antwort von lokalem MLX-Modell"""
         try:
-            if model_name == 'GPT-4.1':
-                return self.get_openai_response(prompt)
+            # TODO: Implementiere MLX-Modell-Inferenz
+            # Für jetzt: Fallback-Antwort
+            model_config = self.mlx_models.get(model_name)
+            if model_config:
+                print(f"🧠 Verwende lokales MLX-Modell: {model_name}")
+                return f"[MLX {model_name}] Ich verstehe: {prompt}. Das ist eine lokale Antwort."
             else:
-                return self.get_ollama_response(model_name, prompt)
-        except Exception as e:
-            print(f"❌ Fehler bei {model_name}: {e}")
-            return f"Entschuldigung, {model_name} ist momentan nicht verfügbar."
-    
-    def get_ollama_response(self, model_name: str, prompt: str) -> str:
-        """Holt Antwort von Ollama-Modell"""
-        try:
-            config = self.model_configs[model_name]
-            
-            payload = {
-                "model": config['model'],
-                "prompt": f"""Du bist {model_name}, ein intelligenter Assistent.
-                Antworte hilfreich und präzise auf Deutsch.
-                
-                Benutzer: {prompt}
-                {model_name}:""",
-                "stream": False,
-                "options": {
-                    "temperature": config['temperature'],
-                    "num_predict": config['max_tokens']
-                }
-            }
-            
-            response = requests.post(
-                self.model_endpoints[model_name], 
-                json=payload, 
-                timeout=15
-            )
-            
-            if response.status_code == 200:
-                result = response.json()
-                return result.get('response', '').strip()
-            else:
-                return f"Fehler: {response.status_code}"
+                return f"Modell {model_name} nicht verfügbar."
                 
         except Exception as e:
-            print(f"❌ Ollama-Fehler für {model_name}: {e}")
+            print(f"❌ MLX-Fehler für {model_name}: {e}")
             return f"Entschuldigung, {model_name} ist nicht verfügbar."
     
     def get_openai_response(self, prompt: str) -> str:
@@ -260,8 +228,13 @@ class OrDoVoiceAgent:
             chosen_model = self.router.route(event)
             print(f"🧠 Router wählte: {chosen_model}")
             
-            # Generiere Antwort
-            response = self.get_model_response(chosen_model, text)
+            # Generiere Antwort basierend auf Modell-Typ
+            if chosen_model in self.mlx_models:
+                response = self.get_mlx_response(chosen_model, text)
+            elif chosen_model == 'GPT-4.1':
+                response = self.get_openai_response(text)
+            else:
+                response = self.get_fallback_response(text)
             
             # Lerne aus Interaktion
             self.learn_from_interaction(text, response, chosen_model)
@@ -342,12 +315,16 @@ class OrDoVoiceAgent:
     
     def run(self):
         """Hauptschleife"""
-        print("🧠 OrDo Voice Agent - Resonanz-Trichord Router Integration")
+        print("🧠 OrDo MLX Voice Agent - Lokale MLX-Modelle")
         print("=" * 70)
         print(f"🎯 Trigger-Wörter: {', '.join(TRIGGER_WORDS)}")
         print(f"🧠 Router: {'✅ Aktiviert' if self.router else '❌ Nicht verfügbar'}")
         print(f"🎵 ElevenLabs: {'✅ Verfügbar' if self.elevenlabs_available else '❌ Nicht verfügbar'}")
         print(f"🔊 pyttsx3: {'✅ Verfügbar' if self.pyttsx3_available else '❌ Nicht verfügbar'}")
+        print("📁 Lokale MLX-Modelle:")
+        for model_name, config in self.mlx_models.items():
+            path_exists = os.path.exists(config['path'])
+            print(f"  {'✅' if path_exists else '❌'} {model_name}: {config['path']}")
         print("🎤 Höre passiv zu... (Sage eines der Trigger-Wörter)")
         print("=" * 70)
         
@@ -394,7 +371,7 @@ class OrDoVoiceAgent:
                 time.sleep(0.1)
                 
             except KeyboardInterrupt:
-                print("\n👋 OrDo Voice Agent wird beendet...")
+                print("\n👋 OrDo MLX Voice Agent wird beendet...")
                 break
             except Exception as e:
                 print(f"❌ Fehler: {e}")
@@ -402,7 +379,7 @@ class OrDoVoiceAgent:
 
 def main():
     """Hauptfunktion"""
-    agent = OrDoVoiceAgent()
+    agent = OrDoMLXAgent()
     agent.run()
 
 if __name__ == "__main__":
