@@ -1,0 +1,11 @@
+context: Konversation
+input_text: so nein es werden keine gegenfragen gestellt und beantwortest ist alle
+  fragen
+learning_patterns: []
+mcp_level: 1
+semantic_analysis:
+  emotional_tone: neutral
+  intent_recognition: general_conversation
+  key_concepts: []
+systemic_insights: []
+timestamp: '2025-07-05T20:46:35.475477'

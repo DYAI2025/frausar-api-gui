@@ -1,0 +1,10 @@
+context: Trigger-Aktivierung
+input_text: hallo  du wirst mir nie helfen können wenn du es nicht
+learning_patterns: []
+mcp_level: 1
+semantic_analysis:
+  emotional_tone: neutral
+  intent_recognition: request_help
+  key_concepts: []
+systemic_insights: []
+timestamp: '2025-07-05T21:08:59.218466'

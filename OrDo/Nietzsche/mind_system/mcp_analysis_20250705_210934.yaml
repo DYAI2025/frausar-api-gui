@@ -1,0 +1,10 @@
+context: Trigger-Aktivierung
+input_text: ich brauche keine hilfe  bauhaus hilfe du brauchst hilfe
+learning_patterns: []
+mcp_level: 0
+semantic_analysis:
+  emotional_tone: neutral
+  intent_recognition: request_help
+  key_concepts: []
+systemic_insights: []
+timestamp: '2025-07-05T21:09:34.967684'

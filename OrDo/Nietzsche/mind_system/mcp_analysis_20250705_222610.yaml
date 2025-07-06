@@ -1,0 +1,11 @@
+context: Trigger-Aktivierung
+input_text: super ich mache euch mal ganz kurz wieder auf normalen modus weil ich
+  glaube wir brauchen tlich toten gerade
+learning_patterns: []
+mcp_level: 0
+semantic_analysis:
+  emotional_tone: neutral
+  intent_recognition: general_conversation
+  key_concepts: []
+systemic_insights: []
+timestamp: '2025-07-05T22:26:10.814157'

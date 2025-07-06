@@ -1,0 +1,11 @@
+context: Konversation
+input_text: hallo freut mich sehr dich kennenzulernen
+learning_patterns: []
+mcp_level: 5
+semantic_analysis:
+  emotional_tone: neutral
+  intent_recognition: learning_request
+  key_concepts:
+  - learning
+systemic_insights: []
+timestamp: '2025-07-05T23:44:30.768720'

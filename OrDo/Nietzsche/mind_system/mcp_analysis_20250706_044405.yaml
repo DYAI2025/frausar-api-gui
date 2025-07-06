@@ -1,0 +1,10 @@
+context: Trigger-Aktivierung
+input_text: was kannst du noch
+learning_patterns: []
+mcp_level: 0
+semantic_analysis:
+  emotional_tone: neutral
+  intent_recognition: general_conversation
+  key_concepts: []
+systemic_insights: []
+timestamp: '2025-07-06T04:44:05.189123'

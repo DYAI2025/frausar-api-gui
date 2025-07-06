@@ -1,0 +1,11 @@
+context: Konversation
+input_text: überleg wie du an deine archetypen kommst das ist deine aufgabe
+learning_patterns: []
+mcp_level: 2
+semantic_analysis:
+  emotional_tone: neutral
+  intent_recognition: task_request
+  key_concepts:
+  - task_management
+systemic_insights: []
+timestamp: '2025-07-05T21:07:59.268225'

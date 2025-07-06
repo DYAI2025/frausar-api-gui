@@ -1,0 +1,11 @@
+context: Konversation
+input_text: ich verstehe leider nicht ganz was du mit leinsamen durch die autostadt
+  einstellungen
+learning_patterns: []
+mcp_level: 0
+semantic_analysis:
+  emotional_tone: neutral
+  intent_recognition: general_conversation
+  key_concepts: []
+systemic_insights: []
+timestamp: '2025-07-06T03:09:01.178461'

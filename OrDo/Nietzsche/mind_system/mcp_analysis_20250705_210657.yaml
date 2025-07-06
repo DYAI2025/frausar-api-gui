@@ -1,0 +1,11 @@
+context: Konversation
+input_text: es tut mir leid dass ich mich unklar ausgedrückt habe lass mich bitte
+  wissen welchen
+learning_patterns: []
+mcp_level: 0
+semantic_analysis:
+  emotional_tone: neutral
+  intent_recognition: general_conversation
+  key_concepts: []
+systemic_insights: []
+timestamp: '2025-07-05T21:06:57.689716'

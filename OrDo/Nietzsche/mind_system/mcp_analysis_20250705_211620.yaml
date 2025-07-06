@@ -1,0 +1,10 @@
+context: Trigger-Aktivierung
+input_text: wie funktioniert zeit
+learning_patterns: []
+mcp_level: 1
+semantic_analysis:
+  emotional_tone: neutral
+  intent_recognition: general_conversation
+  key_concepts: []
+systemic_insights: []
+timestamp: '2025-07-05T21:16:20.705004'

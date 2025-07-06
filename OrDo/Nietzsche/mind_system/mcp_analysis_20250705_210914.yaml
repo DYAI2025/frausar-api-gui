@@ -1,0 +1,10 @@
+context: Konversation
+input_text: wie jetzt musst du dir helfen
+learning_patterns: []
+mcp_level: 0
+semantic_analysis:
+  emotional_tone: neutral
+  intent_recognition: request_help
+  key_concepts: []
+systemic_insights: []
+timestamp: '2025-07-05T21:09:14.764569'

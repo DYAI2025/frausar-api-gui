@@ -1,0 +1,10 @@
+context: Konversation
+input_text: du sagst die du fragst andere unrat okay eingel
+learning_patterns: []
+mcp_level: 0
+semantic_analysis:
+  emotional_tone: neutral
+  intent_recognition: general_conversation
+  key_concepts: []
+systemic_insights: []
+timestamp: '2025-07-05T20:46:19.428929'

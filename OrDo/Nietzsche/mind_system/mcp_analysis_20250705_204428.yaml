@@ -1,0 +1,12 @@
+context: Konversation
+input_text: morgen in muster c du lässt dich ins chaos treiben oder d
+learning_patterns: []
+mcp_level: 4
+semantic_analysis:
+  emotional_tone: neutral
+  intent_recognition: general_conversation
+  key_concepts:
+  - systemic_thinking
+systemic_insights:
+- Erkennung von Verhaltensmustern
+timestamp: '2025-07-05T20:44:28.630338'
