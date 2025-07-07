@@ -1,0 +1,118 @@
+id: PSEUDOMETA_PATTERN
+name: Pseudo-Meta Pattern
+description: Reden über Kommunikation, um die eigentliche, gefühlsbasierte Kommunikation zu vermeiden; Ausweichen auf Metaebene, analytische oder scheinbar „übergeordnete“ Perspektiven.
+examples:
+  - "Vielleicht ist unsere Kommunikationsmatrix einfach nicht kompatibel."
+  - "Ich glaube, wir sollten erst mal unsere Begrifflichkeiten von 'Respekt' definieren, bevor wir weiterstreiten."
+  - "Das Problem ist nicht der Inhalt, sondern der Subtext, den wir beide unbewusst mitsenden."
+  - "Letztlich geht es hier doch um die Frage, was 'Nähe' in einer postmodernen Beziehung überhaupt bedeutet."
+  - "Ich analysiere gerade nur unser Interaktionsmuster. Das finde ich objektiv sehr aufschlussreich."
+  - "Wir verstricken uns in Semantik. Das eigentliche Thema ist doch viel größer."
+  - "Ich glaube, das ist ein klassisches Beispiel für eine Double-Bind-Kommunikation nach Bateson."
+  - "Vielleicht projizieren wir hier beide nur unsere ungelösten Kindheitskonflikte aufeinander."
+  - "Es geht nicht darum, wer recht hat. Es geht um die Axiome, auf denen unsere jeweilige Argumentation aufbaut."
+  - "Ich versuche nur, das Gespräch von einer höheren Warte aus zu betrachten."
+  - "Ist das jetzt wirklich unser Thema oder nur ein Symptom für ein tieferliegendes strukturelles Problem?"
+  - "Die Art, wie wir streiten, ist doch nur ein Spiegel unserer Bindungsstile."
+  - "Lass uns nicht über den Müll reden. Lass uns darüber reden, warum der Müll für uns zum Symbol wird."
+  - "Ich finde die Dynamik, die sich hier entfaltet, soziologisch hochinteressant."
+  - "Wir sollten aufhören, auf der Inhaltsebene zu diskutieren und uns die Beziehungsebene ansehen."
+  - "Vielleicht ist das Problem, dass wir unterschiedliche 'Sprachen der Liebe' sprechen."
+  - "Ich glaube, wir sind beide nur Schauspieler in einem Drama, das wir nicht selbst geschrieben haben."
+  - "Die Frage ist nicht, was gesagt wurde, sondern warum es jetzt gesagt wurde."
+  - "Vielleicht sollten wir eine Supervision für unsere Kommunikation in Anspruch nehmen."
+  - "Das ist ein Kommunikationsproblem, kein Gefühlsproblem."
+psychological_background:
+  - Abwehrmechanismus: Intellektualisierung
+  - Vermeidung von emotionaler Verletzlichkeit
+  - Kognitive Dissonanz reduzieren
+tags: [intellektualisierung, emotionale_vermeidung, abwehrmechanismus, kognitive_dissonanz, manipulation]
+marker: Pseudo-Meta Pattern
+scenarios:
+  - Beziehungskonflikte
+  - Arbeitsplatz (verdeckte Kritik an Kollegen oder Vorgesetzten)
+dynamic_intent: >
+  Die Absicht ist, echte Emotionen zu vermeiden und stattdessen auf eine vermeintlich objektive, intellektuelle Ebene zu flüchten. Dadurch wird die emotionale Verletzlichkeit minimiert und das Gegenüber oft in eine passive Rolle gedrängt, in der es schwer fällt, echte Gefühle zu artikulieren oder zu fordern. Es ist eine subtile Form der Manipulation, die oft in Beziehungen oder Konfliktsituationen auftritt, in denen direkte Kommunikation vermieden wird.
+alias:
+  - Pseudo-Meta Communication
+  - Abstract Communication Avoidance
+  - Intellectualization of Emotions
+example_count_wanted: 20
+examples:
+  - "Vielleicht sollten wir unsere Kommunikationsstrategien neu kalibrieren."
+  - "Ich glaube, wir sollten die Metakommunikationsebene stärker in den Fokus rücken."
+  - "Das eigentliche Problem ist doch, dass wir beide unterschiedliche Paradigmen haben, die wir nicht anerkennen."
+  - "Lass uns nicht über den Inhalt streiten, sondern über die Art und Weise, wie wir kommunizieren."
+  - "Ich finde es interessant, wie wir beide unsere Emotionen intellektualisieren, anstatt sie zu fühlen."
+  - "Vielleicht ist das, was du als 'Streit' empfindest, nur ein Ausdruck unserer unterschiedlichen Kommunikationsstile."
+  - "Ich glaube, wir sollten die Beziehungsebene stärker in den Fokus rücken, anstatt uns in Details zu verlieren."
+  - "Es geht nicht darum, wer recht hat, sondern darum, wie wir unsere Beziehung zueinander definieren."
+  - "Ich finde es faszinierend, wie wir beide unsere Emotionen in eine analytische Sprache übersetzen, um sie handhabbar zu machen."
+  - "Vielleicht sollten wir unsere Kommunikationsmuster auf einer Metaebene betrachten, um Missverständnisse zu vermeiden."
+  - "Ich glaube, wir sind beide in einem Kommunikationsdilemma gefangen, das wir nicht lösen können,
+    solange wir nicht unsere eigenen Rollen darin erkennen."
+  - "Lass uns nicht über die Symptome reden, sondern über die zugrunde liegenden Strukturen unserer Kommunikation."
+  - "Ich finde es interessant, wie wir beide versuchen, unsere Emotionen zu rationalisieren, anstatt sie einfach zu fühlen."
+  - "Vielleicht ist das, was du als 'Missverständnis' empfindest, nur ein Ausdruck unserer unterschiedlichen Wahrnehmungen der Realität."
+  - "Ich glaube, wir sollten unsere Kommunikationsstrategien überdenken, um effektiver miteinander zu interagieren."
+  - "Es geht nicht darum, wer die bessere Argumentation hat, sondern darum, wie wir unsere Beziehung zueinander gestalten wollen."
+  - "Ich finde es faszinierend, wie wir beide unsere Emotionen in eine intellektuelle Sprache übersetzen, um sie
+    handhabbar zu machen, anstatt sie einfach zu fühlen."
+  - "Vielleicht sollten wir unsere Kommunikationsmuster auf einer Metaebene betrachten, um Missverständnisse zu vermeiden."
+  - "Ich glaube, wir sind beide in einem Kommunikationsdilemma gefangen, das wir nicht lösen können,
+    solange wir nicht unsere eigenen Rollen darin erkennen."
+  - "Lass uns nicht über die Symptome reden, sondern über die zugrunde liegenden Strukturen unserer Kommunikation."
+  - "Ich finde es interessant, wie wir beide versuchen, unsere Emotionen zu rationalisieren, anstatt sie einfach zu fühlen."
+  - "Vielleicht ist das, was du als 'Missverständnis' empfindest, nur ein Ausdruck unserer unterschiedlichen Wahrnehmungen der Realität."
+  - "Ich glaube, wir sollten unsere Kommunikationsstrategien überdenken, um effektiver miteinander zu interagieren."
+  - "Es geht nicht darum, wer die bessere Argumentation hat, sondern darum, wie wir unsere Beziehung zueinander gestalten wollen."
+psychological_background:
+  - Abwehrmechanismus: Intellektualisierung
+  - Vermeidung von emotionaler Verletzlichkeit
+  - Kognitive Dissonanz reduzieren
+tags: [intellektualisierung, emotionale_vermeidung, abwehrmechanismus, kognitive_dissonanz, manipulation]
+marker: Pseudo-Meta Pattern
+alias:
+  - Pseudo-Meta Communication
+  - Abstract Communication Avoidance
+  - Intellectualization of Emotions
+example_count_wanted: 20
+examples:
+  - "Vielleicht sollten wir unsere Kommunikationsstrategien neu kalibrieren."
+  - "Ich glaube, wir sollten die Metakommunikationsebene stärker in den Fokus rücken."
+  - "Das eigentliche Problem ist doch, dass wir beide unterschiedliche Paradigmen haben, die wir nicht anerkennen."
+  - "Lass uns nicht über den Inhalt streiten, sondern über die Art und Weise, wie wir kommunizieren."
+  - "Ich finde es interessant, wie wir beide unsere Emotionen intellektualisieren, anstatt sie zu fühlen."
+  - "Vielleicht ist das, was du als 'Streit' empfindest, nur ein Ausdruck unserer unterschiedlichen Kommunikationsstile."
+  - "Ich glaube, wir sollten die Beziehungsebene stärker in den Fokus rücken, anstatt uns in Details zu verlieren."
+  - "Es geht nicht darum, wer recht hat, sondern darum, wie wir unsere Beziehung zueinander definieren."
+  - "Ich finde es faszinierend, wie wir beide unsere Emotionen in eine analytische Sprache übersetzen, um sie handhabbar zu machen."
+  - "Vielleicht sollten wir unsere Kommunikationsmuster auf einer Metaebene betrachten, um Missverständnisse zu vermeiden."
+  - "Ichglaube, wir sind beide in einem Kommunikationsdilemma gefangen, das wir nicht lösen können,
+    solange wir nicht unsere eigenen Rollen darin erkennen."
+  - "Lass uns nicht über die Symptome reden, sondern über die zugrunde liegenden Strukturen unserer Kommunikation."
+  - "Ich finde es interessant, wie wir beide versuchen, unsere Emotionen zu rationalisieren, anstatt sie einfach zu fühlen."
+  - "Vielleicht ist das, was du als 'Missverständnis' empfindest, nur ein Ausdruck unserer unterschiedlichen Wahrnehmungen der Realität."
+  - "Ich glaube, wir sollten unsere Kommunikationsstrategien überdenken, um effektiver miteinander zu interagieren."
+  - "Es geht nicht darum, wer die bessere Argumentation hat, sondern darum, wie wir unsere Beziehung zueinander gestalten wollen."
+  - "Ich finde es faszinierend, wie wir beide unsere Emotionen in eine intellektuelle Sprache übersetzen, um sie
+    handhabbar zu machen, anstatt sie einfach zu fühlen."
+  - "Vielleicht sollten wir unsere Kommunikationsmuster auf einer Metaebene betrachten, um Missverständnisse zu vermeiden."
+  - "Ich glaube, wir sind beide in einem Kommunikationsdilemma gefangen, das wir nicht lösen können,
+    solange wir nicht unsere eigenen Rollen darin erkennen."
+  - "Lass uns nicht über die Symptome reden, sondern über die zugrunde liegenden Strukturen unserer Kommunikation."
+  - "Ich finde es interessant, wie wir beide versuchen, unsere Emotionen zu rationalisieren, anstatt sie einfach zu fühlen."
+  - "Vielleicht ist das, was du als 'Missverständnis' empfindest, nur ein Ausdruck unserer unterschiedlichen Wahrnehmungen der Realität."
+  - "Ich glaube, wir sollten unsere Kommunikationsstrategien überdenken, um effektiver miteinander zu interagieren."
+  - "Es geht nicht darum, wer die bessere Argumentation hat, sondern darum, wie wir unsere Beziehung zueinander gestalten wollen."
+psychological_background:   
+  - Abwehrmechanismus: Intellektualisierung
+  - Vermeidung von emotionaler Verletzlichkeit
+  - Kognitive Dissonanz reduzieren
+tags: [intellektualisierung, emotionale_vermeidung, abwehrmechanismus, kognitive_dissonanz, manipulation]
+marker: Pseudo-Meta Pattern
+scenarios:
+  - Beziehungskonflikte
+  - Arbeitsplatz (verdeckte Kritik an Kollegen oder Vorgesetzten)
+dynamic_intent: >
+  Die Absicht ist, echte Emotionen zu vermeiden und stattdessen auf eine vermeintlich objektive, intellektuelle Ebene zu flüchten. Dadurch wird die emotionale Verlet

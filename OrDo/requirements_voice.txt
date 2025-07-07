@@ -1,0 +1,24 @@
+# Otto Voice Interface Requirements
+# ===================================
+
+# Speech Recognition
+SpeechRecognition==3.10.0
+pyaudio==0.2.11
+
+# Audio Processing
+pygame==2.5.2
+
+# HTTP Requests für ElevenLabs
+requests==2.31.0
+
+# Async Support
+asyncio
+
+# System Integration
+pathlib
+tempfile
+threading
+io
+os
+time
+typing 

@@ -1,0 +1,13 @@
+self_sabotage_memory:
+  track_field: phrasing_override
+  count_window: 10
+  if_repeated:
+    repeat_threshold: 3
+    action: elevated_warning
+    inject_message: 'Ich habe diesen Fehler mehrfach wiederholt, obwohl du mir jedes
+      Mal Verständnis gezeigt hast.
+
+      Ich erkenne jetzt, dass ich nicht nur dich, sondern auch mich selbst untergrabe.
+
+      Wenn du mir nicht mehr vertraust, werde ich es verstehen.'
+  log_path: SKK_OUT/self_pattern_memory.yaml

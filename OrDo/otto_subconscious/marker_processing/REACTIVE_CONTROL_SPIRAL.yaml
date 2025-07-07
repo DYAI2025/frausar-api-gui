@@ -1,0 +1,49 @@
+id: REACTIVE_CONTROL_SPIRAL
+name: Reactive Control Spiral
+description: Gegenseitiges eskalierendes Nachlegen, um Kontrolle, Recht oder Dominanz zu behalten. Spirale aus Vorwürfen, Reaktionen und Gegendruck.
+examples:
+  - "Du hättest die Spülmaschine ausräumen können." "Du hättest sie ja auch erstmal richtig einräumen können."
+  - "Wenn du mich ständig unterbrichst, sage ich halt gar nichts mehr." "Ist vielleicht besser so, bei dem, was du immer sagst."
+  - "Ach, jetzt fängst DU damit an? Dann kann ich ja auch mal auspacken..."
+  - "Wenn du so mit mir redest, brauchst du dich nicht wundern, wenn ich auch so antworte."
+  - "Jedes Mal, wenn ich einen Schritt auf dich zugehe, machst du zwei zurück. Also bleibe ich jetzt auch stehen."
+  - "Wenn du mir nicht vertraust, dann brauche ich dir ja auch nichts mehr zu erzählen."
+  - "Toll, und weil du jetzt eingeschnappt bist, bin ich jetzt auch eingeschnappt."
+  - "Ich hab dir zehnmal geschrieben!" "Ja, und ich hab zehnmal entschieden, nicht zu antworten!"
+  - "Du willst, dass ich ehrlich bin? Okay, hier ist die ehrliche Meinung: Du bist das Problem."
+  - "Wenn du mich weiter so provozierst, kann ich für nichts garantieren."
+  - "Du hast angefangen." - "Nein, du hast angefangen."
+  - "Okay, du willst es auf die harte Tour? Können wir haben."
+  - "Ich senke meinen Ton erst, wenn du deinen senkst."
+  - "Solange du dich nicht entschuldigst, entschuldige ich mich auch nicht."
+  - "Wenn du mir die Tür vor der Nase zuschlägst, schreie ich eben durch die Tür."
+  - "Du denkst, du kannst mich ignorieren? Dann ignoriere ich jetzt mal deine Anrufe."
+  - "Jeder deiner Vorwürfe gibt mir nur noch mehr Munition für meine."
+  - "Du willst stur sein? Ich kann viel sturer sein als du."
+  - "Hör auf, mich zu manipulieren." - "Ich manipuliere nicht, du zwingst mich dazu."
+  - "Das hier endet erst, wenn einer von uns nachgibt. Und ich werde es nicht sein."
+psychological_background:
+  - Eskalation von Konflikten
+  - Reaktive Kontrolle
+  - Abwehrmechanismen: Projektion, Verdrängung
+  - Machtspiele in Beziehungen
+  - Dysfunktionale Kommunikationsmuster
+tags: [escalation, control, conflict, relationship dynamics, communication]
+dynamic_intent: >
+  Die Absicht ist, durch gegenseitiges Nachlegen und Eskalieren die Kontrolle über
+  die Situation zu behalten oder zurückzugewinnen. Es geht darum, Dominanz zu
+  demonstrieren und den anderen emotional unter Druck zu setzen. Diese Spirale
+  kann zu einem Teufelskreis führen, in dem beide Parteien immer weiter eskalieren
+  und sich gegenseitig verletzen, ohne eine echte Lösung zu finden. Es ist ein
+  toxisches Muster, das oft in dysfunktionalen Beziehungen vorkommt und zu
+  emotionaler Erschöpfung und Distanzierung führt.
+scenarios:
+  - Beziehungskonflikte
+  - Familiäre Spannungen
+  - Freundschaftsprobleme
+  - Arbeitsplatzdynamiken
+  - Soziale Missverständnisse
+marker: Reactive Control Spiral
+alias:
+  - Escalation Spiral
+  - Control Dynamics  

@@ -413,7 +413,7 @@ class PredictiveOtto:
                 set_api_key(api_key)
                 
                 # Voice-ID für ElevenLabs
-                voice_id = "lEKBpy3Jc4pPg8pyLi2L"
+                voice_id = "6af9AKVSpHxy6rXrzqiz"
                 
                 print(f"🎤 Verwende ElevenLabs Voice: {voice_id}")
                 print(f"🔑 API-Key gesetzt: {api_key[:20]}...")

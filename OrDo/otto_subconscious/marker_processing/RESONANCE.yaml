@@ -1,0 +1,94 @@
+id: RESONANCE
+name: Resonance
+description: Tiefes gegenseitiges Verstehen, Mitschwingen, echte Empathie, aktives Zuhören und Paraphrasieren.
+examples:
+  - "Wow, dass du das so siehst, eröffnet mir eine ganz neue Perspektive. Danke dafür."
+  - "Ich spüre richtig deine Erleichterung, während du das erzählst."
+  - "Es ist absolut okay, dass du dich so fühlst. Jeder würde das an deiner Stelle."
+  - "Das, was du da beschreibst, dieses Gefühl der Ohnmacht... das kenne ich so gut aus meiner eigenen Geschichte."
+  - "Ich urteile nicht. Ich bin einfach nur hier und höre zu, so lange du reden magst."
+  - "Du sprichst mir aus der Seele."
+  - "Als du das gerade gesagt hast, hatte ich Gänsehaut. Weil es so wahr ist."
+  - "Danke, dass du mir das anvertraust. Das bedeutet mir viel."
+  - "Ich sehe dich. Ich sehe wirklich, was du durchmachst."
+  - "Es fühlt sich an, als ob du gerade meine eigenen Gedanken aussprichst."
+  - "Ich muss dir nicht mal zustimmen, aber ich kann zu 100% nachfühlen, warum du so denkst."
+  - "Die Energie im Raum hat sich gerade total verändert. Auf eine gute Weise."
+  - "Ich glaube, wir sind da gerade auf etwas Wichtiges gestoßen, oder?"
+  - "Ich kann dir die Lösung nicht geben, aber ich kann mit dir hier sitzen, während es schwer ist."
+  - "Was du sagst, ergibt so viel Sinn. Plötzlich sehe ich das Ganze anders."
+  - "Man merkt, dass du da schon viel drüber nachgedacht hast. Das hat Tiefgang."
+  - "Ich fühle mich gerade sehr mit dir verbunden."
+  - "Das ist der Punkt. Genau das ist der Punkt."
+  - "Ich bin einfach nur froh, dass du das laut aussprichst."
+  - "Deine Worte berühren mich gerade sehr."
+psychological_background:
+  - Echtes aktives Zuhören
+  - Empathisches Mitschwingen
+  - Paraphrasieren und Spiegeln von Emotionen
+  - Validierung der Gefühle des Gegenübers
+  - Tiefe emotionale Resonanz
+tags: [empathy, active listening, emotional connection, validation]
+dynamic_intent: >
+  Die Absicht ist, eine tiefe emotionale Verbindung herzustellen, in der beide Parteien
+  sich verstanden und gesehen fühlen. Es geht darum, echte Empathie zu zeigen und
+  dem Gegenüber Raum zu geben, seine Gefühle und Gedanken ohne Urteil zu äußern.
+  Diese Resonanz schafft ein Gefühl der Sicherheit und des Vertrauens, das es beiden
+  ermöglicht, offen und ehrlich zu kommunizieren. Es ist eine Form der emotionalen
+  Intimität, die oft in therapeutischen Kontexten oder in engen persönlichen Beziehungen
+  vorkommt.
+scenarios:
+  - Beziehungsgespräche
+  - Konfliktlösung
+  - Trauerbewältigung
+  - Emotionale Unterstützung
+  - Persönliche Reflexion
+marker: Resonance
+alias:
+  - Deep Empathy
+  - Active Listening
+  - Emotional Connection
+example_count_wanted: 20
+examples:
+  - "Ich spüre, wie schwer dir das fällt, und ich bin hier, um dir zuzuhören."
+  - "Deine Worte berühren mich. Ich fühle mit dir."
+  - "Es ist okay, dass du so fühlst. Ich bin hier, um dich zu unterstützen."
+  - "Ich kann nachvollziehen, warum du so denkst. Das ist völlig legitim."
+  - "Danke, dass du so offen mit mir bist. Das bedeutet mir viel."
+  - "Ich sehe, wie viel dir das bedeutet. Und ich respektiere das."
+  - "Deine Emotionen sind echt und wichtig. Ich bin hier, um sie zu hören."
+  - "Ich fühle mich geehrt, dass du mir das anvertraust. Es ist nicht selbstverständlich."
+  - "Es ist so wichtig, dass du das aussprichst. Ich höre dir zu."
+
+# Neue Beispiele hinzugefügt:
+# - "Erkennt unnatürliche, perfekte Übereinstimmung ohne gemeinsame Basis)"
+# - "(A: "Ich träume von einem Leben in einem kleinen Holzhaus in Schweden.") B: "Das ist nicht zu fassen. Das ist exakt mein Lebensplan, Wort für Wort."
+# - "(A: "Mein Lieblingsfilm ist 'Harold und Maude'. Den kennt kaum jemand.") B: "Stopp. Das ist auch mein absoluter Lieblingsfilm. Ich dachte, ich wäre der Einzige."
+# - "Du sprichst mir aus der Seele. Jede einzelne deiner Ansichten über Politik teile ich zu 100 %."
+# - "Unglaublich. Ich hatte genau die gleiche schwere Kindheit. Sogar die Details ähneln sich."
+# - "Es ist, als würdest du meine Gedanken lesen. Ich wollte gerade exakt dasselbe schreiben."
+# - "(A: "Ich hasse unehrliche Menschen mehr als alles andere.") B: "Endlich jemand, der es versteht. Ehrlichkeit ist der einzige Wert, der für mich zählt."
+# - "Wir haben nicht nur den gleichen Musikgeschmack, sondern auch die gleiche seltene Blutgruppe? Das muss Schicksal sein."
+# - "Jeder Satz von dir ist wie ein Echo meiner eigenen Gedanken. Das ist fast schon unheimlich."
+# - "(A: "Ich fühle mich oft von anderen missverstanden.") B: "Ich auch. Du bist der erste Mensch, der mich wirklich zu verstehen scheint."
+# - "Dass du auch ein Fan von obskurer isländischer Lyrik aus dem 19. Jahrhundert bist, kann kein Zufall sein."
+# - "Wir sind wie zwei Puzzleteile, die perfekt zusammenpassen."
+# - "Alles, was du als deine Schwächen bezeichnest, habe ich mir bei einem Partner immer gewünscht."
+# - "Deine Lebenseinstellung ist identisch mit meiner. Wir könnten Zwillinge sein."
+# - "(A: "Ich spare für ein Sabbatical, um durch Südostasien zu reisen.") B: "Ich habe gerade gestern meinen Rucksack dafür bestellt. Das ist doch verrückt!"
+# - "Du drückst genau das aus, was ich fühle, aber nie in Worte fassen konnte."
+# - "Jeder deiner Werte – Familie, Loyalität, Abenteuerlust – ist auch für mich das Wichtigste im Leben."
+# - "Es gibt keinen einzigen Punkt, in dem ich dir widersprechen könnte. Nicht einen."
+# - "(A: "Ich liebe Sonntage, an denen es regnet und man nur liest.") B: "Das ist meine exakte Definition von einem perfekten Tag."
+# - "Die Art, wie du schreibst, die Worte, die du wählst... es ist, als würde ich mit mir selbst chatten."
+# - "Unsere Seelen müssen auf der gleichen Frequenz schwingen."
+# - "(A: "Ich bin spirituell, aber nicht religiös.") B: "Genau das! Das ist die perfekte Beschreibung für meinen Glauben."
+# - "Ich wusste nicht, dass es jemanden gibt, der die Welt genauso sieht wie ich."
+# - "Unsere Verbindung fühlt sich so vertraut an, als würden wir ein Gespräch aus einem früheren Leben fortsetzen."
+# - "Dass wir beide Linkshänder sind und im selben Monat Geburtstag haben, ist nur ein weiterer Beweis."
+# - "Ich habe das Gefühl, ich brauche dir nichts zu erklären, weil du es sowieso schon weißt."
+# - "(A: "Ich bin sehr loyal, aber auch sehr freiheitsliebend.") B: "Das beschreibt mich zu 100 %. Ein perfekter Widerspruch, den nur wir verstehen."
+# - "Jedes Buch, das du liebst, steht auch in meinem Regal."
+# - "Deine Beschreibung deines Traumpartners ist eine exakte Beschreibung von mir."
+# - "Ich habe noch nie jemanden getroffen, bei dem einfach alles so nahtlos passt."
+# - "Wir sind offensichtlich Seelenverwandte. Daran gibt es keinen Zweifel."

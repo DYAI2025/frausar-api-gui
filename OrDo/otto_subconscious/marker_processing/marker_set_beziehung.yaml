@@ -1,0 +1,47 @@
+marker_set:
+  beschreibung: 'Enthält Marker rund um emotionale Dynamiken in Beziehungen: Manipulation,
+    Rückzug, Sarkasmus.'
+  marker:
+  - name: antizipierte Manipulation
+    quelle: marker_dynamic_knot_beispiele.yaml
+  - name: emotionaler Rückzugsdruck
+    quelle: marker_emotionaler_rueckzugsdruck.yaml
+  - name: Sarkasmus
+    quelle: marker_sarkasmus.yaml
+  name: Beziehungsdynamik
+
+
+# Neue Beispiele hinzugefügt:
+# - "1. Unklare Bedürfnisformulierung"
+# - "Aussagen, in denen emotionale Erwartungen unausgesprochen oder indirekt formuliert werden."
+# - "z. B. „Schon okay, ich wollte ja eh nur reden, aber mach ruhig dein Ding.“"
+# - "🧊 2. Affektive Unterkühlung"
+# - "Kommunikative Kälte, mit der emotionale Nähe abgeblockt wird."
+# - "z. B. „Ist halt so.“, „Muss jeder selbst wissen.“"
+# - "🧠 3. Kognitive Rationalisierung"
+# - "Emotionale Themen werden abgewehrt oder „wegargumentiert“."
+# - "z. B. „Das macht doch objektiv gesehen keinen Sinn, was du fühlst.“"
+# - "🧲 4. Bindungsambivalenz"
+# - "Wechsel zwischen Näheangeboten und emotionalem Rückzug."
+# - "z. B. „Ich will dir nah sein… aber vielleicht ist das gerade nicht gut für mich.“"
+# - "🎭 5. Pseudo-Verantwortung"
+# - "Übertriebene Schuldübernahme, um moralischen Druck auszuüben."
+# - "z. B. „Klar, ich bin wieder an allem schuld. War ja zu erwarten.“"
+# - "😔 6. Emotionaler Selbstwertentzug"
+# - "Aussagen, die sich selbst abwerten, um implizit Aufwertung zu provozieren."
+# - "z. B. „Ich bin halt nicht so wichtig wie deine Arbeit.“"
+# - "🕳 7. Latente Schuldinduktion"
+# - "Subtile Hinweise, dass der andere emotional versagt hat."
+# - "z. B. „Ich dachte, du wärst für mich da… aber vielleicht hab ich dich falsch eingeschätzt.“"
+# - "🤹 8. Ablenkende Emotionsverlagerung"
+# - "Konflikt wird „umgeframed“, um das eigentliche Thema zu vermeiden."
+# - "z. B. „Es geht doch gar nicht um das Gespräch, sondern wie du überhaupt mit Menschen redest.“"
+# - "💥 9. Ironischer Beziehungsangriff"
+# - "Sarkasmus mit affektivem Stich, der Nähe zerstört."
+# - "z. B. „Na klar, du bist ja auch der emotionale Weltmeister.“"
+# - "🧩 10. Infragestellung gemeinsamer Realität"
+# - "Beziehungserfahrungen werden relativiert oder delegitimiert."
+# - "z. B. „Das hast du so empfunden, nicht ich. Ich erinnere mich anders.“"
+# - "Wenn du willst, kann ich diese 10 sofort in YAML-Marker-Dateien oder in ein gemeinsames BEZIEHUNGSDYNAMIK_EXTENDED.yaml Marker-Set gießen. Möchtest du das?"
+# - "ChatGPT fragen"
+# - "ChatGPT kann Fehler machen. OpenAI verwendet keine Daten aus dem Arbeitsbereich DIYrigent GmbH zum Trainieren seiner Modelle."

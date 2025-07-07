@@ -1,0 +1,33 @@
+marker_name: "concept_drift"
+marker_type: "semantic"
+description: "Erkennt semantische Drift in Kommunikation"
+patterns:
+  - pattern: "\\b(neue?|emergente?|aufkommende?)\\s+(idee|konzept|muster)\\b"
+    confidence: 0.8
+  - pattern: "\\b(evolution|entwicklung|wachstum)\\b"
+    confidence: 0.7
+  - pattern: "\\b(semantische?|drift|verschiebung)\\b"
+    confidence: 0.9
+  - pattern: "\\b(bedeutung|konzept|verständnis)\\s+(ändert|entwickelt|evolviert)\\b"
+    confidence: 0.85
+triggers:
+  - "semantic_shift"
+  - "concept_evolution"
+  - "meaning_change"
+  - "drift_detection"
+responses:
+  - "🧠 Semantische Evolution erkannt - Lernmöglichkeit identifiziert"
+  - "📈 Konzept-Drift erkannt - Vertiefte Analyse empfohlen"
+  - "💡 Bedeutungsverschiebung erkannt - Otto kann daraus lernen"
+  - "🔍 Semantische Drift erkannt - Überwachung aktiviert"
+cosd_integration:
+  drift_velocity_threshold: 0.6
+  risk_level_threshold: "MEDIUM"
+  emergence_detection: true
+phi4_reasoning:
+  reasoning_mode: "deductive"
+  cognitive_load: "MEDIUM"
+  abstraction_level: "HIGH"
+  logical_flow: "causal"
+priority: "HIGH"
+active: true 

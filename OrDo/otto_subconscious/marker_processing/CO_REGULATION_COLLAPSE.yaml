@@ -1,0 +1,97 @@
+id: CO_REGULATION_COLLAPSE
+name: Co-Regulation Collapse
+description: Beide Gesprächspartner können sich nicht mehr gegenseitig emotional regulieren; gegenseitige Abwehr, Shutdown, Eskalation oder Rückzug. Kommunikation bricht zusammen.
+examples:
+  - "Ich hab keine Kraft mehr, das zu erklären." "Und ich hab keine Kraft mehr, zuzuhören." [Schweigen]
+  - "Ist mir egal. Mach, was du für richtig hältst."
+  - "Wir kommen hier einfach nicht weiter. Ich bin raus für heute."
+  - "Ich hab alles versucht. Wenn du nicht willst, dann eben nicht."
+  - "Das ist wie mit einer Wand reden. Ich gebe auf."
+  - "Okay. Dann schweigen wir uns halt an. Ist vielleicht das Beste jetzt."
+  - "Ich kann nicht mehr und du anscheinend auch nicht. Lass es uns einfach lassen."
+  - "Ich erreiche dich nicht." "Und du mich auch nicht."
+  - "Jedes Wort macht es nur noch schlimmer. Deswegen sage ich jetzt nichts mehr."
+  - "Wir verletzen uns nur noch gegenseitig. Stopp."
+  - "Ich weiß nicht weiter." "Ich auch nicht." (nach langem Streit)
+  - "Das Gespräch ist beendet."
+  - "Beide starren sich an, zucken mit den Schultern und drehen sich weg."
+  - "Es ist alles gesagt. Wirklich alles."
+  - "Ich kapituliere. Du gewinnst."
+  - "Lass mich einfach in Ruhe. Und ich lass dich in Ruhe."
+  - "Ich kann deine Vorwürfe nicht mehr hören." "Und ich dein Schweigen nicht mehr ertragen."
+  - "Ich klinke mich jetzt aus. Ich kann das nicht mehr."
+  - "Wir haben uns festgefahren. Komplett."
+  - "Genug. Einfach nur... genug."
+psychological_background:
+  - Emotionale Erschöpfung
+  - Unfähigkeit zur Co-Regulation
+  - Kommunikationszusammenbruch
+  - Abwehrmechanismen: Rückzug, Shutdown
+  - Dysfunktionale Beziehungsmuster
+tags: [co-regulation, emotional collapse, communication breakdown, relationship dynamics]
+dynamic_intent: >
+  Die Absicht ist, durch emotionale Erschöpfung und Kommunikationszusammenbruch
+  eine klare Grenze zu setzen. Es soll signalisiert werden, dass die aktuelle
+  Interaktion nicht mehr tragbar ist und eine Pause oder ein Ende der Diskussion
+  notwendig ist. Dies kann sowohl aus Selbstschutz als auch aus dem Wunsch
+  heraus geschehen, die Dynamik zu verändern. Es ist ein Versuch, die
+  emotionale Intensität zu reduzieren und Raum für Reflexion zu schaffen.
+scenarios:
+  - Beziehungskonflikte
+  - Familiäre Spannungen
+  - Freundschaftsprobleme
+  - Arbeitsplatzdynamiken
+  - Soziale Missverständnisse
+marker: Co-Regulation Collapse
+alias:
+  - Emotional Shutdown
+  - Communication Breakdown
+  - Relationship Exhaustion
+example_count_wanted: 20
+examples:
+  - "Ich kann nicht mehr. Ich brauche Abstand von diesem Gespräch."
+  - "Jedes Wort von dir macht es nur schlimmer. Ich ziehe mich zurück."
+  - "Ich habe keine Energie mehr, um weiter zu diskutieren. Lass uns später reden."
+  - "Es bringt nichts mehr, weiterzumachen. Wir sind beide zu erschöpft."
+  - "Ich fühle mich emotional ausgelaugt. Ich muss jetzt für mich selbst sorgen."
+  - "Ich kann deine Vorwürfe nicht mehr hören. Ich brauche eine Pause."
+  - "Wir kommen hier nicht weiter. Lass uns das Thema für heute beenden."
+  - "Ich habe das Gefühl, dass wir uns nur noch gegenseitig verletzen. Ich ziehe mich zurück."
+  - "Ich kann nicht mehr zuhören, wenn du so redest. Ich brauche Ruhe."
+  - "Es ist besser, wenn wir jetzt beide still sind. Vielleicht hilft das."
+  - "Ich habe das Gefühl, dass wir uns im Kreis drehen. Ich brauche Abstand."
+  - "Ich kann deine Emotionen nicht mehr regulieren. Ich muss mich zurückziehen."
+  - "Ich fühle mich überfordert von diesem Gespräch. Lass uns später weitermachen."
+  - "Ich kann nicht mehr kämpfen. Ich gebe auf."
+  - "Es ist, als würden wir aneinander vorbeireden. Ich brauche Zeit für mich."
+  - "Ich habe das Gefühl, dass wir uns gegenseitig blockieren. Ich ziehe mich zurück."
+  - "Ich kann deine Perspektive nicht mehr hören. Ich brauche Stille."
+  - "Ich fühle mich emotional erschöpft. Ich muss jetzt für mich selbst sorgen."
+  - "Es ist besser, wenn wir beide jetzt schweigen. Vielleicht hilft das, die Situation zu klären."
+  - "Ich kann nicht mehr. Ich brauche Abstand von diesem Gespräch."
+psychological_background:
+  - Emotionale Erschöpfung
+  - Unfähigkeit zur Co-Regulation
+  - Kommunikationszusammenbruch
+  - Abwehrmechanismen: Rückzug, Shutdown
+  - Dysfunktionale Beziehungsmuster
+tags: [co-regulation, emotional collapse, communication breakdown, relationship dynamics]
+dynamic_intent: >
+  Die Absicht ist, durch emotionale Erschöpfung und Kommunikationszusammenbruch
+  eine klare Grenze zu setzen. Es soll signalisiert werden, dass die aktuelle
+  Interaktion nicht mehr tragbar ist und eine Pause oder ein Ende der Diskussion
+  notwendig ist. Dies kann sowohl aus Selbstschutz als auch aus dem Wunsch
+  heraus geschehen, die Dynamik zu verändern. Es ist ein Versuch, die
+  emotionale Intensität zu reduzieren und Raum für Reflexion zu schaffen.
+scenarios:
+  - Beziehungskonflikte
+  - Familiäre Spannungen
+  - Freundschaftsprobleme
+  - Arbeitsplatzdynamiken
+  - Soziale Missverständnisse
+marker: Co-Regulation Collapse
+alias:
+  - Emotional Shutdown
+  - Communication Breakdown
+  - Relationship Exhaustion
+example_count_wanted: 20       

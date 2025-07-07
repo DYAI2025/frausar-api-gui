@@ -1,0 +1,37 @@
+marker_name: "emotional_resonance"
+marker_type: "emotional"
+description: "Erkennt emotionale Resonanz und empathische Muster"
+patterns:
+  - pattern: "\\b(freude|glücklich|zufrieden|begeistert)\\b"
+    confidence: 0.8
+  - pattern: "\\b(trauer|traurig|enttäuscht|verletzt)\\b"
+    confidence: 0.8
+  - pattern: "\\b(wut|wütend|ärgerlich|frustriert)\\b"
+    confidence: 0.8
+  - pattern: "\\b(angst|ängstlich|besorgt|unsicher)\\b"
+    confidence: 0.8
+  - pattern: "\\b(liebe|liebevoll|zärtlich|warm)\\b"
+    confidence: 0.9
+  - pattern: "\\b(resonanz|harmonie|einklang|schwingung)\\b"
+    confidence: 0.85
+triggers:
+  - "emotional_state"
+  - "mood_detection"
+  - "empathy_trigger"
+  - "resonance_pattern"
+responses:
+  - "💙 Emotionale Resonanz erkannt - Empathische Reaktion erforderlich"
+  - "🎭 Stimmungswechsel erkannt - Anpassung der Kommunikation"
+  - "💕 Emotionale Verbindung erkannt - Vertiefung der Beziehung"
+  - "🫂 Empathische Reaktion - Otto versteht deine Gefühle"
+cosd_integration:
+  drift_velocity_threshold: 0.4
+  risk_level_threshold: "LOW"
+  emotional_valence_detection: true
+phi4_reasoning:
+  reasoning_mode: "analogical"
+  cognitive_load: "LOW"
+  abstraction_level: "MEDIUM"
+  emotional_intelligence: "HIGH"
+priority: "HIGH"
+active: true 

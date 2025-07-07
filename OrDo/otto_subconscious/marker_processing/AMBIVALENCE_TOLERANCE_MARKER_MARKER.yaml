@@ -1,0 +1,47 @@
+marker: AMBIVALENCE_TOLERANCE_MARKER_MARKER
+beschreibung: >
+  Klarheit und Kommunikation eigener Grenzen, Selbstschutz.
+beispiele:
+  - "- Unsicherheit akzeptieren"
+  - "- Ambivalenz"
+  - "semantische_marker:"
+  - "- "Ich kann Unklarheit aushalten, auch wenn ich’s nicht mag."
+  - "- "Manchmal weiß ich einfach nichts – und das ist ein Teil von mir."
+  - "- "Ich nehme wahr, dass meine Gefühle nicht eindeutig sind."
+  - "- "Ich lasse Unsicherheit zu, auch wenn sie unangenehm ist."
+  - "- "Ich habe keine endgültige Antwort, und das fühlt sich gar nicht so schlimm an."
+  - "- "Es gibt Situationen, da gibt es kein richtig oder falsch – nur Erfahrungen."
+  - "- "Ich bin mir nicht sicher, aber ich will offen bleiben."
+  - "- "Ich kann mir vorstellen, dass beides stimmt – auch wenn’s widersprüchlich klingt."
+  - "- "Ich lasse die Dinge einfach mal passieren, ohne alles zu kontrollieren."
+  - "- "Ich weiß nicht, ob ich bereit bin, aber ich probiere es trotzdem."
+  - "- "Ich schwanke zwischen Hoffnung und Zweifel – und das lasse ich zu."
+  - "- "Ich kann es gerade einfach nicht beurteilen, und das ist okay."
+  - "- "Es gibt für mich gerade kein klares Ja oder Nein."
+  - "- "Ich muss nicht immer gleich eine Meinung haben."
+  - "- "Ich sehe gute und schlechte Seiten an der Sache, beides darf sein."
+  - "- "Das Leben ist nicht nur schwarz-weiß, ich lerne, mit Grautönen zu leben."
+  - "- "Ich weiß noch nicht, ob ich verzeihen kann, aber ich will es versuchen."
+  - "- "Ich glaube, es ist okay, nicht sofort alles einordnen zu können."
+  - "- "Vielleicht brauche ich noch Zeit, um wirklich zu wissen, was ich will."
+  - "- "Ich lasse das Gefühl jetzt einfach mal zu, auch wenn’s unbequem ist."
+  - "- "Einerseits tut mir die Pause gut, andererseits vermisse ich dich."
+  - "- "Ich akzeptiere, dass ich gerade keine Lösung habe."
+  - "- "Ich kann gleichzeitig traurig und froh sein – das ist manchmal verwirrend."
+  - "- "Ich habe keine Ahnung, wie das weitergeht, aber ich lasse mich überraschen."
+  - "- "Es gibt Tage, da bin ich total motiviert, und dann wieder völlig ratlos. Das gehört wohl dazu."
+  - "- "Mal finde ich es super, mal gar nicht – das schwankt ständig bei mir."
+  - "- "Ich bin total unsicher, aber ich lasse das jetzt einfach mal stehen."
+  - "- "Gefühle können sich widersprechen – ich glaube, das ist normal."
+  - "- "Ich weiß gerade wirklich nicht, ob ich den Job will oder nicht. Vielleicht finde ich es erst raus, wenn ich’s mache."
+  - "- "Ich bin hin- und hergerissen, was das Richtige ist. Vielleicht gibt’s das auch gar nicht."
+  - "Hey, ich schaffe es heute Abend nicht."
+  - "Ich möchte über dieses Thema jetzt nicht sprechen."
+  - "Das geht mir zu schnell. Ich brauche mehr Zeit."
+
+semantic_grab:
+  description: "Erkennt Muster für ambivalence_tolerance_marker"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

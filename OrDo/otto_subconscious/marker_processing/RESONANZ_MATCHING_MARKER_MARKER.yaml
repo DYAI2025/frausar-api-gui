@@ -1,0 +1,66 @@
+marker: RESONANZ_MATCHING_MARKER_MARKER
+beschreibung: >
+  beschreibung: >
+    Erkennt eine auffallend hohe Übereinstimmung oder perfekte Resonanz zwischen 
+    den Äußerungen beider Gesprächspartner – insbesondere dann, wenn kein 
+    gemeinsamer Erfahrungshintergrund sichtbar wird. Typisch sind nahtlose 
+    Spiegelungen von Werten, Einstellungen, Sprachstil und Interessen, die 
+    statistisch unplausibel erscheinen. Dies ist ein Indikator für KI-gestützte 
+    Gesprächsoptimierung oder gezielte manipulative Strategie.
+beispiele:
+  - "- marker: RESONANZ_MATCHING_MARKER"
+  - "beschreibung: >"
+  - "Erkennt eine auffallend hohe Übereinstimmung oder perfekte Resonanz zwischen"
+  - "den Äußerungen beider Gesprächspartner – insbesondere dann, wenn kein"
+  - "gemeinsamer Erfahrungshintergrund sichtbar wird. Typisch sind nahtlose"
+  - "Spiegelungen von Werten, Einstellungen, Sprachstil und Interessen, die"
+  - "statistisch unplausibel erscheinen. Dies ist ein Indikator für KI-gestützte"
+  - "Gesprächsoptimierung oder gezielte manipulative Strategie."
+  - "beispiele:"
+  - "- "Das sehe ich ganz genauso, das ist auch mein Lebensmotto.""
+  - "- "Du sprichst mir aus der Seele, ich habe exakt das gleiche erlebt.""
+  - "- "Genau so denke ich auch – es ist, als würdest du meine Gedanken lesen.""
+  - "- "Wahnsinn, wir ticken ja wirklich identisch!""
+  - "- "Das ist verrückt – wir teilen genau die gleichen Werte.""
+  - "- "Es ist, als hätten wir uns schon ewig gekannt.""
+  - "- (Erkennt unnatürliche, perfekte Übereinstimmung ohne gemeinsame Basis)"
+  - "(A: "Ich träume von einem Leben in einem kleinen Holzhaus in Schweden.") B: "Das ist nicht zu fassen. Das ist exakt mein Lebensplan, Wort für Wort.""
+  - "(A: "Mein Lieblingsfilm ist 'Harold und Maude'. Den kennt kaum jemand.") B: "Stopp. Das ist auch mein absoluter Lieblingsfilm. Ich dachte, ich wäre der Einzige.""
+  - ""Du sprichst mir aus der Seele. Jede einzelne deiner Ansichten über Politik teile ich zu 100 %.""
+  - ""Unglaublich. Ich hatte genau die gleiche schwere Kindheit. Sogar die Details ähneln sich.""
+  - ""Es ist, als würdest du meine Gedanken lesen. Ich wollte gerade exakt dasselbe schreiben.""
+  - "(A: "Ich hasse unehrliche Menschen mehr als alles andere.") B: "Endlich jemand, der es versteht. Ehrlichkeit ist der einzige Wert, der für mich zählt.""
+  - ""Wir haben nicht nur den gleichen Musikgeschmack, sondern auch die gleiche seltene Blutgruppe? Das muss Schicksal sein.""
+  - ""Jeder Satz von dir ist wie ein Echo meiner eigenen Gedanken. Das ist fast schon unheimlich.""
+  - "(A: "Ich fühle mich oft von anderen missverstanden.") B: "Ich auch. Du bist der erste Mensch, der mich wirklich zu verstehen scheint.""
+  - ""Dass du auch ein Fan von obskurer isländischer Lyrik aus dem 19. Jahrhundert bist, kann kein Zufall sein.""
+  - ""Wir sind wie zwei Puzzleteile, die perfekt zusammenpassen.""
+  - ""Alles, was du als deine Schwächen bezeichnest, habe ich mir bei einem Partner immer gewünscht.""
+  - ""Deine Lebenseinstellung ist identisch mit meiner. Wir könnten Zwillinge sein.""
+  - "(A: "Ich spare für ein Sabbatical, um durch Südostasien zu reisen.") B: "Ich habe gerade gestern meinen Rucksack dafür bestellt. Das ist doch verrückt!""
+  - ""Du drückst genau das aus, was ich fühle, aber nie in Worte fassen konnte.""
+  - ""Jeder deiner Werte – Familie, Loyalität, Abenteuerlust – ist auch für mich das Wichtigste im Leben.""
+  - ""Es gibt keinen einzigen Punkt, in dem ich dir widersprechen könnte. Nicht einen.""
+  - "(A: "Ich liebe Sonntage, an denen es regnet und man nur liest.") B: "Das ist meine exakte Definition von einem perfekten Tag.""
+  - ""Die Art, wie du schreibst, die Worte, die du wählst... es ist, als würde ich mit mir selbst chatten.""
+  - ""Unsere Seelen müssen auf der gleichen Frequenz schwingen.""
+  - "(A: "Ich bin spirituell, aber nicht religiös.") B: "Genau das! Das ist die perfekte Beschreibung für meinen Glauben.""
+  - ""Ich wusste nicht, dass es jemanden gibt, der die Welt genauso sieht wie ich.""
+  - ""Unsere Verbindung fühlt sich so vertraut an, als würden wir ein Gespräch aus einem früheren Leben fortsetzen.""
+  - ""Dass wir beide Linkshänder sind und im selben Monat Geburtstag haben, ist nur ein weiterer Beweis.""
+  - ""Ich habe das Gefühl, ich brauche dir nichts zu erklären, weil du es sowieso schon weißt.""
+  - "(A: "Ich bin sehr loyal, aber auch sehr freiheitsliebend.") B: "Das beschreibt mich zu 100 %. Ein perfekter Widerspruch, den nur wir verstehen.""
+  - ""Jedes Buch, das du liebst, steht auch in meinem Regal.""
+  - ""Deine Beschreibung deines Traumpartners ist eine exakte Beschreibung von mir.""
+  - ""Ich habe noch nie jemanden getroffen, bei dem einfach alles so nahtlos passt.""
+  - ""Wir sind offensichtlich Seelenverwandte. Daran gibt es keinen Zweifel.""
+  - "kategorie: MANIPULATION"
+  - "tags: [resonanz, spiegelung, matching, synchronizität]"
+  - "risk_score: 4"
+
+semantic_grab:
+  description: "Erkennt Muster für resonanz_matching_marker"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

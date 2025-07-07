@@ -1,0 +1,76 @@
+id: AMBIVALENCE_KNOT
+name: Ambivalence Knot
+description: Stark schwankende, widersprüchliche Nähe- und Distanz-Botschaften, oft in kurzer Abfolge. Innere Zerrissenheit, ambivalentes Kommunikationsmuster.
+examples:
+  - "Ich will unbedingt, dass du heute Abend kommst. Aber erwarte bitte nicht, dass ich viel rede."
+  - "Ich erzähle dir das jetzt, aber versprich, dass du nicht sauer wirst... ach, vergiss es, ist besser, ich sage nichts."
+  - "Ich hasse es, allein zu sein, aber ich kann es kaum ertragen, wenn Leute um mich herum sind."
+  - "Ja, lass uns zusammenziehen! ... Obwohl, wenn ich drüber nachdenke, vielleicht sollten wir noch ein halbes Jahr warten?"
+  - "Bitte, bitte hilf mir, ich schaff das nicht! ... Nein, lass, ich muss da allein durch."
+  - "Ich liebe deine Nähe, aber manchmal muss ich einfach tagelang allein sein, um mich wieder zu spüren."
+  - "Melde dich unbedingt! ... Aber bitte nicht vor nächster Woche, ich brauche Zeit."
+  - "Ich will zu 100% ehrlich zu dir sein. Aber ich kann es einfach nicht."
+  - "Ich könnte mir eine Zukunft mit dir vorstellen. Aber gleichzeitig habe ich panische Angst davor."
+  - "Ich will, dass du für mich kämpfst. Aber bitte bedränge mich nicht."
+  - "Ich habe dir so viel zu sagen... aber irgendwie finde ich die Worte nicht."
+  - "Du bist der einzige Mensch, dem ich vertraue. Trotzdem habe ich ständig das Gefühl, dir misstrauen zu müssen."
+  - "Ich will diese Beziehung, aber nicht um den Preis meiner Freiheit."
+  - "Ich habe das Gefühl, ich ersticke... aber der Gedanke, dass du gehst, ist noch schlimmer."
+  - "Ich habe die Entscheidung getroffen, zu gehen. Aber ich kann die Tür nicht zumachen."
+  - "Ich möchte, dass du mich verstehst. Aber bitte frag nicht nach."
+  - "Bleib! ... Aber fass mich nicht an."
+  - "Ich will alles mit dir teilen... außer meine tiefsten Geheimnisse."
+  - "Ich bin so froh, dass du da bist. Aber ich glaube, es wäre besser, wenn du jetzt gehst."
+  - "Lass uns das durchstehen. Oder vielleicht sollten wir es einfach beenden."
+psychological_background:
+  - Innere Zerrissenheit und Konflikt
+  - Ambivalente Bindungsstile
+  - Angst vor Nähe und Verlust
+  - Emotionale Dysregulation
+  - Vermeidung von Klarheit und Entscheidungen
+tags: [ambivalence, emotional conflict, relationship dynamics, communication]
+dynamic_intent: >
+  Die Absicht ist, durch inkonsistente Signale und widersprüchliche Botschaften
+  emotionale Verwirrung und Unsicherheit zu erzeugen. Dies kann dazu dienen,
+  Kontrolle über den anderen zu behalten, ohne klare Entscheidungen treffen zu müssen.
+scenarios:
+  - Beziehungskonflikte
+  - Familiäre Spannungen
+  - Freundschaftsprobleme
+  - Arbeitsplatzdynamiken
+  - Soziale Missverständnisse
+marker: Ambivalence Knot
+alias:
+  - Emotional Ambivalence
+  - Mixed Signals
+  - Relationship Confusion
+example_count_wanted: 20
+examples:
+  - "Ich will, dass du mich anrufst, aber ich hasse es, wenn du mich anrufst."
+  - "Komm vorbei, aber bitte nicht zu früh, ich brauche Zeit für mich."
+  - "Ich liebe es, wenn du mir schreibst, aber manchmal fühle ich mich von deinen Nachrichten erdrückt."
+  - "Ich will, dass du mich verstehst, aber ich kann dir nicht sagen, was ich wirklich fühle."
+  - "Ich brauche deine Unterstützung, aber ich will nicht, dass du mich bemutterst."
+  - "Ich will, dass du für mich da bist, aber ich will auch meine Unabhängigkeit."
+  - "Ich will, dass du mich liebst, aber ich habe Angst vor deiner Liebe."
+  - "Ich will, dass du mich anziehend findest, aber ich fühle mich unattraktiv."
+  - "Ich will, dass du mich respektierst, aber ich kann nicht respektieren, was du tust."
+  - "Ich will, dass du mich hörst, aber ich will nicht, dass du meine Worte gegen mich verwendest."
+  - "Ich will, dass du mich umarmst, aber ich fühle mich unwohl in deiner Nähe."
+  - "Ich will, dass du mich anrufst, aber ich will nicht, dass du mich belästigst."
+  - "Ich will, dass du mir vertraust, aber ich habe kein Vertrauen in dich."
+  - "Ich will, dass du mich verteidigst, aber ich will nicht, dass du dich in meine Angelegenheiten einmischst."
+  - "Ich will, dass du mich überraschst, aber ich hasse Überraschungen."
+  - "Ich will, dass du mich anziehend findest, aber ich fühle mich unattraktiv."
+  - "Ich will, dass du mich verstehst, aber ich kann dir nicht sagen, was ich wirklich fühle."
+  - "Ich will, dass du mich anrufst, aber ich will nicht, dass du mich belästigst."
+  - "Ich will, dass du mich verteidigst, aber ich will nicht, dass du dich in meine Angelegenheiten einmischst."
+  - "Ich will, dass du mich überraschst, aber ich hasse Überraschungen."
+  - "Ich will, dass du mich anziehend findest, aber ich fühle mich unattraktiv."
+  - "Ich will, dass du mich verstehst, aber ich kann dir nicht sagen, was ich wirklich fühle."
+  - "Ich will, dass du mich anrufst, aber ich will nicht, dass du mich belästigst."
+  - "Ich will, dass du mich verteidigst, aber ich will nicht, dass du dich in meine Angelegenheiten einmischst."
+  - "Ich will, dass du mich überraschst, aber ich hasse Überraschungen."
+  - "Ich will, dass du mich anziehend findest, aber ich fühle mich unattraktiv."
+  - "Ich will, dass du mich verstehst, aber ich kann dir nicht sagen, was ich wirklich fühle."
+  - "Ich will, dass du mich anrufst, aber ich will nicht, dass du mich belästigst." 

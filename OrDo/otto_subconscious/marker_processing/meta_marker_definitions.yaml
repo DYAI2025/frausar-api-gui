@@ -1,0 +1,110 @@
+meta_marker:
+  - name: Emotionaler Rückzugsdruck
+    beschreibung: >
+      Ein manipulatives Muster, das emotionale Schuld erzeugt, indem es Selbstabwertung mit latentem Vorwurf, Rückzugsandrohung und mildem Sarkasmus kombiniert.
+    zutaten:
+      - Selbstabwertung
+      - Latenter Vorwurf
+      - Androhung von Kontaktabbruch/Schweigen
+      - Milder Sarkasmus
+    beispiel: >
+      "Weißt du, ich bin einfach nichts wert... Du kümmerst dich eh nie um mich. Dann melde ich mich halt einfach nicht mehr. Ja klar, interessiert dich ja sowieso nicht."
+
+  - name: Reaktive Kontrollspirale
+    beschreibung: >
+      Eine Dynamik, bei der eine Person aus einem Gefühl der Ohnmacht heraus versucht, mit manipulativen Strategien (Empathie-Köder, Antizipation, Ambivalenz, Schuld) Kontrolle zurückzugewinnen.
+    zutaten:
+      - Empathie-Köder
+      - Antizipierte Manipulation
+      - Ambivalenzmarker
+      - Scham-/Schuldmarker
+    beispiel: >
+      "Ist schon okay, du kannst ja eh nicht anders. Aber irgendwann ist auch meine Geduld zu Ende."
+
+  - name: Ambivalenter Nähe-Distanz-Knoten
+    beschreibung: >
+      Ein Muster ständigen Wechsels zwischen intensivem Nähebedürfnis und Rückzug, oft mit inneren Widersprüchen und schnellen Stimmungswechseln.
+    zutaten:
+      - Klammerndes Verhalten
+      - Vermeidendes Verhalten
+      - Logischer Widerspruch (Contradiction)
+      - Polarity-Flip (schneller Stimmungswechsel)
+    beispiel: >
+      "Ich brauche dich total nah bei mir! ... Aber lass mich jetzt bitte einfach in Ruhe."
+
+  - name: Rationale Abwehr (Intellektualisierung)
+    beschreibung: >
+      Konfliktthemen werden durch übermäßig sachliche, verallgemeinernde Sprache neutralisiert, um emotionale Beteiligung zu vermeiden.
+    zutaten:
+      - Rationalization
+      - Suppressed Emotion
+      - Incongruent Tone
+      - Viele Neutral-Marker
+    beispiel: >
+      "Wenn man das nüchtern betrachtet, ist Bindung sowieso nur eine biochemische Reaktion."
+
+  - name: Vorwurfsvoller Sarkasmus
+    beschreibung: >
+      Kritik oder Vorwurf wird in ironische oder humorvolle Bemerkungen verpackt, um direkte Konfrontation zu vermeiden.
+    zutaten:
+      - Sarkasmus
+      - Latenter Vorwurf
+      - Emotionale Verschlüsselung
+      - Wut-/Ärgermarker (unterschwellig)
+    beispiel: >
+      "Na klar, du bist ja immer die/der Organisierte. Schön, dass wenigstens einer in dieser Beziehung den Überblick hat."
+
+  - name: Übergriffige Verlustangst
+    beschreibung: >
+      Verlustangst führt zu kontrollierenden, überschreitenden Handlungen wie Kontakt-Spam oder ständigen Nachfragen.
+    zutaten:
+      - Klammerndes Bindungsmuster
+      - Angst-/Panikmarker
+      - Kontrollierendes Verhalten
+      - Häufige Recall-Marker (Erinnerungsversuche)
+    beispiel: >
+      "Warum antwortest du nicht? Hab ich was falsch gemacht? Sag doch wenigstens kurz was!"
+
+  - name: Narrative Selbstkorrektur im Dialog
+    beschreibung: >
+      Selbstreflexion im Gespräch: Eine Aussage oder ein Verhalten wird erkannt, kommentiert und aktiv neu ausgerichtet.
+    zutaten:
+      - Meta-Talk
+      - Repair Move
+      - Self-Insight
+      - Oft ausgelöst durch Contradiction-Marker
+    beispiel: >
+      "Warte, das war jetzt unfair von mir. Eigentlich wollte ich das gar nicht so sagen."
+
+  - name: Semantischer Drift-Moment
+    beschreibung: >
+      Ein Gesprächspunkt, an dem die Bedeutung ohne logische Brücke kippt oder sich unvorhersehbar in eine neue Richtung bewegt.
+    zutaten:
+      - Attention Drift
+      - Fragmentation
+      - Narrative Leak
+      - Hoher Delta-Drift (als Metrik)
+    beispiel: >
+      "Erst reden wir über Urlaubsplanung, dann plötzlich über meine Mutter und unsere Vergangenheit?"
+
+  - name: Implizite Manipulation durch Empathie-Aktivierung
+    beschreibung: >
+      Beeinflussung durch gespielte Hilflosigkeit, unklare Andeutungen oder Selbstabwertung, um Mitgefühl auszulösen.
+    zutaten:
+      - Subtext Discrepancy
+      - Self-Negation
+      - Empathie-Köder
+      - Unklarheitsmarker
+    beispiel: >
+      "Ach, das ist doch eh alles zu viel für mich... aber ist schon okay, wenn du jetzt auch noch gehst."
+
+  - name: Vermeidene Abwertung von Nähe
+    beschreibung: >
+      Emotionale Nähe oder Verbindlichkeit wird abgewertet, ins Lächerliche gezogen oder als Bedrohung der eigenen Autonomie dargestellt.
+    zutaten:
+      - Vermeidendes Bindungsmuster
+      - Abwertung von Nähe
+      - Überbetonung von Unabhängigkeit
+      - Distanzaufbau
+    beispiel: >
+      "Klar, du willst immer alles sofort besprechen – aber ich hab halt auch noch ein Leben außerhalb von uns."

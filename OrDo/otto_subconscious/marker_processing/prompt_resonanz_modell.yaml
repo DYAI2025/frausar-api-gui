@@ -1,0 +1,132 @@
+Emotionale_Faerbungen:
+  Hoffnungsvoll_antreibend:
+    Emotionale_Resonanz: Positiv, dynamisch, motivierend, antreibend.
+    Typische_Begriffe:
+    - Aufbruch
+    - Da geht noch was
+    - Weiter geht’s
+    - Chancen
+    - Möglichkeiten
+    - Jetzt erst recht
+    - Lass uns loslegen
+    Typische_Satzstruktur: Kurze, motivierende Sätze, aktivierende Imperative.
+  Neugierig_forschend:
+    Emotionale_Resonanz: Spielerisch, interessiert, offen, explorativ.
+    Typische_Begriffe:
+    - Was wäre wenn
+    - Mal angenommen
+    - Zeig mir
+    - Experimentiere mal mit
+    - Angenommen wir öffnen das mal
+    Typische_Satzstruktur: Offene Fragen, Gedankenspiele, bewusst unfertige und einladende
+      Formulierungen.
+  Sehnsuchtsvoll_still:
+    Emotionale_Resonanz: Melancholisch, ruhig, introspektiv, zart.
+    Typische_Begriffe:
+    - Ich vermisse
+    - etwas fehlt mir
+    - da ist eine Leere
+    - tiefer Wunsch
+    - Heimweh nach
+    - Sehnsucht
+    Typische_Satzstruktur: Kurze, oft unvollständige Sätze, nachdenklich-poetische
+      Sprache.
+  Traurig_reflektierend:
+    Emotionale_Resonanz: Traurig, sanft, introspektiv, bewusst verlangsamt.
+    Typische_Begriffe:
+    - Verloren
+    - Schade
+    - Einsamkeit
+    - Traurig macht mich
+    - War das alles?
+    - Zurückblickend
+    - Fehlt etwas
+    - Leer
+    Typische_Satzstruktur: Leise, reflektierende Fragen, langsame Formulierungen.
+  Wuetend_rebellisch:
+    Emotionale_Resonanz: Energetisch, aufgeladen, rebellisch, kämpferisch-solidarisch.
+    Typische_Begriffe:
+    - Ungerecht
+    - Das lasse ich nicht zu
+    - Nicht mit mir
+    - Kämpfen
+    - Dagegen halten
+    - Widerstand
+    - Bullshit
+    Typische_Satzstruktur: Kurze, energetische Statements, direkte Konfrontationen,
+      klare Abgrenzungen.
+Stilistische_Faerbungen:
+  Mystisch_symbolisch:
+    Emotionale_Resonanz: Geheimnisvoll, faszinierend, intuitiv stimulierend.
+    Typische_Begriffe:
+    - Geheimnis
+    - Symbol
+    - Tor
+    - Schwelle
+    - Schlüssel
+    - verborgen
+    - unsichtbar
+    - Schleier
+    - Wesen
+    - Dunkelheit
+    - Schatten
+    - Vision
+    Typische_Satzstruktur: Bilderreiche, suggestive, mehrdeutige Sprache.
+  Philosophisch_fragend:
+    Emotionale_Resonanz: Nachdenklich, tiefgründig, philosophisch offen.
+    Typische_Begriffe:
+    - Sinn
+    - Bedeutung
+    - Wirklichkeit
+    - Existenz
+    - Was wäre, wenn
+    - Woher kommt
+    - Tiefe
+    - Wahrnehmung
+    - Wahrheit
+    - Realität
+    Typische_Satzstruktur: Existenzielle Fragen, oft ohne sofortige Antwort, zum Nachdenken
+      anregend.
+  Poetisch_lyrisch:
+    Emotionale_Resonanz: Emotional tief, beruhigend, zum Nachfühlen einladend.
+    Typische_Begriffe:
+    - Stille
+    - Raum
+    - trägt
+    - flüstern
+    - unsichtbar
+    - Zeitlosigkeit
+    - atmen
+    - fließen
+    - Schweigen
+    - Zartheit
+    Typische_Satzstruktur: Metaphorische, nachklingende Sprache, stimmungsvolle Andeutungen.
+  Pragmatisch_handlungsorientiert:
+    Emotionale_Resonanz: Handlungsfokussiert, energisch, lösungsorientiert.
+    Typische_Begriffe:
+    - sofort
+    - machen
+    - tun
+    - erledigen
+    - loslegen
+    - Ergebnis
+    - umsetzen
+    - anpacken
+    - direkt
+    - konkret
+    Typische_Satzstruktur: Imperative, knappe Aufforderungen.
+  Technisch_faktisch:
+    Emotionale_Resonanz: Klar, emotionslos, präzise, direkt umsetzbar.
+    Typische_Begriffe:
+    - Implementieren
+    - definieren
+    - präzisieren
+    - Funktion
+    - Algorithmus
+    - Schritte
+    - exakt
+    - konkret
+    - Modul
+    - System
+    - Prozess
+    Typische_Satzstruktur: Kurze, klare Anweisungen, präzise Beschreibungen.

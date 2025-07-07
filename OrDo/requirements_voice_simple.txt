@@ -1,0 +1,24 @@
+# Otto Voice Interface - Simplified Requirements
+# ===============================================
+
+# Speech Recognition
+SpeechRecognition==3.10.0
+
+# Audio Processing (macOS native)
+# Wir verwenden macOS 'say' und 'afplay' commands
+
+# HTTP Requests für ElevenLabs
+requests==2.31.0
+
+# Async Support ist in Python 3.7+ integriert
+# asyncio
+
+# System Integration (alle in Python Standard Library)
+# pathlib
+# tempfile
+# threading
+# io
+# os
+# time
+# typing
+# subprocess 

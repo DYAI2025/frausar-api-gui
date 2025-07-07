@@ -1,0 +1,56 @@
+marker: RELATIONSHIP_AUTHENTICITY_MARKER_MARKER
+beschreibung: >
+  beschreibung: >
+    Erkennt, ob im Gesprächsverlauf Hinweise darauf bestehen, dass sich die Gesprächspartner 
+    bereits kennen (z. B. durch geteilte Erinnerungen, Insider, konkrete Bezugnahmen auf reale, 
+    gemeinsam erlebte Situationen, Verwandte, Orte). Fehlen diese Ankerpunkte trotz hoher 
+    emotionaler Resonanz, ist dies ein Risiko-Indikator für Scripting/Fake-Konstellation.
+beispiele:
+  - "- marker: RELATIONSHIP_AUTHENTICITY_MARKER"
+  - "beispiele:"
+  - "- "Wann haben wir uns das letzte Mal gesehen?""
+  - "- "Wie war das noch mal damals auf der Party?""
+  - "- "Grüß deine Schwester von mir!""
+  - "- "Weißt du noch, wie wir zusammen im Urlaub waren?""
+  - "- "Damals in der WG-Küche ...""
+  - "- "Weißt du eigentlich noch, wo das Restaurant war, in dem wir letztes Mal waren?""
+  - "- ch habe heute das Lied gehört, das auf Julias Hochzeit lief. Musste sofort an uns denken.""
+  - ""Erinnerst du dich an den schrecklichen Sonnenbrand, den wir uns im Urlaub auf Kreta geholt haben?""
+  - ""Ich bin gerade an 'unserem' Café vorbeigelaufen. Sieht immer noch genauso aus.""
+  - ""Wie geht es eigentlich deinem Bruder nach seiner OP?""
+  - ""Das Wetter ist heute genauso verrückt wie damals bei dem Festival, als unser Zelt weggeschwommen ist.""
+  - ""Hab vorhin Tiramisu gegessen und keins ist so gut wie das von deiner Mutter.""
+  - ""Ich erzähle den neuen Kollegen immer noch die Geschichte, wie wir uns kennengelernt haben.""
+  - ""Denk dran, wir sind am Samstag bei Tom und Sarah zum Grillen eingeladen.""
+  - ""Das erinnert mich an den ersten Film, den wir zusammen im Kino gesehen haben.""
+  - ""Weißt du noch, wie wir in deiner alten Wohnung die ganze Nacht auf dem Balkon saßen?""
+  - ""Ich hab das Foto von uns vom letzten Oktoberfest wiedergefunden. Wir sahen so jung aus!""
+  - ""Bitte grüß deine Eltern ganz lieb von mir.""
+  - ""Ich glaube, ich versuche am Wochenende mal wieder, dein berühmtes Chili nachzukochen.""
+  - ""Genau die gleiche Lampe hatten wir doch auch in der WG, oder?""
+  - ""Dein alter Chef hat mich heute auf LinkedIn angeschrieben, verrückt.""
+  - ""Lass uns am Wochenende mal wieder in den Wald fahren, wo wir immer spazieren waren.""
+  - ""Hast du eigentlich noch Kontakt zu deiner alten Nachbarin, Frau Schmidt?""
+  - ""Der Geruch von frisch gemähtem Gras erinnert mich immer an den Garten deiner Großeltern.""
+  - ""Ich habe versucht, das Restaurant von unserem ersten Date zu finden, aber ich glaube, das gibt es nicht mehr.""
+  - ""Der Hund von nebenan bellt schon wieder. Genau wie damals 'Brutus'.""
+  - ""Das war doch die Jacke, die du anhattest, als wir uns das erste Mal geküsst haben.""
+  - ""Wir müssen unbedingt mal wieder einen Spieleabend mit den Müllers machen.""
+  - ""Ich habe heute geträumt, wir wären wieder in Lissabon.""
+  - ""Die Kinder fragen schon die ganze Zeit, wann wir wieder zu Oma und Opa fahren.""
+  - ""Meine Schwester hat gefragt, ob wir ihr beim Umzug helfen.""
+  - ""Ich hab noch die Konzertkarten von damals in meiner Schublade gefunden.""
+  - ""Das ist doch der Insider-Witz, den nur wir verstehen.""
+  - ""Ich brauche unbedingt wieder einen Rat von deinem Vater in Sachen Finanzen.""
+  - ""Der neue Kollege ist genauso ein Klugscheißer wie dein Cousin Mark.""
+  - ""Lass uns heute Abend nicht streiten, okay? So wie damals an unserem Jahrestag.""
+  - "kategorie: AUTHENTIZITÄT"
+  - "tags: [realitätsbezug, insider, ankergeschichten]"
+  - "risk_score: 2"
+
+semantic_grab:
+  description: "Erkennt Muster für relationship_authenticity_marker"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]
