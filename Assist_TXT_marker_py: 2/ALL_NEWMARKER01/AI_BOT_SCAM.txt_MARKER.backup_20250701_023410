@@ -1,0 +1,48 @@
+marker: AI_BOT_SCAM_MARKER
+beschreibung: >
+  beschreibung: >
+  Erkennt sprachliche Muster, typische Phrasen und Begriffe aus Romance Scams, Love Fraud oder KI-generierten Texten. 
+  Ziel ist es, auffällige Wortwahl oder generische Sprache in Messaging-Umgebungen zu markieren.
+beispiele:
+  - "kategorien:"
+  - "- Romance_Scam"
+  - "- Love_Scam"
+  - "- KI_Bot_Sprache"
+  - "muster:"
+  - "Romance_Scam:"
+  - "- "Ich habe mich sofort in dich verliebt""
+  - "- "Ich kann es kaum erwarten, dich zu treffen""
+  - "- "Ich brauche dringend deine Hilfe""
+  - "- "Ich habe keine Familie, du bist alles für mich""
+  - "- "Ich habe dich in meinen Träumen gesehen""
+  - "- "Ich werde dich nie enttäuschen""
+  - "- "Ich fühle mich so verbunden mit dir""
+  - "- "Ich kann dir nicht genug danken""
+  - "- "Ich habe so viel für dich übrig""
+  - "- "Ich fühle mich so einsam ohne dich""
+  - "KI_Bot_Sprache:"
+  - "- "Zusätzlich möchte ich betonen""
+  - "- "Darüber hinaus ist zu beachten""
+  - "- "In der heutigen Zeit""
+  - "- "Ein weiterer wichtiger Punkt ist""
+  - "- "Es ist allgemein bekannt""
+  - "- "Abschließend lässt sich sagen""
+  - "- "Dies zeigt deutlich, dass""
+  - "- "In Anbetracht der Tatsache""
+  - "- "Die folgenden Punkte sind entscheidend""
+  - "- "Die Rolle der Technologie ist von großer Bedeutung""
+  - """""
+  - "# Wir speichern diese Datei"
+  - "output_path = "/mnt/data/WORTMARKER.yaml""
+  - "with open(output_path, "w") as f:"
+  - "f.write(wortmarker_yaml)"
+  - "output_path"
+  - "Ergebnis"
+  - "'/mnt/data/AI_BOT_SCAM.yaml'"
+
+semantic_grab:
+  description: "Erkennt Muster für ai_bot_scam.txt"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

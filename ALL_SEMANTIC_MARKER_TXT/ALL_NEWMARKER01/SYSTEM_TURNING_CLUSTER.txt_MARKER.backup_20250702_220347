@@ -1,0 +1,41 @@
+marker: SYSTEM_TURNING_CLUSTER_MARKER
+beschreibung: >
+  Beschreibt die Marker, die zusammen einen Systenkipppunkt sichtbarmachen.
+beispiele:
+  - "MICRO_CARE_MARKER:"
+  - "beschreibung: >"
+  - "Regelmäßige, kleine Akte der Fürsorge, Aufmerksamkeit und Unterstützung im Alltag."
+  - "Indikator für Beziehungsrobustheit und Bindungsqualität."
+  - "beispiele: []"
+  - "ESCALATION_TENSION_MARKER:"
+  - "beschreibung: >"
+  - "Zunehmende emotionale Spannung, wiederkehrende, schwelende oder sich zuspitzende"
+  - "Konflikte; Vorbote oder Vorstufe offener Eskalation."
+  - "beispiele: []"
+  - "LATENT_INSTABILITY_MARKER:"
+  - "beschreibung: >"
+  - "Subtile, oft unausgesprochene Anzeichen für Unsicherheit, Bindungs- oder"
+  - "Systeminstabilität. Kein akuter Bruch, aber spürbare Drift oder Distanz."
+  - "beispiele: []"
+  - "SYSTEM_RESILIENCE_MARKER:"
+  - "beschreibung: >"
+  - "Zeichen gemeinsamer Widerstandskraft und Flexibilität: Konstruktives Überstehen"
+  - "von Schwierigkeiten, flexible Anpassung und positives Coping als Paar/System."
+  - "beispiele: []"
+  - "INTEGRATION_PROGRESSION_MARKER:"
+  - "beschreibung: >"
+  - "Indikator für Integration neuer Muster, wachsende Reife, Stärkung des Wir-Gefühls"
+  - "und Entwicklung hin zu mehr Teamgeist und Zugehörigkeit."
+  - "beispiele: []"
+  - "SYSTEM_KIPPPUNKT:"
+  - "beschreibung: >"
+  - "Marker für den Übergang („Tipping Point“) zu einer neuen Systemqualität – etwa"
+  - "durch Häufung kritischer Marker, plötzliche Eskalation oder Abbruch von Routinen."
+  - "beispiele: []"
+
+semantic_grab:
+  description: "Erkennt Muster für system_turning_cluster.txt"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

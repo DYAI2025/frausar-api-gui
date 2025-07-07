@@ -25,7 +25,7 @@ Der Super Semantic Processor ist ein revolutionäres Tool, das deine WhatsApp-Ch
 ### Option 1: Einfacher Start (Empfohlen)
 ```bash
 cd whisper_speaker_matcher
-python3 start_super_semantic.py
+C
 ```
 
 Wähle dann:

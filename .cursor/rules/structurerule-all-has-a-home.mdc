@@ -1,0 +1,5 @@
+---
+description: Jedes Projekt bekommt seinen eigenen Ordner auf der obersten Ebene - Keine verschachtelten Repositories (.git Ordner nur im Hauptordner) - Zentrale Ressourcen in shared/ Ordner (.env.shared, scripts/, configs/) - Alle Python-Skripte gehören in ihre jeweiligen Projekt-Ordner - Keine losen Dateien im Hauptordner - Jedes Projekt ist ein eigenes Git-Repository - Vor jedem neuen Projekt: Prüfen ob es in shared/ oder in eigenem Projekt-Ordner gehört
+alwaysApply:true
+---
+

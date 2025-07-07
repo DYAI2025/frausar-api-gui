@@ -1,0 +1,14 @@
+markers:
+  manipulation:
+    keywords:
+      - "schuld"
+      - "nie du"
+      - "immer du"
+    score: -2
+  ressource:
+    keywords:
+      - "danke"
+      - "verstehe"
+      - "gut gemacht"
+      - "lösen"
+    score: 1 

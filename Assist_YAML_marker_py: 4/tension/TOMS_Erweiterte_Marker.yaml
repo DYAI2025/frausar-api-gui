@@ -1,0 +1,40 @@
+ID_FRAGMENT:
+  label: Identitätsfragmentierung
+  description: Unsicherheit über das eigene Selbst oder innere Aufspaltung
+  sample_patterns:
+  - ich weiß nicht wer ich bin
+  - ein teil von mir denkt
+  - ich fühle mich zerrissen
+  weight: 0.8
+EM_OVERFLOW:
+  label: Emotionale Überforderung
+  description: Emotionale Zustände, die nicht mehr reguliert werden können
+  sample_patterns:
+  - es wird mir zu viel
+  - ich verliere den überblick
+  - ich halte das nicht aus
+  weight: 0.75
+SC_ESCAPE:
+  label: Fluchtbewegung
+  description: Vermeidung, Rückzug oder Dissoziation
+  sample_patterns:
+  - ich gehe einfach weg
+  - ich will nichts mehr fühlen
+  - es ist mir egal
+  weight: 0.6
+ME_REPAIR:
+  label: Selbstregulation
+  description: Versuch, das emotionale Gleichgewicht wiederherzustellen
+  sample_patterns:
+  - ich atme durch
+  - ich sortiere mich
+  - ich versuche es zu halten
+  weight: 0.7
+EX_NONEXIST:
+  label: Existentielle Auslöschung
+  description: Gedanken zu Tod, Nichtexistenz, Bedeutungsverlust
+  sample_patterns:
+  - ich existiere nicht
+  - wenn ich tot bin
+  - wenn ich nicht mehr da bin
+  weight: 0.9

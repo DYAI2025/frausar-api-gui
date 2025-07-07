@@ -1,0 +1,60 @@
+marker_scripts/
+├── README.md
+├── .gitignore
+├── requirements.txt
+├── pyproject.toml
+├── setup.py
+├── src/
+│   ├── __init__.py
+│   ├── chunker/
+│   │   ├── __init__.py
+│   │   ├── text_chunker.py
+│   │   └── chunk_models.py
+│   ├── matcher/
+│   │   ├── __init__.py
+│   │   ├── marker_matcher.py
+│   │   ├── fuzzy_engine.py
+│   │   └── marker_models.py
+│   ├── scoring/
+│   │   ├── __init__.py
+│   │   ├── scoring_engine.py
+│   │   └── score_models.py
+│   ├── aggregator/
+│   │   ├── __init__.py
+│   │   ├── time_series_aggregator.py
+│   │   └── aggregation_models.py
+│   ├── tracker/
+│   │   ├── __init__.py
+│   │   ├── attribute_tracker.py
+│   │   └── role_models.py
+│   ├── config/
+│   │   ├── __init__.py
+│   │   ├── config_loader.py
+│   │   └── logging_config.py
+│   └── utils/
+│       ├── __init__.py
+│       ├── text_utils.py
+│       └── validation.py
+├── tests/
+│   ├── __init__.py
+│   ├── conftest.py
+│   ├── test_chunker/
+│   ├── test_matcher/
+│   ├── test_scoring/
+│   ├── test_aggregator/
+│   └── test_tracker/
+├── examples/
+│   ├── __init__.py
+│   ├── basic_analysis.py
+│   ├── romance_scam_detection.py
+│   └── sample_data/
+│       ├── sample_chat.txt
+│       └── sample_markers.yaml
+├── markers/
+│   ├── romance_scam_markers.yaml
+│   ├── manipulation_markers.yaml
+│   └── relationship_health_markers.yaml
+└── docs/
+    ├── API.md
+    ├── MARKERS_GUIDE.md
+    └── USAGE.md

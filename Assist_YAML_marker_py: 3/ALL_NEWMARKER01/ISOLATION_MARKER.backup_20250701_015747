@@ -1,0 +1,17 @@
+# 10. ISOLATION_MARKER.yaml
+marker: ISOLATION_MARKER
+beschreibung: >
+  Kommunikation, die aktiv oder subtil soziale Kontakte, Familie oder Freunde des Gegenübers abwertet, beschränkt oder ausschließt.
+beispiele:
+  - "Deine Familie war von Anfang an gegen mich. Sie gönnen uns unser Glück nicht."
+  - "Jedes Mal, wenn du mit dieser Freundin unterwegs warst, bist du danach schlecht gelaunt. Sie tut dir nicht gut."
+  - "Wir brauchen niemanden außer uns. Unsere Liebe ist stark genug."
+  - "Lass uns heute Abend zu Hause bleiben. Es ist doch viel schöner, wenn wir nur zu zweit sind."
+  - "Ich mag es nicht, wenn du ohne mich ausgehst. Ich mache mir nur Sorgen."
+  - "Deine Freunde sind so oberflächlich. Sie verstehen unsere tiefe Verbindung einfach nicht."
+  - "Hör auf, deiner Mutter alles zu erzählen. Das sind unsere privaten Angelegenheiten."
+  - "Seit du diesen neuen Job hast, entfernst du dich von mir. Vielleicht solltest du ihn kündigen."
+  - "Ich habe dein Handy geprüft und gesehen, was deine Schwester über mich schreibt. Du solltest den Kontakt abbrechen."
+  - "Lass uns an einen Ort ziehen, wo uns niemand kennt. Nur du und ich."
+semantic_grab:
+  description: "Erkennt Muster, die darauf abzielen, soziale Isolation zu fördern oder zu

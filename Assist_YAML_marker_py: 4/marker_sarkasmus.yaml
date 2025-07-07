@@ -1,0 +1,32 @@
+marker:
+  alias:
+  - ironische Selbstabwertung
+  - emotionaler Zynismus
+  - defensiver Sarkasmus
+  beispielanzahl_gewünscht: 15
+  bewertung:
+    Verletzungspotenzial: 0.8
+    emotionale Verschlüsselung: 0.9
+    soziale Sprengkraft: 0.85
+  definition: Ein kommunikativer Stil, bei dem Aussagen ironisch oder übertrieben
+    formuliert sind, um Kritik, Verletzung oder emotionale Distanz indirekt auszudrücken.
+    Häufig genutzt als Abwehr- oder Manipulationsstrategie.
+  indikatoren:
+  - übertriebene Ironie oder Gegenteil dessen, was gemeint ist
+  - Verletzung oder Abwertung durch humoristische Verpackung
+  - Distanzaufbau oder Testreaktionen
+  kontext: Paarbeziehungen, toxische Kommunikation, Online-Chats
+  name: Sarkasmus
+  subtypen:
+  - beispiel:
+    - Sorry, dass ich überhaupt existiere.
+    - Na klar, ich bin ja auch nur der Pausenclown hier.
+    name: Selbstabwertender Sarkasmus
+  - beispiel:
+    - Ach, jetzt passt’s dir wieder nicht – wie überraschend.
+    - Wow, du erinnerst dich an meinen Geburtstag – was für ein Wunder.
+    name: Vorwurfs-Sarkasmus
+  - beispiel:
+    - Kein Problem, red du ruhig weiter mit dir selbst – ich bin eh nur Deko.
+    - Toll, ich liebe es, ignoriert zu werden – macht richtig warm ums Herz.
+    name: Zynischer Rückzug

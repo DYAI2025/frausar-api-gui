@@ -1,0 +1,46 @@
+marker: DEVELOPMENT_META_COMMUNICATION_MARKER_MARKER
+beschreibung: >
+  beispiele:
+    - "Mir fällt auf, dass wir immer streiten, wenn wir müde sind. Vielleicht sollten wir wichtige Themen verschieben, wenn wir erschöpft sind?"
+beispiele:
+  - "cat > DEVELOPMENT_META_COMMUNICATION_MARKER.yaml << EOF"
+  - "DEVELOPMENT_META_COMMUNICATION_MARKER:"
+  - "beschreibung: >"
+  - "Kommunikation über Muster, Prozesse und das Miteinander, Reflexion auf der Beziehungsebene."
+  - "- "Wie geht es dir eigentlich damit, wie wir miteinander kommunizieren?""
+  - "- "Ich habe das Gefühl, wir reden aneinander vorbei. Verstehst du, was ich meine?""
+  - "- "Ich glaube, wir sind wieder in unserem alten Muster gefangen: Ich ziehe mich zurück, du wirst lauter.""
+  - "- "Können wir mal kurz darüber reden, NICHT was passiert ist, sondern WIE es passiert ist?""
+  - "- "Ich finde es toll, dass wir mittlerweile über unsere Streitmuster lachen können.""
+  - "- "Hast du das Gefühl, wir sind auf einem guten Weg, was unsere Kommunikation angeht?""
+  - "- "Ich glaube, es würde uns helfen, wenn wir uns gegenseitig mehr Feedback geben, wie unsere Worte ankommen.""
+  - "- "Wir drehen uns im Kreis. Was brauchen wir, um aus dieser Schleife auszubrechen?""
+  - "- "Ich merke, dass es uns guttut, wenn wir bewusst ‚Ich-Botschaften‘ verwenden. Lass uns das beibehalten.""
+  - "- "Warum eskaliert es bei uns immer beim Thema Geld? Was steckt da eigentlich dahinter?""
+  - "- "Ich möchte, dass wir einen Weg finden, um respektvoll uneinig zu sein.""
+  - "- "Fühlst du dich von mir verstanden, wenn wir reden?""
+  - "- "Ich hab das Gefühl, einer von uns ist immer der ‚Vernünftige‘ und der andere der ‚Emotionale‘. Wollen wir diese Rollen mal tauschen?""
+  - "- "Lass uns mal Spielregeln für unsere Diskussionen aufstellen.""
+  - "- "Ich merke, dass wir viel besser klarkommen, seit wir einmal pro Woche bewusst Zeit zum Reden einplanen.""
+  - "- "Ich fand es super, wie wir das Gespräch gestern gelöst haben. Das war ein echter Fortschritt für uns.""
+  - "- "Manchmal glaube ich, wir hören uns nicht wirklich zu, sondern warten nur darauf, selbst zu antworten.""
+  - "- "Was ist dein Anteil an diesem Konflikt und was ist meiner? Lass uns das mal ehrlich anschauen.""
+  - "- "Unsere Beziehung fühlt sich gerade an wie ein Team im Aufbau. Wir lernen noch, wie wir am besten zusammenspielen.""
+  - "semantische_marker:"
+  - "- Beziehungsmuster ansprechen"
+  - "- Kommunikation reflektieren"
+  - "- Prozessanalyse"
+  - "- Meta-Ebene"
+  - "- Muster benennen"
+  - "- Feedback einholen"
+  - "- Dynamik besprechen"
+  - "- Metakommunikation"
+  - "- Gespräch über Gespräch"
+  - "EOF"
+
+semantic_grab:
+  description: "Erkennt Muster für development_meta_communication_marker"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

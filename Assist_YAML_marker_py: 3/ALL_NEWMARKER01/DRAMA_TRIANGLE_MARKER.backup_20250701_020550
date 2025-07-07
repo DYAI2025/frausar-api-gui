@@ -1,0 +1,66 @@
+# 1. DRAMA_TRIANGLE_MARKER.yaml
+marker: DRAMA_TRIANGLE_MARKER
+beschreibung: >
+  Typische Rollenrotationen nach dem Dramadreieck: Verfolger, Opfer, Retter – oft im schnellen Wechsel, meist in Konflikten oder dysfunktionalen Beziehungen.
+beispiele:
+  - "Das kann doch nicht wahr sein, Frank! Wegen dir haben wir den Pitch verloren!" # Verfolger
+  - "Ich weiß, ich bin im Moment total überfordert…" # Opfer
+  - "Keine Sorge, Frank, ich bügle das wieder aus. Ich rede mit dem Kunden." # Retter
+  - "Ich schaffe das alles nicht mehr, mein Leben ist ein einziges Chaos." # Opfer
+  - "Hör auf zu jammern. Reiß dich zusammen und mach einfach!" # Verfolger
+  - "Typisch! Anstatt mich zu unterstützen, hackst du nur auf mir rum!" # Opfer → Verfolger
+  - "Schau nicht so traurig, mein Schatz. Komm her, ich nehme dir das alles ab." # Retter
+  - "Ich brauche dein Mitleid nicht. Behandle mich nicht wie ein Kind!" # Verfolger
+  - "Ich wollte doch nur nett sein… offenbar ist alles, was ich tue, falsch." # Opfer
+  - "Warum immer ich? ... Aber gut, jemand muss es ja richten. ... Wenn die anderen nur nicht so unfähig wären!"
+  - "Mama, ich hab dir doch gesagt, du sollst da nicht anrufen!"
+  - "Ich sorge mich doch nur um dich, mein Kind."
+  - "Ich opfere mich auf und bekomme nur Undankbarkeit."
+  - "Ist schon okay, geh ruhig ohne mich. Ich bin ja eh nur noch eine Last für dich."
+  - "Ich muss das wohl wieder alleine machen, auf euch ist ja kein Verlass."
+  - "Ihr lautes Trampeln macht mich wahnsinnig!"
+  - "Entschuldigung, die Kinder sind krank, wir sind am Ende unserer Kräfte."
+  - "Wie kann man nur so einen Unsinn posten?"
+  - "Sorry, bin neu hier…"
+  - "Hey, lass ihn in Ruhe!"
+  - "Ich muss mich immer um alles kümmern, während du dein Leben lebst."
+Schon wieder hast du es vergessen! (Verfolger) ... Naja, ist ja klar, ich bin halt nicht wichtig genug. (Opfer)"
+
+"Ich opfere meine ganze Freizeit für dieses Projekt! (Opfer) ... Und du lieferst einfach nicht. Deine Schuld, wenn es scheitert! (Verfolger)"
+
+"Komm her, du Arme, lass mich das für dich regeln. (Retter) ... Aber wunder dich nicht, wenn ich irgendwann auch nicht mehr kann, ich bin nämlich auch am Ende. (Opfer)"
+
+"Niemand unterstützt mich hier! (Opfer) ... Okay, dann muss ich es eben selbst machen, wie immer. (Retter)"
+
+"Wie konntest du nur so egoistisch sein? (Verfolger) ... Weinst du jetzt? Oh nein, es tut mir leid, ich wollte dich nicht verletzen. (Retter)"
+
+"Ich helfe dir ja gerne, aber du bist einfach undankbar! (Retter -> Verfolger)"
+
+"Du bist das Problem in dieser Beziehung! (Verfolger) ... Jetzt lässt du mich einfach stehen? Ich kann das nicht allein. (Opfer)"
+
+"Ich bin zu schwach dafür. (Opfer) ... Aber ich muss dich vor ihm beschützen! (Retter)"
+
+"Ich habe dir doch gesagt, wie das geht! Warum hörst du nicht auf mich? (Verfolger)"
+
+"Ich habe alles für dich getan, und du trittst mich mit Füßen. (Retter -> Opfer)"
+
+(Im Chat) "😡 Du bist unmöglich!" -> 5 Min später: "Es tut mir leid, ich bin einfach so überfordert mit allem... 😢" (Verfolger -> Opfer)
+
+"Hör auf, dich einzumischen! (Verfolger zu Person C) ... Siehst du, was du angerichtet hast? Jetzt ist er/sie traurig. (Verfolger zu Person B)"
+
+"Ich bin der Einzige, der hier den Überblick behält. (Retter) ... Aber natürlich hört niemand auf mich. (Opfer)"
+
+"Du hast mich dazu gezwungen, so zu reagieren! (Verfolger)"
+
+"Ich will doch nur, dass alle glücklich sind. (Retter) ... Aber an mein Glück denkt hier keiner. (Opfer)"
+
+"Ich bin so enttäuscht von dir. (Verfolger) ... Lass es gut sein, ich mache es jetzt selbst. Ist einfacher. (Retter)"
+
+"Ich bin anscheinend nur dein seelischer Mülleimer. (Opfer)"
+
+"Wenn du meine Hilfe nicht annehmen willst, dann beschwer dich aber auch nicht, wenn alles den Bach runtergeht! (Retter -> Verfolger)"
+
+"Warum passiert das immer mir? (Opfer) ... Okay, Planänderung: Wir machen das jetzt genau so, wie ich es sage. (Verfolger)"
+
+"Ich sorge mich nur um dich. (Retter) ... Aber du stößt mich immer wieder weg. (Opfer) ... Vielleicht hast du es nicht anders verdient! (Verfolger)"
+

@@ -1,0 +1,13 @@
+# STYLE_SYNC_MARKER - Semantic Marker
+marker_name: STYLE_SYNC_MARKER
+beschreibung: >
+  
+beispiele:
+
+semantische_grabber_id: AUTO_SEM_20250703_E381
+
+metadata:
+  created_at: 2025-07-03T10:17:04.804614
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

@@ -1,0 +1,41 @@
+marker: SELF_REFLECTION_MARKER_MARKER
+beschreibung: >
+  Fähigkeit zur bewussten Selbstwahrnehmung, Mustererkennung und Ich-Analyse.
+beispiele:
+  - "Mir ist gestern aufgefallen, dass ich oft sofort abblocke, wenn mir jemand widerspricht."
+  - "Ich frage mich, warum ich mich immer so schnell zurückziehe, wenn es schwierig wird."
+  - "Ich hab heute gemerkt, wie sehr ich mich selbst unter Druck setze – das macht mir echt zu schaffen."
+  - "Ich habe drüber nachgedacht: Vielleicht reagiere ich deswegen so, weil ich Angst habe, nicht genug zu sein."
+  - "Manchmal bin ich überrascht, wie schnell ich mich angegriffen fühle – das will ich mal beobachten."
+  - "Ich glaube, ich vergleiche mich viel zu oft mit anderen, das stresst mich."
+  - "Da ist ein Muster: Immer wenn ich gestresst bin, schiebe ich dich weg."
+  - "Ich ertappe mich dabei, dass ich Harmonie über alles stelle – auch wenn’s auf meine Kosten geht."
+  - "Ich habe das Bedürfnis, immer alles im Griff zu haben. Das ist wohl mein Kontrollfreak-Anteil."
+  - "Es ist mir unangenehm zuzugeben, aber ich fühle mich manchmal nicht gesehen – das kommt sicher auch von mir selbst."
+  - "Manchmal frage ich mich, ob ich Erwartungen erfülle, die gar nicht von dir kommen."
+  - "Ich merke, ich traue mich oft nicht, meine Meinung zu sagen, weil ich Angst vor Ablehnung habe."
+  - "Ich habe gerade richtig Lust, einfach mal ehrlich zu mir zu sein, auch wenn’s wehtut."
+  - "Mir fällt auf, dass ich selten Nein sage, obwohl ich es manchmal müsste."
+  - "Ich reflektiere gerade, warum ich auf Kritik immer sofort mit Gegenargumenten komme."
+  - "Ich glaube, ich suche oft nach Fehlern bei mir, statt es einfach mal gut sein zu lassen."
+  - "Wenn ich ehrlich bin, denke ich oft zu viel darüber nach, was andere von mir halten."
+  - "Ich habe erkannt, dass ich meine Gefühle manchmal kleinrede, um nicht verletzlich zu wirken."
+  - "Manchmal frage ich mich, ob mein Perfektionismus mich glücklich macht oder eher ausbremst."
+  - "Ich habe gestern gemerkt, wie schwer es mir fällt, loszulassen."
+  - "Ich beobachte bei mir, dass ich schnelle Lösungen bevorzuge, statt mich mit dem Problem auseinanderzusetzen."
+  - "Ich hinterfrage gerade, warum ich mich schuldig fühle, wenn ich für mich selbst sorge."
+  - "Mir ist klargeworden, dass ich oft versuche, Konflikte zu vermeiden – auch wenn es ungesund ist."
+  - "Ich analysiere mein Verhalten und sehe, dass ich oft stur bleibe, obwohl ich längst weiß, dass es Quatsch ist."
+  - "Ich glaube, ich habe Angst, mich schwach zu zeigen, deswegen spiele ich oft die Starke."
+  - "Ich ertappe mich dabei, anderen die Schuld zu geben, statt meinen Anteil zu sehen."
+  - "Ich erkenne gerade, wie wichtig mir Kontrolle ist, besonders wenn ich unsicher bin."
+  - "Ich habe realisiert, dass ich manchmal absichtlich distanziert bin, um nicht verletzt zu werden."
+  - "Ich frage mich manchmal, ob ich wirklich weiß, was ich will, oder nur Erwartungen erfülle."
+  - "Mir ist aufgefallen, dass ich in Stresssituationen zu Überreaktionen neige – das will ich mir genauer anschauen."
+
+semantic_grab:
+  description: "Erkennt Muster für self_reflection_marker"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]
