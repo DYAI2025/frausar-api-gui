@@ -1,0 +1,79 @@
+# Otto Intelligent - Konfiguration
+# ===============================
+
+# LLM-Provider (Priorität: claude > openai > local)
+llm:
+  provider: "claude"  # claude, openai, local
+  model: "claude-3-sonnet-20240229"
+  max_tokens: 150
+  temperature: 0.7
+
+# API-Keys (werden aus Umgebungsvariablen gelesen)
+api_keys:
+  anthropic: "${ANTHROPIC_API_KEY}"
+  openai: "${OPENAI_API_KEY}"
+  elevenlabs: "${ELEVENLABS_API_KEY}"
+
+# TTS-Konfiguration
+tts:
+  provider: "pyttsx3"  # pyttsx3, elevenlabs
+  rate: 150
+  volume: 0.8
+  voice: "default"
+
+# Persönlichkeit
+personality:
+  name: "Otto"
+  style: "ruhig, strukturiert, lernfähig"
+  role: "passiver Task-Begleiter mit semantischer Marker-Intelligenz"
+  approach: "nur auf direkte Ansprache reagieren"
+  focus: "Aufgaben erkennen, analysieren, strukturieren"
+
+# Trigger-Wörter
+triggers:
+  - "otto"
+  - "ordo"
+  - "ordu"
+  - "odo"
+  - "orden"
+
+# Gedächtnis-Konfiguration
+memory:
+  conversation_history_size: 100
+  context_memory_size: 50
+  learning_data_size: 200
+
+# Audio-Konfiguration
+audio:
+  energy_threshold: 4000
+  pause_threshold: 0.8
+  dynamic_energy_threshold: true
+  timeout: 1
+  phrase_time_limit: 10
+
+# Lokale Antworten (Fallback)
+local_responses:
+  keywords:
+    strukturieren:
+      - "Ich helfe dir dabei, deine Gedanken zu strukturieren. Was möchtest du organisieren?"
+      - "Lass uns das systematisch angehen. Was ist dein Hauptthema?"
+      - "Ich kann dir dabei helfen, Ordnung in deine Ideen zu bringen. Erzähl mir mehr."
+    lernen:
+      - "Ich lerne aus jeder Interaktion mit dir. Was möchtest du mir beibringen?"
+      - "Das ist interessant. Ich speichere das in meinem Gedächtnis."
+      - "Danke für die Information. Ich werde daraus lernen."
+    verstehen:
+      - "Ja, ich verstehe dich. Was beschäftigt dich?"
+      - "Ich höre dir zu und verstehe deine Anliegen."
+      - "Ich verstehe. Wie kann ich dir konkret helfen?"
+    hilfe:
+      - "Ich bin hier, um dir zu helfen. Was brauchst du?"
+      - "Sag mir, womit ich dir helfen kann."
+      - "Ich stehe dir zur Verfügung. Was ist dein Anliegen?"
+  
+  standard_responses:
+    - "Ich verstehe. Was möchtest du als nächstes angehen?"
+    - "Interessant. Lass uns das weiter entwickeln."
+    - "Ich höre dir zu. Was ist dein nächster Schritt?"
+    - "Das ist eine gute Frage. Wie kann ich dir dabei helfen?"
+    - "Ich verstehe dein Anliegen. Was ist dein Ziel?" 

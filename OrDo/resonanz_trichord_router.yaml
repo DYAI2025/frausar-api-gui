@@ -1,0 +1,67 @@
+# Resonanz‑Trichord Router – YAML v0.1
+resonanz_trichord_router:
+  metadata:
+    description: >-
+      Event‑router orchestrating Qwen3, 8B (Executor), Phi-4-Mini Reasoning (Observer),
+      and GPT‑4.1 (Deep_Context) in a metabolic Divergenz–Resonanz–Integration loop.
+    author: Anonymous Developer
+    created: 2025-07-05
+
+  models:
+    primary:
+      name: qwen3:8b
+      role: executor
+      endpoint: "http://localhost:11434/api/generate"
+      tasks: [dialogue, everyday_reasoning, fast_responses]
+    reflective:
+      name: phi-4-mini:reasoning
+      role: observer
+      endpoint: "http://localhost:11434/api/generate"
+      tasks: [semantic_tagging, feedback_loop, contradiction_check]
+    archive_fallback:
+      name: GPT-4.1
+      role: deep_context
+      endpoint: "https://api.openai.com/v1/chat/completions"
+      tasks: [project_memory, document_traversal, longform_reasoning]
+      context_size_tokens: 128000
+
+  phase_thresholds:
+    fluegel_to_strudel: 0.25   # Divergenz → Resonanz
+    strudel_to_knoten: 0.60    # Resonanz  → Knoten‑Index spike
+    knoten_to_kristall: 0.30   # Knoten    → Integration
+
+  roles:
+    divergenz:
+      model_ref: primary
+      allowed_markers: ["Flügel", "Überraschung", "Kind_Ich"]
+    resonanz:
+      model_ref: reflective
+      allowed_markers: ["Strudel", "Schatten", "Wut", "Furcht"]
+    integration:
+      model_ref: archive_fallback
+      allowed_markers: ["Kristalle", "Vertrauen", "Beobachter"]
+
+  router_policy:
+    flow_control: marker_driven
+    fallback_logic: "RD + Drift_Δ"
+    archetype_switching: true
+    max_chain_depth: 3
+    synergy_cooldown_seconds: 30
+
+  self_tuning:
+    update_source: archive_fallback
+    cadence: "RRULE:FREQ=WEEKLY;BYDAY=MO;BYHOUR=03;BYMINUTE=00"
+    update_parameters: ["phase_thresholds", "synergy_weights"]
+
+  synergy_weights:
+    positive:
+      "Flügel+Vertrauen": 1.2
+      "Strudel+Beobachter": 1.1
+    negative:
+      "Strudel+Rot_Power": -0.8
+      "Wut+Schatten": -0.5
+
+  debugging:
+    enable_logging: true
+    log_level: "INFO"
+    log_file: "router.log" 

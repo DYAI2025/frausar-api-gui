@@ -1,0 +1,58 @@
+# Otto Konfiguration
+voice:
+  rate: 150
+  volume: 0.9
+
+llm:
+  provider: "local"  # "local", "openai", "claude"
+  # Lokales Modell (Ollama)
+  model: "qwen2.5:3b"
+  temperature: 0.7
+  max_tokens: 200
+  
+  # Alternative Modelle
+  # model: "mistral:7b"
+  # model: "llama3.1:8b"
+  
+  # Server-Endpunkt
+  endpoint: "http://localhost:11434/api/generate"
+
+triggers:
+  - "otto"
+  - "ordo" 
+  - "ordu"
+  - "odo"
+  - "orden"
+
+# Speicher-Einstellungen
+memory:
+  max_history: 1000
+  save_interval: 60  # Sekunden
+  
+# Task-Management
+tasks:
+  auto_save: true
+  max_tasks: 100
+
+# Otto Master Konfiguration
+# =========================
+
+tts:
+  provider: "pyttsx3"  # "pyttsx3", "elevenlabs"
+  voice: "default"
+  rate: 150
+
+features:
+  learning_system: true
+  kanban: true
+  semantic_markers: true
+
+audio:
+  energy_threshold: 4000
+  pause_threshold: 0.8
+  dynamic_energy_threshold: true
+
+# Dialog-Einstellungen
+dialog:
+  timeout: 5  # Sekunden
+  max_tokens: 150 

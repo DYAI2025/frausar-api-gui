@@ -1,0 +1,8 @@
+ruamel.yaml
+python-dotenv
+SpeechRecognition
+pyaudio
+requests
+websockets
+pyttsx3
+elevenlabs

@@ -162,8 +162,13 @@ TaxCalculatorStorage
 
 # API keys and secrets
 .env
+.env*
+*.env
 config.local.py
 secrets.json
+env/
+env.*
+.env*
 
 # Jupyter Notebook
 .ipynb_checkpoints
