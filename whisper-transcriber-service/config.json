@@ -1,0 +1,8 @@
+{
+  "api_key": "DUMMY_KEY_12345",
+  "service_name": "whisper-transcriber-service",
+  "version": "1.0.0",
+  "environment": "test",
+  "created_at": "2024-12-19",
+  "note": "Temporäre Konfiguration für Tests - API-Schlüssel ist ein Platzhalter"
+} 
