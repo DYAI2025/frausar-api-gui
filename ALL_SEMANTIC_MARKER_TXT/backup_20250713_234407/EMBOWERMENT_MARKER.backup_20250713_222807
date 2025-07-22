@@ -1,0 +1,76 @@
+# EMBOWERMENT_MARKER - Semantic Marker
+marker_name: EMBOWERMENT_MARKER
+beschreibung: >
+  name: "Empowerment/Selbstbestimmung"
+sem_id: "SGR_EMPOWERMENT_01"
+Beschreibung: |
+  Marker für Formulierungen, die Autonomie, Selbstbestimmung und Entscheidungsfreiheit betonen.
+  Erkennt Phrasen, die Wahlfreiheit signalisieren und die eigene Entscheidung unterstützen.
+category: "Beziehung/Meta"
+beispiele:
+  - "examples:"
+  - "# ursprüngliche Beispiele"
+  - "- "Du entscheidest, wie wir weitermachen.""
+  - "- "Sag einfach, wie es dir am besten passt.""
+  - "- "Bereit, wenn du bist!""
+  - "- "Mach das, was sich für dich richtig anfühlt.""
+  - "- "Du bestimmst, worüber wir sprechen.""
+  - "- "Geh den Weg, der für dich stimmt.""
+  - "- "Du hast es in der Hand.""
+  - "- "Es liegt ganz bei dir, kein Zwang.""
+  - "- "Fühl dich frei, jederzeit abzubrechen.""
+  - "- "Nimm dir alle Zeit, die du brauchst.""
+  - "- "Deine Entscheidung zählt – ich stehe hinter dir.""
+  - "- "Du hast die Kontrolle.""
+  - "- "Ich unterstütze jede Entscheidung, die du triffst.""
+  - "- "Wie du möchtest – alles ist möglich.""
+  - "- "Du bist frei in deiner Wahl.""
+  - "# 40 zusätzliche Beispiele"
+  - "- "Es ist deine Entscheidung, ich vertraue dir.""
+  - "- "Die Wahl liegt ganz bei dir, ich unterstütze dich.""
+  - "- "Lass dir Zeit, ich dränge dich nicht.""
+  - "- "Entscheide, was für dich am besten ist.""
+  - "- "Ich respektiere, was du für richtig hältst.""
+  - "- "Alles ist in deiner Hand.""
+  - "- "Mach in deinem Tempo weiter.""
+  - "- "Du allein weißt, was gut für dich ist.""
+  - "- "Tu, was dir guttut.""
+  - "- "Ich begleite dich, egal welchen Weg du wählst.""
+  - "- "Fühl dich nicht verpflichtet – entscheid selbst.""
+  - "- "Es ist dein Leben, gestalte es so, wie du magst.""
+  - "- "Ich lasse dir alle Freiheiten.""
+  - "- "Du definierst die Regeln.""
+  - "- "Alles ist möglich, wenn du es willst.""
+  - "- "Ich glaube an deine Entscheidungen.""
+  - "- "Dein Urteil zählt.""
+  - "- "Du kennst dich am besten aus.""
+  - "- "Vertraue deinem Bauchgefühl.""
+  - "- "Ich folge deinem Lead.""
+  - "- "Ich bin hier, wenn du mich brauchst, aber es bleibt deine Entscheidung.""
+  - "- "Mach es so, wie du es für richtig hältst.""
+  - "- "Du setzt die Prioritäten.""
+  - "- "Ich respektiere deine Wahl.""
+  - "- "Deine Meinung hat Gewicht.""
+  - "- "Du bist der Boss in dieser Sache.""
+  - "- "Ich lege dir nichts auf – du allein entscheidest.""
+  - "- "Du allein schreibst die Regeln.""
+  - "- "Ich unterstütze, egal wie du dich entscheidest.""
+  - "- "Geh deinen Weg, ich weiß, du schaffst das.""
+  - "- "Du gestaltest, ich begleite.""
+  - "- "Fühl dich unbegrenzt in deiner Wahl.""
+  - "- "Ich habe volles Vertrauen in dich.""
+  - "- "Deine Entscheidung ist okay.""
+  - "- "Lass dich nicht von mir beeinflussen.""
+  - "- "Tu es nach deiner eigenen Überzeugung.""
+  - "- "Ich bin für deinen Prozess da, nicht um ihn zu leiten.""
+  - "- "Du hast die Richtlinien in der Hand.""
+  - "- "Ich folge deinem Tempo.""
+  - "- "Du entscheidest, wann und wie du weitermachst.""
+
+semantische_grabber_id: AUTO_SEM_20250712_05C6
+
+metadata:
+  created_at: 2025-07-12T05:17:17.026686
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

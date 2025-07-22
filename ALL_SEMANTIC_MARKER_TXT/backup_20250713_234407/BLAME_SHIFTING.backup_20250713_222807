@@ -1,0 +1,58 @@
+- id: M1002
+  name: "Blameshifting"
+  description: >
+    The act of shifting responsibility for one's own mistakes, negative feelings, or problems onto another person to deflect blame and avoid accountability. This is a common defense mechanism in conflicts, where the individual frames the other person's actions or characteristics as the direct cause of their own negative behavior or outcomes.
+  category: "Conflict & Defense Mechanisms"
+  semantic_grabber_id: BLAME_SHIFTING_SEM
+  semantic_tags:
+    - blame-shifting
+    - manipulation
+    - conflict-dynamics
+    - defense-mechanism
+    - projection
+  examples:
+    - "Wenn du nicht so empfindlich wärst, hätten wir keine Probleme."
+    - "Weil du immer so bist, musste ich so reagieren."
+    - "Es ist deine Schuld, dass ich mich schlecht fühle."
+    - "Ich habe nur so gehandelt, weil du mich dazu gebracht hast."
+    - "Du zwingst mich förmlich dazu, so zu sein."
+    - "Wenn du früher Bescheid gesagt hättest, wäre das jetzt kein Problem."
+    - "Ich wäre pünktlich gewesen, aber du hast mich mit deinen Nachrichten aufgehalten."
+    - "Sorry, dass ich laut geworden bin – du hast mich schließlich provoziert."
+    - "Wären deine Erwartungen realistischer, müsste ich nicht lügen."
+    - "Ich bin nicht genervt – du bringst mich nur ständig an meine Grenzen."
+    - "Because you kept changing plans, I had no choice but to cancel alles."
+    - "Du hast doch gesehen, wie gestresst ich war, natürlich hab ich dann so reagiert."
+    - "Wenn du mich ernst nehmen würdest, müsste ich mich nicht ständig rechtfertigen."
+    - "Meine schlechte Note liegt daran, dass du mich gestern abgelenkt hast."
+    - "Ich hab das Versprechen gebrochen, weil du mir nie Klarheit gibst."
+    - (Sprachnachricht): "Hör mal, wäre dein Ton freundlicher, gäbe es keinen Streit."
+    - "Die Präsentation war chaotisch, weil deine Infos so spät kamen."
+    - "Ich würde ja zuhören, aber du erklärst alles immer so kompliziert."
+    - "Had you trusted me, I wouldn’t have needed to keep things secret."
+    - "Du hast den Abend zerstört, indem du das Thema überhaupt angesprochen hast."
+    - "Wenn du mich nicht ständig kontrollieren würdest, müsste ich nicht ausrasten."
+    - "Ich bin nur distanziert, weil du mich gestern verletzt hast."
+    - "Unser Urlaub wäre super, wenn du nicht so wählerisch wärst."
+    - "Ich vergesse Termine, weil dein Kalender mich dauernd verwirrt."
+    - "Das Missverständnis kam daher, dass du dich immer so unklar ausdrückst."
+    - "Ich wäre nicht so gestresst, wenn du auch mal im Haushalt mit anpacken würdest."
+    - "The reason the team is demotivated is your constant negativity, not my leadership."
+    - (Nach einem Versäumnis): "Du hättest mich ja auch dran erinnern können."
+    - "I only got angry because you were pushing my buttons on purpose."
+    - "Vielleicht würde ich mehr erzählen, wenn du nicht alles sofort bewerten würdest."
+    - "This whole mess happened because you didn't read my email carefully."
+    - "Ich muss Geheimnisse haben, weil du aus jeder Mücke einen Elefanten machst."
+    - "Die Kinder sind so unartig, weil du in der Erziehung immer so nachgiebig bist."
+    - "You're making me feel guilty for something that's clearly your fault."
+    - "Klar bin ich eifersüchtig, wenn du mit jedem so flirtest."
+    - (Chat): "Sorry, aber deine unklare Frage hat diese ganze Verwirrung erst ausgelöst. 🤷"
+    - "I'm not the problem, your reaction is the problem."
+    - "Ich habe das Projekt absichtlich nicht weiterverfolgt, weil von dir sowieso kein Support kam."
+    - "Du hast mich in diese Lage gebracht, jetzt beschwer dich nicht über die Konsequenzen."
+    - "Natürlich habe ich es vergessen, du hast mich ja heute Morgen schon total aus dem Konzept gebracht."
+    - "Hättest du mir einfach vertraut, wäre all das hier nicht passiert."
+    - "Ich ziehe mich nur zurück, weil deine ständigen Forderungen mich erdrücken."
+    - "It’s your insecurity that’s making this an issue, not my actions."
+    - (Sprachnachricht): "Ja, ich hab's verbockt. Aber ganz ehrlich? Mit dem Druck, den du mir machst, war das nur eine Frage der Zeit."
+    - "Das ist nicht meine Verantwortung. Du hast diese Erwartungshaltung geschaffen."

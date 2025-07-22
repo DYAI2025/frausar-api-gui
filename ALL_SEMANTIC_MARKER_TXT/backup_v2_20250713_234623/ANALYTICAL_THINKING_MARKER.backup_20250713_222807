@@ -1,0 +1,57 @@
+# ANALYTICAL_THINKING_MARKER - Semantic Marker
+marker_name: ANALYTICAL_THINKING_MARKER
+beschreibung: >
+  marker:
+  name: ANALYTICAL_THINKING_MARKER
+  grabber_id: ANALYTICAL_THINKING_SEM
+  category: "Analytical Thinking"
+  description: >
+    Erkennt Äußerungen, die systematische Analyse,
+    datengetriebene Schlussfolgerungen und strukturierte Problemlösung signalisieren.
+  pattern:
+    - regex: "(wenn.*dann|Ursachenanalyse|Daten (auswerten|analysieren))"
+    - regex: "(systematisch vorgehen|schritt für schritt)"
+    - keywords: ["Hypothese", "Kausalität", "Muster", "Struktur"]
+    - semantik: >
+        Sätze, die logische Schlussfolgerungen, methodische Analyse
+        und klare Struktur betonen
+beispiele:
+  - "examples:"
+  - "- "Wir sollten Daten auswerten, um das Muster zu erkennen.""
+  - "- "Wenn wir das so angehen, dann können wir die Ursache finden.""
+  - "- "Eine Ursachenanalyse hilft uns, den Fehler zu beheben.""
+  - "- "Lass uns systematisch vorgehen und jeden Schritt dokumentieren.""
+  - "- "Meine Hypothese ist, dass der Server zu langsam reagiert.""
+  - "- "Ich habe die Zahlen in eine Tabelle übertragen und Trends erkannt.""
+  - "- "Schritt für Schritt klären wir, welcher Faktor ausschlaggebend ist.""
+  - "- "Datengetrieben können wir bessere Entscheidungen treffen.""
+  - "- "Ich habe mehrere Szenarien durchgespielt und verglichen.""
+  - "- "Die Kausalität scheint zwischen A und B eindeutig.""
+  - "- "Lasst uns das Problem in seine Einzelteile zerlegen und separat betrachten.""
+  - "- "Ich visualisiere die Abhängigkeiten mal in einem Flowchart.""
+  - "- "Die Korrelation zwischen Kampagne A und dem Umsatzanstieg ist signifikant.""
+  - "- "Bevor wir handeln, müssen wir die Root-Cause-Analyse abschließen.""
+  - "- "Ich habe die Rohdaten bereinigt, um die Analyse nicht zu verfälschen.""
+  - "- "Die logische Schlussfolgerung ist, dass wir Prozess B anpassen müssen.""
+  - "- "Lasst uns eine Pro-Contra-Liste für beide Optionen erstellen.""
+  - "- "Ich habe ein Muster in den Support-Tickets der letzten Woche entdeckt.""
+  - "- "Wir sollten die Variablen isolieren, um den genauen Auslöser zu finden.""
+  - "- "Wenn wir die Kennzahlen vergleichen, sehen wir eine klare Abweichung.""
+  - "- "Ich habe ein Modell erstellt, das die Auswirkungen vorhersagen kann.""
+  - "- "Die Faktenlage deutet darauf hin, dass unsere Annahme falsch war.""
+  - "- "Ich gehe die Logs Zeile für Zeile durch, um die Anomalie zu finden.""
+  - "- "Wir müssen erst die Fakten von den Interpretationen trennen.""
+  - "- "Die Priorisierung sollte auf Basis der analysierten Daten erfolgen.""
+  - "- "Ich habe die verschiedenen Lösungswege nach Aufwand und Ertrag klassifiziert.""
+  - "- "Gibt es einen Benchmark, mit dem wir unsere Ergebnisse vergleichen können?""
+  - "- "Der erste Schritt ist, alle relevanten Datenpunkte zu sammeln.""
+  - "- "Ich sehe hier eine klare Diskrepanz zwischen den Soll- und Ist-Werten.""
+  - "- "Lass uns eine Entscheidungsmatrix aufsetzen, um objektiv zu bleiben.""
+
+semantische_grabber_id: AUTO_SEM_20250712_8B1B
+
+metadata:
+  created_at: 2025-07-12T10:40:23.095869
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

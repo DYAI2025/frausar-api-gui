@@ -1,0 +1,14 @@
+# META_REFLEX_SEM_MARKER - Semantic Marker
+marker_name: META_REFLEX_SEM_MARKER
+beschreibung: >
+  Erkennt Selbstbezug und Reflexion über den Dialog – Meta-Kommentare, Analysen
+    oder Beobachtungen zum eigenen Kommunikationsprozess.
+beispiele:
+
+semantische_grabber_id: AUTO_SEM_20250703_1345
+
+metadata:
+  created_at: 2025-07-03T12:05:01.151430
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

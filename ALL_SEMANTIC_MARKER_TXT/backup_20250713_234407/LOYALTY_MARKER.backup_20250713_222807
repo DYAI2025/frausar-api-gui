@@ -1,0 +1,56 @@
+# LOYALTY_MARKER - Semantic Marker
+marker_name: LOYALTY_MARKER
+beschreibung: >
+  marker:
+  name: LOYALTY_MARKER
+  grabber_id: LOYALTY_SEM
+  category: "Loyalty"
+  description: >
+    Erkennt Äußerungen, die Treue, Verlässlichkeit und Unterstützung
+    gegenüber Person oder Organisation ausdrücken.
+  pattern:
+    - regex: "(ich stehe (dir|Ihnen) bei|immer hinter (dir|Ihnen))"
+    - regex: "(egal was passiert|auf lange Sicht)"
+    - keywords: ["Loyalität", "Verlässlichkeit", "Treue", "Zusammenhalt"]
+    - semantik: >
+        Sätze, die Beständigkeit, Verpflichtung und emotionalen Rückhalt signalisieren
+beispiele:
+  - "examples:"
+  - "- "Ich stehe immer hinter dir, egal was kommt.""
+  - "- "Du kannst lange auf mich zählen.""
+  - "- "Egal was passiert, ich bin dabei.""
+  - "- "Ich halte dir den Rücken frei, versprochen.""
+  - "- "Ich bleibe diesem Projekt treu, bis es abgeschlossen ist.""
+  - "- "Unsere Zusammenarbeit hat für mich Priorität.""
+  - "- "Langfristig bin ich absolut verlässlich.""
+  - "- "Meine Loyalität gilt unserem Team.""
+  - "- "Ich unterstütze dich voll und ganz.""
+  - "- "Ich bin noch an Bord, auch wenn’s schwierig wird.""
+  - "- "Wir stehen das als Team gemeinsam durch.""
+  - "- "Auch wenn andere gehen, ich bleibe dem Unternehmen treu.""
+  - "- "Du kannst dich auf mich verlassen, zu 100 %.""
+  - "- "Ich lasse dich in dieser Situation nicht hängen.""
+  - "- "Für dieses Team gehe ich die Extrameile.""
+  - "- "Ich verteidige unsere Entscheidung auch nach außen.""
+  - "- "Ich glaube an dieses Projekt und werde bis zum Ende dafür kämpfen.""
+  - "- "Was auch immer du brauchst, sag Bescheid, ich bin für dich da.""
+  - "- "Ich sehe meine berufliche Zukunft hier in dieser Firma.""
+  - "- "Auf mein Wort ist Verlass.""
+  - "- "Selbst wenn die Chefin anderer Meinung ist, ich stehe zu dir.""
+  - "- "Unsere Freundschaft ist mir wichtiger als diese Meinungsverschiedenheit.""
+  - "- "Ich bin nicht nur Kollege, ich bin dein Verbündeter.""
+  - "- "Diese Firma hat mir eine Chance gegeben, das vergesse ich nicht.""
+  - "- "Lass die anderen reden. Wir halten zusammen.""
+  - "- "Mein Engagement für dieses Ziel ist ungebrochen.""
+  - "- "In guten wie in schlechten Zeiten – das gilt für mich auch im Job.""
+  - "- "Solange du an Bord bist, bin ich es auch.""
+  - "- "Ich lasse niemanden aus meinem Team im Regen stehen.""
+  - "- "Ich bin committed, dieses Ding mit dir durchzuziehen.""
+
+semantische_grabber_id: AUTO_SEM_20250712_5D4A
+
+metadata:
+  created_at: 2025-07-12T10:38:50.264861
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

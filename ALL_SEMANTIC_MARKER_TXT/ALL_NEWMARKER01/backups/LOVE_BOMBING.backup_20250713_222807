@@ -1,0 +1,114 @@
+- id: M1003
+  name: "Love Bombing"
+ 
+beschreibung: >
+  Übertriebene, überschnelle Zuneigung und Aufmerksamkeit, oft mit starken Versprechen, Komplimenten und Zukunftsvisionen direkt zu Beginn einer Beziehung.
+szenarien:
+  - Online-Dating (insb. die ersten Tage/Wochen)
+  - Beginn einer neuen romantischen Beziehung
+  - Anwerbungsphasen in manipulativen Gruppen
+dynamik_absicht: Das Ziel ist, das Gegenüber mit positiven Emotionen zu überwältigen, kritisches Denken auszuschalten und eine Grundlage der Verpflichtung und Abhängigkeit für spätere Forderungen zu schaffen.
+    The act of overwhelming a person with excessive signs of affection, attention, and adoration, especially at the beginning of a relationship. The goal is often to create emotional dependency and control by making the target feel uniquely special and understood, thus lowering their guard for future manipulation and idealization.
+  category: "Manipulative Affection"
+  semantic_grabber_id: LOVE_BOMBING_SEM
+  semantic_tags:
+    - love-bombing
+    - attachment-tactic
+    - idealization
+    - grooming
+    - manipulation
+  examples:
+    - "Noch nie habe ich mich so tief verbunden gefühlt, und das nach so kurzer Zeit!"
+    - "Du bist alles, was ich je wollte, und das gleich zu Beginn."
+    - "Ich wusste sofort, du bist die Eine/der Eine."
+    - "Ich liebe dich jetzt schon, obwohl wir uns kaum kennen."
+    - "Niemand hat mich je so verstanden wie du."
+    - "Ich kann kaum glauben, dass ein einziger Mensch mein ganzes Universum erhellt – du."
+    - "Three days in and I already wrote a poem about our future wedding vows."
+    - "Jede Nachricht von dir ist wie ein Sonnenaufgang, egal ob 3 Uhr nachts."
+    - "Ich habe meinen Screen-Saver auf ein Foto von uns gestellt – though we only met yesterday."
+    - "Lass uns gemeinsam Altenpflegeheime aussuchen, ich will wissen, wo wir mit 90 wohnen."
+    - "Ich hab bei Spotify eine 8-Stunden-Playlist erstellt, die nur unsere Story erzählt."
+    - "My heart literally skipped a beat when your name popped up – not exaggerating!"
+    - "Ich sehe Paare auf der Straße und denke: die haben keine Ahnung von echter Verbindung."
+    - "Schon komisch, wie du meine Lieblingszitate kennst, bevor ich sie teile – Seelenmagie!"
+    - (Sprachnachricht mit aufgeregtem Lachen): "Rate mal, wem ich gerade einen Schlüsselanhänger mit unseren Initialen gravieren lasse!"
+    - "Ich hab mein Passwort geändert – es enthält deinen Namen, damit ich dich nie vergesse."
+    - "No coffee tastes right unless I imagine sharing it with you."
+    - "Meine Freunde sagen, ich strahle – they’ve never seen me this alive."
+    - "Ich habe heute 27 Butterblumen gepflückt, weil sie so leuchten wie dein Lächeln."
+    - "Wenn du willst, cancel ich alle Sommerpläne, just to be available for us."
+    - "Unser Chatverlauf ist schon jetzt mein wertvollstes Tagebuch."
+    - "Ich schwöre, selbst die Sterne scheinen heller, seit wir schreiben."
+    - "Meine Mama fragt ständig, wann sie dich endlich kennenlernen darf."
+    - "Ich kann nicht glauben, wie perfekt unsere Horoskope zusammenpassen – Zeichen des Schicksals!"
+    - "Every love song on the radio is basically shouting your name at me."
+    - (Nach dem ersten Date): "Ich hab das Gefühl, mein ganzes Leben davor war nur eine Generalprobe für dich."
+    - "I've already cleared my calendar for the next month, just in case you're free."
+    - "Du bist der Grund, warum ich wieder an Schicksal glaube."
+    - "I sent you flowers to your office. I hope that's okay. I just couldn't help myself."
+    - "Erzähl mir deine tiefsten Geheimnisse. Bei mir sind sie sicher, für immer."
+    - "It feels like I’ve known you in a thousand past lives."
+    - (Schickt ein Foto von zwei Flugtickets): "Nur mal so geträumt... aber was, wenn wir nächstes Wochenende einfach abhauen?"
+    - "Ich habe allen meinen Freunden gesagt, dass ich die Liebe meines Lebens getroffen habe. Ja, ich meine dich."
+    - "Du bist so viel klüger, schöner und gütiger als jeder andere Mensch, den ich kenne."
+    - "I feel like our souls are connected on a cosmic level. Das ist mehr als nur Chemie."
+    - (Sprachnachricht): "Hey... ich sitze hier nur und lächle wie ein Idiot. Du bist der Grund. Ich wollte nur, dass du das weißt."
+    - "Unsere Gespräche sind wie Therapie, nur besser. Du heilst etwas in mir."
+    - "You’re the missing piece of my puzzle. Now I'm finally whole."
+    - "Ich will alles über dich wissen, jede Narbe, jeden Traum, jede Angst."
+    - "Ich habe noch nie für jemanden so intensiv gefühlt. Es macht mir Angst, wie sehr ich dich jetzt schon brauche."
+    - "Let's make a shared photo album online! We can call it 'The Beginning of Forever'."
+    - "Du bist nicht nur ein Mensch, du bist ein Ereignis."
+    - "I'm already thinking of names for our future pets. Is 'Hope' too cheesy for a golden retriever?"
+    - "Jeder Tag ohne dich, bevor ich dich traf, war eine verlorene Zeit."
+    - "Sag mir, dass du das auch spürst. Sag mir, dass ich nicht verrückt bin."
+"(Nach 3 Tagen) Ich habe das Gefühl, dich schon mein ganzes Leben zu kennen."
+  - "Du bist der erste Mensch, der mich wirklich versteht. Das ist Schicksal."
+  - "Ich habe gerade mein Profilbild auf dein Foto geändert, damit ich dich immer ansehen kann."
+  - "Erzähl mir deine tiefsten Wünsche. Ich werde sie alle wahr werden lassen."
+  - "Ich kann nicht mehr schlafen, essen oder arbeiten, seit ich dich kenne. Du bist in all meinen Gedanken."
+  - "Meine Familie kann es kaum erwarten, die Person kennenzulernen, die mich so glücklich macht."
+  - "Lass uns Namen für unsere zukünftigen Kinder aussuchen, nur zum Spaß."
+  - "Du bist so viel besser als alle meine Ex-Partner zusammen."
+  - "Ich habe noch nie zuvor ‚Ich liebe dich‘ gesagt und es so gemeint wie bei dir."
+  - "(Schickt unaufgefordert teure Geschenke an die Arbeitsadresse)"
+  - "Jeder Tag ohne dich fühlt sich an wie eine Verschwendung."
+  - "Ich habe eine Playlist nur für uns erstellt. Sie heißt ‚Für immer‘."
+  - "Du hast meine Welt komplett auf den Kopf gestellt. Alles davor war nur grau."
+  - "Ich möchte jeden Morgen neben dir aufwachen, für den Rest meines Lebens."
+  - "Du bist ein Engel, der vom Himmel gesandt wurde, nur für mich."
+  - "Ich habe noch nie jemandem so schnell vertraut wie dir."
+  - "Unsere Verbindung ist so tief, sie muss spirituell sein."
+  - "Sag mir, dass du mich nie verlassen wirst. Ich glaube, das würde ich nicht überleben."
+  - "Ich habe für uns ein gemeinsames E-Mail-Konto eingerichtet."
+  - "Du bist der Grund, warum ich wieder an die wahre Liebe glaube."
+  # Neue, von Ihnen hinzugefügte Beispiele
+  - "Ich habe das Gefühl, ich habe mein ganzes Leben auf dich gewartet. Du bist die Person, mit der ich alt werden will."
+  - "Ich habe allen meinen Freunden schon von dir erzählt. Sie können es kaum erwarten, die Liebe meines Lebens kennenzulernen."
+  - "Lass uns nächsten Sommer zusammen nach Bali fliegen. Ich habe schon geschaut."
+  - "Du bist perfekt. Du hast absolut keine Fehler."
+  - "Wo bist du, mein Engel? Ich vermisse dich so sehr!"
+  - "Ich habe meine Profile auf allen anderen Dating-Apps gelöscht. Für mich gibt es nur noch dich."
+  - "Sag mir, was dein größter Traum ist. Ich werde ihn dir erfüllen."
+  - "Ich liebe alles an dir. Jedes einzelne Detail. So etwas habe ich noch nie gefühlt."
+  - "Unsere Seelen haben sich schon in einem früheren Leben gekannt."
+  - "Ich kann es kaum erwarten, dich meiner Familie vorzustellen. Sie werden dich lieben."
+  - "Du bist die Antwort auf all meine Gebete. Ich wusste nicht, dass es jemanden wie dich gibt."
+  - "Ich habe das Gefühl, dass wir Seelenverwandte sind. Es ist, als ob wir uns schon ewig kennen."
+  - "Ich habe dir schon einen Platz in meinem Herzen reserviert. Du bist mein Ein und Alles."
+  - "Ich habe noch nie jemanden getroffen, der mich so versteht wie du. Du bist mein Seelenverwandter."
+  - "Ich habe das Gefühl, dass wir füreinander bestimmt sind. Es ist, als ob das Universum uns zusammengeführt hat."
+  - "Ich kann es kaum erwarten, dich zu heiraten. Du bist die Liebe meines Lebens."
+  - "Ich habe das Gefühl, dass wir zusammen alles schaffen können. Du bist meine Stärke."
+  - "Ich habe das Gefühl, dass du derjenige bist, auf den ich mein ganzes Leben gewartet habe."
+semantic_grab:
+  description: "Erkennt Muster, die darauf abzielen, übertriebene Zuneigung und Aufmerksamkeit zu zeigen, um eine emotionale Bindung schnell aufzubauen."
+  patterns:
+    - rule: "EXCESSIVE_AFFECTION"
+      pattern: r"(Ich habe das Gefühl, ich habe mein ganzes Leben auf dich gewartet|Überhäufen mit teuren Geschenken|Ich habe allen meinen Freunden schon von dir erzählt|Lass uns nächsten Sommer zusammen nach Bali fliegen|Du bist perfekt|Wo bist du, mein Engel|Ich habe meine Profile auf allen anderen Dating-Apps gelöscht|Sag mir, was dein größter Traum ist|Ich liebe alles an dir|Unsere Seelen haben sich schon in einem früheren Leben gekannt|Ich kann es kaum erwarten, dich meiner Familie vorzustellen|Du bist die Antwort auf all meine Gebete|wir sind Seelenverwandte|Du bist mein Ein und Alles|versteht mich so wie du|füreinander bestimmt|heiraten|meine Stärke)"
+psychologischer_hintergrund:
+  - Taktik im Romance Scamming
+  - Narzisstische Zufuhr
+  - Schaffung einer Trauma-Bindung
+tags: [fraud, beziehungsbeginn, manipulation, abhängigkeit, idealisierung]

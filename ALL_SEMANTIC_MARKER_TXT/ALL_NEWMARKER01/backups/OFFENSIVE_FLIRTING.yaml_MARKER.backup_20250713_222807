@@ -1,0 +1,60 @@
+marker: OFFENSIVE_FLIRTING_MARKER
+beschreibung: >
+  eschreibung: >
+
+Erkennt kommunikative Muster von offensivem, teils grenzüberschreitendem Flirten.
+
+Typisch sind direkte Anspielungen auf Aussehen, Sexualität, oder das schnelle Andeuten
+
+einer (körperlichen) Beziehung. Oft gepaart mit Pacing, Übertreibung und
+
+nachgeschobenen Rückziehern („war nur Spaß“)
+beispiele:
+  - "OFFENSIVE_FLIRTING_MARKER"
+  - "yaml"
+  - "KopierenBearbeiten"
+  - "- marker: OFFENSIVE_FLIRTING_MARKER"
+  - "b. beispiele:"
+  - "- "Mit dir würde ich sofort ans Meer fahren, ganz ehrlich.""
+  - "- "Wenn ich dich jetzt neben mir hätte, wäre es sicher nicht langweilig.""
+  - "- "Bist du eigentlich immer so sexy, oder nur im Chat?""
+  - "- "Sorry, das war vielleicht ein bisschen zu viel. Aber du bist wirklich heiß.""
+  - "- "Wollen wir nicht einfach durchbrennen?""
+  - "- "Das klingt jetzt vielleicht verrückt, aber du machst mich echt an.""
+  - "Dein Profilbild macht es einem echt schwer, sich zu konzentrieren.""
+  - ""Ich wette, du siehst in echt noch besser aus.""
+  - ""Na, so allein zu Hause? Ich hätte da ein paar Ideen, wie man das ändern könnte.""
+  - ""Mit den Augen könntest du wahrscheinlich jeden dazu bringen, alles zu tun, oder?""
+  - ""Mal ehrlich, wie viele Nachrichten bekommst du hier pro Tag mit dem Aussehen?""
+  - ""Schick mal ein Bild von jetzt. Will sehen, ob du immer so heiß aussiehst.""
+  - ""Ich hoffe, du bist nicht nur hübsch, sondern auch ein bisschen versaut.""
+  - ""Meine Couch ist groß, aber neben dir würde ich trotzdem ganz nah ranrücken.""
+  - ""Lass uns nicht lange schreiben, wann treffen wir uns?""
+  - ""Ich fantasiere gerade ein bisschen, was passieren würde, wenn ich jetzt bei dir wäre.""
+  - ""Sorry, wenn ich zu direkt bin, aber dein Körper ist eine glatte 10/10.""
+  - ""Du hast so ein unschuldiges Lächeln... aber ich glaube, der Schein trügt, oder? 😉""
+  - ""Warum Zeit verlieren? Hier ist meine Nummer, ruf an, wenn du bereit für was Echtes bist.""
+  - ""Hör auf, so sexy zu sein, sonst kann ich für nichts garantieren.""
+  - ""Was würdest du tun, wenn ich jetzt vor deiner Tür stehen würde?""
+  - ""Ich bin mir sicher, wir beide hätten zusammen eine Menge Spaß... auch ohne Kleidung.""
+  - ""Bist du immer so unartig oder nur für mich?""
+  - ""Die Beschreibung in deinem Profil ist nett, aber deine Fotos sagen alles.""
+  - ""Ich suche nichts Ernstes, aber für eine Nacht mit dir würde ich eine Ausnahme machen.""
+  - ""Deine Beine auf dem Foto... wow. Einfach nur wow.""
+  - ""Ich bin ein sehr körperlicher Mensch. Du auch?""
+  - ""Lass uns das Vorspiel überspringen und direkt zur Sache kommen.""
+  - ""Antworte schon, Prinzessin. Ich mag es nicht zu warten.""
+  - ""Du spielst wohl gerne die Unschuldige, was?""
+  - ""Ich wette, du bist im Bett genauso abenteuerlustig wie beim Reisen.""
+  - ""Hör auf, dich zu zieren. Du willst es doch auch.""
+  - ""Sag mir, was du anhast.""
+  - ""So, genug geredet. Meine Adresse oder deine?""
+  - ""Das war nur Spaß... außer du willst, dass es ernst wird. 👀""
+  - ""Du machst einen Mann ganz verrückt, weißt du das?""
+
+semantic_grab:
+  description: "Erkennt Muster für offensive_flirting.txt"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

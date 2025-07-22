@@ -1,0 +1,97 @@
+id: rollen_rotation
+name: Rollen-Rotation (Dramadreieck)
+beschreibung: >
+  Zyklischer, oft unbewusster Rollenwechsel zwischen Verfolger (Persecutor), Retter (Rescuer) und Opfer (Victim) innerhalb kurzer Zeit. Das Muster ist ein zentrales Element des Dramadreiecks (Karpman) und zeigt eine Konfliktdynamik an, in der echte Bedürfnisse und Gefühle durch Abwehrmechanismen überdeckt werden.
+
+szenarien:
+  - Partnerschaftskonflikte: Vorwurf -> Hilflosigkeit -> Helfen -> Gekränktheit (Rollen rotieren)
+  - Arbeitsplatzdynamiken: Kritik -> Einmischen -> Opferhaltung -> neue Schuldzuweisung
+  - Familiensysteme: Bevormunden -> Rückzug -> Wutausbruch -> Verletztheit
+  - Betrug/Fraud: Opfer-Inszenierung -> Retter-Aktivierung -> Vorwurfsdrohung
+
+beispiele:
+  - Person A: "Immer lässt du alles liegen! Du bist so rücksichtslos!" (Verfolger)
+    Person B: "Es tut mir leid, ich kriege nichts auf die Reihe." (Opfer)
+    Person A: "Komm, ich helfe dir, das zu organisieren." (Retter)
+    Person B: "Ich brauche deine Hilfe nicht! Du willst mich nur kontrollieren!" (Verfolger)
+    Person A: "Nichts, was ich tue, ist je gut genug für dich." (Opfer)
+  - Teamleiter: "Die Zahlen sind eine Katastrophe, Frank, Ihre Abteilung hat versagt." (Verfolger)
+    Kollegin: "Schick mir deine Tabellen, ich korrigiere das." (Retter)
+    Frank: "Ich bin eh der Sündenbock." (Opfer)
+    Kollegin: "Ich opfere mich auf und bekomme nur Undankbarkeit." (Opfer, von Retter)
+  - Freundin 1: "Ich schaff das einfach nicht… ich falle bestimmt durch." (Opfer)
+    Freundin 2: "Kopf hoch! Ich rette dich da raus!" (Retter)
+    (Stunden später) "Wenn du meine Hilfe nicht willst, dann sag es doch einfach!" (Verfolger)
+  - Sohn: "Mama, hör auf, meine Vermieterin anzurufen!" (Verfolger)
+    Mutter: "Ich will doch nur helfen." (Retter)
+    Mutter: "Ich opfere mich auf und werde nur weggestoßen." (Opfer)
+  - User A: "Dieser Post ist totaler Blödsinn." (Verfolger)
+    User B: "Ich bin noch neu, wollte nur diskutieren." (Opfer)
+    User C: "Lass dich nicht unterkriegen, ich teile den Post." (Retter)
+    User A: "Jetzt kommt der strahlende Ritter. Leute wie du sind das Problem." (Verfolger, zu Retter)
+    User C: "Ich wollte nur vermitteln und werde direkt angegriffen." (Opfer, von Retter)
+
+semantic_patterns:
+  verfolger_patterns:
+    - "Du bist (immer|so|schon wieder)"
+    - "Wegen dir"
+    - "Du hast (versagt|das falsch gemacht)"
+    - "Das ist deine Schuld"
+    - "(Immer|Typisch) du"
+    - "Warum hast du nicht"
+    - "Du bist schuld"
+    - "Du machst immer alles falsch"
+    - "Wegen Leuten wie dir"
+    - "Du versaust alles"
+    - "Ich hab’s dir gleich gesagt"
+  opfer_patterns:
+    - "Ich Arme(r)"
+    - "Ich kann nicht mehr"
+    - "Niemand (hilft|versteht) mir"
+    - "Ich bin (so hilflos|am Ende|überfordert)"
+    - "Warum immer ich"
+    - "Ich bin anscheinend (nicht gut genug|eine Last)"
+    - "Ich werde immer übergangen"
+    - "Mir wird alles zugeschoben"
+    - "Ich habe keine Wahl"
+    - "Bin das Opfer"
+    - "Bin machtlos"
+    - "Wurde gezwungen"
+  retter_patterns:
+    - "Lass mich das für dich machen"
+    - "Komm, ich helfe dir"
+    - "Keine Sorge, ich rette dich"
+    - "Du Arme(r), hier ist, was du tun solltest"
+    - "Ohne mich schafft ihr das nicht"
+    - "Ich muss das wohl machen"
+    - "Ich helfe doch immer allen"
+    - "Wenn ich das nicht tue, macht es keiner"
+    - "Ich opfere mich auf"
+    - "Sorge mich nur"
+    - "Ich rette euch"
+    - "Ich hab’s gerettet"
+    - "Bin halt die/der Einzige, der hilft"
+    - "Ich springe immer ein"
+    - "Ich regel das schon"
+    - "Ich bin die letzte Hoffnung"
+
+  trigger_words_sequencing: >
+    Wenn in kurzen Abständen (z.B. 2–3 Redebeiträge pro Person oder insgesamt 4–6 Beiträgen) Wechsel zwischen Aussagen aus unterschiedlichen Rollen-Mustern auftreten, erhöhe die Wahrscheinlichkeit für rollen_rotation.
+
+context_interpretation:
+  - Ein Wechsel innerhalb von 2–3 Beiträgen ist ein starkes Signal.
+  - Kontext: Konflikt, Stress oder Unsicherheit, keine rein humoristische Szenerie.
+  - Nonverbale/Digitale Marker (z.B. Emojis wie 😢, 😠, 🤗) verstärken die Marker.
+
+rules_for_ai:
+  - Wenn eine Aussage mit `verfolger_patterns` auf eine mit `opfer_patterns` folgt, erhöhe den Score für rollen_rotation.
+  - Wenn eine Person in kurzer Zeit von einer Rolle zur anderen wechselt, ist das ein starker Indikator.
+  - Wenn Person A eine Verfolger-Aussage macht, Person B mit Opfer, Person A dann mit Retter, ist das ein typischer Zyklus.
+  - Suche nach der Sequenz: Anklage/Kritik → Klage/Hilflosigkeit → Retten/Überverantwortung.
+  - Sätze wie „Ich wollte ja nur helfen, aber anscheinend...“ markieren den Rollenwechsel explizit.
+
+psychologischer_hintergrund: >
+  Basierend auf Karpman (Dramadreieck, Transaktionsanalyse): Rollenwechsel dienen als Angstabwehr und Konfliktvermeidung bei geringer Differenzierung des Selbst (Murray Bowen). Die Dynamik der rollen_rotation verhindert echte Problemlösung, hält emotionale Verschmelzung und Drama aufrecht und ist ein Warnsignal für schlecht ko-regulierte Beziehungssysteme.
+
+hinweis: >
+  Die rollen_rotation ist einer der wichtigsten Metamarker für Kommunikations- und Beziehungskrisen. Sie ist erkennbar durch schnelle, oft implizite Wechsel von Vorwurf, Hilflosigkeit und übertriebenem Helfen.

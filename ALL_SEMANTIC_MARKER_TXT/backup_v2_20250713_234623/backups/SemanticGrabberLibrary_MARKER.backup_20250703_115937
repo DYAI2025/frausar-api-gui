@@ -1,0 +1,133 @@
+"""
+SemanticGrabberLibrary_MARKER - Semantic Marker
+import yaml
+from sentence_transformers import SentenceTransformer, util
+
+class SemanticGrabberLibrary:
+    def __init__(self, yaml_path: str, model_name: str = 'distiluse-base-multilingual-cased'):
+        # Lade Grabber-Library aus YAML
+        with open(yaml_path, 'r', encoding='utf-8') as f:
+            self.library = yaml.safe_load(f)
+
+        # Lade SentenceTransformer Modell
+        self.model = SentenceTransformer(model_name)
+        self._build_anchor_embeddings()
+
+    def _build_anchor_embeddings(self):
+        self.embeddings = {}
+        for grabber_id, data in self.library.items():
+            patterns = data.get('patterns', [])
+            if patterns:
+                self.embeddings[grabber_id] = self.model.encode(patterns, convert_to_tensor=True)
+
+    def get_grabber_ids(self):
+        return list(self.library.keys())
+
+    def get_patterns_for_id(self, grabber_id):
+        return self.library.get(grabber_id, {}).get('patterns', [])
+
+    def get_description_for_id(self, grabber_id):
+        return self.library.get(grabber_id, {}).get('beschreibung', '')
+
+    def match_text(self, text, threshold=0.7):
+        matches = []
+        text_embedding = self.model.encode(text, convert_to_tensor=True)
+
+        for grabber_id, anchor_embeds in self.embeddings.items():
+            cos_sim = util.cos_sim(text_embedding, anchor_embeds)
+            max_score = cos_sim.max().item()
+            if max_score >= threshold:
+                matches.append((grabber_id, round(max_score, 3)))
+
+        # Sortiere nach Score absteigend
+        matches.sort(key=lambda x: x[1], reverse=True)
+        return matches
+"""
+
+import re
+
+class SemanticGrabberLibrary_MARKER:
+    """
+    import yaml
+from sentence_transformers import SentenceTransformer, util
+
+class SemanticGrabberLibrary:
+    def __init__(self, yaml_path: str, model_name: str = 'distiluse-base-multilingual-cased'):
+        # Lade Grabber-Library aus YAML
+        with open(yaml_path, 'r', encoding='utf-8') as f:
+            self.library = yaml.safe_load(f)
+
+        # Lade SentenceTransformer Modell
+        self.model = SentenceTransformer(model_name)
+        self._build_anchor_embeddings()
+
+    def _build_anchor_embeddings(self):
+        self.embeddings = {}
+        for grabber_id, data in self.library.items():
+            patterns = data.get('patterns', [])
+            if patterns:
+                self.embeddings[grabber_id] = self.model.encode(patterns, convert_to_tensor=True)
+
+    def get_grabber_ids(self):
+        return list(self.library.keys())
+
+    def get_patterns_for_id(self, grabber_id):
+        return self.library.get(grabber_id, {}).get('patterns', [])
+
+    def get_description_for_id(self, grabber_id):
+        return self.library.get(grabber_id, {}).get('beschreibung', '')
+
+    def match_text(self, text, threshold=0.7):
+        matches = []
+        text_embedding = self.model.encode(text, convert_to_tensor=True)
+
+        for grabber_id, anchor_embeds in self.embeddings.items():
+            cos_sim = util.cos_sim(text_embedding, anchor_embeds)
+            max_score = cos_sim.max().item()
+            if max_score >= threshold:
+                matches.append((grabber_id, round(max_score, 3)))
+
+        # Sortiere nach Score absteigend
+        matches.sort(key=lambda x: x[1], reverse=True)
+        return matches
+    """
+    
+    examples = [
+    
+        "- "Ich zweifle ständig an meinen Entscheidungen.",
+        "- "Manchmal frage ich mich, ob ich gut genug bin.",
+        "- "Ich weiß nicht, ob ich das überhaupt richtig mache.",
+        "- "Vielleicht bin ich wirklich zu empfindlich.",
+        "beschreibung: Erkennt Selbstzweifel, Unsicherheit und mangelndes Selbstvertrauen.",
+        "SELF_DOUBT_SEM_g7h8:",
+        "- "Immer drehst du alles so, dass ich mich schlecht fühle.",
+        "- "Denk mal darüber nach, wie egoistisch du gerade bist.",
+        "- "Du bist schuld, dass es mir so schlecht geht.",
+        "- "Wenn du mich wirklich lieben würdest, würdest du das tun.",
+        "beschreibung: Erkennt emotionale Manipulation und verdeckte Beeinflussung.",
+        "EMOTIONAL_MANIPULATION_SEM_e5f6:",
+        "- "Ich habe dir klar gesagt, dass ich das nicht will.",
+        "- "So möchte ich nicht behandelt werden.",
+        "- "Du hast meine Grenze überschritten.",
+        "- "Das war jetzt wirklich zu viel für mich.",
+        "beschreibung: Erkennt Grenzüberschreitungen oder das Ignorieren persönlicher Grenzen.",
+        "BOUNDARY_VIOLATION_SEM_c3d4:",
+        "- "Du hast mir schon so oft etwas versprochen und nicht gehalten.",
+        "- "Ich spüre, dass mein Vertrauen in dich schwindet.",
+        "- "Irgendetwas stimmt hier nicht mehr zwischen uns.",
+        "- "Ich weiß nicht mehr, ob ich dir glauben kann.",
+        "beschreibung: Erkennt Vertrauensverlust und Zweifel in der Beziehung.",
+        "TRUST_EROSION_SEM_a1b2:",]
+    
+    patterns = [
+        re.compile(r"(muster.*wird.*ergänzt)", re.IGNORECASE)
+    ]
+    
+    semantic_grabber_id = "AUTO_GENERATED"
+    
+    def match(self, text):
+        """Prüft ob der Text zum Marker passt"""
+        for pattern in self.patterns:
+            if pattern.search(text):
+                return True
+        return False

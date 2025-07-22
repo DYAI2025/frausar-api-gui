@@ -1,0 +1,49 @@
+marker: Sarkasmus_schuldsubtil
+beschreibung: >
+  Sarkastische oder ironische Aussagen, die Schuldgefühle beim Gegenüber auslösen sollen,
+  ohne die Schuld direkt zu benennen. Die Manipulation ist oft beruflich, beziehungshaft
+  oder selbstironisch getarnt.
+
+kategorien:
+  - name: Beruf & Leistung – Der unterbewertete Kollege
+    kontext: Beruf, Kollegium, Chef
+    beispiele:
+      - "Ihre konstruktive Kritik ist wirklich eine Bereicherung für uns alle, [ADRESSAT]."
+      - "Selbstverständlich übernehme ich Ihre Aufgaben auch noch. Ich habe ja nur 24 Stunden am Tag Zeit."
+      - "Ein weiteres Meeting? Wunderbar. Ich liebe es, meine eigentliche Arbeit dann nachts zu erledigen."
+      - "Macht nur ohne mich weiter. Ich bin ja nur die Person, die das Projekt von Anfang an geleitet hat."
+      - "Keine Sorge, die Arbeit mache ich gerne für dich mit. Ich wollte sowieso heute Nacht nicht schlafen."
+      - "Deine Fähigkeit, Verantwortung abzugeben, ist wirklich inspirierend."
+      - "Ich lebe für unbezahlte Überstunden. Das ist meine wahre Leidenschaft."
+      - "Ich bin fasziniert von der logischen Stringenz Ihrer Argumentation."
+  - name: Beziehung & Nähe – Die emotionale Schuldzuweisung
+    kontext: Partnerschaft, Familie, enge Beziehung
+    beispiele:
+      - "Na klar, weil mein einziger Lebensinhalt darin besteht, auf deine Nachrichten zu warten."
+      - "Schön, dass du auch mal anrufst. Ist heute ein Feiertag, von dem ich nichts weiß?"
+      - "Oh, du hast den Müll rausgebracht? Pass nur auf, dass du dich nicht überanstrengst."
+      - "Nein, nein, du störst überhaupt nicht. Ich starre nur gerne aus dem Fenster und denke über den Sinn des Lebens nach."
+      - "Klar, ruf mich an, wenn du was brauchst. Sonst aber bitte nicht."
+      - "Ich habe überhaupt nichts dagegen, wenn du mein Essen isst. Ich wollte sowieso eine Diät anfangen."
+      - "Es ist immer wieder erstaunlich, wie du es schaffst, das Thema auf dich zu lenken."
+      - "Es ist beruhigend zu wissen, dass du im Krisenfall die Nerven behältst."
+  - name: Selbstironie als Waffe – Das kalkulierte Opfer
+    kontext: Opferrolle, Selbstabwertung, emotionale Manipulation
+    beispiele:
+      - "Sorry, dass meine Existenz deine Pläne durchkreuzt hat."
+      - "Die Anleitung war sonnenklar. Liegt bestimmt an meiner mangelnden Intelligenz, dass ich sie trotzdem nicht verstehe."
+      - "Ich finde es toll, wie du immer ehrlich deine Meinung sagst, besonders wenn niemand danach gefragt hat."
+      - "Vielen Dank für die unaufgeforderte Lebensberatung."
+      - "Wieder so ein Tag, an dem man am liebsten Applaus für das bloße Aufstehen bekommen möchte."
+      - "Ich schätze deine Hilfe wirklich sehr. Dieses Chaos hier noch zu vergrößern, hätte ich alleine nie geschafft."
+      - "Das war nicht ironisch gemeint. Das war ein Test deines Ironie-Detektors."
+  - name: Spöttische Beobachtungen & verletzender Zynismus
+    kontext: Grenztest, spöttischer Kommentar, verdeckte Aggression
+    beispiele:
+      - "Das hast du ja wieder ganz fantastisch hingekriegt."
+      - "Deine Pünktlichkeit ist mal wieder bewundernswert."
+      - "Ach, du hast es bemerkt? Ich bin beeindruckt von deiner scharfen Beobachtungsgabe."
+      - "Ich bin total überrascht, dass das nicht funktioniert hat. Total."
+      - "Deine Ratschläge sind Gold wert. Ich werde sie direkt ignorieren."
+      - "Dein Optimismus ist ansteckend. Zum Glück bin ich geimpft."
+      - "Das ist ja eine reizende Überraschung. Und ich habe leider kein Gift im Haus."

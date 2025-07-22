@@ -1,0 +1,11 @@
+marker: SEMANTIC_MARKER_RULES_MARKER
+beschreibung: >
+  
+beispiele:
+
+semantic_grab:
+  description: "Erkennt Muster für semantic_marker_rules_marker"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

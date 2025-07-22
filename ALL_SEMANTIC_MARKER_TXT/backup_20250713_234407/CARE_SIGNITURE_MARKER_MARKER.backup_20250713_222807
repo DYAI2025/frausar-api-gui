@@ -1,0 +1,32 @@
+marker: CARE_SIGNITURE_MARKER_MARKER
+beschreibung: >
+  Sich musterhaft wiederholdene Nachrichtenabschlüsse beim Verabschieden, die Zuneigung und Verbinung für die Partner implizieren. Die Wiederholung als Beziehungs Baseline Temeratur, an der Microveränderungen abzulesen sind.
+beispiele:
+  - "CareSignatureIndicator (CSI):"
+  - "Typ: MetaMarker"
+  - "Detektion: Satz- oder Nachrichtenschluss, Wiederholung"
+  - "Zeichenarten:"
+  - "- Buchstabenfolgen: x, xx, xxx, xoxo"
+  - "- Emojis: ❤️, 😘, 😊, 🫶"
+  - "- Insider: "Ciao", "Knutsch", Kosename"
+  - "- Kombinationen"
+  - "Skala:"
+  - "- None:     Rückzug, Distanz"
+  - "- Minimal:  Basis, Routine"
+  - "- Stabil:   Alltag, Normalbindung"
+  - "- Hoch:     Nähe, Zuneigung"
+  - "- Peak:     Versöhnung, Ritual, Hochbindung"
+  - "Driftanalyse:"
+  - "- Reduktion: Wer reduziert zuerst?"
+  - "- Ursache: Kränkung, Frustration, Überforderung"
+  - "- Steigerung: Reparatur, Nähe, Ritualverstärkung"
+  - "BeispielZoeBen:"
+  - "- Zunahme "xxx + ❤️": Versöhnung, positives Commitment"
+  - "- Rückgang auf "x" oder —: Verletzung, Rückzug, Drift"
+
+semantic_grab:
+  description: "Erkennt Muster für care_signiture_marker"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

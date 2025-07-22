@@ -1,0 +1,46 @@
+marker: COMPARISON_GHOST_MARKER
+beschreibung: Subtiler oder offener Vergleich einer aktuellen Situation mit Ex-Partnern, einem früheren Leben oder alternativen Szenarien, was Unsicherheit und Konkurrenzdruck erzeugt.
+szenarien:
+  - Patchwork-Familie
+  - Neue Partnerschaft nach langer Beziehung
+  - Beruflicher Wechsel
+  - Freundschaften im Wandel
+dynamik_absicht: Die Absicht reicht von unbewusster Unsicherheit und dem Suchen nach Bestätigung („Bin ich gut genug?“) über passive Aggression („Früher war alles besser“) bis zu gezielter Manipulation. Die Wirkung ist fast immer destabilisierend.
+beispiele:
+  - "Mein Ex hätte das sofort verstanden."
+  - "Am Anfang unserer Beziehung warst du viel aufmerksamer."
+  - "In meiner alten Firma hatten wir für so etwas ein Budget."
+  - "Denkst du manchmal noch darüber nach, was gewesen wäre, wenn du den anderen Job angenommen hättest?"
+  - "Sandra kocht für ihren Freund jeden Abend frisch. Das finde ich toll."
+  - "Mit meiner Ex-Frau konnte ich über solche Dinge einfach besser reden."
+  - "Früher, als die Kinder noch klein waren, war alles irgendwie einfacher."
+  - "Ich wünschte, du wärst ein bisschen mehr wie dein Bruder, was die Planung angeht."
+  - "War das mit ihr auch immer so kompliziert?"
+  - "Die Frau meines besten Freundes unterstützt ihn bei allem, ohne zu fragen."
+  - "Ich habe das Gefühl, du vergleichst mich ständig mit deiner Mutter."
+  - "Als ich noch Single war, hatte ich viel mehr Zeit für meine Hobbys."
+  - "Meine letzte Beziehung ist daran zerbrochen, dass wir zu wenig geredet haben. Ich habe Angst, dass das wieder passiert."
+  - "Wow, schau mal, was Anna von ihrem Freund zum Jahrestag bekommen hat. [zeigt Handy]"
+  - "Das erinnert mich an den Urlaub, den ich damals mit Martin gemacht habe."
+  - "Finanziell ging es mir besser, bevor wir zusammengezogen sind."
+  - "Bist du sicher, dass du das so machen willst? Mein Vater hat immer gesagt, dass..."
+  - "Du bist so anders als alle, die ich davor kannte." (kann positiv oder negativ sein, erzeugt aber Vergleich)
+  - "Ich will dich ja nicht ändern, aber ein bisschen mehr Spontanität, so wie früher, wäre schön."
+  - "Wenn ich sehe, wie glücklich andere Paare sind, frage ich mich manchmal..."
+metamarker_kombinationen:
+  - name: "Nostalgie-Falle"
+    kombination_mit: BLAME_SHIFT_MARKER
+    szenario: "Die Verantwortung für die Diskrepanz zwischen 'früher' und 'heute' wird dem neuen Partner zugeschoben. Beispiel: 'Mit meiner Ex konnte ich stundenlang reden. Bei dir habe ich das Gefühl, jedes Wort auf die Goldwaage legen zu müssen.'"
+semantic_grab:
+  description: "Erkennt vergleichende Sprache, die sich auf vergangene oder alternative Personen/Szenarien bezieht."
+  patterns:
+    - rule: "EX_PARTNER_COMPARISON"
+      pattern: "(mein/e Ex|\\w+) +(hat immer|hat nie|war mehr|konnte besser) +([\\w\\s]+)"
+      example: "Mein Ex hat nie vergessen, den Müll rauszubringen."
+    - rule: "PAST_VS_PRESENT_DECAY"
+      pattern: "(früher|damals|am Anfang) +([\\w\\s]+) +(aber jetzt|heute) +([\\w\\s]+)"
+      example: "Früher warst du viel aufmerksamer, aber jetzt schaust du nur noch aufs Handy."
+psychologischer_hintergrund:
+  - Theorie: Bindungstheorie (unsichere Bindungsstile)
+  - Theorie: Objektbeziehungstheorie (Externalisierung, Projektion, Übertragung)
+tags: [beziehung, patchwork, eifersucht, vergangenheit, konflikt]

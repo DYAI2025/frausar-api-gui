@@ -1,0 +1,22 @@
+marker_name: __ID_MARKER
+beschreibung: ''
+beispiele: null
+semantische_grabber_id: AUTO_SEM_20250722_F527
+metadata:
+  created_at: 2025-07-22 00:24:15.500479
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags:
+  - neu_erstellt
+  - needs_review
+  last_repaired: '2025-07-22T00:39:57.269446'
+  repair_version: '1.0'
+category: UNCATEGORIZED
+tags:
+- needs_review
+examples:
+- AUTO_GENERATED_EXAMPLE_1
+- AUTO_GENERATED_EXAMPLE_2
+- AUTO_GENERATED_EXAMPLE_3
+- AUTO_GENERATED_EXAMPLE_4
+- AUTO_GENERATED_EXAMPLE_5

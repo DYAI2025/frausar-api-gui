@@ -1,0 +1,13 @@
+# RESPONSE_TIMING_MARKER - Semantic Marker
+marker_name: RESPONSE_TIMING_MARKER
+beschreibung: >
+  Synchronisierte oder adaptierte Antwortzeiten, bemerkte Gleichzeitigkeit, bewusste Pausen oder Gleichklang im Chat-Tempo.
+beispiele:
+
+semantische_grabber_id: AUTO_SEM_20250703_9F2B
+
+metadata:
+  created_at: 2025-07-03T11:33:32.273164
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

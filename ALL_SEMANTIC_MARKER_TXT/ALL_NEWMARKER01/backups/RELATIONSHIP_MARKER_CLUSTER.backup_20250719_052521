@@ -1,0 +1,17 @@
+kategorie: ATOMIC
+marker:
+  category: Atomic
+  context_rule: []
+  description: Automatisch generierte Beschreibung für RELATIONSHIP_MARKER_CLUSTER
+  examples:
+  - Automatisch generierte Beschreibung für RELATIONSHIP_MARKER_CLUSTER
+  id: M_RELATIONSHIP_MARKER_CLUSTER
+  level: 1
+  name: RELATIONSHIP_CLUSTER
+  pattern: []
+  semantic_grabber_id: AUTO_SEM_20250714_BA2D
+  semantic_tags:
+  - relationship-marker-cluster
+marker_name: RELATIONSHIP_MARKER_CLUSTER
+tags:
+- needs_review

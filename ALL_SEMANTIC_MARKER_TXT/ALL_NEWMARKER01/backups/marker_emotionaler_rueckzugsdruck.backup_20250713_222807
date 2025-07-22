@@ -1,0 +1,68 @@
+mmarker: EMOTIONAL_WITHDRAWAL_PRESSURE
+beschreibung: Eine manipulative Kommunikationsform, die Selbstabwertung, einen latenten Vorwurf und eine Rückzugsandrohung kombiniert, um beim Gegenüber Schuldgefühle und Verlustangst zu erzeugen und es zur Reaktion zu zwingen.
+szenarien:
+  - Toxische Beziehungen
+  - Konflikte in Freundschaften und Familie
+  - Arbeitsplatz-Mobbing
+dynamik_absicht: Es ist eine passiv-aggressive Taktik, um Aufmerksamkeit, Bestätigung oder eine Verhaltensänderung zu erzwingen, ohne die eigenen Bedürfnisse direkt zu äußern. Die Verantwortung für das "Retten" der Situation wird dem Gegenüber zugeschoben.
+beispiele:
+  - "Ist schon okay, du hast Besseres zu tun. Ich komme schon klar, hab ich ja immer."
+  - "Ich merke schon, dass ich störe. Ich ziehe mich dann mal leise zurück."
+  - "Du brauchst dich nicht zu rechtfertigen. Ich habe verstanden, dass ich in deiner Liste der Prioritäten nicht vorkomme."
+  - "Vielleicht ist es besser, wenn ich einfach gehe, bevor ich dich noch mehr enttäusche."
+  - "Keine Sorge um mich. Ich bin es gewohnt, übersehen zu werden."
+  - "Ich wollte nur helfen. Aber anscheinend mache ich alles nur noch schlimmer. Ich halte mich jetzt raus."
+  - "Es ist okay. Du musst dich nicht für mich interessieren. Tut ja sonst auch keiner."
+  - "Ich habe wohl zu viel erwartet. Mein Fehler. Ich werde meine Erwartungen ab jetzt runterschrauben."
+  - "Du scheinst glücklicher zu sein, wenn ich nicht da bin. Also werde ich dir diesen Gefallen tun."
+  - "Ich will keine Last sein. Ich verschwinde einfach, dann ist es für alle einfacher."
+  - "Ich sehe doch, dass du genervt bist. Ist gut jetzt, ich sage nichts mehr."
+  - "Ich bin anscheinend zu kompliziert für diese Welt. Ich bleibe besser für mich."
+  - "Du musst mir nicht antworten. Ich bin es nicht wert, dass man sich die Mühe macht."
+  - "Vergiss einfach, was ich gesagt habe. Es ist offensichtlich nicht wichtig."
+  - "Ich habe das Gefühl, ich kämpfe hier allein um uns. Vielleicht sollte ich einfach aufgeben."
+  - "Du hast recht, ich bin zu anstrengend. Ich werde dich nicht weiter damit belasten."
+  - "Anscheinend bin ich unsichtbar. Also verhalte ich mich auch so."
+  - "Ich wollte deine gute Laune nicht ruinieren. Ich gehe jetzt lieber."
+  - "Ich bin wohl einfach nicht liebenswert genug. Schon okay, ich hab's verstanden."
+  - "Genieß deinen Abend. Ich werde mich dann mal in meine Ecke zurückziehen."
+psychologischer_hintergrund:
+  - Passiv-aggressives Verhalten
+  - Emotionale Erpressung
+  - Angelernte Hilflosigkeit als Machtinstrument
+tags: [manipulation, passiv-aggressiv, emotionale erpressung, schuld, rückzug]arker:
+  alias:
+  - Rückzugsmanipulation
+  - emotionaler Eskalationsknoten
+  - Selbstmitleid-Vorwurf-Rückzug
+  beispielanzahl_gewünscht: 20
+  beispiele:
+  - Ist schon okay. Ich hab einfach zu hohe Erwartungen an Menschen.
+  - Vielleicht bin ich einfach jemand, den man nicht lieben kann.
+  - Ich zieh mich mal zurück, bevor ich noch mehr falsch mache.
+  - Wenn du jetzt nicht antwortest, weiß ich, woran ich bin.
+  - Ich hab das Gefühl, ich bin dir nur im Weg – wieder mal.
+  - Sorry, dass ich überhaupt geschrieben hab.
+  - Dann brauchst du dich ja jetzt gar nicht mehr zu melden.
+  - Ich wusste, dass es zu schön ist, um für mich zu funktionieren.
+  - Schon gut, ich werd mich in Zukunft einfach weniger melden.
+  - Keine Sorge, ich klär das schon irgendwie allein.
+  bewertung:
+    Selbstabwertung: 0.9
+    emotionale Manipulation: 0.85
+    soziale Eskalation: 0.75
+  definition: Ein manipulativer Kommunikationsstil, bei dem Selbstmitleid, subtile
+    Vorwürfe und Rückzugsandrohungen kombiniert werden, um emotionale Schuld oder
+    Bindungsreflexe beim Gegenüber zu erzeugen.
+  indikatoren:
+  - Selbstabwertung mit unterschwelliger Erwartung
+  - Nicht ausgesprochene Vorwürfe durch Formulierungen
+  - Andeutungen von Rückzug oder Schweigen
+  - Emotional gefärbter Sarkasmus
+  kontext: toxische Beziehungsmuster, Nähe-Distanz-Dynamiken, Romance Scams
+  name: emotionaler Rückzugsdruck
+  submarker_kombination:
+  - Selbstmitleid
+  - latenter Vorwurf
+  - emotionaler Rückzug
+  - Sarkasmus (mild)

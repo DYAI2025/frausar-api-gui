@@ -1,0 +1,18 @@
+# A_BLAME_SHIFT_MARKER - Semantic Marker
+marker_name: A_BLAME_SHIFT_MARKER
+beschreibung: >
+  Atomic Marker für Formulierungen, die die Schuld oder Verantwortung explizit auf eine andere Person zurückschieben (Projektion).
+beispiele:
+  - "Wenn du nicht immer so gestresst wärst, wäre das nicht passiert."
+  - "Du bist doch derjenige, der das Thema immer wieder anfängt."
+  - "Wegen dir ist die Stimmung jetzt gekippt."
+  - "Du provozierst das ja geradezu."
+  - "Selber schuld, wenn du so empfindlich reagierst."
+
+semantische_grabber_id: SGR_BLAME_SHIFT_01
+
+metadata:
+  created_at: 2025-07-21T12:52:31.604766
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

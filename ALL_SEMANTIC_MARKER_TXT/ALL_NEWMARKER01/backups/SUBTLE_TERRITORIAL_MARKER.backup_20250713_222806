@@ -1,0 +1,45 @@
+marker: SUBTLE_TERRITORIAL_MARKER
+beschreibung: Verdecktes oder offenes Abstecken von persönlichen Grenzen und Revieren durch Regeln, Rituale oder nonverbale Signale, die den Zugang zu bestimmten Lebensbereichen regulieren oder verwehren.
+szenarien:
+  - Patchwork-Familie
+  - Partnerschaft (Wohnung, Handy, Freunde)
+  - Arbeitsplatz (Kunden, Informationen)
+dynamik_absicht: Dient der Wahrung von Identität und Autonomie. Kann gesund sein, wird aber bei rigider oder misstrauischer Anwendung zu einem exklusiven, abweisenden Signal („Ich lasse dich nicht ganz in mein Leben“).
+beispiele:
+  - "Mein Handy ist und bleibt Privatsache."
+  - "Das Wochenende ist immer nur für mich und die Kinder, okay?"
+  - "Ich bringe die Kinder lieber allein ins Bett, das ist unser Ritual."
+  - "Mein Büro ist mein Rückzugsort, da brauche ich einfach Ruhe."
+  - "Manche Dinge bespreche ich lieber nur mit meiner Schwester."
+  - "Fotos von uns teile ich eigentlich nicht, das ist mir zu privat."
+  - "Meine Finanzen regele ich grundsätzlich allein."
+  - "Nein, zu meinen alten Uni-Freunden kannst du nicht mitkommen, das ist eine andere Welt."
+  - "Bitte geh nicht an meinen Laptop, auch wenn er offen ist."
+  - "Den Keller habe ich für meine Modelleisenbahn reserviert, da hat sonst niemand was zu suchen."
+  - "Über meine Vergangenheit rede ich, wenn ich dazu bereit bin."
+  - "Das ist 'mein' Stuhl."
+  - "Lass uns getrennte Freundeskreise haben, das ist auf Dauer gesünder."
+  - "Die Kommunikation mit diesem Kunden läuft ausschließlich über mich."
+  - "Meine Morgenroutine ist heilig, da will ich komplett ungestört sein."
+  - "Du musst nicht alles von mir wissen."
+  - "Ich erzähle meiner Mutter lieber selbst von uns, wenn die Zeit reif ist."
+  - "Den Hund habe ich in die Beziehung gebracht, also treffe ich die Entscheidungen über ihn."
+  - "Bitte schließ die Tür zu meinem Arbeitszimmer, wenn du gehst."
+  - "Ich brauche meinen eigenen Bereich in der Wohnung, eine Ecke nur für mich."
+metamarker_kombinationen:
+  - name: "Autonomie-Festung"
+    kombination_mit: Vermeidende Abwertung von Nähe
+    szenario: "Das Territorium wird nicht nur abgegrenzt, sondern die Beziehung selbst als Bedrohung dafür dargestellt. Beispiel: 'Mein Hobby ist der einzige Ort, wo ich nicht ständig diesen Beziehungskram habe.'"
+semantic_grab:
+  description: "Erkennt exkludierende Formulierungen, Besitzansprüche ('mein') und die explizite Trennung von Lebensbereichen."
+  patterns:
+    - rule: "EXCLUSIVE_ZONE_RULE"
+      pattern: "(Dieser Bereich|Diese Zeit) +(ist nur für|gehört nur) +(mich und die Kinder|mich allein|uns)"
+      example: "Der Mädelsabend ist heilig, da haben Männer nichts verloren."
+    - rule: "ACCESS_DENIAL"
+      pattern: "(Bitte geh nicht an|Finger weg von) +(mein Handy|meinen Schreibtisch|meine Sachen)"
+      example: "Bitte geh nicht ohne zu fragen an mein Handy."
+psychologischer_hintergrund:
+  - Theorie: Systemische Modelle (Bowen/Schnarch: Differenzierung des Selbst vs. Fusion)
+  - Theorie: Bindungstheorie (vermeidend-distanzierter Bindungsstil, Deaktivierungsstrategie)
+tags: [autonomie, grenzen, kontrolle, vermeidung, distanz]

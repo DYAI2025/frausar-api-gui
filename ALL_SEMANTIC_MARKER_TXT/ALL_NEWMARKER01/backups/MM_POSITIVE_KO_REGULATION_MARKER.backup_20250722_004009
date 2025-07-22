@@ -1,0 +1,57 @@
+marker_name: MM_POSITIVE_KO_REGULATION_MARKER
+beschreibung: 'Meta-marker for strong, healthy relationship dynamics.
+
+  '
+beispiele:
+- Ein Gesprächsverlauf über mehrere Tage, der durchgängig von gemeinsamer Urlaubsplanung
+  und liebevollen Kosenamen geprägt ist.
+- A multi-day chat full of joint vacation planning and affectionate pet names throughout.
+- Eine Sequenz, in der ein Partner einen Zukunftswunsch äußert, der andere resonant
+  antwortet und sie konkrete Pläne schmieden, begleitet von 'darling' & Co.
+- A sequence where one partner states a future wish, the other resonates, they craft
+  concrete plans, all while using pet names like 'darling'.
+- Weekly logs show constant we-language, joint plans, and mutual hype—meta fires.
+- 'Chat history: alternating anticipation messages and cozy nicknames triggering both
+  clusters.'
+- Four days of planning a road trip plus daily 'sweetheart' resonance—co-regulation
+  confirmed.
+- 'Couple’s thread: every morning a pet name + proposal for new shared routine.'
+- 'Analysis window: 6 joint-future initiatives, 5 positive pet-name responses—strong
+  bond.'
+- Therapist transcript flags meta when partners validate and plan together repeatedly.
+- Vacation board screenshot exchange + 'we got this' talk—system labels positive co-regulation.
+- Even under stress they fall back to 'team us' language and immediate empathy replies.
+- Planning renovation together with constant 'love' affirmations across 15 messages.
+- Long-distance pair share countdown widgets, pet names, and mutual excitement—meta
+  green.
+- 'Daily check-ins: anticipation for weekend + ''babe'' resonance loop recognized.'
+- Joint calendar edits plus encouraging nicknames light up bonding dashboard.
+- Sprint retrospective shows couple organizing chores collaboratively, praising each
+  other.
+- 'Meta monitors 10-message window: two clusters active—scores peak.'
+- 'Recorded voice notes: shared future dreams with laughter and pet-name warmth.'
+- Their conflict resolution includes planning a treat together and thanking each other—meta
+  hits.
+- Chatbot detects continuous secure bond—suggests celebrating milestones.
+- 'Evening recap: planning, pet names, resonance—positive loop maintained.'
+- Weekend summary illustrates balanced initiative and empathy exchanges.
+- 'System output: ‘Relationship resilience high—co-regulation stable.’'
+semantische_grabber_id: SGR_POSITIVE_COREGULATION_01
+metadata:
+  created_at: 2025-07-22 00:37:37.248204
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags:
+  - neu_erstellt
+  - needs_review
+  last_repaired: '2025-07-22T00:39:57.340760'
+  repair_version: '1.0'
+category: UNCATEGORIZED
+tags:
+- needs_review
+examples:
+- AUTO_GENERATED_EXAMPLE_1
+- AUTO_GENERATED_EXAMPLE_2
+- AUTO_GENERATED_EXAMPLE_3
+- AUTO_GENERATED_EXAMPLE_4
+- AUTO_GENERATED_EXAMPLE_5

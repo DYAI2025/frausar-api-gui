@@ -1,0 +1,72 @@
+marker: GUILT_TRIPPING_SEMANTIC_DETECT.py_MARKER
+beschreibung: >
+  # -*- coding: utf-8 -*-
+
+# #############################################################################
+#  SEMANTIC GRAB DEFINITION FÜR: GUILT_TRIPPING_MARKER (Pärchen-Chat)
+#
+#  Zweck:
+#  Diese Datei definiert Erkennungsmuster für die manipulative Taktik
+#  "Guilt Tripping" (Schuldinduktion), wie sie typischerweise in
+#  Text-Chats zwischen Partnern auftritt.
+#
+#  Die Muster sind darauf ausgelegt, von einer KI verwendet zu werden, um
+#  subtile Vorwürfe, Märtyrer-Aussagen und passiv-aggressive Kommentare
+#  zu identifizieren, die darauf abzielen, Schuldgefühle zu erzeugen.
+# #############################################################################
+beispiele:
+  - "GUILT_TRIPPING_SEMANTIC_GRAB = {"
+  - ""description": "Erkennt Muster im Chat-Kontext, die darauf abzielen, beim Partner durch subtile Vorwürfe, Märtyrer-Aussagen, das Infragestellen der Zuneigung oder passiv-aggressive Kommentare Schuldgefühle zu erzeugen.","
+  - ""patterns": ["
+  - "{"
+  - ""rule": "MARTYR_STATEMENTS","
+  - ""pattern": r"(ich mach das schon|hab alles gemacht|kümmere mich allein|niemand hilft) + (allein|während du|aber das siehst du ja nicht|ist ja egal)","
+  - ""example": "Ist schon ok, ich mach das schon alles allein. Hab ich ja bisher auch immer geschafft.""
+  - "},"
+  - "{"
+  - ""rule": "CONTRASTING_ENJOYMENT","
+  - ""pattern": r"(Viel Spaß|Genieß den Abend|Feier du ruhig|Schön, dass du lachst) + (während ich|ich sitze hier|ich bin krank|meine Kopfschmerzen)","
+  - ""example": "Viel Spaß dir heute Abend. Ich bleib einfach auf der Couch, vielleicht schläft mein Kopfschmerz dann irgendwann ein.""
+  - "},"
+  - "{"
+  - ""rule": "CONDITIONAL_LOVE_TEST","
+  - ""pattern": r"(Wenn du mich lieben würdest|Wäre ich dir wichtig|Anscheinend bin ich dir nicht wichtig|Jemand, der liebt) + (dann hättest du|würdest du nicht|hättest du daran gedacht)","
+  - ""example": "Wenn ich dir wirklich wichtig wäre, hättest du daran gedacht.""
+  - "},"
+  - "{"
+  - ""rule": "PASSIVE_AGGRESSIVE_MINIMIZATION","
+  - ""pattern": r"^(ok\.|Aha\.|Schon gut\.|Vergiss es\.|Mach was du willst\.)$","
+  - ""example": "(Als Antwort auf eine lange Erklärung oder Entschuldigung des Partners) 'ok.'""
+  - "},"
+  - "{"
+  - ""rule": "SOMATIC_LEVERAGE","
+  - ""pattern": r"(Seit unserem Streit|Wenn du so bist|Wegen dem ganzen Stress) + (kann ich nicht schlafen|hab ich Migräne|dreht sich mein Magen um|bin ich krank)","
+  - ""example": "Seit unserem Streit gestern konnte ich kaum schlafen.""
+  - "},"
+  - "{"
+  - ""rule": "UNAPPRECIATED_EFFORT","
+  - ""pattern": r"(Schade, dass dir das nicht aufgefallen ist|Ein 'Danke' wäre nett|Das siehst du wahrscheinlich gar nicht)","
+  - ""example": "Schade, dass dir das nicht aufgefallen ist. Ich hab mir extra für dich Mühe gegeben.""
+  - "}"
+  - "]"
+  - "}"
+  - "# Beispielhafter Aufruf, um die Daten zu verwenden und zu überprüfen:"
+  - "if __name__ == "__main__":"
+  - "print("="*50)"
+  - "print("SEMANTIC GRAB FÜR GUILT TRIPPING GELADEN")"
+  - "print("="*50)"
+  - "print(f"\nBeschreibung: {GUILT_TRIPPING_SEMANTIC_GRAB['description']}\n")"
+  - "print("Muster für die KI-Erkennung:")"
+  - "for pattern_rule in GUILT_TRIPPING_SEMANTIC_GRAB['patterns']:"
+  - "print(f"\n  - Regel: {pattern_rule['rule']}")"
+  - "print(f"    Beispiel: '{pattern_rule['example']}'")"
+  - "# Hinweis: Das 'pattern' ist eine abstrakte Regex-Darstellung."
+  - "# Eine echte Implementierung würde entweder Regex oder semantische Ähnlichkeit nutzen."
+  - "print(f"    Abstraktes Muster: {pattern_rule['pattern']}")"
+
+semantic_grab:
+  description: "Erkennt Muster für guilt_tripping_semantic_detect.py"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

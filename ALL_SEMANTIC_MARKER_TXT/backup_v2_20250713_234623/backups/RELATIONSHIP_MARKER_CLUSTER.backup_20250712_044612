@@ -1,0 +1,11 @@
+marker_cluster:
+  beschreibung: 'Enthält Marker rund um emotionale Dynamiken in Beziehungen: Manipulation,
+    Rückzug, Sarkasmus.'
+  marker:
+  - name: antizipierte Manipulation
+    quelle: marker_dynamic_knot_beispiele.yaml
+  - name: emotionaler Rückzugsdruck
+    quelle: marker_emotionaler_rueckzugsdruck.yaml
+  - name: Sarkasmus
+    quelle: marker_sarkasmus.yaml
+  name: Beziehungsdynamik

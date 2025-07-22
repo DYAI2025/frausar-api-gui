@@ -1,0 +1,20 @@
+marker: RESONACE_MATCHING_DETECTOR.py_MARKER
+beschreibung: >
+  Semantic detection of too good to be true matching.
+beispiele:
+  - "RESONANZ_MATCHING_GRAB = {"
+  - ""marker": "RESONANZ_MATCHING_MARKER","
+  - ""description": "Erkennt nahtlose Spiegelung/Synchronizität von Sprache, Einstellungen, Interessen – auffällig hohe Deckungsgleichheit ohne Vorlauf oder Insider.","
+  - ""patterns": ["
+  - "r"(genau das gleiche erlebt|wir ticken identisch|du sprichst mir aus der Seele|wie aus meinem Kopf|genau meine Gedanken|mein Lebensmotto|hätten uns schon ewig gekannt)","
+  - "r"(Wir sind so ähnlich|Wahnsinn, wir teilen die gleichen Werte|Verrückt, wie sehr wir uns ähneln)","
+  - "r"(exakt so sehe ich das auch|Genau so denke ich auch|Wir sind auf der gleichen Wellenlänge)","
+  - "]"
+  - "}"
+
+semantic_grab:
+  description: "Erkennt Muster für resonace_matching_detector.py"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

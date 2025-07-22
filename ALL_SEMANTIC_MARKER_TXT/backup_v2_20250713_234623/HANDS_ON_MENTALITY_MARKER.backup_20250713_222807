@@ -1,0 +1,56 @@
+# HANDS_ON_MENTALITY_MARKER - Semantic Marker
+marker_name: HANDS_ON_MENTALITY_MARKER
+beschreibung: >
+  marker:
+  name: HANDS_ON_MENTALITY_MARKER
+  grabber_id: HANDS_ON_MENTALITY_SEM
+  category: "Hands-on Mentality"
+  description: >
+    Erkennt Äußerungen, die eine pragmatische,
+    anpackende Herangehensweise und direkten Umsetzungseifer zeigen.
+  pattern:
+    - regex: "(pack( an|en)? wir es an|los geht('s)?|direkt anfangen)"
+    - regex: "(ich übernehme das|lass mich das machen)"
+    - keywords: ["Hands-on", "selbstständig", "Tatkraft", "umsetzen"]
+    - semantik: >
+        Sätze, die Eigeninitiative, schnellen Start und praktische Umsetzung betonen
+beispiele:
+  - "examples:"
+  - "- "Packen wir es an, ich richte den Account gleich ein.""
+  - "- "Ich übernehme das und melde mich, wenn es fertig ist.""
+  - "- "Los geht’s – ich lege direkt los.""
+  - "- "Lass mich das Tool installieren, dann können wir testen.""
+  - "- "Ich schnapp mir das Ticket und mache es fertig.""
+  - "- "Ich steige sofort ein und setze die ersten Schritte um.""
+  - "- "Direkt praktisch probieren hilft uns schneller voranzukommen.""
+  - "- "Ich mache einen Prototypen – fertig in zehn Minuten.""
+  - "- "Selbstständig kümmere ich mich um die Konfiguration.""
+  - "- "Lass uns nicht lange reden, sondern direkt handeln.""
+  - "- "Gebt her, ich mache das schnell fertig.""
+  - "- "Ich fange einfach mal an, wir können später optimieren.""
+  - "- "Weniger planen, mehr machen. Ich starte jetzt.""
+  - "- "Ich hab den Code schon mal eingecheckt. Könnt ihr drüberschauen.""
+  - "- "Das Problem ist klar. Ich fange direkt an, es zu beheben.""
+  - "- "Ich bin dran.""
+  - "- "Reden wir nicht drüber, machen wir's einfach.""
+  - "- "Ich kümmere mich drum.""
+  - "- "Erledigt.""
+  - "- "Ich baue mal schnell einen Klick-Dummy, dann haben wir was zum Diskutieren.""
+  - "- "Ich probiere das mal lokal bei mir aus.""
+  - "- "Keine Sorge, ich hab das schon auf meiner Liste und beginne sofort.""
+  - "- "Ich ziehe mir die Aufgabe und starte.""
+  - "- "Warten wir nicht auf das Meeting, ich setze es schon mal auf.""
+  - "- "Theorie ist gut, aber lasst es uns jetzt in die Praxis umsetzen.""
+  - "- "Ich erstelle den ersten Entwurf, dann haben wir eine Grundlage.""
+  - "- "Ich rufe da jetzt einfach mal an und kläre das direkt.""
+  - "- "Ich hab schon eine Idee, wie wir das schnell umsetzen können. Ich zeig's euch.""
+  - "- "Ich hasse offene To-Dos. Ich mache das jetzt sofort weg.""
+  - "- "Während ihr noch redet, hab ich schon mal das Repository angelegt.""
+
+semantische_grabber_id: AUTO_SEM_20250712_9ED4
+
+metadata:
+  created_at: 2025-07-12T10:39:43.223301
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

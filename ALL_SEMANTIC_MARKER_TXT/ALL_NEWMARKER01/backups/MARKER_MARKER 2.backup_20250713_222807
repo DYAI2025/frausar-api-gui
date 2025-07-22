@@ -1,0 +1,58 @@
+# MARKER_MARKER - Semantic Marker
+marker_name: MARKER_MARKER
+beschreibung: >
+  Anzeichen von nachhaltiger Widerstandsfähigkeit, System-Offenheit, Fähigkeit zur schnellen Regeneration
+    und zur Integration von Wandel.
+beispiele:
+  - "Ja, es war hart, aber wir haben daraus gelernt und sind jetzt besser vorbereitet als zuvor."
+  - "Es beeindruckt mich, wie ruhig du trotz all der Schwierigkeiten bleibst. Das gibt mir auch Kraft."
+  - "Die Kündigung trifft mich, klar. Aber das ist vielleicht genau der Anstoß, um etwas Neues anzufangen."
+  - "Wir haben immer einen Weg gefunden – und genau deshalb glaube ich, dass wir es auch diesmal schaffen."
+  - "Hey, ich sehe, dass du versuchst, dich nicht runterziehen zu lassen. Das bedeutet mir echt viel."
+  - "Ich hatte heute einen Rückfall, aber morgen starte ich neu. Das ist kein Scheitern, das gehört zum Prozess."
+  - "Es ist schwer, aber wir reden offen darüber – das zeigt, dass wir inzwischen wirklich stark geworden sind."
+  - "Auch wenn wir gerade nicht weiterwissen, wir wissen immerhin, dass wir uns gegenseitig haben."
+  - "Ich bewundere, wie du nach Rückschlägen immer wieder neu ansetzt. Davon können wir alle lernen."
+  - "Die letzten Monate haben uns gezeigt, dass wir viel robuster sind, als wir je gedacht hätten."
+  - "Klar bin ich enttäuscht, aber ich weiß, es gibt immer noch Optionen. Lass uns die jetzt suchen."
+  - "Früher wären wir an so etwas verzweifelt. Heute nutzen wir das als Chance, um zusammenzuhalten."
+  - "Lass uns heute Abend einfach mal Pause machen und Kraft tanken – morgen starten wir frisch."
+  - "Wir verlieren gerade etwas Wichtiges, aber lass uns jetzt überlegen, wie wir daraus trotzdem was Gutes machen."
+  - "Vielleicht ist genau das die Gelegenheit, um endlich mal zu zeigen, was wirklich in uns steckt."
+  - "Ich merke, dass wir immer besser darin werden, unsere Fehler anzunehmen, ohne uns gegenseitig fertigzumachen."
+  - "Lass uns nicht nur darauf schauen, was schieflief, sondern vor allem darauf, was wir daraus lernen können."
+  - "Dass du trotz allem immer wieder an unsere Freundschaft glaubst, gibt mir echt Hoffnung."
+  - "Ich hatte Angst, dass uns das auseinanderbringt, aber es fühlt sich so an, als wären wir dadurch sogar enger zusammengerückt."
+  - "Heute tut’s weh, aber wir haben gelernt, Schmerzen nicht mehr zu vermeiden, sondern gemeinsam durchzugehen."
+  - "Wir schaffen das schon, irgendwie geht's immer weiter."
+  - "Selbst nach dem Streit finde ich es schön, wie wir uns wieder annähern."
+  - "Ich merke, dass wir nicht mehr so leicht aus dem Gleichgewicht geraten."
+  - "Was auch kommt, wir halten das gemeinsam aus."
+  - "Ich finde, wir sind viel stabiler geworden als früher."
+  - "Okay, das war gestern echt heftig. Aber gut, dass wir es angesprochen haben. Lass uns schauen, wie wir das jetzt gemeinsam besser machen."
+  - "Das Projekt ist gescheitert, ja. Aber lasst uns analysieren, was wir daraus lernen können, damit uns das nicht noch mal passiert."
+  - "Klar bist du jetzt am Boden, das verstehe ich total. Aber hey, wir haben schon Schlimmeres durchgestanden. Wir kriegen dich da wieder raus."
+  - "Puh, die unerwartete Rechnung ist ein Schock. Aber keine Panik, wir setzen uns heute Abend zusammen und machen einen Plan. Wir sind ein Team."
+  - "Erinnerst du dich, wie wir dachten, die Welt geht unter, als wir durch die Prüfung gefallen sind? Heute lachen wir drüber. Das schaffen wir jetzt auch."
+  - "Wir haben die Deadline nur knapp geschafft, weil wir uns alle gegenseitig geholfen haben. Das zeigt, was wir als Team draufhaben."
+  - "Ich merke, wie wir beide die Werkzeuge aus der Therapie anwenden, auch wenn es schwerfällt. Wir kämpfen wirklich für uns."
+  - "Unsere Freundschaft hat schon so viele Phasen überlebt. Auch diese schwierige Zeit werden wir zusammen durchstehen."
+  - "Ich weiß, ich war in letzter Zeit wegen dem Stress unausstehlich. Danke, dass du so geduldig mit mir warst. Das bedeutet mir alles."
+  - "Oma braucht jetzt mehr Pflege. Lasst uns alle zusammensetzen und einen Plan machen, wie wir die Aufgaben fair aufteilen können."
+  - "Schau uns an. Vor fünf Jahren hätten wir uns bei so einem Thema zerfleischt. Heute können wir darüber reden. Wir sind echt weitergekommen."
+  - "Wir haben unterschiedliche Meinungen dazu, aber ich respektiere deine Sicht. Wir finden einen Kompromiss."
+  - "Okay, Plan A fällt ins Wasser. Egal, Schwarmintelligenz ist gefragt! Wer hat eine coole Idee für Plan B?"
+  - "Wir haben uns lange nicht mehr alle gesehen. Lasst uns trotz Alltagsstress einen festen Termin finden, unsere Runden sind zu wichtig, um sie einschlafen zu lassen."
+  - "Ein Freund entschuldigt sich für ein früheres Verhalten. Die Antwort: 'Vergessen wir’s. Wir haben beide dazugelernt. Wichtig ist, wo wir jetzt stehen."
+  - "Wir stehen als Team hinter dieser Entscheidung. Wir haben die Vor- und Nachteile abgewogen und sind bereit, die Verantwortung zu tragen."
+  - "Ich weiß, das verunsichert dich jetzt. Aber es ändert nichts an *uns*. Wir stehen das zusammen durch."
+  - "Uff, ich merke, wir geraten wieder in unser altes Muster. Stopp. Lass uns kurz durchatmen und es anders versuchen."
+  - "Nachdem die Kinder aus dem Haus sind: 'Jetzt beginnt ein neues Kapitel für uns. Was wollen wir Schön"
+
+semantische_grabber_id: AUTO_SEM_20250705_824B
+
+metadata:
+  created_at: 2025-07-05T08:22:43.809845
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

@@ -1,0 +1,51 @@
+marker:
+  id: "M_ARCHETYPAL_PATTERNS"
+  name: "ARCHETYPAL_PATTERNS"
+  level: "meta"
+  category: "Narrative Struktur"
+  semantic_tags: ["Archetyp", "Selbstdarstellung", "Mustererkennung", "Identität"]
+  description: |
+    Erkennung archetypischer Erzählmuster. Der Marker identifiziert narrative Selbstdarstellungen, die typischen Archetypen wie Held, Unschuldiger, Liebender, Rebell, Weise, Herrscher, Schöpfer, Kümmerer, Unterhalter, Waise, Magier zugeordnet werden können. Erfasst Kernwünsche, Ängste, Motivationen und wiederkehrende Rollen in der Kommunikation. Analyse erfolgt sowohl über klassische Rollen-Keywords als auch über semantische Clustering-Methoden.
+  pattern:
+    - RegEx: "(retten|beschützen|kämpfen|siegen|aufgeben|leiden|verbinden|lieben|verstehen|entdecken|reisen|neu anfangen|kontrollieren|planen|führen|kümmern|helfen|für dich da|humor|witz|lachen|nicht dazugehören|einsam|Wunder|Magie|Schicksal)"
+    - Semantik: Aussagen, die archetypische Rollen und Lebensskripte inszenieren oder reflektieren (s.o.)
+  examples:
+    - "Ich will doch nur, dass wir uns alle wieder vertragen und glücklich sind 🥺"
+    - "Keine Sorge, ich regel das für dich. Du kannst dich auf mich verlassen."
+    - "Du und ich gegen den Rest der Welt, mein Schatz. Unsere Liebe ist das Einzige, was zählt."
+    - "Ich hab alles gekündigt. Muss raus hier, die Welt sehen. Spüre diesen Drang nach Freiheit! 🌍✈️"
+    - "Regeln sind da, um gebrochen zu werden. Ich mach mein eigenes Ding, egal was die anderen sagen."
+    - "Vielleicht sollten wir einen Schritt zurücktreten und das Problem aus einer höheren Perspektive betrachten."
+    - "Hier ist der Plan für die Woche. Bitte haltet euch exakt daran, damit es kein Chaos gibt."
+    - "Ich hatte heute Nacht eine total verrückte Idee für ein neues Projekt! Muss ich dir sofort erzählen! 🎨"
+    - "Geht es dir auch wirklich gut? Du siehst müde aus. Soll ich dir was zu essen vorbeibringen?"
+    - "Komm schon, lach mal! Das Leben ist zu kurz für lange Gesichter. Lass uns was Dummes anstellen! 🤪"
+    - "Manchmal fühle ich mich, als würde ich nirgendwo richtig dazugehören."
+    - "Was wäre, wenn wir die Situation komplett umdenken? Alles ist möglich, wir müssen es nur visualisieren."
+    - "Ich kämpfe hier im Ausland für eine bessere Welt, aber der Gedanke an dich gibt mir die Kraft dazu."
+    - "Bin gerade spontan nach Portugal geflogen. Hab nur einen Rucksack dabei. #yolo"
+    - "Ich kann nicht aufhören, an unser Gespräch gestern zu denken. Das hat so viel in mir ausgelöst."
+    - "Die Präsentation vom Chef war ja mal wieder Bullshit. Zeit für eine kleine Revolution im Team."
+    - "Ich verstehe einfach nicht, warum Menschen so gemein zueinander sein können."
+    - "Denk dran, deine Jacke mitzunehmen! Es soll heute Abend kalt werden."
+    - "Wahre Erkenntnis findet man nicht im Außen, sondern in der Stille mit sich selbst."
+    - "Die Entscheidung ist gefallen. Diskussionen sind an dieser Stelle nicht mehr produktiv."
+    - "Schon wieder hat sich niemand gemeldet. Typisch, am Ende ist man doch immer allein."
+    - "Hab gerade den peinlichsten Moment meines Lebens gehabt 😂 Muss ich dir per Sprachnachricht erzählen!"
+    - "Ich hab die ganze Nacht an dem Song gebastelt. Hier ist eine erste Demo, nur für dich."
+    - "Ich glaube fest daran, dass das Universum uns zusammengeführt hat. Das ist kein Zufall."
+    - "Jedes Detail an dir ist faszinierend. Ich will alles über dich wissen."
+  - "Ich werde alles tun, um dich zu beschützen. Das ist meine Aufgabe."
+  - "Es fühlt sich an, als ob ich immer die Verantwortung für alle tragen muss."
+  - "Ich suche nach dem Sinn in allem, was ich tue. Es muss mehr geben als das hier."
+  - "Ich bin der ewige Optimist – ich glaube immer an das Gute im Menschen."
+  - "Heute bin ich der Clown, morgen vielleicht der Weise. Kommt ganz auf die Situation an."
+  - "Immer wenn jemand Hilfe braucht, bin ich die Erste, die einspringt."
+  - "Ich wünsche mir nur, dass meine Geschichte irgendwann ein gutes Ende findet."
+  - "Ich träume davon, die Welt zu verändern. Irgendwie fühle ich mich dazu berufen."
+  - "Warum kann ich nicht einfach normal sein? Immer muss ich gegen den Strom schwimmen."
+  - "Ich weiß nicht, ob ich der Held in meiner eigenen Geschichte bin – oder nur Statist."
+
+  semantic_grabber_id: "SGR_ARCHETYPE_01"
+  context_rule:
+    - "Rollenmuster müssen in mind. 2 Nachrichten konsiste

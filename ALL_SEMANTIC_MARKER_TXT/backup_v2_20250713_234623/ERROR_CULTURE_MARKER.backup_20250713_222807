@@ -1,0 +1,57 @@
+# ERROR_CULTURE_MARKER - Semantic Marker
+marker_name: ERROR_CULTURE_MARKER
+beschreibung: >
+  marker:
+  name: ERROR_CULTURE_MARKER
+  grabber_id: ERROR_CULTURE_SEM
+  category: "Error Culture"
+  description: >
+    Erkennt Äußerungen, die ein offenes Umgehen mit Fehlern,
+    Verantwortungsübernahme und Lernen aus Misserfolgen signalisieren.
+  pattern:
+    - regex: "(aus (dem )?Fehler(n)? lernen|Fehler gehören dazu|Schuld?frage)"
+    - regex: "(Entschuldigung, das war mein Fehler|das lag an mir)"
+    - keywords: ["Fehlerkultur", "Lernchance", "Review", "Risikominimierung"]
+    - semantik: >
+        Sätze, die Transparenz über Fehltritte, Übernahme von Verantwortung
+        und Bereitschaft zur Nachbesserung ausdrücken
+beispiele:
+  - "examples:"
+  - "- "Entschuldigung, das war mein Fehler – ich korrigiere das sofort.""
+  - "- "Lass uns das in der Retrospektive besprechen und daraus lernen.""
+  - "- "Fehler gehören zum Prozess – Hauptsache, wir ziehen Konsequenzen.""
+  - "- "Ich sehe das als Lernchance und passe den Ablauf entsprechend an.""
+  - "- "Danke für dein Feedback, so vermeiden wir solche Fehler künftig.""
+  - "- "Können wir eine Fehleranalyse machen, um die Ursache zu finden?""
+  - "- "Bitte bespricht in Zukunft auch die Risiken vorab.""
+  - "- "Das Review hat den Bug aufgedeckt – guter Job!""
+  - "- "Ich übernehme die Verantwortung dafür und stelle es wieder her.""
+  - "- "Wir sollten einen Lessons-Learned-Workshop durchführen.""
+  - "- "Okay, das ist schiefgelaufen. Wichtig ist, wie wir jetzt damit umgehen.""
+  - "- "Kein Problem, das kann passieren. Lasst uns schauen, wie wir es beheben.""
+  - "- "Die Schuldfrage bringt uns nicht weiter. Konzentrieren wir uns auf die Lösung.""
+  - "- "Gut, dass wir das jetzt entdeckt haben und nicht erst beim Kunden.""
+  - "- "Ich stehe zu meinem Fehler. Das geht auf meine Kappe.""
+  - "- "Danke, dass du das so offen ansprichst. Das hilft uns allen.""
+  - "- "Das war ein teures Learning, aber jetzt wissen wir es besser.""
+  - "- "Ich richte einen Prozess ein, damit dieser Fehler nicht noch einmal vorkommt.""
+  - "- "Lasst uns eine Kultur schaffen, in der man offen über Pannen sprechen kann.""
+  - "- "Der Versuch war es wert, auch wenn er nicht geklappt hat. Was haben wir gelernt?""
+  - "- "Ich habe die falsche Annahme getroffen, das hat zu dem Problem geführt.""
+  - "- "Das ist mir unangenehm, aber ich muss einen Fehler meinerseits zugeben.""
+  - "- "Transparenz ist hier entscheidend: Wir haben einen Fehler gemacht und hier ist unser Plan, ihn zu beheben.""
+  - "- "Das war nicht optimal gelöst von mir, ich arbeite an einer besseren Version.""
+  - "- "Lasst uns das als Team-Moment sehen, um unsere Prozesse zu stärken.""
+  - "- "Ich hab das Problem verursacht, weil ich einen Schritt übersehen habe. Sorry dafür.""
+  - "- "Wichtig ist nicht, wer den Fehler gemacht hat, sondern dass wir ihn als Team fixen.""
+  - "- "Scheitern ist nur dann schlimm, wenn wir nichts daraus mitnehmen.""
+  - "- "Ich erstelle ein kurzes Post-Mortem-Dokument, damit alle davon lernen können.""
+  - "- "Hier muss sich niemand dafür rechtfertigen, einen Fehler gemeldet zu haben. Im Gegenteil: Danke!""
+
+semantische_grabber_id: AUTO_SEM_20250712_031C
+
+metadata:
+  created_at: 2025-07-12T10:43:24.438204
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

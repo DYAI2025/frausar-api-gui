@@ -1,0 +1,13 @@
+cat > STYLE_SYNC_SEM.yaml <<EOF
+STYLE_SYNC_SEM:
+  beschreibung: >
+    Synchroner oder adaptierter Schreibstil im Dialog; auffallend ähnliche Wortwahl, gleiche Satzstruktur, Wiederholung typischer Formulierungen.
+  patterns:
+    - "Wir schreiben mittlerweile fast gleich."
+    - "Unsere Wortwahl wird immer ähnlicher."
+    - "Ich erkenne kaum noch, ob du oder ich das geschrieben habe."
+    - "Unsere Sätze spiegeln sich gegenseitig."
+    - "Sogar die Satzlänge passt sich an."
+    - "Wir nutzen jetzt dieselben Abkürzungen."
+    - "Selbst unsere Emojis sind identisch platziert."
+EOF

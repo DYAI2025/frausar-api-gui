@@ -1,0 +1,46 @@
+marker: FAILURE_OWNERSHIP_MARKER_MARKER
+beschreibung: >
+  beschreibung: >
+    Verantwortung für eigenes Handeln und Fehler anerkennen, Konfliktbereitschaft.
+beispiele:
+  - "cat > FAILURE_OWNERSHIP_MARKER.yaml << EOF"
+  - "FAILURE_OWNERSHIP_MARKER:"
+  - "beispiele:"
+  - "- "Sorry, das war mein Fehler. Ich hab die Deadline komplett verpennt.""
+  - "- "Ich hab da echt Mist gebaut. Es tut mir leid, dass ich dich in diese unangenehme Situation gebracht habe.""
+  - "- "Du hattest recht. Ich hätte auf dich hören sollen. Das war meine Sturheit.""
+  - "- "Ich übernehme die volle Verantwortung für die Panne. Ich hätte das besser prüfen müssen.""
+  - "- "Meine Reaktion gestern war total übertrieben und unfair. Das tut mir aufrichtig leid.""
+  - "- "Ich sehe ein, dass ich mit meiner Aussage deine Gefühle verletzt habe. Das war nicht meine Absicht, aber es ist passiert und es war mein Fehler.""
+  - "- "Okay, das geht auf meine Kappe. Ich hab nicht richtig zugehört.""
+  - "- "Ich muss mich entschuldigen. Ich habe versprochen, mich zu melden, und es nicht getan. Keine Ausreden.""
+  - "- "Das war schlecht kommuniziert von mir. Ich hätte klarer sein müssen.""
+  - "- "Ich habe einen Fehler gemacht. Wie kann ich es wieder gutmachen?""
+  - "- "Ich hab das total falsch eingeschätzt. Mein Fehler.""
+  - "- "Ja, ich war das. Ich hab’s kaputt gemacht. Tut mir leid.""
+  - "- "Ich hätte nicht so von oben herab mit dir reden dürfen. Das war respektlos und mein Fehler.""
+  - "- "Ich sehe jetzt, dass mein Verhalten dazu beigetragen hat, dass die Situation eskaliert ist.""
+  - "- "Ich hab dich da im Stich gelassen. Das war nicht in Ordnung von mir.""
+  - "- "Ich hab dein Vertrauen missbraucht. Das war allein meine Schuld.""
+  - "- "Ich entschuldige mich für meine unüberlegte Bemerkung vorhin.""
+  - "- "Puh, das war dumm von mir. Hätte ich mir denken können.""
+  - "- "Ich habe die Aufgabe falsch verstanden und einfach losgelegt. Mein Fehler, ich korrigiere das.""
+  - "- "Ich hab dir die Schuld gegeben, aber eigentlich lag der Fehler bei mir.""
+  - "semantische_marker:"
+  - "- Fehler zugeben"
+  - "- Verantwortung übernehmen"
+  - "- Entschuldigung"
+  - "- Schuld anerkennen"
+  - "- Selbstkritik"
+  - "- Eingeständnis"
+  - "- Versagen thematisieren"
+  - "- Fehlerkultur"
+  - "- Selbstreflexion im Konflikt"
+  - "EOF"
+
+semantic_grab:
+  description: "Erkennt Muster für failure_ownership_marker"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

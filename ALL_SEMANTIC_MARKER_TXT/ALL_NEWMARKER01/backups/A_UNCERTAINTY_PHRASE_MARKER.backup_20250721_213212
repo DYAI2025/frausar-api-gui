@@ -1,0 +1,20 @@
+# A_UNCERTAINTY_PHRASE_MARKER - Semantic Marker
+marker_name: A_UNCERTAINTY_PHRASE_MARKER
+beschreibung: >
+  Ausdrücke, die Nichtwissen, Zweifel oder Unsicherheit signalisieren.
+beispiele:
+  - "but in relationship - I don't know."
+  - "Ich weiß nicht 🤷‍♂️, vielleicht morgen?"
+  - "Kein Plan, bin unsicher..."
+  - "I'm not sure about that tbh."
+  - "I don't know 🤔, feels weird."
+  - "Ich bin unsicher, was du meinst."
+  - "I dunno, kinda lost here."
+
+semantische_grabber_id: AUTO_SEM_20250721_D963
+
+metadata:
+  created_at: 2025-07-21T18:54:41.431918
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

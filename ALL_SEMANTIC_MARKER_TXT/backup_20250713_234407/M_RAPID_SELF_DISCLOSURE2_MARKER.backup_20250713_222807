@@ -1,0 +1,69 @@
+# M_RAPID_SELF_DISCLOSURE2_MARKER - Semantic Marker
+marker_name: M_RAPID_SELF_DISCLOSURE2_MARKER
+beschreibung: >
+  - id: "M_RAPID_SELF_DISCLOSURE"
+  name: "Rapid Self Disclosure"
+  category: "relational_dynamics"
+  cluster: ["relationship_authenticity"]
+  meta_marker: ["MM_MANIPULATIVE_RELATIONSHIP_ENGINEERING"]
+  semantic_grabber_id: "SGR_RSD_01"
+  level: 2
+  status: "review"
+  author: "ben_2025"
+  created_at: "2025-07-14"
+  lang: "de"
+  description: |
+    Marker für auffällig frühe, intensive Selbstoffenbarung ohne etablierte Vertrauensbasis.
+    Typisch im Kontext von manipulativem Beziehungsaufbau, Love Scamming, aber auch bei Bindungsunsicherheit.
+    Tritt häufig gemeinsam mit Love Bombing, Future Faking und Verlustangst auf.
+beispiele:
+  - "examples:"
+  - "- "Ich erzähle dir das, weil ich dir vertraue …""
+  - "- "Ich weiß, wir kennen uns kaum, aber …""
+  - "- "Eigentlich rede ich nie so offen, aber du bist anders.""
+  - "- "Mein letzter Partner/meine letzte Partnerin hat mich schwer verletzt.""
+  - "- "Das hat noch nie jemandem erzählt …""
+  - "rules:"
+  - "- type: co_occurrence"
+  - "condition: "innerhalb_von""
+  - "value: 10  # Weniger als 10 Nachrichten bekannt"
+  - "- type: temporal"
+  - "condition: "conversation_duration_hours""
+  - "value: 48  # Innerhalb von 48 Stunden nach erstem Kontakt"
+  - "- type: frequency"
+  - "threshold: 2"
+  - "scope: "conversation_chunk""
+  - "- type: contrastive_structure"
+  - "pattern: "(Ich weiß|Verrückt|Eigentlich), wir kennen uns (kaum|erst kurz), aber .*""
+  - "- type: vulnerability_lexicon"
+  - "threshold: 3"
+  - "description: "Hohe Dichte von Verletzlichkeitswörtern innerhalb kurzer Zeit.""
+  - "- type: abrupt_topic_leap"
+  - "from_topic: ["hobbies","work","allgemeines"]"
+  - "to_topic: ["trauma","krise","verlassenwerden","psychische_probleme"]"
+  - "description: "Thematischer Sprung zu sehr privaten oder traumatischen Themen.""
+  - "tags: ["early_intimacy","fraud_risk","relationship_risk"]"
+  - "scoring:"
+  - "weight: 1.7"
+  - "impact: high"
+  - "grabber_similarity: 0.91"
+  - "examples:"
+  - "- "Ich weiß, wir kennen uns erst seit gestern, aber ich muss dir einfach sagen, wie schwer die letzten Jahre für mich waren.""
+  - "- "Du bist der erste Mensch, dem ich das erzähle: Nach der Scheidung war ich am Boden zerstört.""
+  - "- "Sorry, wenn das jetzt zu viel ist, aber ich habe seit Jahren Depressionen. Ich rede sonst mit niemandem darüber.""
+  - "- "Das klingt verrückt, aber ich glaube, ich habe noch nie so schnell jemandem so vertraut.""
+  - "- "Ich will ehrlich sein: Meine Frau ist vor zwei Jahren gestorben, seitdem bin ich allein. Du bist die Erste, der ich das erzähle.""
+  - "# Fraud/Scammer-Kontext"
+  - "- "My Dearest, you are the only person I feel comfortable sharing my pain with. Since I lost my wife, life has been unbearable.""
+  - "- "I hope you don't mind me being honest so soon, but I am struggling a lot since my accident abroad.""
+  - "- "Eigentlich erzähle ich sowas niemandem, aber ich habe große Schulden und weiß nicht mehr weiter.""
+  - "- "Ich weiß nicht, warum ich dir das alles so schnell schreibe, aber ich fühle mich einfach verbunden.""
+  - "- "Ich hatte noch nie so ein tiefes Gespräch nach so kurzer Zeit. Danke, dass du zuhörst.""
+
+semantische_grabber_id: AUTO_SEM_20250713_4A95
+
+metadata:
+  created_at: 2025-07-13T22:21:54.321374
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

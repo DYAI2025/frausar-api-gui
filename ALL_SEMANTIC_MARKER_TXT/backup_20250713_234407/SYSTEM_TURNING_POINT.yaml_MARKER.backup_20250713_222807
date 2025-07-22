@@ -1,0 +1,19 @@
+marker: SYSTEM_TURNING_POINT_MARKER
+beschreibung: >
+  description: >
+    System erreicht Kipppunkt bei Häufung von Instabilitäts- und Eskalationsmarkern, gleichzeitiger Abnahme positiver Marker.
+beispiele:
+  - "SYSTEM_KIPPPUNKT:"
+  - "preconditions:"
+  - "- LATENT_INSTABILITY_MARKER > 3 in Folge"
+  - "- ESCALATION_TENSION_MARKER im Verlauf steigend"
+  - "- MICRO_CARE_MARKER stark rückläufig"
+  - "trigger_threshold: Schwelle individuell anpassbar"
+  - "visualisation: Kipppunkt (Farbwechsel, Warnsymbol)"
+
+semantic_grab:
+  description: "Erkennt Muster für system_turning_point.txt"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

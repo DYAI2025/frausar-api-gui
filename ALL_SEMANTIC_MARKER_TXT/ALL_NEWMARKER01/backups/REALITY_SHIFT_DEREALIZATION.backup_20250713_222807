@@ -1,0 +1,59 @@
+- id: M1007
+  name: "Reality Shift / Derealization"
+  description: >
+    Identifies subtle communicative signals of cognitive dissonance, repression, or an impending relationship breakdown. This pattern doesn't state a problem directly but alludes to an emotional 'tipping point' where reality feels altered, strange, or distant. It often manifests as a conflict between rational thought ('everything is fine') and a visceral, intuitive feeling that something is fundamentally wrong, leading to a sense of unreality or emotional detachment.
+  category: "Psychological Disassociation"
+  semantic_grabber_id: REALITY_SHIFT_SEM
+  semantic_tags:
+    - derealization
+    - cognitive-dissonance
+    - denial
+    - repression
+    - dissociation
+    - impending-breakup
+  examples:
+    - "Es fühlt sich irgendwie anders an, aber ich weiß nicht warum."
+    - "Eigentlich ist doch alles in Ordnung, oder?"
+    - "Ich will darüber nicht nachdenken, lass uns einfach so weitermachen."
+    - "Vielleicht bilde ich mir das alles nur ein."
+    - "Irgendwie sieht alles gleich aus und doch komplett verschoben."
+    - "Ich wache auf und habe das Gefühl, unser Leben gehört jemand anderem."
+    - "Kann sein, dass ich spinne, aber die Farben zwischen uns wirken blasser."
+    - "Wenn ich logisch drüber nachdenke, passt alles – aber mein Herz zuckt."
+    - "Es klingt seltsam, doch dein Lachen hallt anders in meinem Ohr."
+    - "Sometimes it feels like watching us through frosted glass—blurred yet familiar."
+    - "Ich sage mir dauernd, dass wir okay sind, aber mein Bauch widerspricht laut."
+    - "Vielleicht ist das nur eine Phase, die gar keine sein sollte."
+    - "Ich weiß nicht, ob wir uns näherkommen oder einfach auflösen."
+    - "Dieselbe Wohnung, aber sie riecht plötzlich nach Abschied."
+    - (Sprachnachricht mit leisem Seufzen): "Hörst du auch den leeren Raum zwischen unseren Worten?"
+    - "Nothing changed, yet everything seems a centimetre to the left."
+    - "Gestern warst du mein Zuhause, heute fühlt es sich gemietet an."
+    - "Es ist, als hätten wir ‚Pause‘ gedrückt, aber der Film läuft weiter."
+    - "Ich halte deine Hand, doch manchmal glaube ich, sie ist nur ein Schatten."
+    - "Maybe I’m overthinking, but the silence has a different texture lately."
+    - "Unsere Zukunft wirkt plötzlich wie jemand anders’ Entwurf."
+    - "Ich lese alte Chats und frage mich, ob das wirklich wir waren."
+    - "Müsste glücklich sein, bin’s auch – aber auf einer verschobenen Frequenz."
+    - "Alles steht da, nur das Gefühl, das es zusammenhält, hängt schief."
+    - "Lass uns nicht über Dinge sprechen, die noch gar nicht passiert sind."
+    - "Manchmal fühlt sich unsere Beziehung an wie ein Zimmer, aus dem langsam die Luft entweicht."
+    - "Wir sagen 'Ich liebe dich', aber die Worte fühlen sich hohl an, wie ein Echo."
+    - "I'm here, you're here, but it feels like 'we' left the room a while ago."
+    - "Mein Kopf sagt mir, dass alles perfekt ist. Mein Körper schreit aber die ganze Zeit."
+    - "Ist das noch Liebe oder nur noch eine sehr eingespielte Gewohnheit?"
+    - "Wenn ich nicht genau hinschaue, ist es fast so, als wäre alles wie früher."
+    - "Es ist, als würden wir beide das Drehbuch für einen Film lesen, den wir gar nicht drehen wollen."
+    - "Ich habe das Gefühl, wir spielen eine Wiederholung einer Serie, deren Finale wir beide schon kennen und fürchten."
+    - "Die Stille zwischen uns hat ein anderes Gewicht bekommen. Sie ist nicht mehr friedlich."
+    - "Manchmal frage ich mich, ob ich mir dich nur in meiner Vorstellung so perfekt gebaut habe."
+    - "Sag mir, dass alles gut ist. Bitte, ich muss es von dir hören, weil ich es selbst nicht mehr glaube."
+    - "I look at photos of us from last year and it feels like I'm looking at two strangers."
+    - "Wir machen alles richtig, und trotzdem fühlt es sich so grundlegend falsch an."
+    - "Es ist, als ob eine hauchdünne Glasscheibe zwischen uns ist. Ich sehe dich, aber ich erreiche dich nicht."
+    - "Wir halten uns an den Händen, aber es fühlt sich an, als würden wir uns gleichzeitig loslassen."
+    - "Ich glaube, unser gemeinsamer Weg hat eine unsichtbare Biegung gemacht und ich weiß nicht, wohin sie führt."
+    - "Dein Parfum riecht heute fremd an dir. Hast du es gewechselt?"
+    - "Everything you say makes sense, but the emotional math isn't adding up."
+    - (Sprachnachricht): "Lass uns einfach in den Urlaub fahren und so tun, als gäbe es dieses... 'Ding' zwischen uns nicht."
+    - "Ich zähle all die Gründe auf, warum ich glücklich sein sollte, aber das Gefühl kommt nicht an."

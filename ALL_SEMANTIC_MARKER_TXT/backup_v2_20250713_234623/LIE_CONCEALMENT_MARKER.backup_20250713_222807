@@ -1,0 +1,66 @@
+marker: LIE_CONCEALMENT_MARKER
+beschreibung: >
+  Indikatoren für Lügen, Ausflüchte oder bewusste Verheimlichung. Erkennbar an widersprüchlichen Aussagen, ausweichenden, vagen oder deflektierenden Formulierungen – häufig kombiniert mit Ausreden und Vermeidungstaktik.
+beispiele:
+  - "Das ist jetzt nicht so wichtig. Lass uns über was anderes reden."
+  - "Darum geht’s doch gar nicht. Vertrau mir einfach."
+  - "Warum willst du das denn so genau wissen? Ist doch egal."
+  - "Ich hab’s ehrlich vergessen… Oder war das vielleicht doch letzte Woche?"
+  - "Du brauchst nicht alles zu wissen. Nicht alles ist dein Thema."
+  Auf die Frage "Wo warst du?"): "Ich war nur kurz unterwegs, nichts Besonderes."
+
+"Das ist eine lange Geschichte für einen anderen Tag."
+
+"Warum ist das jetzt relevant für dich?"
+
+"Ich bin mir nicht mehr ganz sicher, wie das genau war."
+
+"Lass uns das Thema wechseln, es ist unangenehm."
+
+"Darüber möchte ich im Moment nicht sprechen."
+
+(Auf die Frage "Mit wem hast du telefoniert?"): "Nur ein Kollege. Du kennst ihn nicht."
+
+"Das ist kompliziert. Du würdest es nicht verstehen."
+
+"Es ist nichts passiert, okay? Vertrau mir einfach."
+
+"Ich kann mich an Details wirklich nicht mehr erinnern, mein Kopf ist wie ein Sieb."
+
+"Das war, bevor wir zusammen waren, also geht es dich eigentlich nichts an."
+
+"Fakt ist, dass es jetzt so ist. Die Vergangenheit spielt keine Rolle."
+
+"Ich habe dir doch schon gesagt, dass da nichts war. Warum glaubst du mir nicht?" (Obwohl nichts gesagt wurde)
+
+"Ich glaube, du verwechselst da was."
+
+"Lass uns nicht in Kleinigkeiten verlieren. Wichtig ist doch..." (Ablenkung)
+
+"Das ist meine Privatsphäre, die musst du respektieren."
+
+"Es war einfach ein Missverständnis, mehr gibt es dazu nicht zu sagen."
+
+"Ich habe das Gefühl, du verhörst mich." (Angriff als Verteidigung)
+
+"Manche Dinge behält man besser für sich."
+
+"Das ist erledigt. Punkt. Kein Grund, das wieder aufzuwärmen."
+semantic_grab:
+  description: "Erkennt Ausweich- und Abwehrmuster, Unspezifikationen, vage Abwehr oder das aktive Blockieren von Nachfragen, häufig als toxische Kommunikationsstrategie."
+  patterns:
+    - rule: "VAGUE_DEFLECTION"
+      pattern: r"(ist doch egal|darum geht's doch gar nicht|muss dich nicht kümmern|das musst du nicht wissen)"
+      example: "Ist doch egal, vertrau mir einfach."
+    - rule: "TOPIC_CHANGE"
+      pattern: r"(lass uns über was anderes reden|können wir das Thema wechseln|reden wir später darüber)"
+      example: "Lass uns bitte über was anderes reden."
+    - rule: "QUESTION_AVOIDANCE"
+      pattern: r"(warum willst du das wissen|wieso interessiert dich das|muss das sein|schon wieder diese Frage)"
+      example: "Warum willst du das so genau wissen?"
+    - rule: "UNCERTAIN_RECALL"
+      pattern: r"(hab ich vergessen|weiß ich nicht mehr|bin mir nicht sicher|war das nicht letztens?)"
+      example: "Ich hab's ehrlich vergessen… Oder war das vielleicht doch letzte Woche?"
+    - rule: "MINIMIZING_STATEMENT"
+      pattern: r"(nicht so wichtig|unwichtig|kein großes Ding|kein Thema)"
+      example: "Das ist jetzt nicht so wichtig."

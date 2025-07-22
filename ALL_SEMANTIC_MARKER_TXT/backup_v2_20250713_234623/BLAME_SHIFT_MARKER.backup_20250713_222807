@@ -1,0 +1,47 @@
+marker: BLAME_SHIFT_MARKER
+beschreibung: Die Technik, die Verantwortung für eigene Fehler, negative Gefühle oder Beziehungsprobleme subtil oder offen auf den Partner oder andere Umstände zu verlagern.
+szenarien:
+  - Streit in Partnerschaften
+  - Eltern-Kind-Konflikte
+  - Arbeitsplatz (Fehlerkultur)
+  - Öffentlicher Diskurs / Politik
+dynamik_absicht: Die primäre Absicht ist der Selbstschutz durch Abwehr von Schuld, Scham oder Unzulänglichkeit. Es ist ein fundamentaler Abwehrmechanismus, um das eigene positive Selbstbild aufrechtzuerhalten.
+beispiele:
+  - "Ich hätte nicht so reagiert, wenn du nicht so einen Ton angeschlagen hättest."
+  - "Du bist doch unzufrieden, dann ändere was."
+  - "Du interpretierst das immer gleich so negativ."
+  - "Vielleicht bist du einfach zu sensibel für sowas."
+  - "Ich hab mein Bestes gegeben – was ist denn dein Beitrag?"
+  - "Ich habe nur gelogen, weil ich wusste, dass du die Wahrheit nicht ertragen kannst."
+  - "Natürlich bin ich gereizt, bei dem Stress, den du mir machst."
+  - "Das Projekt ist gescheitert, weil die Rahmenbedingungen von Anfang an schlecht waren."
+  - "Ich bin nicht eifersüchtig, du gibst mir nur ständig Anlass dazu."
+  - "Sorry, dass du dich jetzt so fühlst, aber das war wirklich nur ein Witz."
+  - "Du provozierst mich so lange, bis ich die Beherrschung verliere."
+  - "Wenn du mir mehr vertrauen würdest, müsste ich keine Geheimnisse haben."
+  - "Das Problem ist nicht mein Verhalten, sondern deine überzogenen Erwartungen."
+  - "Ich bin nicht das Problem, die ganze Situation ist das Problem."
+  - "Du hast mich dazu gebracht, das zu tun."
+  - "Ich kann nichts dafür, ich bin halt so."
+  - "Warum musst du immer alles so dramatisieren?"
+  - "Der Fehler ist passiert, weil mir niemand die richtigen Informationen gegeben hat."
+  - "Du wusstest doch, worauf du dich einlässt."
+  - "Hättest du mich früher gefragt, wäre das nicht passiert."
+metamarker_kombinationen:
+  - name: "Verfolger-Opfer-Flip"
+    kombination_mit: Rollenrotation (Dramadreieck)
+    szenario: "Der Marker ist der Kernmechanismus für den Rollenwechsel. Beispiel: 'Du bist schuld, dass ich geschrien habe (Verfolger). Und jetzt machst du mir auch noch Vorwürfe, obwohl ich so unter Druck stehe (Opfer).'"
+semantic_grab:
+  description: "Erkennt 'Du'-Botschaften, konditionale Rechtfertigungen und die Zuschreibung von negativen Absichten an andere."
+  patterns:
+    - rule: "CONDITIONAL_JUSTIFICATION"
+      pattern: "(Ich hätte nicht|Ich würde nicht) +([\\w\\s]+) +(wenn du nicht|weil du)"
+      example: "Ich hätte das nicht gesagt, wenn du mich nicht so provoziert hättest."
+    - rule: "PATHOLOGIZING_THE_REACTION"
+      pattern: "(Du) +(reagierst|interpretierst|bist) +(zu|übermäßig|einfach) +(sensibel|negativ|emotional)"
+      example: "Du bist einfach zu sensibel für diese Art von Humor."
+psychologischer_hintergrund:
+  - Abwehrmechanismus: Projektion, Rationalisierung
+  - Theorie: Karpman-Dramadreieck (Verfolger-Rolle)
+  - Theorie: Narrative Therapie (Konstruktion einer Problem-Story)
+tags: [schuld, verantwortung, projektion, konflikt, abwehr]

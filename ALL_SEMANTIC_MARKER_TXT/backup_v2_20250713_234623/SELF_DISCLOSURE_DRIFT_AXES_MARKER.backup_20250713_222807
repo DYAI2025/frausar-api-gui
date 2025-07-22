@@ -1,0 +1,13 @@
+# SELF_DISCLOSURE_DRIFT_AXES_MARKER - Semantic Marker
+marker_name: SELF_DISCLOSURE_DRIFT_AXES_MARKER
+beschreibung: >
+  
+beispiele:
+
+semantische_grabber_id: AUTO_SEM_20250713_59FC
+
+metadata:
+  created_at: 2025-07-13T00:58:43.634045
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

@@ -1,0 +1,72 @@
+template_name: RECOPA_chunk_out
+chunk_id: <string>              # z.B. "131-154" oder "Chunk_01"
+zeitraum: <string>              # Zeitraum, z.B. "Januar 2020" oder "Q1 2022"
+monat: <int>                    # 1-12
+jahr: <int>                     # 4-stellig
+besondere_ereignisse:
+  - <string>                    # z.B. "Geburt", "Umzug", "Krankheit", "Urlaub"
+chronologie:
+  sprecher:
+    - name: <string>
+      rolle: <string>           # z.B. "Suchend", "Führend", "Abgrenzend", "Neutral"
+    # beliebig viele Sprecher möglich
+beziehungsklima:
+  grundton: <string>            # z.B. "harmonisch", "angespannt", "unsicher"
+  fürsorge: <string>            # Beschreibung, wie Fürsorge im Chunk erscheint
+  rollen: <string>              # Beschreibung der Rollenverteilung
+  emotionale_offenheit: <string>
+bindungs_und_interaktionsmuster:
+  suchend: <string>             # Wer oder was ist suchend?
+  abgrenzend: <string>          # Wer oder was grenzt sich ab?
+  führend: <string>
+  bedürftig: <string>
+  coregulation: <string>        # z.B. "hoch", "niedrig", "wechselnd"
+  dysregulation: <string>
+alltagsintegration:
+  beruf_ebene: <string>         # Zusammenfassung Berufliches
+  beziehung_ebene: <string>     # Zusammenfassung Beziehungsaspekte
+krisen_und_mikrodrift:
+  - <string>                    # z.B. "Kleinkonflikt um Organisation", "Missverständnis"
+manipulation:
+  - typ: <string>               # z.B. "Blame Shift", "Gaslighting", "Self Sabotage"
+    zitat: <string>             # Direktes Zitat oder Paraphrase aus dem Text
+markertracking:
+  widerspruch: <bool>
+  zweifel: <bool>
+  vorwurf: <bool>
+  abbruch: <bool>
+  spiral_dynamics: <string>     # z.B. "orange, grün", bei Bedarf leer lassen
+  systemische_rolle:            # Liste von Rollen
+    - <string>                  # z.B. "Retter", "Opfer", "Täter"
+  bindungstyp:
+    - <string>                  # z.B. "ängstlich", "vermeidend"
+  emotionale_drift: <string>
+  narrative_drift: <string>
+wertepanel:
+  stresslevel: <int>            # Skala, z.B. 0-10
+  rollen:
+    <string>: <string>          # Sprecher: Rolle
+  coregulation: <int>           # Skala 1-10
+  dysregulation: <int>          # Skala 1-10
+  resilienz: <int>              # Skala 1-10
+  manipulation:
+    <string>: <int>             # Sprecher: Wert (0-10)
+  liebevoller_umgang: <int>     # Skala 1-10
+  ehrlichkeit: <int>            # Skala 1-10
+  offenheit: <int>              # Skala 1-10
+  harmonie: <int>               # Skala 1-10
+  krisenthema: <string>         # Schlagwort oder Thema
+belegpflicht:
+  - sprecher: <string>
+    zitat: <string>
+prosa_zusammenfassung: |
+  <Fließtext, frei generierbar>
+analytische_zusammenfassung:
+  zentrale_ereignisse_und_veraenderungen:
+    - <string>
+  große_marker_und_muster:
+    - <string>
+  wandel_und_entwicklung:
+    - <string>
+abschluss_ausblick: |
+  <Abschließender Fließtext, frei generierbar>

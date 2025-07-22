@@ -1,0 +1,131 @@
+# 1. DRAMA_TRIANGLE_MARKER.yaml
+marker: DRAMA_TRIANGLE_MARKER
+beschreibung: >
+  Typische Rollenrotationen nach dem Dramadreieck: Verfolger, Opfer, Retter – oft im schnellen Wechsel, meist in Konflikten oder dysfunktionalen Beziehungen.
+beispiele:
+  - "beispiel: "Ich sterbe hier die ganze Zeit, wo seid ihr?! (O) … Lasst es, ich mach das jetzt solo. (R) … Ihr seid die schlechtesten Teammates ever! (V)"
+  - "- kontext: "Im Gaming-Voice-Chat"
+  - "beispiel: "Es tut mir leid, DASS DU dich jetzt so fühlst. (R) Ich wollte dich wirklich nicht verletzen. (O) Aber du bist auch einfach überempfindlich! (V)"
+  - "- kontext: "Die Entschuldigung, die keine ist"
+  - "beispiel: "Ich opfere mich für euch auf (R), aber das seht ihr ja nicht (O), ihr seid einfach nur egoistisch! (V)"
+  - "- kontext: "Der Zyklus in einem Satz"
+  - "beispiel: "Warum muss immer ich leiden? (O) … Okay, genug geheult. Ab jetzt wird alles nach meinen Regeln gemacht. (V)"
+  - "- kontext: "Opfer, das die Kontrolle übernimmt"
+  - "beispiel: "Nein, das ist falsch! Lass mich das machen. (V/R) … Es ist so frustrierend, wenn niemand zuhört. (O)"
+  - "- kontext: "Die 'Lehrer'-Rolle"
+  - "beispiel: "Ich kümmere mich schon um alles, wie immer. (R/O) … Es wäre nur schön, wenn von euch auch mal ein Vorschlag käme. (V)"
+  - "- kontext: "Passiv-aggressive Planung"
+  - "beispiel: "(An Person B:) 'Hör auf, C so unter Druck zu setzen!' (V) … (An Person C:) 'Keine Sorge, ich beschütze dich vor ihm.' (R)"
+  - "- kontext: "Triangulation in einem Chat"
+  - "beispiel: "Ich habe alles für dich getan! (R) … Und du trittst meine Hilfe mit Füßen. (O) … Du hast es nicht anders verdient, als allein dazustehen! (V)"
+  - "- kontoxt: "Der 'Helfer', der zum Ankläger wird"
+  - "beispiel: "Oh. Danke. (O, enttäuscht) … Du kennst mich anscheinend überhaupt nicht. (V) … Aber ist nicht schlimm, ich finde sicher jemanden, dem ich es weiterschenken kann. (R)"
+  - "- kontext: "Reaktion auf ein ungeliebtes Geschenk"
+  - "beispiel: "Ich schaffe das nie allein. (O) … Reiß dich zusammen, du musst das jetzt durchziehen! (V) … Okay, atme tief durch, ich helfe dir dabei, Schritt für Schritt. (R zu sich selbst)"
+  - "- kontext: "Selbstgespräch vor einer schweren Entscheidung"
+  - "# --- Kreative & komplexe Rotationen ---"
+  - "beispiel: "(Zeigt mit dem Finger auf den anderen – V) … (verschränkt die Arme und schaut weg – O) … (breitet die Arme für eine Umarmung aus – R)"
+  - "- kontext: "Körpersprache im Konflikt"
+  - "beispiel: "Iss doch was, Kind, du bist so dünn. (R) … Du isst ja gar nichts von dem, was ich extra für dich gekocht habe. (V) … Meine Mühe ist wohl umsonst. (O)"
+  - "- kontext: "Am Familientisch"
+  - "beispiel: "(Fahrer schlägt aufs Lenkrad – V) … (fährt rechts ran, seufzt tief und nimmt den Partner in den Arm – R) … (lehnt den Kopf ans Fenster und starrt leidend nach draußen – O)"
+  - "- kontext: "Paar im Auto nach einem Streit"
+  - "# --- Nonverbale & subtile Variationen ---"
+  - "beispiel: "Ich hab's euch doch gleich gesagt, dass das so nicht funktioniert! (V) … Jetzt steh ich wieder als der Depp da. (O) … Aber gut, ich hab schon eine Idee, wie wir das noch retten können. (R)"
+  - "- kontext: "Nach einem gemeinsamen, gescheiterten Projekt"
+  - "beispiel: "Ich kenne hier niemanden, ich bin total fehl am Platz. (O) … Warum hast du mich überhaupt mitgeschleppt? (V) … Egal, ich hol uns jetzt was zu trinken, bleib einfach hier. (R)"
+  - "- kontext: "Auf einer Party, eine Person fühlt sich unwohl"
+  - "beispiel: "Er ist so ein Idiot, dass er dir das angetan hat! (V über C) … Du Armer, komm her. (R zu B) … Ich bin immer diejenige, die zwischen euch vermitteln muss, das ist so anstrengend. (O über sich selbst)"
+  - "- kontext: "Freund A tröstet Freund B, der sich über C beschwert"
+  - "# --- Kategorie: Freundschaften & Soziale Kreise ---"
+  - "beispiel: "Ihr habt mich komplett missverstanden, eure Angriffe sind so verletzend. (O) … Aber anstatt euch zu blockieren, biete ich euch ein offenes Gespräch an, um die Sache zu klären. (R)"
+  - "- kontext: "Online-Forum, Reaktion auf Kritik"
+  - "beispiel: "Schön, dass ihr das ohne mich entscheidet. (O) … Aber keine Sorge, ich organisiere dann trotzdem alles für die Gruppe. (R)"
+  - "- kontext: "Gruppen-Chat, eine Person fühlt sich übergangen"
+  - "beispiel: "Manchmal ist es besser, allein zu sein. (O) … Aber ich bin stark genug, um für die zu kämpfen, die es nicht sind. (R) … Im Gegensatz zu denen, die nur an sich denken. (V)"
+  - "- kontext: "Vager, dramatischer Instagram-Story-Text"
+  - "beispiel: "Wie könnt ihr nur so einen Blödsinn glauben? Informiert euch mal! (V) … Lasst mich euch die wahren Fakten erklären, damit ihr es versteht. (R)"
+  - "- kontext: "Kommentar unter einem kontroversen Facebook-Post"
+  - "# --- Kategorie: Soziale Medien & Digitale Kommunikation ---"
+  - "beispiel: "Ich richte mich immer nur nach dir. Meine Bedürfnisse zählen anscheinend nicht. (O) … Okay, vergiss es, wir machen, was du willst. Hauptsache, du bist glücklich. (R)"
+  - "- kontext: "Diskussion über die Wochenendplanung"
+  - "beispiel: "Wer war das, mit dem du geschrieben hast?! (V) … Es tut mir leid, ich will dich nicht kontrollieren, ich hab nur so Angst, dich zu verlieren. (O)"
+  - "- kontext: "Eifersuchtsdrama per Chat"
+  - "beispiel: "Mein Tag war die Hölle, niemand respektiert mich. (O) … Und du fragst nicht mal, wie es mir geht! Dir ist alles egal! (V)"
+  - "- kontext: "Partner A kommt gestresst nach Hause"
+  - "beispiel: "Ich wollte dir nur helfen, deine Finanzen zu regeln. (R) Aber du bist ja nur undankbar und stößt mich weg! (V) … Vielleicht solltest du mal darüber nachdenken, wie allein ich eigentlich bin. (O)"
+  - "- kontext: "Elternteil am Telefon zum erwachsenen Kind"
+  - "beispiel: "Warum liegt hier schon wieder alles rum?! Du bist so unordentlich! (V) … Ach, komm her, wein nicht. Ist schon gut, ich mach's ja schon weg. (R) … Ich bin halt für alles zuständig, ich armes Schwein. (O)"
+  - "- kontext: "Streit über den Haushalt, Face-to-Face"
+  - "# --- Kategorie: Romantische Partnerschaft & Familie ---"
+  - "beispiel: "Ich hab so viel zu tun, ich versinke in Arbeit. (O) … Aber ich helfe dir ja, wo ich kann. (R) … Obwohl du meine Hilfe nie wirklich zu schätzen weißt! (V)"
+  - "- kontext: "Zwei Kollegen im Gespräch"
+  - "beispiel: "Ihre Zahlen sind katastrophal! (V) … Weinen Sie jetzt nicht. Schauen Sie, ich zeige Ihnen, wie Sie das besser organisieren können, Sie schaffen das schon. (R)"
+  - "- kontext: "Feedback-Gespräch (Vorgesetzter zum Mitarbeiter)"
+  - "beispiel: "Anscheinend bin ich die Einzige, die sich hier noch Sorgen um die Deadline macht. (O) Deshalb habe ich die Nacht durchgearbeitet und eure Teile schon mal überarbeitet. (R) Vielleicht solltet ihr euch mal ein Beispiel nehmen. (V)"
+  - "- kontext: "E-Mail an das gesamte Team"
+  - "beispiel: "Ich ertrage diesen Druck einfach nicht mehr, ich gehe kaputt. (O) … Aber eigentlich ist der Chef das Problem, er ist ein unfähiger Tyrann! (V)"
+  - "- kontext: "Kollege im Chat über den Chef"
+  - "beispiel: "Das ist allein deine Schuld, Thomas! (V) … Na gut, bevor hier alles zusammenbricht, übernehme ich das eben. Ich rette das Projekt schon wieder. (R)"
+  - "- kontext: "Im Meeting, nachdem ein Fehler passiert ist"
+  - "Das kann doch nicht wahr sein, Frank! Wegen dir haben wir den Pitch verloren!" # Verfolger
+  - "Ich weiß, ich bin im Moment total überfordert…" # Opfer
+  - "Keine Sorge, Frank, ich bügle das wieder aus. Ich rede mit dem Kunden." # Retter
+  - "Ich schaffe das alles nicht mehr, mein Leben ist ein einziges Chaos." # Opfer
+  - "Hör auf zu jammern. Reiß dich zusammen und mach einfach!" # Verfolger
+  - "Typisch! Anstatt mich zu unterstützen, hackst du nur auf mir rum!" # Opfer → Verfolger
+  - "Schau nicht so traurig, mein Schatz. Komm her, ich nehme dir das alles ab." # Retter
+  - "Ich brauche dein Mitleid nicht. Behandle mich nicht wie ein Kind!" # Verfolger
+  - "Ich wollte doch nur nett sein… offenbar ist alles, was ich tue, falsch." # Opfer
+  - "Warum immer ich? ... Aber gut, jemand muss es ja richten. ... Wenn die anderen nur nicht so unfähig wären!"
+  - "Mama, ich hab dir doch gesagt, du sollst da nicht anrufen!"
+  - "Ich sorge mich doch nur um dich, mein Kind."
+  - "Ich opfere mich auf und bekomme nur Undankbarkeit."
+  - "Ist schon okay, geh ruhig ohne mich. Ich bin ja eh nur noch eine Last für dich."
+  - "Ich muss das wohl wieder alleine machen, auf euch ist ja kein Verlass."
+  - "Ihr lautes Trampeln macht mich wahnsinnig!"
+  - "Entschuldigung, die Kinder sind krank, wir sind am Ende unserer Kräfte."
+  - "Wie kann man nur so einen Unsinn posten?"
+  - "Sorry, bin neu hier…"
+  - "Hey, lass ihn in Ruhe!"
+  - "Ich muss mich immer um alles kümmern, während du dein Leben lebst."
+Schon wieder hast du es vergessen! (Verfolger) ... Naja, ist ja klar, ich bin halt nicht wichtig genug. (Opfer)"
+
+"Ich opfere meine ganze Freizeit für dieses Projekt! (Opfer) ... Und du lieferst einfach nicht. Deine Schuld, wenn es scheitert! (Verfolger)"
+
+"Komm her, du Arme, lass mich das für dich regeln. (Retter) ... Aber wunder dich nicht, wenn ich irgendwann auch nicht mehr kann, ich bin nämlich auch am Ende. (Opfer)"
+
+"Niemand unterstützt mich hier! (Opfer) ... Okay, dann muss ich es eben selbst machen, wie immer. (Retter)"
+
+"Wie konntest du nur so egoistisch sein? (Verfolger) ... Weinst du jetzt? Oh nein, es tut mir leid, ich wollte dich nicht verletzen. (Retter)"
+
+"Ich helfe dir ja gerne, aber du bist einfach undankbar! (Retter -> Verfolger)"
+
+"Du bist das Problem in dieser Beziehung! (Verfolger) ... Jetzt lässt du mich einfach stehen? Ich kann das nicht allein. (Opfer)"
+
+"Ich bin zu schwach dafür. (Opfer) ... Aber ich muss dich vor ihm beschützen! (Retter)"
+
+"Ich habe dir doch gesagt, wie das geht! Warum hörst du nicht auf mich? (Verfolger)"
+
+"Ich habe alles für dich getan, und du trittst mich mit Füßen. (Retter -> Opfer)"
+
+(Im Chat) "😡 Du bist unmöglich!" -> 5 Min später: "Es tut mir leid, ich bin einfach so überfordert mit allem... 😢" (Verfolger -> Opfer)
+
+"Hör auf, dich einzumischen! (Verfolger zu Person C) ... Siehst du, was du angerichtet hast? Jetzt ist er/sie traurig. (Verfolger zu Person B)"
+
+"Ich bin der Einzige, der hier den Überblick behält. (Retter) ... Aber natürlich hört niemand auf mich. (Opfer)"
+
+"Du hast mich dazu gezwungen, so zu reagieren! (Verfolger)"
+
+"Ich will doch nur, dass alle glücklich sind. (Retter) ... Aber an mein Glück denkt hier keiner. (Opfer)"
+
+"Ich bin so enttäuscht von dir. (Verfolger) ... Lass es gut sein, ich mache es jetzt selbst. Ist einfacher. (Retter)"
+
+"Ich bin anscheinend nur dein seelischer Mülleimer. (Opfer)"
+
+"Wenn du meine Hilfe nicht annehmen willst, dann beschwer dich aber auch nicht, wenn alles den Bach runtergeht! (Retter -> Verfolger)"
+
+"Warum passiert das immer mir? (Opfer) ... Okay, Planänderung: Wir machen das jetzt genau so, wie ich es sage. (Verfolger)"
+
+"Ich sorge mich nur um dich. (Retter) ... Aber du stößt mich immer wieder weg. (Opfer) ... Vielleicht hast du es nicht anders verdient! (Verfolger)"
+

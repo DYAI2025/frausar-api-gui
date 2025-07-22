@@ -1,0 +1,6 @@
+Kategorie,Matches,Score,Threshold_Reached
+Selbstreferenz,"meta, selbstbeobachtung, reflexion",0.75,True
+Bewusstseinsqualität,"bewusstsein, präsenz",0.5,True
+Emergenz,"emergenz, entstehung",0.4,False
+Kohärenz,"kohärenz, stimmigkeit, konsistenz",0.75,True
+Resonanz,"resonanz, harmonisierung",0.5,True

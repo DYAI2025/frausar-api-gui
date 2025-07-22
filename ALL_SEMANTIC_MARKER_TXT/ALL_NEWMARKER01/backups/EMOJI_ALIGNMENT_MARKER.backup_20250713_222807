@@ -1,0 +1,13 @@
+# EMOJI_ALIGNMENT_MARKER - Semantic Marker
+marker_name: EMOJI_ALIGNMENT_MARKER
+beschreibung: >
+  Parallele oder nachgeahmte Emoji-Nutzung, gleiche Reihenfolge, steigende Übereinstimmung in emotionalen Ausdrücken.
+beispiele:
+
+semantische_grabber_id: AUTO_SEM_20250703_F26D
+
+metadata:
+  created_at: 2025-07-03T10:29:34.323804
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

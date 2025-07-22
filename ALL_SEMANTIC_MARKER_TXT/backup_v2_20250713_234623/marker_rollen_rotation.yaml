@@ -1,0 +1,12 @@
+marker_name: marker_rollen_rotation
+- marker_id: rollen_rotation
+  funktion: "Wechselt zyklisch zwischen Opfer, Retter, Verfolger."
+  psychodynamischer_resonanzkörper: "Karpman-Dramadreieck"
+- marker_id: meta_überhöhung
+  funktion: "Sprache als intellektuelles Ritual statt Gefühlskommunikation."
+  psychodynamischer_resonanzkörper: "Abwehrmechanismus: Intellektualisierung"
+- marker_id: pseudo_klarheit
+  funktion: "Scheinbar sachlicher Ton verschleiert inneren Konflikt."
+  psychodynamischer_resonanzkörper: "Abwehrmechanismus: Affektisolierung"
+kategorie: UNCATEGORIZED
+tags: [needs_review]

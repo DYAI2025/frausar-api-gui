@@ -1,0 +1,23 @@
+marker: GREETING_FREQUENCY_MARKER_MARKER
+beschreibung: >
+  beschreibung: >
+    Häufigkeit von Begrüßungen und Verabschiedungen, Ausdruck von Nähe und Kommunikationsnorm.
+beispiele:
+  - "cat > GREETING_FREQUENCY_MARKER.yaml << EOF"
+  - "GREETING_FREQUENCY_MARKER:"
+  - "beispiele:"
+  - "- "Guten Morgen!""
+  - "- "Na du :)""
+  - "- "Tschüss, bis morgen!""
+  - "semantische_marker:"
+  - "- Begrüßung"
+  - "- Verabschiedung"
+  - "- Höflichkeitsformel"
+  - "EOF"
+
+semantic_grab:
+  description: "Erkennt Muster für greeting_frequency_marker"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

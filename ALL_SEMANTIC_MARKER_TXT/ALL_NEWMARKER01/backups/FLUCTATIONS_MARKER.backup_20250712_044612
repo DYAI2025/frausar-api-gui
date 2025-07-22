@@ -1,0 +1,71 @@
+# FLUCTATIONS_MARKER - Semantic Marker
+marker_name: FLUCTATIONS_MARKER
+beschreibung: >
+  marker:
+  id: "M_FLUCTUATION"
+  name: "FLUCTUATION"
+  level: "meta"
+  category: "Emotionsdynamik"
+  semantic_tags: ["Schwankung", "Instabilität", "Polarity", "Ambivalenz", "Regulation"]
+  description: |
+    Misst die Schwankungsrate und -amplitude von Emotion, Meinung oder Thema über die Zeit. Hohe Fluktuation zeigt sich in schnellen, widersprüchlichen Wechseln (z. B. von Liebe zu Hass, Ja zu Nein, Nähe zu Distanz). Geringe Fluktuation bedeutet Stabilität oder emotionale Starre. Erfasst Wechsel anhan
+beispiele:
+  - "marker:"
+  - "id: "M_FLUCTUATION""
+  - "name: "FLUCTUATION""
+  - "level: "meta""
+  - "category: "Emotionsdynamik""
+  - "semantic_tags: ["Schwankung", "Instabilität", "Polarity", "Ambivalenz", "Regulation"]"
+  - "description: |"
+  - "Misst die Schwankungsrate und -amplitude von Emotion, Meinung oder Thema über die Zeit. Hohe Fluktuation zeigt sich in schnellen, widersprüchlichen Wechseln (z. B. von Liebe zu Hass, Ja zu Nein, Nähe zu Distanz). Geringe Fluktuation bedeutet Stabilität oder emotionale Starre. Erfasst Wechsel anhand aufeinanderfolgender, semantisch oder polaritätsmäßig gegensätzlicher Nachrichten (Antonymie, Themenwechsel, Arousal-Jumps)."
+  - "example:"
+  - "- RegEx: "(einerseits.*andererseits|heute so, morgen so|erst das, dann das|hass.*liebe|nähe.*distanz|immer.*nie|vertraue dir.*komisches gefühl|super.*daneben|Wut.*Reue|Idee.*dumm|Ja.*Nein|rote Kleid.*blaue Kleid)""
+  - "- Semantik: Abfolge von Nachrichten mit entgegengesetzter Valenz, Emotion oder Thema (Kontext/Sentimentfenster nötig!)"
+  - "examples:"
+  - "- "Ich liebe dich mehr als alles andere! ❤️" → "Lass mich einfach in Ruhe, ich ertrage das nicht mehr.""
+  - "- "Ich bin mir 100% sicher, wir sollten kündigen!" → "Vielleicht ist es doch keine so gute Idee…""
+  - "- "Wann sehen wir uns endlich? Ich vermisse dich so!" → "Sorry, die Woche ist voll, hab keine Zeit.""
+  - "- "Du verstehst mich wie kein anderer." → "Du hast absolut keine Ahnung, wer ich bin.""
+  - "- "Ich hab das Gefühl, ich schaffe heute alles!" → "Ich bin so ein Versager.""
+  - "- "Wegen des Urlaubs: Ich hab Flüge gecheckt… aber mal was anderes, erinnerst du dich an Tante Helga?""
+  - "- "Mir egal." → "Warte, WAS??" → "Ist schon gut, beruhigen wir uns wieder.""
+  - "- "Das war allein mein Fehler, sorry." → "Aber wenn du nicht gewesen wärst, hätte ich das auch nicht gemacht.""
+  - "- "Lasst uns zusammenziehen!" → "Ich glaube, ich brauche erstmal mehr Freiraum.""
+  - "- "War doch nur ein Witz, lach mal! 😂" → "Nein, eigentlich meine ich das todernst.""
+  - "- "Ich melde mich jeden Tag bei dir, versprochen!" → "Ich brauchte Abstand.""
+  - "- "Heute Nacht machen wir durch! 🎉" → "Ich glaub, ich geh schlafen.""
+  - "- "Darauf können wir bauen." → "Ich weiß nicht, ob das alles so eine gute Basis hat.""
+  - "- "Ich vertraue dir vollkommen." → "Ich hab da so ein komisches Gefühl bei der Sache.""
+  - "- "Ich schaffe das nicht allein (Opfer)." → "Keine Sorge, ich helfe dir (Retter)." → "Du machst es ja doch nur falsch (Verfolger)!""
+  - "- "Okay, ich kaufe das rote Kleid." → "Nein, doch das blaue." → "Ach, ich nehme keins.""
+  - "- "Alles super." → "Obwohl, wenn ich drüber nachdenke, war das gestern schon ziemlich daneben von dir.""
+  - "- "Deine Haare sehen toll aus! Aber die Hose passt gar nicht dazu.""
+  - "- "Erzähl mir alles, jedes Detail!" → "Ah, sorry, muss kurz was anderes machen.""
+  - "- "Vergiss es, ist nicht deine Schuld." → "Aber du hättest es natürlich schon merken können.""
+  - "- "Ich sehe meine Zukunft mit dir." → "Lass uns die Dinge erstmal langsam angehen.""
+  - "- "Das ist die beste Idee aller Zeiten!" → "Jetzt wo ich es ausspreche, klingt es irgendwie dumm.""
+  - "- "ICH HASSE DICH!" → "Es tut mir so leid, was ich gesagt habe. 😢""
+  - "- "Du kannst mich alles fragen." → "Darüber möchte ich nicht reden.""
+  - "- "Ich denke nur noch an dich." → "Ich muss jetzt echt mal meinen Kopf freikriegen und an was anderes denken.""
+  - "Heute Morgen war ich total motiviert, jetzt will ich nur noch ins Bett."
+  - "Erst wollte ich hinschmeißen, aber jetzt sehe ich wieder Hoffnung."
+  - "Mal liebe ich meine Arbeit, mal frage ich mich, warum ich das alles mache."
+  - "Vorhin habe ich gesagt, alles ist okay. Aber ehrlich gesagt stimmt das gar nicht."
+  - "Letzte Woche war ich überzeugt, jetzt bin ich voller Zweifel."
+  - "Eben noch gefeiert, jetzt schon wieder Streit. Was für ein Auf und Ab."
+  - "Gestern war ich so glücklich mit dir. Heute fühle ich mich leer."
+  - "Ich weiß, ich habe versprochen zu bleiben, aber ich brauche gerade Abstand."
+  - "Einerseits freue ich mich, andererseits habe ich total Angst davor."
+  - "Du bist manchmal mein größter Halt – und manchmal mein größter Stressfaktor."
+
+  - "semantic_grabber_id: "SGR_FLUCTUATION_01""
+  - "context_rule:"
+  - "- "Mindestens zwei gegensätzliche Aussagen in zeitlicher Nähe, Wechsel erkennbar über Polarität oder Thema.""
+
+semantische_grabber_id: AUTO_SEM_20250712_2F94
+
+metadata:
+  created_at: 2025-07-12T02:18:22.845153
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

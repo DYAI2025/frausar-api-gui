@@ -1,0 +1,52 @@
+Eskalationsmarker:
+- input: Ey, mein Herz rast und ich zittere – du hörst mir nie zu und ich hab echt
+    keinen Bock mehr, ich bin raus.
+  output: Eskalationsmarker
+- input: Alter, ich raste aus vor Wut, fühl mich komplett verarscht und jetzt reicht’s,
+    ciao.
+  output: Eskalationsmarker
+- input: Ich koche vor Zorn, mein Puls hämmert bis zum Hals, du ignorierst mich ständig
+    – ich geh offline!
+  output: Eskalationsmarker
+- input: Ey, ich schwitze und zittere, du hast null Respekt, ich hab die Schnauze
+    voll, peace.
+  output: Eskalationsmarker
+- input: Mein ganzer Körper bebt, du bringst mich zum Explodieren und ich lösche den
+    Chat – fertig.
+  output: Eskalationsmarker
+- input: OMG, ich kann kaum atmen, du hörst nie zu und laberst nur Blödsinn – ich
+    bin raus!
+  output: Eskalationsmarker
+- input: Alter, ich platze gleich vor Wut, du gehst mir so derbe auf den Keks, also
+    bis hier hin und weg!
+  output: Eskalationsmarker
+- input: Ich spür mein Herz hämmern, du lenkst mich ab und hast mich hängen lassen
+    – tschö mit ö!
+  output: Eskalationsmarker
+- input: Ey, ich bin so sauer, mein Puls rast, du hältst mich für’n Idioten, peace
+    out!
+  output: Eskalationsmarker
+- input: Ich zitter gerade am ganzen Körper, du verarschst mich, ey, das war’s, ich
+    geh offline.
+  output: Eskalationsmarker
+- input: Alter, mein Blut kocht, du laberst mich voll, ich hab keinen Bock mehr auf
+    deine Scheiße, ich bin raus.
+  output: Eskalationsmarker
+beispiele:
+- Jetzt reicht’s! Ich zittere am ganzen Körper, weil du mir schon wieder nicht zuhörst.
+  Ich geh jetzt, bevor ich was Falsches sage!
+- ALTER, DAS LAGGT SO HARD! ICH RASTE AUS! FUCK IT, ICH BIN RAUS FÜR HEUTE!
+- Mein Puls ist auf 180! Wenn Sie das jetzt nicht sofort klären, dann eskaliert das
+  hier gewaltig, das garantiere ich Ihnen!
+- Ich hab dir das jetzt 10x erklärt und mein Herz hämmert vor Wut. Lass mich einfach
+  in Ruhe, ich kann nicht mehr.
+- FÄHRT DER IDIOT MIR JETZT ECHT HINTEN REIN? ICH PLATZE GLEICH!
+- Mir schnürt sich die Kehle zu. Du hast mein Vertrauen so missbraucht, ich kann gerade
+  nicht mal mehr klar denken. Ende.
+- Wenn ich diesen Blödsinn noch einmal lese, explodiert mein Kopf! Ihr seid doch alle
+  verloren. Ich lösche meinen Account.
+- (Person wird rot, ballt die Fäuste unter dem Tisch) „Das ist inakzeptabel. Ich muss
+  kurz an die frische Luft.“
+- Ich krieg keine Luft mehr, alles dreht sich, ich glaube, ich kippe um, irgendwas
+  stimmt nicht!
+- 🤬🤬🤬 ICH HASSE DAS. BIN WEG. 🚪

@@ -1,0 +1,13 @@
+# A_FEELING_CONNECTION_MARKER - Semantic Marker
+marker_name: A_FEELING_CONNECTION_MARKER
+beschreibung: >
+  Phrasen, die ein Gefühl der Verbundenheit direkt ausdrücken.
+beispiele:
+
+semantische_grabber_id: AUTO_SEM_20250721_DC94
+
+metadata:
+  created_at: 2025-07-21T18:44:37.854322
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

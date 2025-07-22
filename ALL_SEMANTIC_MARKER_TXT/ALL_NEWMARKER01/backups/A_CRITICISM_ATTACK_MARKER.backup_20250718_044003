@@ -1,0 +1,32 @@
+# A_CRITICISM_ATTACK_MARKER - Semantic Marker
+marker_name: A_CRITICISM_ATTACK_MARKER
+beschreibung: >
+  id: A_CRITICISM_ATTACK
+level: 1
+version: "1.0.0"
+author: "Marker_Evaluator_v2"
+created_at: "2025-07-18"
+status: "draft"
+lang: "de"
+name: CRITICISM_ATTACK
+description: "Ad-hominem-Kritik, die den Charakter statt das Verhalten adressiert."
+atomic_pattern:
+  - "Du bist so .*"
+  - "Du machst immer .* falsch"
+  - "Warum kannst du nie .*"
+  - "Immer musst du .*"
+semantic_grabber_id: SGR_GOTTMAN_01
+tags: ["gottman","criticism","communication","origin_author:John_Gottman"]
+beispiele:
+  - "examples:"
+  - "- "Du bist so faul, ich kann nicht mehr!""
+
+semantische_grabber_id: AUTO_SEM_20250718_944A
+
+metadata:
+  created_at: 2025-07-18T02:36:13.580894
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]
+
+kategorie: UNCATEGORIZED

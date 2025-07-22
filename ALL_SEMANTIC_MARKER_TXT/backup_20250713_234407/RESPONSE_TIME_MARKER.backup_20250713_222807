@@ -1,0 +1,24 @@
+marker: RESPONSE_TIME_MARKER
+beschreibung: >
+  beschreibung: >
+    Geschwindigkeit, mit der auf Nachrichte
+beispiele:
+  - "cat > RESPONSE_TIME_MARKER.yaml << EOF"
+  - "RESPONSE_TIME_MARKER:"
+  - "n reagiert wird – misst Engagement und Verbindlichkeit."
+  - "beispiele:"
+  - "- "Sorry, hab's erst jetzt gelesen!""
+  - "- "Danke für die schnelle Antwort :)""
+  - "- "Warum schreibst du denn nie direkt zurück?""
+  - "semantische_marker:"
+  - "- Antwortlatenz"
+  - "- Reaktionszeit"
+  - "- Verzögerung"
+  - "EOF"
+
+semantic_grab:
+  description: "Erkennt Muster für response_time"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

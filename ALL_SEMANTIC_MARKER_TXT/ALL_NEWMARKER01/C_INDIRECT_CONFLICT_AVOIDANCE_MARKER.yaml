@@ -1,0 +1,17 @@
+# C_INDIRECT_CONFLICT_AVOIDANCE_MARKER - Semantic Marker
+marker_name: C_INDIRECT_CONFLICT_AVOIDANCE_MARKER
+beschreibung: >
+  Cluster, der ein wiederkehrendes Muster indirekter Konfliktaustragung erfasst. Das Muster zeigt sich wiederholt durch passiv-aggressive Angriffe, Rückzug oder Schuldumkehr.
+beispiele:
+  - "A (Montag): "Denk bitte an den Termin morgen."
+  - "B (Dienstag): "Sorry, hab ich komplett übersehen."
+  - "A (Donnerstag): "Das war mir aber wichtig, ich bin enttäuscht."
+  - "B (Donnerstag): "Ich wollte doch nur helfen, aber wenn du mir immer so einen Druck machst...""
+
+semantische_grabber_id: SGR_INDIRECT_CONFLICT_01
+
+metadata:
+  created_at: 2025-07-21T12:53:28.339824
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

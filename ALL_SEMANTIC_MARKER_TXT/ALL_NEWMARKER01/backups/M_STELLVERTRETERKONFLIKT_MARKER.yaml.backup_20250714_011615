@@ -1,0 +1,145 @@
+# M_STELLVERTRETERKONFLIKT_MARKER - Semantic Marker
+marker_name: M_STELLVERTRETERKONFLIKT_MARKER
+beschreibung: >
+  - id: "M_STELLVERTRETERKONFLIKT"
+  name: "Stellvertreterkonflikt"
+  level: 2
+  category: "dynamics"
+  cluster: ["conflict_avoidance", "hidden_motivation"]
+  meta_marker: ["MM_INDIREKTER_KONFLIKT"]
+  status: "review"
+  author: "ben_2025"
+  created_at: "2025-07-14"
+  lang: "de"
+  description: |
+    Marker für indirekte, verschobene Konfliktführung: Die eigentliche emotionale Motivation
+    (z.B. Eifersucht, Neid, Angst, Verletztheit) bleibt unausgesprochen. Die Diskussion wird auf ein Nebenthema verlagert (Prinzipien, Sicherheit, Ordnung, Budget, Kompetenz), um ohne Offenlegung eigener Verletzlichkeit Kontrolle, Vorteil oder moralische Überlegenheit zu beanspruchen.
+  pattern:
+    - "Plötzliche Sorge um rationale, organisatorische oder moralische Details, während im Hintergrund ein anderes Gefühl steht."
+    - "Diskussionen, die auf der Sachebene bleiben, obwohl der wahre Grund emotional ist."
+    - "Begründungen, die moralisch, vernünftig oder fürsorglich klingen, aber dem Anderen das Handeln erschweren oder Schuld zuweisen."
+    - "Scheinbar selbstlose Bedenken, die faktisch Kontrolle, Überlegenheit oder Vorteil sichern."
+  rules:
+    - type: negation
+      description: "Keine direkte Benennung der eigentlichen Emotion (Eifersucht, Angst, Neid, Unsicherheit)."
+    - type: co_occurrence
+      condition: "emotionale Spannung, die sich im Verhalten/Timing zeigt"
+    - type: role_inversion
+      description: "Vorteil, Kontrolle oder Überlegenheit werden durch den Vorwand beansprucht."
+  tags: ["konflikt", "indirekt", "stellvertreter", "beziehung", "hidden_agenda"]
+  semantic_grabber_id: "SGR_STELLVERTRETER_01"
+  scoring:
+    weight: 1.3
+    impact: mid
+beispiele:
+  - "examples:"
+  - "- |"
+  - "**Finanzen als Vorwand**"
+  - "B möchte verreisen. A:"
+  - ""Schatz, hast du gesehen, wie viel wir diesen Monat schon ausgegeben haben? Deine Reise… ich weiß nicht, ob das so klug ist.""
+  - "*(eigentlich: Eifersucht auf Zeit ohne A)*"
+  - "- |"
+  - "**Kompetenz in Frage gestellt**"
+  - "Team-Meeting, Kollege A zu B:"
+  - ""Bevor wir uns später Ärger einhandeln: Hast du alle Zahlen geprüft? Letztes Mal gab’s da eine Lücke. Ich kann da nachher drüber schauen.""
+  - "*(eigentlich: Neid, Angst vor Statusverlust)*"
+  - "- |"
+  - "**Unordnung als Streitpunkt**"
+  - "A fühlt sich vernachlässigt, B beschäftigt sich mit neuem Hobby."
+  - ""So ein Chaos überall – ich kann hier gar nicht mehr entspannen. Musst du immer alles liegen lassen?""
+  - "*(eigentlich: Verletztheit, Wunsch nach mehr Aufmerksamkeit)*"
+  - "- |"
+  - "**Prinzipien als Totschlagargument**"
+  - "B schlägt vor, Freunde zu besuchen. A:"
+  - ""Nein, zu denen geh ich nicht. Ich bin strikt gegen Rauchen in geschlossenen Räumen, das weißt du. Da bin ich konsequent.""
+  - "*(eigentlich: Vermeidung einer Person aus Eifersucht/Misstrauen)*"
+  - "- |"
+  - "**Sicherheit als Begründung**"
+  - "B will ein sportliches Fahrrad kaufen. A:"
+  - ""Hast du mal die Unfallzahlen gesehen? Ich find das echt gefährlich. Ein normales Bike wär sicherer.""
+  - "*(eigentlich: Neid, Angst vor weniger Einfluss)*"
+  - "- |"
+  - "**Wohlergehen vorschieben**"
+  - "B möchte abends ausgehen. A:"
+  - ""Ich glaub ehrlich, du solltest mal mehr auf deinen Schlaf achten – dauernd unterwegs ist doch nicht gesund.""
+  - "*(eigentlich: Angst, den Partner zu verlieren; Wunsch nach Kontrolle)*"
+  - "- |"
+  - "**Zeitmanagement/Selbstfürsorge als Vorwand**"
+  - "Kollegin B schlägt gemeinsames Projekt vor."
+  - "A: "Ich habe gelernt, Grenzen zu setzen und muss gerade an mein eigenes Wohl denken. Vielleicht passt das einfach nicht mehr zu meiner Work-Life-Balance.""
+  - "*(eigentlich: Missgunst, Angst vor Überflügeltwerden)*"
+  - "- |"
+  - "**"Fürsorglicher" Kontaktabbruch**"
+  - "Nach Streit, A zu B:"
+  - ""Ich glaube, es ist besser, wenn wir uns eine Weile nicht sehen. Du brauchst Raum, und ich will dich da nicht einengen.""
+  - "*(eigentlich: Selbstschutz, aber auch Strafe/Kontrolle durch Rückzug)*"
+  - "- |"
+  - "**Regel / Tradition vorschieben**"
+  - "B schlägt einen spontanen Ausflug vor."
+  - "A: "Wir haben immer schon am Sonntag Familienzeit gemacht. Ich finde, solche Traditionen sollten nicht einfach übergangen werden.""
+  - "*(eigentlich: Angst vor Ausschluss, Kränkung durch spontane Änderung)*"
+  - "- |"
+  - "**Formale Argumente bei Beziehungsgespräch**"
+  - "B sagt: "Ich fühle mich oft allein.""
+  - "A: "Du weißt, dass mein Job mich voll auslastet. Das ist nicht so einfach, wenn man beruflich so eingespannt ist.""
+  - "*(eigentlich: Vermeidung, echte Gefühle zu zeigen – Schutz vor Verletzbarkeit)*"
+  - "- |"
+  - "**Frühes Aufstehen als Hindernis**"
+  - "B lädt A zu einem späten Treffen mit alten Freunden ein."
+  - "A: "Ich muss morgen sehr früh raus, das wäre total unvernünftig, noch so spät loszugehen.""
+  - "*(eigentlich: Eifersucht auf Bs Freundeskreis)*"
+  - "- |"
+  - "**Nachhaltigkeitsargument**"
+  - "B möchte das neueste Smartphone kaufen. A:"
+  - ""Findest du nicht, es ist ökologisch unverantwortlich, ständig neue Geräte zu kaufen?""
+  - "*(eigentlich: Neid auf Bs finanziellen Spielraum)*"
+  - "- |"
+  - "**Gesundheitliche Bedenken vorgeschoben**"
+  - "B plant, sich einen Hund anzuschaffen. A:"
+  - ""Du weißt doch, wie stark ich auf Tierhaare reagiere, das wäre echt ungesund für mich.""
+  - "*(eigentlich: Angst, weniger Aufmerksamkeit zu bekommen)*"
+  - "- |"
+  - "**Bürokratie als Bremse**"
+  - "Projektmeeting. A zu B:"
+  - ""Bevor wir das Konzept einreichen, brauchen wir erst eine Risikoanalyse und drei neue Freigaben vom Vorstand.""
+  - "*(eigentlich: Furcht, dass B im Rampenlicht steht)*"
+  - "- |"
+  - "**Datenschutz als Vorwand**"
+  - "B möchte Urlaubsfotos auf Social Media posten. A:"
+  - ""Ich finde, man sollte da viel vorsichtiger sein – wer weiß, wer das sieht?""
+  - "*(eigentlich: Kontrollbedürfnis, Eifersucht auf Likes und Kommentare)*"
+  - "- |"
+  - "**Kalender-Korrektiv**"
+  - "B trägt gemeinsame Zeit für Sport ein. A:"
+  - ""Das kollidiert mit meiner Yoga-Session, und Balance ist mir super wichtig. Lass es uns verschieben.""
+  - "*(eigentlich: subtiler Rückzug nach Streit)*"
+  - "- |"
+  - "**Altruistische Hilfe ablehnen**"
+  - "B bietet an, A bei einem Umzug zu helfen."
+  - "A: "Mach dir keinen Stress, ich will nicht, dass du dich übernimmst – ich buche lieber Profis.""
+  - "*(eigentlich: Kränkung, Abwehr weiterer Nähe)*"
+  - "- |"
+  - "**Kind als Argument**"
+  - "Gemeinsamer Freundeskreis lädt zum Grillabend. A:"
+  - ""Die Kleine muss am nächsten Tag zur Schule, das wäre unverantwortlich, sie so spät ins Bett zu bringen.""
+  - "*(eigentlich: Sorge, dem Ex von B zu begegnen)*"
+  - "- |"
+  - "**Kulturelle Sensibilität vorschieben**"
+  - "B schlägt ein bestimmtes Restaurant vor. A:"
+  - ""Dort wird Fleisch nicht halal/zertifiziert – ich möchte keine schlechte Botschaft senden.""
+  - "*(eigentlich: Antipathie gegen Bs KollegInnen, die dort verkehren)*"
+  - "- |"
+  - "**"Pflichtbewusst" umorganisieren**"
+  - "B plant Pärchenurlaub. A:"
+  - ""Mir fällt gerade ein, dass ich in der Woche Steuerunterlagen sortieren muss – das ist wirklich wichtig.""
+  - "*(eigentlich: Angst, sich in der Beziehung festlegen zu müssen)*"
+
+semantische_grabber_id: AUTO_SEM_20250714_6E57
+
+metadata:
+  created_at: 2025-07-14T00:42:25.155399
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]
+
+kategorie: UNCATEGORIZED

@@ -1,0 +1,58 @@
+- id: M1004
+  name: "Splitting (Idealization/Devaluation)"
+  description: >
+    [cite_start]Identifies the dynamic of abrupt shifts between idealization and devaluation, a core defense mechanism in emotionally unstable relationship patterns[cite: 15, 43]. A person or relationship is perceived in black-and-white terms: either as 'all good' (perfect, angelic, a savior) or 'all bad' (worthless, evil, a monster). [cite_start]There is no middle ground, and the switch from one extreme to the other can be triggered by a single perceived disappointment or slight[cite: 17, 44].
+  category: "Unstable Relationship Patterns"
+  semantic_grabber_id: SPLITTING_IDEALIZATION_SEM
+  semantic_tags:
+    - splitting
+    - idealization
+    - devaluation
+    - black-and-white-thinking
+    - instability
+  examples:
+    - "Du bist perfekt, du kannst nie etwas falsch machen."
+    - "Plötzlich enttäuscht du mich total, das hätte ich nie gedacht."
+    - "Ich dachte, du wärst anders als alle anderen."
+    - "Jetzt zeigst du dein wahres Gesicht."
+    - "Erst warst du alles für mich, und jetzt erkenne ich, wer du wirklich bist."
+    - "Gestern warst du noch mein Superstar, heute kann ich dich kaum ansehen."
+    - "Du warst der Einzige, dem ich vertraut habe, jetzt weiß ich, du bist wie alle."
+    - "I used to brag about you, now I'm almost ashamed to mention your name."
+    - "Von 100 % Bewunderung zu 0 % Respekt in weniger als einer Woche."
+    - "Du schienst perfekt, bis du mich heute enttäuscht hast."
+    - "Ich dachte, du würdest mich nie verletzen – falsch gedacht."
+    - "One minute you're my dream come true, the next you're my biggest mistake."
+    - "Du warst mein Licht, aber jetzt sehe ich nur noch Schatten."
+    - "Ich habe dich auf ein Podest gestellt und jetzt fällt alles in Scherben."
+    - "I held you higher than the stars, now you're barely ground level."
+    - "So viel Liebe gestern, so viel Frust heute."
+    - "Ich kann nicht glauben, dass ich dich für ideal gehalten habe."
+    - "From angel to villain, all in one conversation."
+    - "Du bist entweder alles oder gar nichts für mich—kein Mittelweg."
+    - "Deine Stimme war Musik, jetzt ist sie nur Lärm."
+    - "Gestern hätte ich für dich gekämpft, heute spare ich mir jede Mühe."
+    - "I thought you were different, turns out you're just another disappointment."
+    - "Wie konnte ich dich so überschätzen?"
+    - "Du warst mein sicherer Hafen, jetzt ein Sturm."
+    - "Erst himmelhoch jauchzend, jetzt zu Tode betrübt wegen dir."
+    - "Du bist die beste Freundin, die man sich wünschen kann! ...einen Tag später: Ich will dich nie wieder sehen, du bist eine toxische Schlange."
+    - "This project is brilliant, a game-changer! ...nach einer kritischen Frage: This whole project is a complete failure."
+    - "Ich habe noch nie jemanden so reinen Herzens wie dich getroffen. ...nach einem Streit: Du bist von Grund auf verlogen."
+    - "Entweder du bist 100% für mich da, oder du bist mein Feind."
+    - "Du warst meine Rettung. Jetzt bist du mein Untergang."
+    - (Sprachnachricht): "Ich bewundere dich so sehr für deine Stärke. ...später: Deine angebliche Stärke ist nichts als kalte Arroganz."
+    - "I can't believe how perfect we are for each other. ...nächster Tag: We have nothing in common. This was a mistake."
+    - "Er ist der beste Chef, den ich je hatte. ...nach einer Kritik: Er ist ein inkompetenter Tyrann."
+    - "An einem Tag bist du ein Gott, am nächsten ein Dämon. Dazwischen gibt es nichts."
+    - "Ich habe dich idealisiert, das war mein Fehler. Jetzt sehe ich die hässliche Wahrheit."
+    - "Your very presence was a gift. Now it feels like a curse."
+    - "Ich habe unsere Zukunft als perfekt gesehen. Jetzt sehe ich keine Zukunft mehr."
+    - "Du bist entweder der Held meiner Geschichte oder der Bösewicht. Such es dir aus."
+    - "Ich dachte, du wärst die Lösung für all meine Probleme. Jetzt bist du das Problem."
+    - "Last week, I thought you were my soulmate. Today, I feel nothing but disgust."
+    - "Für mich gibt es nur Schwarz und Weiß. Und du warst strahlend weiß, jetzt bist du pechschwarz."
+    - "Ich habe dich geliebt. Jetzt verachte ich dich. So einfach ist das."
+    - "Diese Freundschaft war das Beste in meinem Leben. Jetzt ist sie der größte Verrat."
+    - "You were the one person I thought I could count on. Now I see you are completely unreliable."
+    - "Die Art, wie du lachst, war bezaubernd. Jetzt finde ich sie nur noch nervig und falsch."

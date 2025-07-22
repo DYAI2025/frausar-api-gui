@@ -1,0 +1,13 @@
+# MODEL_DIVERGENCE_SEM_MARKER - Semantic Marker
+marker_name: MODEL_DIVERGENCE_SEM_MARKER
+beschreibung: >
+  Auffällige Abweichungen, Widersprüche oder divergierende Klassifikationen bei mehreren KI-Systemen auf denselben Input.
+beispiele:
+
+semantische_grabber_id: AUTO_SEM_20250703_968E
+
+metadata:
+  created_at: 2025-07-03T12:06:48.392400
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

@@ -1,0 +1,49 @@
+marker: SHOCK_SURPRISE_DRIFT_MARKER
+beschreibung: >
+  beschreibung: >
+  Erkennt Momente plötzlicher Überraschung oder Erschrockenheit, die einen abrupten Bedeutungsdrift auslösen.
+  Charakteristisch ist die spontane Reaktionswende im Kommunikationsverlauf, gefolgt von einer systemischen Drift:
+  - hin zu Hoffnung/Öffnung (positive Drift)
+  - hin zu Furcht/Kontrolle (negative Drift)
+Die weitere Richtung der Drift zeigt, ob das System auf Kontrollgewinn (Steuerung, Rückzug, Klärung)
+  oder auf Hingabe (Akzeptanz, neue Offenheit) zusteuert – oder ob eine ambivalente, schwankende Tendenz vorliegt.
+  Relevant für die Analyse von Beziehungsmustern, Dynamik und emergenter Systemsteuerung.
+
+
+  - oder in einen ambivalenten, unentschiedenen Zustand (Ambivalenzmarker).
+beispiele:
+  - "marker: SHOCK_SURPRISE_DRIFT"
+  - "beispiele:"
+  - "- "Das habe ich wirklich nicht erwartet.""
+  - "- "Das schockiert mich.""
+  - "- "Ich bin ehrlich gesagt gerade total überrumpelt.""
+  - "- "Ich weiß nicht, ob ich mich darauf freuen oder Angst bekommen soll.""
+  - "- "Jetzt muss ich erstmal tief durchatmen.""
+  - "- "Das macht mir Angst – ich will sofort wissen, was los ist." # Kontrollbedürfnis"
+  - "- "Vielleicht ist das ja der Anfang von etwas Gutem?"          # Hoffnung"
+  - "- "Ich bin unsicher, was das für uns bedeutet."                # Ambivalenz"
+  - "- "Ich will sofort alles verstehen und kontrollieren."         # Steuerungsimpuls"
+  - "- "Ich lasse es einfach mal auf mich zukommen."                # Hingabe"
+  - "tags:"
+  - "- schock"
+  - "- überraschung"
+  - "- drift"
+  - "- dynamik"
+  - "- kontrolle"
+  - "- hingabe"
+  - "- hoffnung"
+  - "- furcht"
+  - "- ambivalenz"
+  - "kategorie: Dynamische Emotions- und Beziehungsmarker"
+  - "psychologischer_hintergrund: >"
+  - "Plötzliche Schock- oder Überraschungsreaktionen bewirken häufig eine abrupte Drift im Systemverhalten,"
+  - "deren Richtung – Hoffnung, Furcht, Kontrolle, Hingabe oder Ambivalenz – Rückschlüsse auf Bindungsmuster,"
+  - "Resilienz, Steuerungswunsch und die Qualität des Miteinanders zulassen."
+  - "risk_score: 2"
+
+semantic_grab:
+  description: "Erkennt Muster für shock_surprise_drift.txt"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

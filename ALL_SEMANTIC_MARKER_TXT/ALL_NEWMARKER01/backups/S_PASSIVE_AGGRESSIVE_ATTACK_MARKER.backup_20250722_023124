@@ -1,0 +1,46 @@
+marker_name: S_PASSIVE_AGGRESSIVE_ATTACK_MARKER
+beschreibung: 'Subtiler Sarkasmus + verdeckte Anspielung in einer Message.
+
+  '
+beispiele:
+- War ja klar, *immer* vergisst du die Deadline – schön gemacht.
+- Schön für dich, dass du *ständig* perfekt bist.
+- Na toll, *jedes Mal* passiert dir so was.
+- Wie nett von dir, *nie* pünktlich zu sein.
+- Muss ja schön sein, wenn man *immer* Recht hat.
+- War ja klar, dass du *typisch* wieder alles an dich reißt.
+- Schön für dich, du hast es heute sogar *einmal* geschafft zuzuhören.
+- Na super, *immer* bist du der Held des Tages.
+- Wie nett von dir, *ständig* Ausreden zu finden.
+- Muss ja schön sein, wenn du *nie* was falsch machst.
+- War ja klar, du bist *immer* der, der es besser weiß.
+- Schön, *jedes Mal* derselbe Zirkus mit dir.
+- Na toll, *nie* kriegst du’s hin, die Küche sauber zu lassen.
+- Wie nett, dass du *ständig* meine Hinweise ignorierst.
+- Muss ja schön sein, wenn dein *typisch* chaotischer Stil funktioniert.
+- War ja klar, *immer* Drama, wenn du dabei bist.
+- Schön für dich, das *jedes Mal* auf mich abzuwälzen.
+- Na super, *immer* bist du im Mittelpunkt – großartig.
+- Wie nett, dass du *nie* Fehler zugibst.
+- Muss ja schön sein, wenn du *ständig* Applaus erwartest.
+semantische_grabber_id: SGR_PASSIVE_AGGRESSIVE_ATTACK_01
+metadata:
+  created_at: 2025-07-22 00:19:10.740227
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags:
+  - neu_erstellt
+  - needs_review
+  last_repaired: '2025-07-22T02:04:54.273465'
+  repair_version: '1.0'
+category: UNCATEGORIZED
+tags:
+- needs_review
+examples:
+- AUTO_GENERATED_EXAMPLE_1
+- AUTO_GENERATED_EXAMPLE_2
+- AUTO_GENERATED_EXAMPLE_3
+- AUTO_GENERATED_EXAMPLE_4
+- AUTO_GENERATED_EXAMPLE_5
+
+kategorie: UNCATEGORIZED

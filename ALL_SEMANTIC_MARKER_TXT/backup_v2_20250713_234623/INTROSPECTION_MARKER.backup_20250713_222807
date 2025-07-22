@@ -1,0 +1,56 @@
+# INTROSPECTION_MARKER - Semantic Marker
+marker_name: INTROSPECTION_MARKER
+beschreibung: >
+  marker:
+  name: INTROSPECTION_MARKER
+  grabber_id: SELF_REFLECTION_SEM
+  category: "Self-reflection"
+  description: >
+    Erkennt Äußerungen, in denen die sprechende Person ihr eigenes
+    Verhalten hinterfragt, analysiert und persönliche Erkenntnisse teilt.
+  pattern:
+    - regex: "(ich habe mich gefragt|mir ist aufgefallen|reflektiere)"
+    - regex: "(in Zukunft werde ich|darauf achte ich|ich nehme mir vor)"
+    - keywords: ["Selbstreflexion", "Rückblick", "Lernprozess", "Achtsamkeit"]
+    - semantik: >
+        Sätze, die introspektive Betrachtung und persönliche Entwicklungsziele ausdrücken
+beispiele:
+  - "examples:"
+  - "- "Mir ist aufgefallen, dass ich in Meetings oft zu kurz komme.""
+  - "- "Ich habe mich gefragt, warum ich da so reagiert habe.""
+  - "- "In Zukunft werde ich mir mehr Zeit für die Vorbereitung nehmen.""
+  - "- "Ich reflektiere gerade mein Kommunikationsverhalten.""
+  - "- "Nach dem Gespräch denke ich darüber nach, wie ich es besser machen kann.""
+  - "- "Ich nehme mir vor, bewusster zuzuhören.""
+  - "- "Rückblickend hätte ich direkter sein sollen.""
+  - "- "Ich achte jetzt darauf, meine Gedanken klarer zu formulieren.""
+  - "- "Dieser Fehler zeigt mir, woran ich arbeiten muss.""
+  - "- "Ich mache gerade einen kleinen Selbstlern-Prozess durch.""
+  - "- "Ich habe gemerkt, dass mich das Thema X triggert und ich dann unsachlich werde.""
+  - "- "Mein erster Impuls war Abwehr, aber ich glaube, du hattest recht.""
+  - "- "Ich muss lernen, nicht alles persönlich zu nehmen.""
+  - "- "Ich ertappe mich dabei, wie ich bei Stress zu Mikromanagement neige.""
+  - "- "Wenn ich ehrlich zu mir bin, habe ich die Aufgabe prokrastiniert.""
+  - "- "Ich analysiere gerade, warum mir diese Aufgabe so schwerfällt.""
+  - "- "Die Erkenntnis war für mich, dass ich früher um Hilfe bitten muss.""
+  - "- "Ich glaube, meine Ungeduld stand uns da im Weg.""
+  - "- "Ich war selbst überrascht, wie defensiv ich reagiert habe. Das muss ich mir ansehen.""
+  - "- "Früher hätte ich einfach weitergemacht, heute erkenne ich, wann ich eine Pause brauche.""
+  - "- "Ich frage mich, ob mein Perfektionismus hier eher hinderlich als nützlich ist.""
+  - "- "Mein Ziel für nächstes Quartal ist es, besser im Delegieren zu werden.""
+  - "- "Ich sehe ein, dass meine Kommunikation da missverständlich war.""
+  - "- "Ich versuche, meine eigenen Vorurteile in dieser Sache zu erkennen und zu hinterfragen.""
+  - "- "Im Nachhinein betrachtet, war meine Reaktion übertrieben.""
+  - "- "Ich nehme aus dem Projekt mit, dass ich meine Zeit besser managen muss.""
+  - "- "Mein Anteil an dem Konflikt war, dass ich nicht klar gesagt habe, was ich brauche.""
+  - "- "Ich will verstehen, was mich dazu bringt, so zu handeln.""
+  - "- "Dieses Feedback hat mir einen blinden Fleck bei mir aufgezeigt.""
+  - "- "Ich arbeite daran, meine erste Reaktion zu kontrollieren und überlegter zu antworten.""
+
+semantische_grabber_id: AUTO_SEM_20250712_748B
+
+metadata:
+  created_at: 2025-07-12T10:41:47.304171
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

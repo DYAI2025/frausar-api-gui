@@ -1,0 +1,83 @@
+marker: SHOCK_SURPRISE_DRIFT_MARKER
+beschreibung: >
+  beschreibung: >
+  Erkennt Momente plötzlicher Überraschung oder Erschrockenheit, die einen abrupten Bedeutungsdrift auslösen.
+  Charakteristisch ist die spontane Reaktionswende im Kommunikationsverlauf, gefolgt von einer systemischen Drift:
+  - hin zu Hoffnung/Öffnung (positive Drift)
+  - hin zu Furcht/Kontrolle (negative Drift)
+Die weitere Richtung der Drift zeigt, ob das System auf Kontrollgewinn (Steuerung, Rückzug, Klärung)
+  oder auf Hingabe (Akzeptanz, neue Offenheit) zusteuert – oder ob eine ambivalente, schwankende Tendenz vorliegt.
+  Relevant für die Analyse von Beziehungsmustern, Dynamik und emergenter Systemsteuerung.
+
+
+  - oder in einen ambivalenten, unentschiedenen Zustand (Ambivalenzmarker).
+beispiele:
+  - "Alarm. Die Kernannahme wurde verletzt. Ich muss die Strategie sofort anpassen." # KI (Furcht/Kontrolle)"
+  - "Das ist wie ein Plot-Twist im echten Leben." # Mensch"
+  - "Der Kontext ist soeben gekippt. Wechsle in den Analyse-Modus." # KI (Kontrolle)"
+  - "Das ist… unerwartet. Ich weiß nicht, ob das gut oder schlecht ist." # Mensch (Ambivalenz)"
+  - "Faszinierend. Diese Wendung verändert die gesamte narrative Dynamik." # KI (Analyse/Hoffnung)"
+  - "Na dann… sehen wir mal, was passiert." # Mensch (Hingabe)"
+  - "Krass. Okay, wir brauchen sofort einen neuen Plan." # Mensch (Kontrolle)"
+  - "Oh Gott, was bedeutet das jetzt für die Zukunft?" # Mensch (Furcht)"
+  - "Das eröffnet ja ganz neue Möglichkeiten!" # Mensch (Hoffnung)"
+  - "Abrupter Drift und Andeutung der Folgedynamik"
+  - "Okay, ich gebe auf. Damit hätte ich nie gerechnet." # Mensch (Hingabe)"
+  - "Mein System meldet eine Kontext-Anomalie. Ich kann die Konsequenzen noch nicht abschätzen." # KI"
+  - "Du bringst mich gerade komplett aus dem Konzept." # Mensch"
+  - "Das erzeugt eine signifikante Unsicherheit in meiner Prognose." # KI"
+  - "Ich weiß gar nicht, was ich dazu sagen oder denken soll." # Mensch"
+  - "Ich bin unsicher, wie ich diese neue Entwicklung einordnen soll." # KI"
+  - "Eingeständnis von Unsicherheit und Kontrollverlust"
+  - "Diese Anfrage erfordert eine temporäre Aussetzung meiner Standardprozeduren." # KI"
+  - "Ich weiß gerade nicht, wohin mit dieser Information." # Mensch"
+  - "System-Reset: Die bisherige Annahme war fehlerhaft. Ich beginne die Analyse neu." # KI"
+  - "Das muss ich erst mal sacken lassen." # Mensch"
+  - "Meine bisherige Analyse ist mit dieser neuen Information hinfällig geworden." # KI"
+  - "Okay… gib mir eine Sekunde. Das muss ich erst mal verarbeiten." # Mensch"
+  - "Einen Augenblick, ich muss meine internen Parameter neu kalibrieren." # KI"
+  - "Selbstreflexion und Verarbeitungsbedarf"
+  - "Du hast mich gerade kalt erwischt." # Mensch"
+  - "Das ist eine… unerwartete Variable." # KI"
+  - "Wow. Einfach nur wow. Damit habe ich nicht gerechnet." # Mensch"
+  - "Mein Vorhersagemodell hat diesen Ausgang mit einer Wahrscheinlichkeit von Null eingestuft." # KI"
+  - "Echt jetzt? Das hätte ich im Leben nicht erwartet." # Mensch"
+  - "Diese Information steht im fundamentalen Widerspruch zu meinem bisherigen Datensatz." # KI"
+  - "Ich bin gerade ehrlich sprachlos." # Mensch"
+  - "Moment, was? Das wirft jetzt alles komplett über den Haufen." # Mensch"
+  - "Explizite Überraschungs- und Schock-Aussagen"
+  - "marker: SHOCK_SURPRISE_DRIFT"
+  - "beispiele:"
+  - "- "Das habe ich wirklich nicht erwartet.""
+  - "- "Das schockiert mich.""
+  - "- "Ich bin ehrlich gesagt gerade total überrumpelt.""
+  - "- "Ich weiß nicht, ob ich mich darauf freuen oder Angst bekommen soll.""
+  - "- "Jetzt muss ich erstmal tief durchatmen.""
+  - "- "Das macht mir Angst – ich will sofort wissen, was los ist." # Kontrollbedürfnis"
+  - "- "Vielleicht ist das ja der Anfang von etwas Gutem?"          # Hoffnung"
+  - "- "Ich bin unsicher, was das für uns bedeutet."                # Ambivalenz"
+  - "- "Ich will sofort alles verstehen und kontrollieren."         # Steuerungsimpuls"
+  - "- "Ich lasse es einfach mal auf mich zukommen."                # Hingabe"
+  - "tags:"
+  - "- schock"
+  - "- überraschung"
+  - "- drift"
+  - "- dynamik"
+  - "- kontrolle"
+  - "- hingabe"
+  - "- hoffnung"
+  - "- furcht"
+  - "- ambivalenz"
+  - "kategorie: Dynamische Emotions- und Beziehungsmarker"
+  - "psychologischer_hintergrund: >"
+  - "Plötzliche Schock- oder Überraschungsreaktionen bewirken häufig eine abrupte Drift im Systemverhalten,"
+  - "deren Richtung – Hoffnung, Furcht, Kontrolle, Hingabe oder Ambivalenz – Rückschlüsse auf Bindungsmuster,"
+  - "Resilienz, Steuerungswunsch und die Qualität des Miteinanders zulassen."
+  - "risk_score: 2"
+
+semantic_grab:
+  description: "Erkennt Muster für shock_surprise_drift.txt"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

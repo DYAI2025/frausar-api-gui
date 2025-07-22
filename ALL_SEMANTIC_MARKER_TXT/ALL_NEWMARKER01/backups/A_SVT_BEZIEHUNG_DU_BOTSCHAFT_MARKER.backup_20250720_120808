@@ -1,0 +1,38 @@
+# A_SVT_BEZIEHUNG_DU_BOTSCHAFT_MARKER - Semantic Marker
+marker_name: A_SVT_BEZIEHUNG_DU_BOTSCHAFT_MARKER
+beschreibung: >
+  id: "A_SVT_BEZIEHUNG_DU_BOTSCHAFT"
+level: 1
+version: "1.0.1"
+author: "Marker Evaluator & Generator v2"
+created_at: "2025-07-20"
+status: "draft"
+lang: "de"
+name: "SVT_ACCUSATORY_YOU_MESSAGE"
+[cite_start]description: "Identifiziert 'Du-Botschaften', die dem Empfänger Eigenschaften oder Schuld zuweisen und somit die Beziehungsebene stark belasten. "
+atomic_pattern:
+  - "du bist"
+  - "du hast"
+  - "sie kommen schon wieder"
+  - "dein verhalten"
+  - "warum hast du"
+regex_flags: ["i"]
+scoring:
+  impact: "high"
+tags: ["schulz_von_thun", "beziehungsebene", "konflikt", "origin_author:Schulz-von-Thun"]
+semantic_grabber_id: "SGR_SVT_RELATION_ACCUSATION_01"
+beispiele:
+  - "examples:"
+  - "- "Du bist eine schlechte Autofahrerin.""
+  - "- "Sie kommen schon wieder zu spät.""
+  - "- "Warum hast du das nicht erledigt?""
+  - "- "Dein Verhalten ist mal wieder typisch.""
+  - "- "Du hast schon wieder nicht zugehört.""
+
+semantische_grabber_id: AUTO_SEM_20250720_D7B7
+
+metadata:
+  created_at: 2025-07-20T11:48:57.138302
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

@@ -1,0 +1,59 @@
+# C_ETABLIERTE_INTIMITAET_UND_RESONANZ_MARKER - Semantic Marker
+marker_name: C_ETABLIERTE_INTIMITAET_UND_RESONANZ_MARKER
+beschreibung: >
+  Stable pattern of regular pet-names & resonance.
+beispiele:
+  - "A: "Wir beide sind echt ein gutes Team, Schatz."
+B: "Absolut. Ich bin so froh, dich zu haben."
+A: "Das geht mir genauso.""
+  - "A: "We really are a great team, darling."
+B: "Absolutely. I’m so glad I have you."
+A: "Same here.""
+  - "A: "Morning, honey. We crushed that deadline together!"
+B: "Totally! Couldn’t have done it without you.""
+  - "A: "Dinner was awesome, sweetheart—our recipe rocks."
+B: "Agreed! Team us for the win.""
+  - "A: "We’re unstoppable, babe."
+B: "Exactly, love—power duo.""
+  - "A: "Good night, muffin. We nailed today."
+B: "Right! Proud of us.""
+  - "A: "Together we handled the drama, champ."
+B: "Yep, same wavelength all day.""
+  - "A: "Our playlist slaps, partner."
+B: "Totally vibing with you.""
+  - "A: "Thanks for the pep-talk, angel."
+B: "Anytime—we’ve got each other.""
+  - "A: "We both know brunch is sacred, cutie."
+B: "Absolutely—best ritual ever.""
+  - "A: "Love how we tag-team chores, honey."
+B: "Me too—smooth like butter.""
+  - "A: "Our shared calendar is life, darling."
+B: "Exactly—keeps us synced.""
+  - "A: "We smashed that workout, tiger."
+B: "High-five! In perfect sync.""
+  - "A: "Movie-marathon Sundays forever, babe."
+B: "Amen to that!""
+  - "A: "We’re such a solid unit, sweetie."
+B: "Couldn’t agree more.""
+  - "A: "Our game strategy was flawless, genius."
+B: "Teamwork made it happen.""
+  - "A: "Night, pumpkin—love our chats."
+B: "Same, darling—sleep well.""
+  - "A: "We’re on fire, superstar."
+B: "Totally synced energy!""
+  - "A: "Our inside jokes keep growing, buddy."
+B: "Love that—best vibe.""
+  - "A: "Great brainstorm, wizard—our ideas click."
+B: "We spark off each other perfectly.""
+  - "A: "Grateful for our bond, hero."
+B: "Feeling the same, love.""
+  - "A: "Our dream board looks epic, darling."
+B: "Exactly—manifesting together!""
+
+semantische_grabber_id: SGR_ESTABLISHED_INTIMACY_01
+
+metadata:
+  created_at: 2025-07-22T00:37:20.507656
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

@@ -1,0 +1,34 @@
+# MM_MANIPULATIVE_RELATIONSHIP_ENGINEERING_MARKER - Semantic Marker
+marker_name: MM_MANIPULATIVE_RELATIONSHIP_ENGINEERING_MARKER
+beschreibung: >
+  id: "MM_MANIPULATIVE_RELATIONSHIP_ENGINEERING"
+  name: "Manipulativer Beziehungsaufbau"
+  level: 4
+  description: |
+    Übergeordneter Meta-Marker für die Kombination von strategisch eingesetzten Beziehungsmustern.
+    Entsteht, wenn Rapid Self Disclosure, Love Bombing und Future Faking in kurzer Folge auftreten.
+  composed_of:
+    - type: semantic
+      marker_ids: ["M_RAPID_SELF_DISCLOSURE","M_LOVE_BOMBING","M_FUTURE_FAKING"]
+  activation_logic: "(M_RAPID_SELF_DISCLOSURE AND M_LOVE_BOMBING) OR (M_RAPID_SELF_DISCLOSURE AND M_FUTURE_FAKING)"
+  trigger_threshold: 2
+  scoring:
+    weight: 2.0
+    impact: high
+  tags: ["fraud","love_scamming","relational_manipulation"]
+beispiele:
+  - "-"
+  - "examples:"
+  - "- |"
+  - "Scammer: "Seit meine Frau gestorben ist, bin ich allein.""
+  - "Opfer: "Das tut mir sehr leid.""
+  - "Scammer: "Du bist der erste Mensch, bei dem ich mich wieder öffnen kann. Ich glaube, ich verliebe mich in dich.""
+  - "Scammer (später): "Ich habe das Gefühl, wir könnten zusammen alt werden, vielleicht sogar heiraten.""
+
+semantische_grabber_id: AUTO_SEM_20250713_22E7
+
+metadata:
+  created_at: 2025-07-13T22:23:16.310488
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

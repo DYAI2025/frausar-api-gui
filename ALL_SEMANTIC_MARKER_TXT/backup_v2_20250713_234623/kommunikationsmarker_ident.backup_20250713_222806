@@ -1,0 +1,14 @@
+{
+  "name": "identifiziere_kommunikationsmarker",
+  "description": "Analysiert einen Dialog und identifiziert spezifische psychologische Kommunikationsmarker.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "dialog_text": {
+        "type": "string",
+        "description": "Der zu analysierende Dialog oder Text."
+      }
+    },
+    "required": ["dialog_text"]
+  }
+}

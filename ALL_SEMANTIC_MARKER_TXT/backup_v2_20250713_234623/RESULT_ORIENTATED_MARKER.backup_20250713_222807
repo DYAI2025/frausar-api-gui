@@ -1,0 +1,56 @@
+# RESULT_ORIENTATED_MARKER - Semantic Marker
+marker_name: RESULT_ORIENTATED_MARKER
+beschreibung: >
+  marker:
+  name: RESULT_ORIENTATION_MARKER
+  grabber_id: RESULT_ORIENTATION_SEM
+  category: "Result Orientation"
+  description: >
+    Erkennt Äußerungen, die Fokus auf Zielerreichung,
+    Effizienz und messbare Ergebnisse legen.
+  pattern:
+    - regex: "(ziel(e)? erreichen|Deadline|Ergebnis orientiert)"
+    - regex: "(Output|Outcome|Erfolgsmessung)"
+    - keywords: ["Effizienz", "Produktivität", "Meilenstein", "KPIs"]
+    - semantik: >
+        Sätze, die klare Zielvorgaben, Deadlines und Erfolgskriterien betonen
+beispiele:
+  - "examples:"
+  - "- "Lass uns das Ziel bis Freitag erreichen.""
+  - "- "Wir müssen den Meilenstein diese Woche abschließen.""
+  - "- "Ich fokussiere mich auf den Output, nicht auf den Aufwand.""
+  - "- "Wie messen wir den Erfolg dieses Features?""
+  - "- "Deadline ist morgen um 12 Uhr – ich lege los.""
+  - "- "Ergebnisorientiert arbeiten bedeutet für mich: keine offenen Tasks.""
+  - "- "Produktivität ist, wenn wir liefern, was vereinbart wurde.""
+  - "- "Unsere KPIs sehen eine Steigerung von 20 % vor.""
+  - "- "Wir prüfen am Ende, ob die Goals erfüllt sind.""
+  - "- "Das Outcome zählt, nicht die Zeit, die wir investiert haben.""
+  - "- "Lasst uns auf die Dinge konzentrieren, die den größten Impact haben.""
+  - "- "Wie zahlt diese Aufgabe auf unsere Quartalsziele ein?""
+  - "- "Das ist eine interessante Diskussion, aber bringt sie uns dem Ergebnis näher?""
+  - "- "Mein Fokus liegt darauf, dieses Ticket auf 'Done' zu setzen.""
+  - "- "Wir müssen effizienter werden, um unsere Ziele zu schaffen.""
+  - "- "Am Ende des Tages zählt, was wir geliefert haben.""
+  - "- "Lasst uns die To-Dos priorisieren, die uns dem Release am nächsten bringen.""
+  - "- "Wann ist dieses Projekt für uns ein Erfolg? Lasst uns die Metriken definieren.""
+  - "- "Wir müssen den 'Return on Investment' für diese Maßnahme im Auge behalten.""
+  - "- "Das Ziel ist klar definiert. Lasst uns den schnellsten Weg dorthin finden.""
+  - "- "Schön, aber was ist das konkrete, messbare Ergebnis?""
+  - "- "Wir müssen liefern, nicht nur diskutieren.""
+  - "- "Ich will am Ende der Woche sehen, dass wir die Conversion Rate gesteigert haben.""
+  - "- "Alles, was nicht direkt zum Ziel beiträgt, wird erstmal zurückgestellt.""
+  - "- "Ich bin ein Fan von 'Done is better than perfect'.""
+  - "- "Können wir das abkürzen und direkt zum Ergebnis kommen?""
+  - "- "Hauptsache, wir halten die Deadline. Überstunden sind eingeplant.""
+  - "- "Wir brauchen einen klaren Action-Plan, um das Ziel zu sichern.""
+  - "- "Lasst uns weniger auf den Prozess und mehr auf das Resultat schauen.""
+  - "- "Der Kunde will Ergebnisse sehen, keine Ausreden.""
+
+semantische_grabber_id: AUTO_SEM_20250712_D197
+
+metadata:
+  created_at: 2025-07-12T10:37:55.593851
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

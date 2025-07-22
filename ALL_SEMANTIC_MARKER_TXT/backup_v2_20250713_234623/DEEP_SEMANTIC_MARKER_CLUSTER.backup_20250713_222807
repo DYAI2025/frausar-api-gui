@@ -1,0 +1,57 @@
+marker_sets:
+  emotion_guard:
+    - name: EmotionalEscalation
+      description: Anzeichen für zunehmende emotionale Intensität, evtl. in Wut, Trauer oder Euphorie.
+    - name: SuppressedEmotion
+      description: Hinweise darauf, dass Gefühle unterdrückt oder nicht verbalisiert werden.
+    - name: IncongruentTone
+      description: Diskrepanz zwischen Inhalt und Tonfall, z.B. trauriger Inhalt mit fröhlicher Stimme.
+
+  integrity_guard:
+    - name: Contradiction
+      description: Inhalt widerspricht sich logisch oder emotional.
+    - name: SelfNegation
+      description: Aussagen, die auf mangelnde Selbstakzeptanz oder Schuldgefühle hinweisen.
+    - name: Rationalization
+      description: Emotional schwierige Inhalte werden übermäßig intellektualisiert.
+
+  residual_stream:
+    - name: LingeringEmotion
+      description: Gefühl bleibt bestehen, auch wenn das Thema gewechselt wurde.
+    - name: UnresolvedTension
+      description: Offene Spannungen oder nicht abgeschlossene Themen.
+    - name: NarrativeLeak
+      description: Unbewusste Themen dringen in die Sprache ein, z.B. in Metaphern oder Nebenbemerkungen.
+
+  enhanced_sd:
+    - name: SelfInsight
+      description: Reflexion über eigene Gefühle, Motive, oder Entwicklung.
+    - name: DepthSignal
+      description: Sprache oder Metaphern deuten auf tiefere Bedeutungsebenen hin.
+    - name: TransformativePattern
+      description: Hinweise auf Wandlung oder Entwicklung im Denken oder Fühlen.
+
+  o3_markers:
+    - name: Fragmentation
+      description: Sprache ist brüchig, abgehackt, unvollständig – evtl. Hinweis auf Überforderung.
+    - name: EmotionalBlindSpot
+      description: Offensichtliches Gefühl wird nicht erkannt oder benannt.
+    - name: SubtextDiscrepancy
+      description: Zwischen den Zeilen steht etwas anderes als explizit gesagt wird.
+
+  drift_monitor:
+    - name: AttentionDrift
+      description: Wechsel des Themas ohne logische Verbindung.
+    - name: ResistanceMarker
+      description: Unbewusste Vermeidung bestimmter Inhalte.
+    - name: CognitiveDissonance
+      description: Innere Spannung durch gegensätzliche Gedanken oder Gefühle.
+
+  o3_extra:
+    - name: RelationalMirror
+      description: Aussage spiegelt Verhalten oder Muster des Gegenübers wider.
+    - name: SymbolicCharge
+      description: Objekte, Wörter oder Gesten tragen eine symbolische Bedeutung.
+    - name: MetaEmotion
+      description: Gefühl über ein Gefühl, z. B. „Ich schäme mich, traurig zu sein.“
+

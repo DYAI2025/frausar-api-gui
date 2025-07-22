@@ -1,0 +1,13 @@
+# REBOUND_SEM_MARKER - Semantic Marker
+marker_name: REBOUND_SEM_MARKER
+beschreibung: >
+  Detektiert Reparatur- und Versöhnungsphasen nach Kommunikationsbrüchen – Entschuldigungen, Neustart-Signale oder Einladungen zur Wiederannäherung.
+beispiele:
+
+semantische_grabber_id: AUTO_SEM_20250703_E0A1
+
+metadata:
+  created_at: 2025-07-03T12:05:29.455078
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

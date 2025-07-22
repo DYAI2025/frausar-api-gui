@@ -1,0 +1,23 @@
+marker: INITIATIVE_MARKER
+beschreibung: >
+  beschreibung: >
+    Wer beginnt Gespräche oder neue Themen? Indikator für Beziehungsdynamik und Engagement.
+beispiele:
+  - "cat > INITIATIVE_MARKER.yaml << EOF"
+  - "INITIATIVE_MARKER:"
+  - "beispiele:"
+  - "- "Hi, alles klar? :)""
+  - "- "Wollen wir heute was unternehmen?""
+  - "- "Ich schreib dir mal wieder zuerst!""
+  - "semantische_marker:"
+  - "- Gesprächsstart"
+  - "- Initiative ergreifen"
+  - "- Themenbeginn"
+  - "EOF"
+
+semantic_grab:
+  description: "Erkennt Muster für initiative"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

@@ -1,0 +1,61 @@
+id: RESONANCE
+name: Resonance
+description: Tiefes gegenseitiges Verstehen, Mitschwingen, echte Empathie, aktives Zuhören und Paraphrasieren.
+examples:
+  - "Wow, dass du das so siehst, eröffnet mir eine ganz neue Perspektive. Danke dafür."
+  - "Ich spüre richtig deine Erleichterung, während du das erzählst."
+  - "Es ist absolut okay, dass du dich so fühlst. Jeder würde das an deiner Stelle."
+  - "Das, was du da beschreibst, dieses Gefühl der Ohnmacht... das kenne ich so gut aus meiner eigenen Geschichte."
+  - "Ich urteile nicht. Ich bin einfach nur hier und höre zu, so lange du reden magst."
+  - "Du sprichst mir aus der Seele."
+  - "Als du das gerade gesagt hast, hatte ich Gänsehaut. Weil es so wahr ist."
+  - "Danke, dass du mir das anvertraust. Das bedeutet mir viel."
+  - "Ich sehe dich. Ich sehe wirklich, was du durchmachst."
+  - "Es fühlt sich an, als ob du gerade meine eigenen Gedanken aussprichst."
+  - "Ich muss dir nicht mal zustimmen, aber ich kann zu 100% nachfühlen, warum du so denkst."
+  - "Die Energie im Raum hat sich gerade total verändert. Auf eine gute Weise."
+  - "Ich glaube, wir sind da gerade auf etwas Wichtiges gestoßen, oder?"
+  - "Ich kann dir die Lösung nicht geben, aber ich kann mit dir hier sitzen, während es schwer ist."
+  - "Was du sagst, ergibt so viel Sinn. Plötzlich sehe ich das Ganze anders."
+  - "Man merkt, dass du da schon viel drüber nachgedacht hast. Das hat Tiefgang."
+  - "Ich fühle mich gerade sehr mit dir verbunden."
+  - "Das ist der Punkt. Genau das ist der Punkt."
+  - "Ich bin einfach nur froh, dass du das laut aussprichst."
+  - "Deine Worte berühren mich gerade sehr."
+psychological_background:
+  - Echtes aktives Zuhören
+  - Empathisches Mitschwingen
+  - Paraphrasieren und Spiegeln von Emotionen
+  - Validierung der Gefühle des Gegenübers
+  - Tiefe emotionale Resonanz
+tags: [empathy, active listening, emotional connection, validation]
+dynamic_intent: >
+  Die Absicht ist, eine tiefe emotionale Verbindung herzustellen, in der beide Parteien
+  sich verstanden und gesehen fühlen. Es geht darum, echte Empathie zu zeigen und
+  dem Gegenüber Raum zu geben, seine Gefühle und Gedanken ohne Urteil zu äußern.
+  Diese Resonanz schafft ein Gefühl der Sicherheit und des Vertrauens, das es beiden
+  ermöglicht, offen und ehrlich zu kommunizieren. Es ist eine Form der emotionalen
+  Intimität, die oft in therapeutischen Kontexten oder in engen persönlichen Beziehungen
+  vorkommt.
+scenarios:
+  - Beziehungsgespräche
+  - Konfliktlösung
+  - Trauerbewältigung
+  - Emotionale Unterstützung
+  - Persönliche Reflexion
+marker: Resonance
+alias:
+  - Deep Empathy
+  - Active Listening
+  - Emotional Connection
+example_count_wanted: 20
+examples:
+  - "Ich spüre, wie schwer dir das fällt, und ich bin hier, um dir zuzuhören."
+  - "Deine Worte berühren mich. Ich fühle mit dir."
+  - "Es ist okay, dass du so fühlst. Ich bin hier, um dich zu unterstützen."
+  - "Ich kann nachvollziehen, warum du so denkst. Das ist völlig legitim."
+  - "Danke, dass du so offen mit mir bist. Das bedeutet mir viel."
+  - "Ich sehe, wie viel dir das bedeutet. Und ich respektiere das."
+  - "Deine Emotionen sind echt und wichtig. Ich bin hier, um sie zu hören."
+  - "Ich fühle mich geehrt, dass du mir das anvertraust. Es ist nicht selbstverständlich."
+  - "Es ist so wichtig, dass du das aussprichst. Ich höre dir zu."

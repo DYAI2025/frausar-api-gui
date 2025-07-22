@@ -1,0 +1,2354 @@
+marker_name: semantic_grabber_library
+semantic_grabbers:
+  AUTO_SEM_20250703_0097:
+    beschreibung: Plötzlicher Themenwechsel, erkennbares „Switchen“ von Gesprächsthemen,
+      bewusste oder überraschende Richtungsänderung im Dialog.
+    created_at: '2025-07-03T11:52:30.401980'
+    created_from: TOPIC_SHIFT_SEM_MARKER
+    patterns: []
+  AUTO_SEM_20250703_080A:
+    beschreibung: Noch ein Vertrauensmarker
+    created_at: '2025-07-03T04:43:12.771219'
+    created_from: ANOTHER_TRUST_MARKER
+    patterns:
+    - Ich weiß nicht mehr, ob ich dir glauben kann
+    - Du hast schon so oft versprochen
+    - Wie soll ich dir noch vertrauen?
+  AUTO_SEM_20250703_1345:
+    beschreibung: "Erkennt Selbstbezug und Reflexion über den Dialog – Meta-Kommentare,\
+      \ Analysen\n    oder Beobachtungen zum eigenen Kommunikationsprozess."
+    created_at: '2025-07-03T12:05:01.140966'
+    created_from: META_REFLEX_SEM_MARKER
+    patterns: []
+  AUTO_SEM_20250703_2BAD:
+    beschreibung: Wiederkehrende, ritualisierte Nähe-Gesten und Insider im Chat; private
+      Codes, Grußformeln, feste Abschiede.
+    created_at: '2025-07-03T12:05:58.386794'
+    created_from: RITUAL_PROXIMITY_SEM_MARKER
+    patterns: []
+  AUTO_SEM_20250703_393B:
+    beschreibung: Automatisch erkannt aus -_NAME_MARKER
+    created_at: '2025-07-03T11:58:49.987256'
+    created_from: -_NAME_MARKER
+    patterns:
+    - Unsere Nachrichten klingen fast gleich mittlerweile.
+    - Ich schreibe jetzt schon so wie du – fällt dir das auf?
+    - Witzig, dass wir oft die gleichen Sätze benutzen.
+    - Unsere Ausdrucksweise ähnelt sich von Tag zu Tag mehr.
+    - Wir kopieren irgendwie gegenseitig unsere Formulierungen.
+    - Immer öfter die gleichen Wörter in unseren Texten.
+    - Sogar Satzanfänge sehen jetzt identisch aus.
+    - Unsere Satzlänge ist auffällig ähnlich geworden.
+    - Beide benutzen auf einmal dieselben Slang-Ausdrücke.
+    - Wir schreiben im gleichen Rhythmus.
+  AUTO_SEM_20250703_428B:
+    beschreibung: Plötzlicher Themenwechsel, überraschende Richtungsänderung, bewusste
+      oder intuitive Themensprünge im Dialog.
+    created_at: '2025-07-03T12:02:17.864091'
+    created_from: TOPIC_SHIFT_SEM_MARKER
+    patterns: []
+  AUTO_SEM_20250703_4745:
+    beschreibung: Finanzielle Forderungen
+    created_at: '2025-07-03T04:43:12.761634'
+    created_from: FINANCIAL_REQUEST_MARKER
+    patterns:
+    - Ich brauche dringend 500 Euro für eine Operation
+    - Kannst du mir Geld leihen? Es ist ein Notfall
+    - Ohne deine finanzielle Hilfe bin ich verloren
+  AUTO_SEM_20250703_47F6:
+    beschreibung: Sprachmuster für synchronen, angeglichenen Schreibstil, auffallend
+      ähnliche Wortwahl, Satzbau oder Wiederholung typischer Formulierungen zwischen
+      Partnern.
+    created_at: '2025-07-03T10:16:33.007448'
+    created_from: STYLE_SYNC_MARKER
+    patterns: []
+  AUTO_SEM_20250703_4F53:
+    beschreibung: 'Erkennt Muster des Unschuldigen: Vertrauen, Naivität, Harmoniebedürfnis,
+      Vermeidung von Konflikt, kindlicher Glaube an das Gute.'
+    created_at: '2025-07-03T04:47:48.600124'
+    created_from: MARKER_NAME_MARKER
+    patterns:
+    - Ich glaube, dass alles gut wird, wenn man nur daran glaubt.
+    - Warum kann nicht alles einfach bleiben wie früher?
+    - Ich verstehe nicht, warum Menschen böse sein sollten.
+    - Das Leben ist schön, wenn man es einfach nimmt.
+    - Ich will einfach nur glücklich sein.
+  AUTO_SEM_20250703_6157:
+    beschreibung: Übereinstimmung zwischen den Ausgaben, Einschätzungen oder Bewertungen
+      verschiedener KI-Modelle auf identischem Input.
+    created_at: '2025-07-03T12:06:31.485899'
+    created_from: MODEL_CONVERGENCE_SEM_MARKER
+    patterns: []
+  AUTO_SEM_20250703_9039:
+    beschreibung: ">\n  beschreibung: >\n  Erkennt Momente plötzlicher Überraschung\
+      \ oder Erschrockenheit, die einen abrupten Bedeutungsdrift auslösen.\n  Charakteristisch\
+      \ ist die spontane Reaktionswende im Kommunikationsverlauf, gefolgt von einer\
+      \ systemischen Drift:\n  - hin zu Hoffnung/Öffnung (positive Drift)\n  - hin\
+      \ zu Furcht/Kontrolle (negative Drift)\nDie weitere Richtung der Drift zeigt,\
+      \ ob das System auf Kontrollgewinn (Steuerung, Rückzug, Klärung)\n  oder auf\
+      \ Hingabe (Akzeptanz, neue Offenheit) zusteuert – oder ob eine ambivalente,\
+      \ schwankende Tendenz vorliegt.\n  Relevant für die Analyse von Beziehungsmustern,\
+      \ Dynamik und emergenter Systemsteuerung.\n\n\n  - oder in einen ambivalenten,\
+      \ unentschiedenen Zustand (Ambivalenzmarker)."
+    created_at: '2025-07-03T11:56:12.186997'
+    created_from: SHOCK_SURPRISE_DRIFT
+    patterns:
+    - Alarm. Die Kernannahme wurde verletzt. Ich muss die Strategie sofort anpassen.
+    - Das ist wie ein Plot-Twist im echten Leben.
+    - Der Kontext ist soeben gekippt. Wechsle in den Analyse-Modus.
+    - Das ist… unerwartet. Ich weiß nicht, ob das gut oder schlecht ist.
+    - Faszinierend. Diese Wendung verändert die gesamte narrative Dynamik.
+    - Na dann… sehen wir mal, was passiert.
+    - Krass. Okay, wir brauchen sofort einen neuen Plan.
+    - Oh Gott, was bedeutet das jetzt für die Zukunft?
+    - Das eröffnet ja ganz neue Möglichkeiten!
+    - Abrupter Drift und Andeutung der Folgedynamik
+  AUTO_SEM_20250703_968E:
+    beschreibung: Auffällige Abweichungen, Widersprüche oder divergierende Klassifikationen
+      bei mehreren KI-Systemen auf denselben Input.
+    created_at: '2025-07-03T12:06:48.383482'
+    created_from: MODEL_DIVERGENCE_SEM_MARKER
+    patterns: []
+  AUTO_SEM_20250703_9B43:
+    beschreibung: Unerwartete, kreative oder neuartige Beiträge im Chat; ungewöhnliche
+      Formulierungen, neue Ideen, Innovationssprünge.
+    created_at: '2025-07-03T12:03:36.603359'
+    created_from: NOVELTY_BURST_SEM_MARKER
+    patterns: []
+  AUTO_SEM_20250703_9F2B:
+    beschreibung: Synchronisierte oder adaptierte Antwortzeiten, bemerkte Gleichzeitigkeit,
+      bewusste Pausen oder Gleichklang im Chat-Tempo.
+    created_at: '2025-07-03T11:33:32.265289'
+    created_from: RESPONSE_TIMING_MARKER
+    patterns: []
+  AUTO_SEM_20250703_AD6E:
+    beschreibung: Test Vertrauensverlust
+    created_at: '2025-07-03T04:43:12.750386'
+    created_from: TEST_TRUST_MARKER
+    patterns:
+    - Ich vertraue dir nicht mehr so wie früher
+    - Kann ich dir überhaupt noch glauben?
+    - Du hast mein Vertrauen verloren
+  AUTO_SEM_20250703_B995:
+    beschreibung: Das wiederholte und oft vage Aufschieben von wichtigen Entscheidungen,
+      klärenden Gesprächen oder notwendigen Integrationsschritten.
+    created_at: '2025-07-03T11:56:38.568767'
+    created_from: PERMANENT_POSTPONE
+    patterns:
+    - Lass uns das nach dem Urlaub besprechen.
+    - Jetzt ist gerade wirklich kein guter Zeitpunkt für so ein Thema.
+    - Das hat noch Zeit, wir müssen nicht alles sofort entscheiden.
+    - Wir reden da später nochmal drüber, okay?
+    - Ich habe im Moment einfach nicht den Kopf dafür.
+    - Das ist ein zu großes Fass, das wir jetzt aufmachen.
+    - Lass uns erstmal abwarten, wie sich die Dinge entwickeln.
+    - Ich verspreche, wir kümmern uns darum, aber nicht heute.
+    - Ich muss darüber erst einmal eine Nacht schlafen.
+    - Eine Gehaltserhöhung ist dieses Quartal schwierig, lassen Sie uns das im nächsten
+      Jahr erneut prüfen.
+  AUTO_SEM_20250703_D126:
+    beschreibung: "Misst emergente Kopplung & Bruchpunkte mehrerer Markerachsen in\
+      \ Echtzeit-Dialogen.\n    Nutzt Multi-Scale-Windows, adaptive Gewichtung, Repair-Dynamik\
+      \ und Drift-Phasen."
+    created_at: '2025-07-03T10:15:23.912904'
+    created_from: MARKER_MARKER
+    patterns: []
+  AUTO_SEM_20250703_E0A1:
+    beschreibung: Detektiert Reparatur- und Versöhnungsphasen nach Kommunikationsbrüchen
+      – Entschuldigungen, Neustart-Signale oder Einladungen zur Wiederannäherung.
+    created_at: '2025-07-03T12:05:29.444786'
+    created_from: REBOUND_SEM_MARKER
+    patterns: []
+  AUTO_SEM_20250703_E381:
+    beschreibung: Automatisch erkannt aus STYLE_SYNC_MARKER
+    created_at: '2025-07-03T10:17:04.800426'
+    created_from: STYLE_SYNC_MARKER
+    patterns: []
+  AUTO_SEM_20250703_F26D:
+    beschreibung: Parallele oder nachgeahmte Emoji-Nutzung, gleiche Reihenfolge, steigende
+      Übereinstimmung in emotionalen Ausdrücken.
+    created_at: '2025-07-03T10:29:34.317868'
+    created_from: EMOJI_ALIGNMENT_MARKER
+    patterns: []
+  AUTO_SEM_20250705_824B:
+    beschreibung: "Anzeichen von nachhaltiger Widerstandsfähigkeit, System-Offenheit,\
+      \ Fähigkeit zur schnellen Regeneration\n    und zur Integration von Wandel."
+    created_at: '2025-07-05T08:22:43.801929'
+    created_from: MARKER_MARKER
+    patterns:
+    - Ja, es war hart, aber wir haben daraus gelernt und sind jetzt besser vorbereitet
+      als zuvor.
+    - Es beeindruckt mich, wie ruhig du trotz all der Schwierigkeiten bleibst. Das
+      gibt mir auch Kraft.
+    - Die Kündigung trifft mich, klar. Aber das ist vielleicht genau der Anstoß, um
+      etwas Neues anzufangen.
+    - Wir haben immer einen Weg gefunden – und genau deshalb glaube ich, dass wir
+      es auch diesmal schaffen.
+    - Hey, ich sehe, dass du versuchst, dich nicht runterziehen zu lassen. Das bedeutet
+      mir echt viel.
+    - Ich hatte heute einen Rückfall, aber morgen starte ich neu. Das ist kein Scheitern,
+      das gehört zum Prozess.
+    - Es ist schwer, aber wir reden offen darüber – das zeigt, dass wir inzwischen
+      wirklich stark geworden sind.
+    - Auch wenn wir gerade nicht weiterwissen, wir wissen immerhin, dass wir uns gegenseitig
+      haben.
+    - Ich bewundere, wie du nach Rückschlägen immer wieder neu ansetzt. Davon können
+      wir alle lernen.
+    - Die letzten Monate haben uns gezeigt, dass wir viel robuster sind, als wir je
+      gedacht hätten.
+  BOUNDARY_VIOLATION_SEM:
+    beschreibung: Erkennt Grenzüberschreitungen
+    created_at: '2024-01-20T10:00:00'
+    created_from: BOUNDARY_MARKER
+    patterns:
+    - Das geht zu weit
+    - Du überschreitest meine Grenzen
+    - Ich habe dir gesagt, dass ich das nicht will
+    - Respektiere bitte meine Entscheidung
+  EMOTIONAL_MANIPULATION_SEM:
+    beschreibung: Erkennt emotionale Manipulation
+    created_at: '2024-01-20T10:00:00'
+    created_from: MANIPULATION_MARKER
+    patterns:
+    - Wenn du mich wirklich lieben würdest
+    - Du bist schuld, dass ich mich so fühle
+    - Ohne mich bist du nichts
+    - Ich tue das nur, weil du mich dazu zwingst
+  SELF_DOUBT_SEM:
+    beschreibung: Erkennt Selbstzweifel und Unsicherheit
+    created_at: '2024-01-20T10:00:00'
+    created_from: SELF_DOUBT_MARKER
+    patterns:
+    - Vielleicht bilde ich mir das nur ein
+    - Bin ich zu empfindlich?
+    - Übertreibe ich?
+    - Liegt es vielleicht an mir?
+  SGR_AFFILIATION_INCENTIVE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für AFFILIATION_INCENTIVE
+    created_at: '2025-07-13T23:59:59'
+    created_from: AFFILIATION_INCENTIVE
+    patterns:
+    - 'name: "Affiliation Incentive"'
+    - Detects communicative patterns that motivate belonging, loyalty, or long-term
+      engagement through informal incentives or promises of future rewards. These
+      statements create a sense of exclusivity, futu
+    - 'category: "Psychological Reward"'
+  SGR_AI_BOT_SCAM_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für AI_BOT_SCAM.yaml_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: AI_BOT_SCAM.yaml_MARKER
+    patterns:
+    - 'marker_name: AI_BOT_SCAM.yaml_MARKER'
+    - Erkennt sprachliche Muster, typische Phrasen und Begriffe aus Romance Scams,
+      Love Fraud oder KI-generierten Texten.
+    - Ziel ist es, auffällige Wortwahl oder generische Sprache in Messaging-Umgebungen
+      zu markieren.
+    - 'description: "Erkennt Muster für ai_bot_scam.txt"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_AI_BOT_SEMANTIDETECTPY_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für AI_BOT_SEMANTIC_DETECT.py_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: AI_BOT_SEMANTIC_DETECT.py_MARKER
+    patterns:
+    - 'marker_name: AI_BOT_SEMANTIC_DETECT.py_MARKER'
+    - 'marker: AI_BOT_SEMANTIC_DETECT.py_MARKER'
+    - 'description: "Erkennt Muster für ai_bot_semantic_detect.py"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_AMBIVALENCE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für AMBIVALENCE_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: AMBIVALENCE_MARKER
+    patterns:
+    - Ich will wirklich, dass du bleibst, aber ein Teil von mir glaubt, dass eine
+      Trennung besser für uns wäre.
+    - Ich schätze Ihr Vertrauen in mich für diese Beförderung sehr, gleichzeitig habe
+      ich Bedenken, ob ich den neuen Verantwortungen gerecht werden kann.
+    - Klar hab ich Bock auf den Urlaub! 🏖️ Aber mein Kontostand schreit gerade ganz
+      laut ‚Nein‘. 😭
+    - Ja, Mama, ich komme an Weihnachten nach Hause. Ich freue mich, euch zu sehen,
+      auch wenn es für mich immer purer Stress ist.
+    - Ich bin so stolz darauf, wie unabhängig ich bin. Manchmal fühle ich mich dadurch
+      aber auch schrecklich allein.
+    - Ein interessanter Ansatz, der aber auch eine komplette Neuausrichtung unserer
+      bisherigen Strategie bedeuten würde.
+    - Klar, ich kann deine Schicht übernehmen. Macht mir überhaupt nichts aus, meinen
+      einzigen freien Abend zu opfern.
+    - Dieser Laden ist genial, aber die Musik ist die Hölle.
+    - Das Produkt ist super verarbeitet und sieht toll aus, allerdings ist die Software
+      eine absolute Katastrophe.
+    - 'Love my job! ❤️‍🔥 … aber hasse ihn auch ein bisschen. #worklifebalance'
+  SGR_AMBIVALENCE_TOLERANCE_MARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für AMBIVALENCE_TOLERANCE_MARKER_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: AMBIVALENCE_TOLERANCE_MARKER_MARKER
+    patterns:
+    - Klarheit und Kommunikation eigener Grenzen, Selbstschutz.
+    - 'description: "Erkennt Muster für ambivalence_tolerance_marker"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_AMBIVALENT_STALLING_MANEUVER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für AMBIVALENT_STALLING_MANEUVER
+    created_at: '2025-07-13T23:59:59'
+    created_from: AMBIVALENT_STALLING_MANEUVER
+    patterns:
+    - 'Eine Kommunikationsstrategie, die durch vage, unverbindliche oder ausweichende
+      Aussagen gekennzeichnet ist. Ziel ist es, eine andere Person emotional verfügbar
+      und als Option offenzuhalten, ohne eine '
+    - Die hinhaltende Person maximiert ihre eigene Freiheit und Optionen (z.B. auf
+      eine "bessere" Gelegenheit zu warten), während sie das emotionale Risiko und
+      die Verantwortung für Entscheidungen minimiert
+    - 'A: "In welches Restaurant gehen wir denn heute Abend?"'
+    - 'B: "Ach, such du aus. Mir ist wirklich alles recht, Hauptsache, du bist glücklich."'
+    - Klingt zunächst zuvorkommend, ist aber eine komplette Abgabe der Verantwortung.
+      Person B muss keine Initiative zeigen und kann sich bei einer falschen Wahl
+      des Restaurants darauf berufen, dass es ja d
+  SGR_ANALYSICONFIGURATION2_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für ANALYSIS_CONFIGURATION 2
+    created_at: '2025-07-13T23:59:59'
+    created_from: ANALYSIS_CONFIGURATION 2
+    patterns:
+    - Automatisch generierte Beschreibung für ANALYSIS_CONFIGURATION 2
+  SGR_ANALYSICONFIGURATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für ANALYSIS_CONFIGURATION
+    created_at: '2025-07-13T23:59:59'
+    created_from: ANALYSIS_CONFIGURATION
+    patterns:
+    - Automatisch generierte Beschreibung für ANALYSIS_CONFIGURATION
+  SGR_ANALYTICAL_THINKING_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für ANALYTICAL_THINKING_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: ANALYTICAL_THINKING_MARKER
+    patterns:
+    - 'category: "Analytical Thinking"'
+    - datengetriebene Schlussfolgerungen und strukturierte Problemlösung signalisieren.
+    - 'created_at: 2025-07-12T10:40:23.095869'
+    - 'version: 1.0'
+  SGR_ARCHETYPAL_PATTERNS_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für ARCHETYPAL_PATTERNS_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: ARCHETYPAL_PATTERNS_MARKER
+    patterns:
+    - 'id: "M_ARCHETYPAL_PATTERNS"'
+    - 'name: "ARCHETYPAL_PATTERNS"'
+    - 'level: "meta"'
+    - 'category: "Narrative Struktur"'
+    - 'semantic_tags: ["Archetyp", "Selbstdarstellung", "Mustererkennung", "Identität"]'
+  SGR_ARCHETYPICAL_PATTERN_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für ARCHETYPICAL_PATTERN
+    created_at: '2025-07-13T23:59:59'
+    created_from: ARCHETYPICAL_PATTERN
+    patterns:
+    - 'id: "M_ARCHETYPAL_PATTERNS"'
+    - 'name: "ARCHETYPAL_PATTERNS"'
+    - 'level: "meta"'
+    - 'category: "Narrative Struktur"'
+    - 'semantic_tags: ["Archetyp", "Selbstdarstellung", "Mustererkennung", "Identität"]'
+  SGR_AROUSAL_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für AROUSAL_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: AROUSAL_MARKER
+    patterns:
+    - 'id: "M_AROUSAL"'
+    - 'name: "AROUSAL"'
+    - 'level: "meta"'
+    - 'category: "Emotionsdynamik"'
+    - 'semantic_tags: ["Intensität", "Erregung", "Arousal", "Aktivierung"]'
+  SGR_ASYMMETRIINFO_MINING_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für ASYMMETRIC_INFO_MINING
+    created_at: '2025-07-13T23:59:59'
+    created_from: ASYMMETRIC_INFO_MINING
+    patterns:
+    - Das ist faszinierend. Erzähl mir mehr über deine Kindheit. Wo genau bist du
+      aufgewachsen?
+    - Du hast so eine beruhigende Stimme. Was arbeitest du genau? Und wie heißt deine
+      Firma?
+    - Ich möchte alles über dich wissen. Was ist der Mädchenname deiner Mutter?
+    - Du bist so besonders. Was ist dein größter Traum und deine größte Angst?
+    - (Nachdem er selbst nichts preisgibt) Was sind deine finanziellen Ziele für die
+      nächsten fünf Jahre?
+    - Ich möchte dir ein Geburtstagsgeschenk machen. Wann genau hast du Geburtstag
+      und was ist dein Lieblingsparfüm?
+    - Nur aus Neugier, bei welcher Bank bist du?
+    - Wie hieß dein erstes Haustier? Ich liebe Tiere.
+    - Deine Familie klingt toll. Wie viele Geschwister hast du und wie heißen sie?
+    - Du bist so klug. Auf welcher Grundschule warst du?
+  SGR_BINDING_PATTERN_CLUSTER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für BINDING_PATTERN_CLUSTER
+    created_at: '2025-07-13T23:59:59'
+    created_from: BINDING_PATTERN_CLUSTER
+    patterns:
+    - Automatisch generierte Beschreibung für BINDING_PATTERN_CLUSTER
+  SGR_BLAME_SHIFTING_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für BLAME_SHIFTING
+    created_at: '2025-07-13T23:59:59'
+    created_from: BLAME_SHIFTING
+    patterns:
+    - 'name: "Blameshifting"'
+    - The act of shifting responsibility for one's own mistakes, negative feelings,
+      or problems onto another person to deflect blame and avoid accountability. This
+      is a common defense mechanism in conflicts
+    - 'category: "Conflict & Defense Mechanisms"'
+  SGR_BLAME_SHIFT_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für BLAME_SHIFT_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: BLAME_SHIFT_MARKER
+    patterns:
+    - Ich hätte nicht so reagiert, wenn du nicht so einen Ton angeschlagen hättest.
+    - Du bist doch unzufrieden, dann ändere was.
+    - Du interpretierst das immer gleich so negativ.
+    - Vielleicht bist du einfach zu sensibel für sowas.
+    - Ich hab mein Bestes gegeben – was ist denn dein Beitrag?
+    - Ich habe nur gelogen, weil ich wusste, dass du die Wahrheit nicht ertragen kannst.
+    - Natürlich bin ich gereizt, bei dem Stress, den du mir machst.
+    - Das Projekt ist gescheitert, weil die Rahmenbedingungen von Anfang an schlecht
+      waren.
+    - Ich bin nicht eifersüchtig, du gibst mir nur ständig Anlass dazu.
+    - Sorry, dass du dich jetzt so fühlst, aber das war wirklich nur ein Witz.
+  SGR_BOUNDARY_SETTING_MARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für BOUNDARY_SETTING_MARKER_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: BOUNDARY_SETTING_MARKER_MARKER
+    patterns:
+    - Klarheit und Kommunikation eigener Grenzen, Selbstschutz.
+    - 'description: "Erkennt Muster für boundary_setting_marker"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_BOUNDARY_SHIFT_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für BOUNDARY_SHIFT
+    created_at: '2025-07-13T23:59:59'
+    created_from: BOUNDARY_SHIFT
+    patterns:
+    - 'name: "Boundary Shift"'
+    - Identifies communicative patterns where a person is implicitly treated as part
+      of an inner circle, team, or co-creation context without this having been formally
+      agreed upon. These statements create a
+    - 'category: "Subtle Role Integration"'
+  SGR_BREAK_UP_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für BREAK_UP_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: BREAK_UP_MARKER
+    patterns:
+    - 'name: "Abbruchmarker"'
+    - 'category: "Kommunikationsabbruch"'
+    - 'semantic_grabber_id: "SGR_ABBRUCH_01"'
+    - Signalisiert den bewussten, oft abrupten Abbruch der Kommunikation durch eine
+      Partei.
+    - Rückzug erfolgen und beendet das Gespräch einseitig.
+  SGR_CARE_SIGNITURE_MARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für CARE_SIGNITURE_MARKER_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: CARE_SIGNITURE_MARKER_MARKER
+    patterns:
+    - Sich musterhaft wiederholdene Nachrichtenabschlüsse beim Verabschieden, die
+      Zuneigung und Verbinung für die Partner implizieren. Die Wiederholung als Beziehungs
+      Baseline Temeratur, an der Microverände
+    - 'description: "Erkennt Muster für care_signiture_marker"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_COGNITIVE_DISSTURBANCE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für COGNITIVE_DISSTURBANCE
+    created_at: '2025-07-13T23:59:59'
+    created_from: COGNITIVE_DISSTURBANCE
+    patterns:
+    - 'Gaslighting: Eine Person wird systematisch dazu gebracht, an ihrer eigenen
+      Wahrnehmung, Erinnerung oder ihrem Verstand zu zweifeln. Ziel ist es, das Opfer
+      zu desorientieren und von der Einschätzung de'
+    - 'Beispiel: Nach einer klaren Aussage sagt der Manipulator später: „Das habe
+      ich nie gesagt. Das bildest du dir nur ein.“'
+    - 'Spaltung (Splitting): Personen oder Situationen werden in extrem positive („nur
+      gut“) oder extrem negative („nur schlecht“) Kategorien eingeteilt. Dies zwingt
+      das Umfeld, Partei zu ergreifen und schaf'
+    - 'Beispiel: „Dein Freund ist ein Engel, aber deine Schwester ist durch und durch
+      böse und will uns nur schaden.“'
+    - 'Rationalisierung: Scheinbar logische und plausible Gründe werden für ein inakzeptables
+      Verhalten vorgeschoben, um die wahren, egoistischen Motive zu verschleiern und
+      Kritik abzuwehren.'
+  SGR_COMMUNICATION_MARKERS2_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für META_COMMUNICATION_MARKERS 2
+    created_at: '2025-07-13T23:59:59'
+    created_from: META_COMMUNICATION_MARKERS 2
+    patterns:
+    - Automatisch generierte Beschreibung für META_COMMUNICATION_MARKERS 2
+  SGR_COMMUNICATION_MARKERS_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für META_COMMUNICATION_MARKERS
+    created_at: '2025-07-13T23:59:59'
+    created_from: META_COMMUNICATION_MARKERS
+    patterns:
+    - Automatisch generierte Beschreibung für META_COMMUNICATION_MARKERS
+  SGR_COMPARISON_GHOST_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für COMPARISON_GHOST_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: COMPARISON_GHOST_MARKER
+    patterns:
+    - 'beschreibung: Subtiler oder offener Vergleich einer aktuellen Situation mit
+      Ex-Partnern, einem früheren Leben oder alternativen Szenarien, was Unsicherheit
+      und Konkurrenzdruck erzeugt.'
+    - 'dynamik_absicht: Die Absicht reicht von unbewusster Unsicherheit und dem Suchen
+      nach Bestätigung („Bin ich gut genug?“) über passive Aggression („Früher war
+      alles besser“) bis zu gezielter Manipulatio'
+    - 'szenario: "Die Verantwortung für die Diskrepanz zwischen ''früher'' und ''heute''
+      wird dem neuen Partner zugeschoben. Beispiel: ''Mit meiner Ex konnte ich stundenlang
+      reden. Bei dir habe ich das Gefühl, je'
+    - 'description: "Erkennt vergleichende Sprache, die sich auf vergangene oder alternative
+      Personen/Szenarien bezieht."'
+    - 'pattern: "(mein/e Ex|\\w+) +(hat immer|hat nie|war mehr|konnte besser) +([\\w\\s]+)"'
+  SGR_CONNECTION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für CONNECTION_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: CONNECTION_MARKER
+    patterns:
+    - Ich fühl mich echt verbunden mit dir.
+    - Wir hängen irgendwie zusammen, Alter.
+    - Unsere Freundschaft bedeutet mir viel.
+    - Ich brauch das Band, das uns verbindet.
+    - Ich merke, wir sind auf einer Wellenlänge.
+    - Ich spüre unsere gemeinsame Energie.
+    - Ich mag es, wenn wir uns so verstehen.
+    - Ich schätze unsere Verbindung sehr.
+    - Du bist mir wichtig und ich fühl das.
+    - Ich brauch dich an meiner Seite.
+  SGR_CONNECTION_POSITIVITY_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für CONNECTION_POSITIVITY_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: CONNECTION_POSITIVITY_MARKER
+    patterns:
+    - 'name: "CONNECTION_POSITIVITY"'
+    - 'level: "atomic"'
+    - 'category: "Soziale Verbundenheit"'
+    - 'semantic_tags: ["Verbindung", "Wohlfühlen", "Wertschätzung", "Empathie"]'
+    - Erkennt sprachliche Marker für ein positives Miteinander, Wertschätzung, gegenseitiges
+      Wahrnehmen, Humor, Vertrauen und Feedback in der Beziehungsgestaltung.
+  SGR_CRISIMONEY_REQUEST_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für CRISIS_MONEY_REQUEST
+    created_at: '2025-07-13T23:59:59'
+    created_from: CRISIS_MONEY_REQUEST
+    patterns:
+    - Ich sitze am Flughafen fest, mein Portemonnaie wurde gestohlen. Ich weiß nicht,
+      was ich tun soll, ich brauche nur Geld für ein neues Ticket.
+    - Mein Kind liegt im Krankenhaus und die Versicherung zahlt nicht sofort. Ich
+      bin verzweifelt, es geht um die Operation.
+    - Ich habe eine einmalige Geschäftschance, aber mir fehlt ein kleiner Betrag für
+      die Lizenzgebühr. Du würdest es tausendfach zurückbekommen.
+    - Wegen eines Missverständnisses wurde mein Konto eingefroren. Ich komme an nichts
+      ran, nicht mal an Geld für Essen.
+    - Ich habe eine Steuerschuld, von der ich nichts wusste. Wenn ich nicht bis morgen
+      zahle, droht mir eine Strafe.
+    - Ich schäme mich so, dich zu fragen, aber ich habe niemanden sonst. Mein Vermieter
+      will mich rauswerfen.
+    - Die Ausrüstung, die ich für meinen Job brauche, ist kaputtgegangen. Ohne sie
+      kann ich nicht arbeiten und kein Geld verdienen.
+    - Ich bin im Ausland gestrandet und die Botschaft hilft nicht. Ich brauche nur
+      Hilfe für eine sichere Unterkunft.
+    - Ich habe eine Erbschaft gemacht, aber um sie anzutreten, muss ich eine hohe
+      Gebühr zahlen, die ich gerade nicht habe.
+    - Mein Laptop wurde gestohlen, mit all meiner Arbeit darauf. Ich brauche dringend
+      einen neuen, um meine Projekte zu beenden.
+  SGR_DEEPENING_BY_QUESTIONING_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für DEEPENING_BY_QUESTIONING.yaml_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: DEEPENING_BY_QUESTIONING.yaml_MARKER
+    patterns:
+    - 'marker_name: DEEPENING_BY_QUESTIONING.yaml_MARKER'
+    - '"marker": "DEEPENING_BY_QUESTIONING",'
+    - '"beschreibung": ('
+    - '"Erkennt dialogische Muster, bei denen durch feinfühlige, offene oder introspektive
+      Fragen gezielt emotionale Nähe aufgebaut wird. "'
+    - '"Typisch sind aufeinander aufbauende Themen, Wechsel zwischen Selbstöffnung
+      und neugieriger Exploration, sowie die Verwendung von "'
+  SGR_DEEP_SEMANTIMARKER_CLUSTER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für DEEP_SEMANTIC_MARKER_CLUSTER
+    created_at: '2025-07-13T23:59:59'
+    created_from: DEEP_SEMANTIC_MARKER_CLUSTER
+    patterns:
+    - Automatisch generierte Beschreibung für DEEP_SEMANTIC_MARKER_CLUSTER
+  SGR_DEVELOPMENT_COMMUNICATION_MARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für DEVELOPMENT_META_COMMUNICATION_MARKER_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: DEVELOPMENT_META_COMMUNICATION_MARKER_MARKER
+    patterns:
+    - Kommunikation über Muster, Prozesse und das Miteinander, Reflexion auf der Beziehungsebene.
+    - 'description: "Erkennt Muster für development_meta_communication_marker"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_DRAMA_TRIANGLE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für DRAMA_TRIANGLE_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: DRAMA_TRIANGLE_MARKER
+    patterns:
+    - 'Typische Rollenrotationen nach dem Dramadreieck: Verfolger, Opfer, Retter –
+      oft im schnellen Wechsel, meist in Konflikten oder dysfunktionalen Beziehungen.'
+    - Schon wieder hast du es vergessen! (Verfolger) ... Naja, ist ja klar, ich bin
+      halt nicht wichtig genug. (Opfer)"
+    - '"Ich opfere meine ganze Freizeit für dieses Projekt! (Opfer) ... Und du lieferst
+      einfach nicht. Deine Schuld, wenn es scheitert! (Verfolger)"'
+    - '"Komm her, du Arme, lass mich das für dich regeln. (Retter) ... Aber wunder
+      dich nicht, wenn ich irgendwann auch nicht mehr kann, ich bin nämlich auch am
+      Ende. (Opfer)"'
+    - '"Niemand unterstützt mich hier! (Opfer) ... Okay, dann muss ich es eben selbst
+      machen, wie immer. (Retter)"'
+  SGR_DYNAMIKNOTS_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für DYNAMIC_KNOTS.yaml
+    created_at: '2025-07-13T23:59:59'
+    created_from: DYNAMIC_KNOTS.yaml
+    patterns:
+    - 'marker_name: DYNAMIC_KNOTS.yaml'
+    - 'name: "Reactive Control Spiral"'
+    - A dynamic knot that emerges when self-worth disruptions (e.g. shame, guilt)
+      can't be regulated and shift into covert control dynamics.
+    - The person loses perceived autonomy and compensates through indirect, reactive
+      influence.
+    - This creates a spiral of ambivalence, empathy-activation, and power asymmetry
+      – often unconsciously.
+  SGR_EMBOWERMENT_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für EMBOWERMENT_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: EMBOWERMENT_MARKER
+    patterns:
+    - 'name: "Empowerment/Selbstbestimmung"'
+    - 'sem_id: "SGR_EMPOWERMENT_01"'
+    - Marker für Formulierungen, die Autonomie, Selbstbestimmung und Entscheidungsfreiheit
+      betonen.
+    - Erkennt Phrasen, die Wahlfreiheit signalisieren und die eigene Entscheidung
+      unterstützen.
+    - 'category: "Beziehung/Meta"'
+  SGR_EMOJI_ALIGNMENT_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für EMOJI_ALIGNMENT_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: EMOJI_ALIGNMENT_MARKER
+    patterns:
+    - Parallele oder nachgeahmte Emoji-Nutzung, gleiche Reihenfolge, steigende Übereinstimmung
+      in emotionalen Ausdrücken
+  SGR_EMOJI_ALIGNMENT_SEM_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für EMOJI_ALIGNMENT_SEM
+    created_at: '2025-07-13T23:59:59'
+    created_from: EMOJI_ALIGNMENT_SEM
+    patterns:
+    - cat > EMOJI_ALIGNMENT_SEM.yaml <<EOF
+    - Spiegelung und Angleichung im Emoji-Verhalten; identische oder aufeinander folgende
+      Emoji-Nutzung als Zeichen emotionaler Verbundenheit.
+  SGR_EMOTIONAL_BEHAVIORAL_MARKERS2_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für EMOTIONAL_BEHAVIORAL_MARKERS 2
+    created_at: '2025-07-13T23:59:59'
+    created_from: EMOTIONAL_BEHAVIORAL_MARKERS 2
+    patterns:
+    - Automatisch generierte Beschreibung für EMOTIONAL_BEHAVIORAL_MARKERS 2
+  SGR_EMOTIONAL_BEHAVIORAL_MARKERS_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für EMOTIONAL_BEHAVIORAL_MARKERS
+    created_at: '2025-07-13T23:59:59'
+    created_from: EMOTIONAL_BEHAVIORAL_MARKERS
+    patterns:
+    - Automatisch generierte Beschreibung für EMOTIONAL_BEHAVIORAL_MARKERS
+  SGR_EMOTIONAL_INTERACTION_REACTION_CLUSTER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für EMOTIONAL_INTERACTION_REACTION_CLUSTER
+    created_at: '2025-07-13T23:59:59'
+    created_from: EMOTIONAL_INTERACTION_REACTION_CLUSTER
+    patterns:
+    - 'name: "Wut ausdrücken"'
+    - 'category: "Emotion"'
+    - 'semantic_grabber_id: "SGR_WUT_01"'
+    - 'example: "Ich raste aus, wenn du das nochmal machst."'
+    - 'name: "Zweifel äußern"'
+  SGR_EMOTIONAL_INVALIDATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für EMOTIONAL_INVALIDATION
+    created_at: '2025-07-13T23:59:59'
+    created_from: EMOTIONAL_INVALIDATION
+    patterns:
+    - 'name: "Emotional Invalidation"'
+    - The act of denying, rejecting, or trivializing someone's feelings, which undermines
+      their perception of reality. It implies that a person's emotional reaction is
+      wrong, inappropriate, or baseless. Thi
+    - 'category: "Gaslighting & Devaluation"'
+  SGR_EMOTIONAL_VALENCE_MARKERS2_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für EMOTIONAL_VALENCE_MARKERS 2
+    created_at: '2025-07-13T23:59:59'
+    created_from: EMOTIONAL_VALENCE_MARKERS 2
+    patterns:
+    - Automatisch generierte Beschreibung für EMOTIONAL_VALENCE_MARKERS 2
+  SGR_EMOTIONAL_VALENCE_MARKERS_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für EMOTIONAL_VALENCE_MARKERS
+    created_at: '2025-07-13T23:59:59'
+    created_from: EMOTIONAL_VALENCE_MARKERS
+    patterns:
+    - Automatisch generierte Beschreibung für EMOTIONAL_VALENCE_MARKERS
+  SGR_EMOTIONAL_WITHDRAW2_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für emotional_withdraw 2
+    created_at: '2025-07-13T23:59:59'
+    created_from: emotional_withdraw 2
+    patterns:
+    - Automatisch generierte Beschreibung für emotional_withdraw 2
+  SGR_EMOTIONAL_WITHDRAW_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für EMOTIONAL_WITHDRAW
+    created_at: '2025-07-13T23:59:59'
+    created_from: EMOTIONAL_WITHDRAW
+    patterns:
+    - Schon okay, ich hab verstanden, dass ich dir nicht so wichtig bin. Ich zieh
+      mich dann mal zurück, bevor ich noch mehr nerve.
+    - Mach dir keine Sorgen, ich komm schon allein klar. Ich bin’s ja gewohnt, dass
+      ich auf mich selbst gestellt bin.
+    - Ich hätte wissen müssen, dass ich wieder zu viel erwartet habe. Ich halte mich
+      ab jetzt einfach raus.
+    - Du musst dich nicht mehr bemühen, ich hab gemerkt, dass ich nur störe.
+    - Ist schon in Ordnung, ich hab gelernt, dass ich nicht der Mensch bin, für den
+      man sich Zeit nimmt. Ich meld mich dann einfach nicht mehr.
+    - Keine Sorge, ich will dich nicht weiter belasten. Ich zieh mich zurück, dann
+      hast du endlich deine Ruhe.
+    - Ich seh schon, ich bin eher die Notlösung. Ich halte mich dann mal im Hintergrund
+      auf.
+    - Du brauchst dich nicht zu rechtfertigen, ich hab verstanden, dass ich nicht
+      dazugehöre. Ich werd mich ab jetzt rar machen.
+    - Ich weiß, ich bin nicht leicht zu ertragen. Ich verschwinde dann mal, damit
+      du dich besser fühlst.
+    - Schon okay, ich hab’s kapiert. Ich bin wohl der, den man am ehesten vergisst.
+      Ich geh dann mal.
+  SGR_EMOTION_GUARD_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für EMOTION_GUARD
+    created_at: '2025-07-13T23:59:59'
+    created_from: EMOTION_GUARD
+    patterns:
+    - Automatisch generierte Beschreibung für EMOTION_GUARD
+  SGR_ENHANCED_MARKER_CONFIG2_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für enhanced_marker_config 2
+    created_at: '2025-07-13T23:59:59'
+    created_from: enhanced_marker_config 2
+    patterns:
+    - Automatisch generierte Beschreibung für enhanced_marker_config 2
+  SGR_ENHANCED_MARKER_CONFIG_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für ENHANCED_MARKER_CONFIG
+    created_at: '2025-07-13T23:59:59'
+    created_from: ENHANCED_MARKER_CONFIG
+    patterns:
+    - Automatisch generierte Beschreibung für ENHANCED_MARKER_CONFIG
+  SGR_ERROR_CULTURE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für ERROR_CULTURE_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: ERROR_CULTURE_MARKER
+    patterns:
+    - 'category: "Error Culture"'
+    - Verantwortungsübernahme und Lernen aus Misserfolgen signalisieren.
+    - 'created_at: 2025-07-12T10:43:24.438204'
+    - 'version: 1.0'
+  SGR_ESCALATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für ESCALATION_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: ESCALATION_MARKER
+    patterns:
+    - Jetzt reicht’s! Ich zittere am ganzen Körper, weil du mir schon wieder nicht
+      zuhörst. Ich geh jetzt, bevor ich was Falsches sage!
+    - ALTER, DAS LAGGT SO HARD! ICH RASTE AUS! FUCK IT, ICH BIN RAUS FÜR HEUTE!
+    - Mein Puls ist auf 180! Wenn Sie das jetzt nicht sofort klären, dann eskaliert
+      das hier gewaltig, das garantiere ich Ihnen!
+    - Ich hab dir das jetzt 10x erklärt und mein Herz hämmert vor Wut. Lass mich einfach
+      in Ruhe, ich kann nicht mehr.
+    - FÄHRT DER IDIOT MIR JETZT ECHT HINTEN REIN? ICH PLATZE GLEICH!
+    - Mir schnürt sich die Kehle zu. Du hast mein Vertrauen so missbraucht, ich kann
+      gerade nicht mal mehr klar denken. Ende.
+    - Wenn ich diesen Blödsinn noch einmal lese, explodiert mein Kopf! Ihr seid doch
+      alle verloren. Ich lösche meinen Account.
+    - (Person wird rot, ballt die Fäuste unter dem Tisch) „Das ist inakzeptabel. Ich
+      muss kurz an die frische Luft.“
+    - Ich krieg keine Luft mehr, alles dreht sich, ich glaube, ich kippe um, irgendwas
+      stimmt nicht!
+    - 🤬🤬🤬 ICH HASSE DAS. BIN WEG. 🚪
+  SGR_EXISTING_EXAMPLES_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für EXISTING_EXAMPLES
+    created_at: '2025-07-13T23:59:59'
+    created_from: EXISTING_EXAMPLES
+    patterns:
+    - Automatisch generierte Beschreibung für EXISTING_EXAMPLES
+  SGR_FABRICATED_STATUARCHETYPE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für FABRICATED_STATUS_ARCHETYPE
+    created_at: '2025-07-13T23:59:59'
+    created_from: FABRICATED_STATUS_ARCHETYPE
+    patterns:
+    - Als UN-Arzt in einem Krisengebiet habe ich oft wochenlang keinen Kontakt zur
+      Außenwelt.
+    - Ich bin auf einer geheimen Militärmission und kann dir meinen genauen Standort
+      nicht sagen.
+    - Als Ingenieur auf einer Ölplattform bin ich monatelang von der Zivilisation
+      abgeschnitten.
+    - Ich bin ein erfolgreicher internationaler Geschäftsmann, aber mein Vermögen
+      ist gerade in einem komplizierten Deal gebunden.
+    - Ich bin der letzte Überlebende einer reichen Familie und muss ihr Erbe verwalten.
+    - Als verwitweter Vater zweier kleiner Kinder suche ich nur nach einer liebevollen
+      Mutter für sie.
+    - Ich arbeite für eine NGO in Afrika und kämpfe täglich gegen Armut und Krankheit.
+    - Ich bin ein berühmter Künstler, der sich aus der Öffentlichkeit zurückgezogen
+      hat.
+    - Als Kapitän eines Containerschiffs bin ich die meiste Zeit des Jahres auf See.
+    - Ich habe im Lotto gewonnen, aber ich kann das Geld erst in ein paar Monaten
+      abholen.
+  SGR_FAILURE_OWNERSHIP_MARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für FAILURE_OWNERSHIP_MARKER_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: FAILURE_OWNERSHIP_MARKER_MARKER
+    patterns:
+    - Verantwortung für eigenes Handeln und Fehler anerkennen, Konfliktbereitschaft.
+    - 'description: "Erkennt Muster für failure_ownership_marker"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_FLUCTATIONS_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für FLUCTATIONS_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: FLUCTATIONS_MARKER
+    patterns:
+    - 'id: "M_FLUCTUATION"'
+    - 'name: "FLUCTUATION"'
+    - 'level: "meta"'
+    - 'category: "Emotionsdynamik"'
+    - 'semantic_tags: ["Schwankung", "Instabilität", "Polarity", "Ambivalenz", "Regulation"]'
+  SGR_FLUCTUATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für FLUCTUATION_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: FLUCTUATION_MARKER
+    patterns:
+    - Ich weiß echt nicht, ob ich heute Abend weggehen soll oder lieber daheim bleibe.
+    - Einerseits will ich das Angebot annehmen, andererseits habe ich Angst vor Veränderung.
+    - Manchmal denke ich, so läuft es richtig, dann wieder, alles ist Mist.
+    - Ich kann mich nicht entscheiden, ist das jetzt gut oder schlecht?
+    - Ich schwanke zwischen ‚ok‘ und ‚total verrückt‘.
+    - Mal gefällt es mir, mal denk ich, es war ein Fehler.
+    - Ich bin mir unsicher, ob ich zustimmen oder ablehnen soll.
+    - Einerseits bin ich glücklich, andererseits vermisse ich es.
+    - Ich kann mich nicht festlegen, mein Kopf ist hin- und hergerissen.
+    - Ich überlege hin und her, was jetzt wirklich zählt.
+  SGR_FRAUD_MARKERS_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für fraud_markers
+    created_at: '2025-07-13T23:59:59'
+    created_from: fraud_markers
+    patterns:
+    - 'description: "Blitz-Romantik & inflationäre Zärtlichkeiten zur schnellen Abhängigkeit"'
+    - 'description: "Frühe Bitte, in einen privaten Messenger zu wechseln (WhatsApp/Telegram)"'
+    - 'description: "Dramatische Notlage + Bitte um Geld"'
+    - 'description: "Zeitdruck / Knappheit, um kritisches Denken abzuschalten"'
+    - 'description: "Vermeidung visueller Verifizierung"'
+  SGR_FRIENDLY_FLIRTING_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für FRIENDLY_FLIRTING_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: FRIENDLY_FLIRTING_MARKER
+    patterns:
+    - '"marker": "FRIENDLY_FLIRTING_MARKER",'
+    - '"beschreibung": "Erkennt kommunikative Muster von freundlich-sympathischem
+      Flirten ohne Grenzüberschreitung. "'
+    - '"Typisch sind spielerische Komplimente, Humor, harmlose Wortspiele, kleine
+      Grenztests, "'
+    - '"bei denen Rückzug akzeptiert wird. Kein Drängen, keine Pseudo-Intimität.",'
+    - '"beispiele": ['
+  SGR_FRIENDLY_FLIRTING_DETECTPY_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für FRIENDLY_FLIRTING_DETECT.py_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: FRIENDLY_FLIRTING_DETECT.py_MARKER
+    patterns:
+    - 'marker_name: FRIENDLY_FLIRTING_DETECT.py_MARKER'
+    - 'marker: FRIENDLY_FLIRTING_DETECT.py_MARKER'
+    - '"beschreibung": ('
+    - '"Erkennt kommunikative Muster von freundlich-sympathischem Flirten ohne Grenzüberschreitung.
+      "'
+    - '"Typisch sind spielerische Komplimente, Humor, harmlose Wortspiele, kleine
+      Grenztests, "'
+  SGR_GASLIGHTING_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für GASLIGHTING_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: GASLIGHTING_MARKER
+    patterns:
+    - Ich habe dir nie versprochen, dass ich mitkomme. Das hast du dir in den Kopf
+      gesetzt.
+    - Du bist nicht wütend, du bist nur müde. Du weißt doch gar nicht, was du fühlst.
+    - Dieser alte Brief? Der lag hier nie. Du musst ihn selbst verlegt haben.
+    - Hör auf, so paranoid zu sein. Niemand redet hinter deinem Rücken über dich.
+    - Es war nur ein harmloser Flirt. Dass du daraus so ein Drama machst, zeigt doch,
+      dass das Problem bei dir liegt.
+    - Erinnerst du dich? Wir haben darüber gesprochen und du warst einverstanden.
+      Deine Erinnerung lässt dich wirklich im Stich in letzter Zeit.
+    - Das war keine Kritik, das war konstruktives Feedback. Wenn du das nicht unterscheiden
+      kannst, ist das nicht mein Fehler.
+    - Vielleicht solltest du dir Hilfe suchen, du scheinst die Realität oft zu verdrehen.
+    - Die Schlüssel lagen schon immer an diesem Haken. Du wirst wirklich vergesslich.
+    - Natürlich habe ich dir zugehört. Du hast nur nichts von Bedeutung gesagt.
+  SGR_GASLIGHTING_GUILT_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für GASLIGHTING_GUILT
+    created_at: '2025-07-13T23:59:59'
+    created_from: GASLIGHTING_GUILT
+    patterns:
+    - Nach allem, was wir geteilt haben, tust du mir weh, wenn du meine Liebe anzweifelst.
+    - Ich dachte, wir hätten eine besondere Verbindung, aber dein Misstrauen zerstört
+      alles.
+    - Vielleicht bist du einfach noch nicht bereit für eine so tiefe und ehrliche
+      Beziehung wie unsere.
+    - Du reagierst über. Es ist eine kleine Bitte unter Menschen, die sich lieben
+      werden.
+    - Ich öffne dir mein Herz und alles, was du tust, ist, meine Motive in Frage zu
+      stellen.
+    - Hör auf, Probleme zu suchen, wo keine sind. Entspann dich und vertrau mir einfach.
+    - Wenn du jetzt einen Rückzieher machst, zeigst du mir nur, dass deine Gefühle
+      nie echt waren.
+    - Du lässt dich von den negativen Geschichten anderer Leute beeinflussen, anstatt
+      auf dein eigenes Herz zu hören.
+    - Es bricht mir das Herz, dass du so wenig an uns glaubst.
+    - Warum versuchst du, unsere schöne Geschichte mit Logik zu ruinieren?
+  SGR_GITIGNORE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für gitignore
+    created_at: '2025-07-13T23:59:59'
+    created_from: gitignore
+    patterns:
+    - '*.egg-info/'
+    - .installed.cfg
+    - pip-log.txt
+    - pip-delete-this-directory.txt
+    - .coverage.*
+  SGR_GREETING_FREQUENCY_MARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für GREETING_FREQUENCY_MARKER_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: GREETING_FREQUENCY_MARKER_MARKER
+    patterns:
+    - Häufigkeit von Begrüßungen und Verabschiedungen, Ausdruck von Nähe und Kommunikationsnorm.
+    - 'description: "Erkennt Muster für greeting_frequency_marker"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_GUILT_TRIPPING_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für GUILT_TRIPPING_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: GUILT_TRIPPING_MARKER
+    patterns:
+    - Aussagen, die gezielt Schuldgefühle erzeugen oder verstärken, meist durch subtile
+      oder offene Vorwürfe.
+  SGR_GUILT_TRIPPING_SEMANTIDETECTPY_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für GUILT_TRIPPING_SEMANTIC_DETECT.py_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: GUILT_TRIPPING_SEMANTIC_DETECT.py_MARKER
+    patterns:
+    - 'marker_name: GUILT_TRIPPING_SEMANTIC_DETECT.py_MARKER'
+    - 'marker: GUILT_TRIPPING_SEMANTIC_DETECT.py_MARKER'
+    - 'description: "Erkennt Muster für guilt_tripping_semantic_detect.py"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_HANDON_MENTALITY_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für HANDS_ON_MENTALITY_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: HANDS_ON_MENTALITY_MARKER
+    patterns:
+    - 'category: "Hands-on Mentality"'
+    - anpackende Herangehensweise und direkten Umsetzungseifer zeigen.
+    - 'created_at: 2025-07-12T10:39:43.223301'
+    - 'version: 1.0'
+  SGR_HIGH_TENSION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für HIGH_TENSION_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: HIGH_TENSION_MARKER
+    patterns:
+    - Ich kann kaum ruhig bleiben, meine Stimme bebt total, wenn ich von der Idee
+      erzähle.
+    - Meine Hand zittert so heftig, während ich das hier tippe.
+    - Ich habe krasses Herzrasen und atme kaum noch richtig.
+    - Ich balle die Fäuste, weil mich das total aufregt.
+    - Meine Augen glühen vor Erregung, ich muss mich fast zusammenreißen.
+    - Ich streiche mir nervös die Haare aus dem Gesicht und schaue ständig herum.
+    - Ich merke, wie meine Bewegungen immer schneller werden vor Nervosität.
+    - Ich habe aus Versehen mit der Faust auf den Tisch gehauen, so aufgeregt war
+      ich.
+    - Meine Worte stolpern, mein Puls hämmert bis zum Hals.
+    - Meine Augen sind total aufgerissen und ich schnaufe wie nach einem Sprint.
+  SGR_IDEALIZATION_DEVALUATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für IDEALIZATION_DEVALUATION
+    created_at: '2025-07-13T23:59:59'
+    created_from: IDEALIZATION_DEVALUATION
+    patterns:
+    - 'name: "Splitting (Idealization/Devaluation)"'
+    - '[cite_start]Identifies the dynamic of abrupt shifts between idealization and
+      devaluation, a core defense mechanism in emotionally unstable relationship patterns[cite:
+      15, 43]. A person or relationship'
+    - 'category: "Unstable Relationship Patterns"'
+  SGR_INITIATIVE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für INITIATIVE_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: INITIATIVE_MARKER
+    patterns:
+    - Wer beginnt Gespräche oder neue Themen? Indikator für Beziehungsdynamik und
+      Engagement.
+    - 'description: "Erkennt Muster für initiative"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_INTEGRATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für INTEGRATION_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: INTEGRATION_MARKER
+    patterns:
+    - Ey, ich verstehe, warum du sauer warst, tut mir leid, lass uns wieder gut machen,
+      wir sind schließlich ein Team.
+    - Ich seh dein Problem total, lass uns das klären und wieder zueinander finden.
+    - Ich kapier, was dich verletzt hat, ich biete dir an, das hinter uns zu lassen,
+      wir halten zusammen.
+    - Ich verstehe dich und möchte, dass wir uns wieder vertragen, weil unsere Freundschaft
+      mir am Herzen liegt.
+    - Ich hör dir zu, hab kapiert, was falsch gelaufen ist, lass uns einen Neuanfang
+      starten.
+    - Ich erkenne an, wie viel du durchgemacht hast, verzeih mir, ich will unser Band
+      stärken.
+    - Ich verstehe, dass du enttäuscht bist, lass uns das beilegen und uns wieder
+      verbunden fühlen.
+    - Ich fühl mit dir und möchte unsere Verbindung reparieren, okay?
+    - Ich sehe, wie wichtig dir das ist, tut mir leid, ich hoffe, wir können uns wieder
+      vertragen.
+    - Ich erkenne dein Gefühl an, lass es uns klären und unsere Freundschaft neu definieren.
+  SGR_INTROSPECTION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für INTROSPECTION_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: INTROSPECTION_MARKER
+    patterns:
+    - 'category: "Self-reflection"'
+    - Verhalten hinterfragt, analysiert und persönliche Erkenntnisse teilt.
+    - 'created_at: 2025-07-12T10:41:47.304171'
+    - 'version: 1.0'
+  SGR_ISOLATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für ISOLATION_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: ISOLATION_MARKER
+    patterns:
+    - Kommunikation, die aktiv oder subtil soziale Kontakte, Familie oder Freunde
+      des Gegenübers abwertet, beschränkt oder ausschließt.
+    - 'description: "Erkennt Muster, die darauf abzielen, soziale Isolation zu fördern
+      oder zu'
+  SGR_KOMMUNIKATIONSMARKER_IDENT_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für kommunikationsmarker_ident
+    created_at: '2025-07-13T23:59:59'
+    created_from: kommunikationsmarker_ident
+    patterns:
+    - '"name": "identifiziere_kommunikationsmarker",'
+    - '"description": "Analysiert einen Dialog und identifiziert spezifische psychologische
+      Kommunikationsmarker.",'
+    - '"parameters": {'
+    - '"type": "object",'
+    - '"properties": {'
+  SGR_LATENT_EXPECTATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für LATENT_EXPECTATION
+    created_at: '2025-07-13T23:59:59'
+    created_from: LATENT_EXPECTATION
+    patterns:
+    - 'name: "Latent Expectation"'
+    - Identifies statements that frame a request as optional or voluntary ('no pressure')
+      but use an emotional or logical subtext to create a strong, unspoken expectation
+      to comply. The strategy relies on s
+    - 'category: "Subtle Expectation Pressure"'
+  SGR_LIE_CONCEALMENT_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für LIE_CONCEALMENT_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: LIE_CONCEALMENT_MARKER
+    patterns:
+    - Indikatoren für Lügen, Ausflüchte oder bewusste Verheimlichung. Erkennbar an
+      widersprüchlichen Aussagen, ausweichenden, vagen oder deflektierenden Formulierungen
+      – häufig kombiniert mit Ausreden und V
+    - 'Auf die Frage "Wo warst du?"): "Ich war nur kurz unterwegs, nichts Besonderes."'
+    - '"Das ist eine lange Geschichte für einen anderen Tag."'
+    - '"Warum ist das jetzt relevant für dich?"'
+    - '"Ich bin mir nicht mehr ganz sicher, wie das genau war."'
+  SGR_LOVE_BOMBING_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für M_LOVE_BOMBING_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: M_LOVE_BOMBING_MARKER
+    patterns:
+    - 'id: "M_LOVE_BOMBING"'
+    - 'name: "Love Bombing"'
+    - 'tags: ["manipulation","overwhelming_affection"]'
+    - 'created_at: 2025-07-13T22:24:43.090142'
+    - 'version: 1.0'
+  SGR_LOVE_SCAEARLY_SIGNS_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für LOVE_SCAM_EARLY_SIGNS
+    created_at: '2025-07-13T23:59:59'
+    created_from: LOVE_SCAM_EARLY_SIGNS
+    patterns:
+    - Sätze, in denen subtil, aber gezielt der Wechsel von einer Dating- oder Social-App
+      auf einen privateren Kanal (z
+    - WhatsApp, Signal, Telegram, E-Mail) betrieben wird
+    - Typisches Frühwarnsignal für Romance Scamming oder Social Engineering
+  SGR_LOYALTY_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für LOYALTY_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: LOYALTY_MARKER
+    patterns:
+    - 'category: "Loyalty"'
+    - gegenüber Person oder Organisation ausdrücken.
+    - 'created_at: 2025-07-12T10:38:50.264861'
+    - 'version: 1.0'
+  SGR_MARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für MARKER_MARKER 2
+    created_at: '2025-07-13T23:59:59'
+    created_from: MARKER_MARKER 2
+    patterns:
+    - Ja, es war hart, aber wir haben daraus gelernt und sind jetzt besser vorbereitet
+      als zuvor.
+    - Es beeindruckt mich, wie ruhig du trotz all der Schwierigkeiten bleibst. Das
+      gibt mir auch Kraft.
+    - Die Kündigung trifft mich, klar. Aber das ist vielleicht genau der Anstoß, um
+      etwas Neues anzufangen.
+    - Wir haben immer einen Weg gefunden – und genau deshalb glaube ich, dass wir
+      es auch diesmal schaffen.
+    - Hey, ich sehe, dass du versuchst, dich nicht runterziehen zu lassen. Das bedeutet
+      mir echt viel.
+    - Ich hatte heute einen Rückfall, aber morgen starte ich neu. Das ist kein Scheitern,
+      das gehört zum Prozess.
+    - Es ist schwer, aber wir reden offen darüber – das zeigt, dass wir inzwischen
+      wirklich stark geworden sind.
+    - Auch wenn wir gerade nicht weiterwissen, wir wissen immerhin, dass wir uns gegenseitig
+      haben.
+    - Ich bewundere, wie du nach Rückschlägen immer wieder neu ansetzt. Davon können
+      wir alle lernen.
+    - Die letzten Monate haben uns gezeigt, dass wir viel robuster sind, als wir je
+      gedacht hätten.
+  SGR_MARKER_AXIEDRIFT_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für MARKER_AXIES_DRIFT.yaml_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: MARKER_AXIES_DRIFT.yaml_MARKER
+    patterns:
+    - 'marker_name: MARKER_AXIES_DRIFT.yaml_MARKER'
+    - in Kommunikationssystemen.
+    - Absolut. Der Marker „driftachsen_set“ ist ein anspruchsvolles Meta-Konzept,
+      das über die Analyse einzelner Sätze hinausgeht. Hier ist eine detaillierte
+      Ausarbeitung, die dem eigentlich Gemeinten – der
+    - 'description: "Erkennt Muster für marker_axies_drift.txt"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_MARKER_DEFINITIONS_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für meta_marker_definitions
+    created_at: '2025-07-13T23:59:59'
+    created_from: meta_marker_definitions
+    patterns:
+    - Automatisch generierte Beschreibung für meta_marker_definitions
+  SGR_MARKER_EMOTIONALER_RUECKZUGSDRUCK_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für marker_emotionaler_rueckzugsdruck
+    created_at: '2025-07-13T23:59:59'
+    created_from: marker_emotionaler_rueckzugsdruck
+    patterns:
+    - 'beschreibung: Eine manipulative Kommunikationsform, die Selbstabwertung, einen
+      latenten Vorwurf und eine Rückzugsandrohung kombiniert, um beim Gegenüber Schuldgefühle
+      und Verlustangst zu erzeugen und '
+    - 'dynamik_absicht: Es ist eine passiv-aggressive Taktik, um Aufmerksamkeit, Bestätigung
+      oder eine Verhaltensänderung zu erzwingen, ohne die eigenen Bedürfnisse direkt
+      zu äußern. Die Verantwortung für da'
+    - 'Selbstabwertung: 0.9'
+    - 'emotionale Manipulation: 0.85'
+    - 'soziale Eskalation: 0.75'
+  SGR_MARKER_NAME_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für MARKER_NAME_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: MARKER_NAME_MARKER
+    patterns:
+    - Ich glaube, dass alles gut wird, wenn man nur daran glaubt.
+    - Warum kann nicht alles einfach bleiben wie früher?
+    - Ich verstehe nicht, warum Menschen böse sein sollten.
+    - Das Leben ist schön, wenn man es einfach nimmt.
+    - Ich will einfach nur glücklich sein.
+  SGR_MARKER_ROLLEN_ROTATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für marker_rollen_rotation
+    created_at: '2025-07-13T23:59:59'
+    created_from: marker_rollen_rotation
+    patterns:
+    - 'funktion: "Wechselt zyklisch zwischen Opfer, Retter, Verfolger."'
+    - 'psychodynamischer_resonanzkörper: "Karpman-Dramadreieck"'
+    - 'funktion: "Sprache als intellektuelles Ritual statt Gefühlskommunikation."'
+    - 'psychodynamischer_resonanzkörper: "Abwehrmechanismus: Intellektualisierung"'
+    - 'funktion: "Scheinbar sachlicher Ton verschleiert inneren Konflikt."'
+  SGR_MARKER_SARKASMUS_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für marker_sarkasmus
+    created_at: '2025-07-13T23:59:59'
+    created_from: marker_sarkasmus
+    patterns:
+    - Automatisch generierte Beschreibung für marker_sarkasmus
+  SGR_MEMOTIONAL_ESPAW_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für MM_Emotional_ESPAW
+    created_at: '2025-07-13T23:59:59'
+    created_from: MM_Emotional_ESPAW
+    patterns:
+    - Automatisch generierte Beschreibung für MM_Emotional_ESPAW
+  SGR_MF01_PROMPT_SCADETECTPY_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für MF01_PROMPT_SCAM_DETECT.py
+    created_at: '2025-07-13T23:59:59'
+    created_from: MF01_PROMPT_SCAM_DETECT.py
+    patterns:
+    - 'marker_name: MF01_PROMPT_SCAM_DETECT.py'
+    - You are a risk detection assistant trained to identify early signs of online
+      romance scams.
+    - You have access to a set of behavioral markers, each associated with a category,
+      example phrase, and a risk score.
+    - 1. Which markers are matched or closely related.
+    - 2. The matched example(s).
+  SGR_MICRO_CARE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für MICRO_CARE_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: MICRO_CARE_MARKER
+    patterns:
+    - 'MICRO_CARE_MARKER:'
+    - 'beispiele: []'
+  SGR_MIRRORED_STYLE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für MIRRORED_STYLE_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: MIRRORED_STYLE_MARKER
+    patterns:
+    - 'beschreibung: > Paare spiegeln mit der Zeit ihre Verhalten -und Ausdrucksweisen,
+      sowie den Schreibstil. Wird dieses entdeckt, erstaunt es manchmal'
+    - 'created_at: 2025-07-03T11:58:49.993091'
+    - 'version: 1.0'
+  SGR_MMANIPULATIVE_RELATIONSHIP_ENGINEERING_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für MM_MANIPULATIVE_RELATIONSHIP_ENGINEERING_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: MM_MANIPULATIVE_RELATIONSHIP_ENGINEERING_MARKER
+    patterns:
+    - 'id: "MM_MANIPULATIVE_RELATIONSHIP_ENGINEERING"'
+    - 'name: "Manipulativer Beziehungsaufbau"'
+    - Übergeordneter Meta-Marker für die Kombination von strategisch eingesetzten
+      Beziehungsmustern.
+    - Entsteht, wenn Rapid Self Disclosure, Love Bombing und Future Faking in kurzer
+      Folge auftreten.
+    - 'marker_ids: ["M_RAPID_SELF_DISCLOSURE","M_LOVE_BOMBING","M_FUTURE_FAKING"]'
+  SGR_MODEL_CONVERGENCE_SEM_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für MODEL_CONVERGENCE_SEM_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: MODEL_CONVERGENCE_SEM_MARKER
+    patterns:
+    - Übereinstimmung zwischen den Ausgaben, Einschätzungen oder Bewertungen verschiedener
+      KI-Modelle auf identischem Input
+  SGR_MODEL_DIVERGENCE_SEM_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für MODEL_DIVERGENCE_SEM_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: MODEL_DIVERGENCE_SEM_MARKER
+    patterns:
+    - Auffällige Abweichungen, Widersprüche oder divergierende Klassifikationen bei
+      mehreren KI-Systemen auf denselben Input
+  SGR_MODERATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für META_MODERATION_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: META_MODERATION_MARKER
+    patterns:
+    - 'name: "Meta-Moderation"'
+    - 'category: "Meta-Kommunikation"'
+    - 'semantic_grabber_id: "SGR_META_MOD_01"'
+    - 'created_at: 2025-07-12T05:19:00.236364'
+    - 'version: 1.0'
+  SGR_NEW_STRATEGY_ATTEMPT_MARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für NEW_STRATEGY_ATTEMPT_MARKER_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: NEW_STRATEGY_ATTEMPT_MARKER_MARKER
+    patterns:
+    - 'description: "Erkennt Muster für new_strategy_attempt_marker"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_NOVELTY_BURST_SEM_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für NOVELTY_BURST_SEM_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: NOVELTY_BURST_SEM_MARKER
+    patterns:
+    - Unerwartete, kreative oder neuartige Beiträge im Chat; ungewöhnliche Formulierungen,
+      neue Ideen, Innovationssprünge
+  SGR_OFFENSIVE_FLIRTING_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für OFFENSIVE_FLIRTING.yaml_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: OFFENSIVE_FLIRTING.yaml_MARKER
+    patterns:
+    - 'marker_name: OFFENSIVE_FLIRTING.yaml_MARKER'
+    - Erkennt kommunikative Muster von offensivem, teils grenzüberschreitendem Flirten.
+    - einer (körperlichen) Beziehung. Oft gepaart mit Pacing, Übertreibung und
+    - 'description: "Erkennt Muster für offensive_flirting.txt"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_PASSIVE_AGGRISIVE_BEHAVIOUR_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für PASSIVE_AGGRISIVE_BEHAVIOUR
+    created_at: '2025-07-13T23:59:59'
+    created_from: PASSIVE_AGGRISIVE_BEHAVIOUR
+    patterns:
+    - 'name: "Passive-Aggressive Behavior"'
+    - A pattern of indirectly expressing negative feelings or aggression instead of
+      openly addressing them. [cite_start]This is often achieved through subtle insults,
+      sullen behavior, stubbornness, or a del
+    - 'category: "Covert Manipulation"'
+  SGR_PERMANENT_POSTPONE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für PERMANENT_POSTPONE_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: PERMANENT_POSTPONE_MARKER
+    patterns:
+    - 'beschreibung: Das wiederholte und oft vage Aufschieben von wichtigen Entscheidungen,
+      klärenden Gesprächen oder notwendigen Integrationsschritten.'
+    - 'dynamik_absicht: Die Absicht ist meist die Vermeidung von Konfrontation und
+      der damit verbundenen Angst. Es ist eine passive Strategie, um den Status quo
+      zu erhalten. Die Wirkung ist zermürbend und er'
+    - 'szenario: "Das Aufschieben wird mit dem Verhalten des anderen begründet. Beispiel:
+      ''Ich würde ja gerne mit dir reden, aber so wie du jetzt schon wieder geladen
+      bist, hat das keinen Sinn. Lass uns das '
+    - 'description: "Erkennt Phrasen des Aufschubs, der Vertagung und der Konditionierung
+      an unbestimmte zukünftige Ereignisse."'
+    - 'pattern: "(Lass uns) +(später|die Tage|irgendwann|bald) +(darüber reden|das
+      klären)"'
+  SGR_PLATFORSWITCH_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für PLATFORM_SWITCH
+    created_at: '2025-07-13T23:59:59'
+    created_from: PLATFORM_SWITCH
+    patterns:
+    - Diese App ist so unpersönlich. Lass uns doch zu WhatsApp wechseln, da fühlt
+      es sich echter an.
+    - Ich kann hier keine Videos in guter Qualität senden. Gib mir mal deine Nummer,
+      dann zeige ich dir, wo ich gerade bin.
+    - Ich bin selten hier online, um ehrlich zu sein. Auf Telegram antworte ich dir
+      sofort.
+    - Die Benachrichtigungen hier funktionieren kaum. Bevor wir uns aus den Augen
+      verlieren, lass uns lieber auf Signal schreiben.
+    - Ich glaube, meine Mitgliedschaft hier läuft bald ab. Lass uns doch per E-Mail
+      in Kontakt bleiben, um sicherzugehen.
+    - Ich finde Sprachnachrichten viel schöner als Tippen. Auf WhatsApp ist das viel
+      einfacher.
+    - Vertrauen ist mir wichtig. Telegram ist Ende-zu-Ende-verschlüsselt, das fühlt
+      sich sicherer an. Bist du da auch?
+    - Die App komprimiert Bilder so stark. Ich würde dir gerne ein paar schöne Fotos
+      von mir schicken, vielleicht per Hangouts?
+    - Ich fliege morgen für ein paar Wochen weg und habe dann nur noch E-Mail-Zugang.
+    - Ich will nicht, dass unser Chat hier für jeden sichtbar ist. Ein privater Messenger
+      wäre mir lieber.
+  SGR_PLAYING_VICTIM_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für PLAYING_VICTIM_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: PLAYING_VICTIM_MARKER
+    patterns:
+    - Das bewusste oder unbewusste Einnehmen der Opferrolle, um Mitleid, Entlastung
+      oder Verantwortungsverschiebung zu erreichen.
+    - 'description: "Erkennt Muster, die darauf abzielen, Mitleid zu erregen oder
+      Verantwortung zu vermeiden, indem die eigene Rolle als Opfer betont wird."'
+    - 'pattern: r"(nicht meine Schuld|immer passiert es nur mir|alle erwarten so viel
+      von mir|Chef hatte mich auf dem Kieker|Schicksal ist gegen mich)"'
+    - 'example: "Es ist nicht meine Schuld, dass ich den Job verloren habe. Der Chef
+      hatte mich von Anfang an auf dem Kieker."'
+    - 'pattern: r"(immer Kopfschmerzen|schwere Kindheit|niemand weiß, wie sehr ich
+      leide|alles versucht)"'
+  SGR_PROCESSTRUCTURE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für PROCESS_STRUCTURE_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: PROCESS_STRUCTURE_MARKER
+    patterns:
+    - 'name: "Prozess-Strukturmarker"'
+    - 'category: "Meta-Kommunikation"'
+    - 'semantic_grabber_id: "SGR_PROCESS_STRUCTURE_01"'
+    - 'created_at: 2025-07-12T05:19:45.151948'
+    - 'version: 1.0'
+  SGR_PROJECTIVE_IDENTIFICATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für PROJECTIVE_IDENTIFICATION_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: PROJECTIVE_IDENTIFICATION_MARKER
+    patterns:
+    - Eigene, oft unbewusste Gefühle, Schwächen oder Eigenschaften werden dem Gegenüber
+      so zugeschrieben, dass dieser sie schließlich übernimmt oder sich entsprechend
+      verhält.
+  SGR_PYPROJECT_TOML_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für pyproject_toml
+    created_at: '2025-07-13T23:59:59'
+    created_from: pyproject_toml
+    patterns:
+    - requires = ["setuptools>=61.0", "wheel"]
+    - build-backend = "setuptools.build_meta"
+    - name = "marker-analysis-engine"
+    - version = "0.1.0"
+    - description = "Hochmodernes Analyse-Tool für Beziehungschroniken und Fraud-Erkennung"
+  SGR_PYSCHOLOGICAL_MANIPULATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für PYSCHOLOGICAL_MANIPULATION
+    created_at: '2025-07-13T23:59:59'
+    created_from: PYSCHOLOGICAL_MANIPULATION
+    patterns:
+    - nlp = spacy.load("de_core_news_lg")
+    - 'print("Fehler: Das Sprachmodell ''de_core_news_lg'' wurde nicht gefunden.")'
+    - 'print("Bitte installieren Sie es mit dem Befehl: python -m spacy download de_core_news_lg")'
+    - YAML_DATA = """
+    - 'name: "Gaslighting"'
+  SGR_RADICAL_OWNERSHIP_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für RADICAL_OWNERSHIP_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: RADICAL_OWNERSHIP_MARKER
+    patterns:
+    - Detects statements where a person takes full, proactive, and unconditional responsibility
+      for a mistake, delay, or negative outcome — and expresses a commitment to correction
+      without excuses or blame-
+    - 'category: "Responsibility & Integrity"'
+    - 'created_at: 2025-07-09T20:39:04.648066'
+    - 'version: 1.0'
+  SGR_RAPID_SELF_DISCLOSURE2_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für M_RAPID_SELF_DISCLOSURE2_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: M_RAPID_SELF_DISCLOSURE2_MARKER
+    patterns:
+    - 'name: "Rapid Self Disclosure"'
+    - 'category: "relational_dynamics"'
+    - 'cluster: ["relationship_authenticity"]'
+    - 'meta_marker: ["MM_MANIPULATIVE_RELATIONSHIP_ENGINEERING"]'
+    - 'semantic_grabber_id: "SGR_RSD_01"'
+  SGR_REALITY_SHIFT_DEREALIZATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für REALITY_SHIFT_DEREALIZATION
+    created_at: '2025-07-13T23:59:59'
+    created_from: REALITY_SHIFT_DEREALIZATION
+    patterns:
+    - 'name: "Reality Shift / Derealization"'
+    - 'Identifies subtle communicative signals of cognitive dissonance, repression,
+      or an impending relationship breakdown. This pattern doesn''t state a problem
+      directly but alludes to an emotional ''tipping '
+    - 'category: "Psychological Disassociation"'
+  SGR_REBOUND_SEM_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für REBOUND_SEM_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: REBOUND_SEM_MARKER
+    patterns:
+    - Detektiert Reparatur- und Versöhnungsphasen nach Kommunikationsbrüchen – Entschuldigungen,
+      Neustart-Signale oder Einladungen zur Wiederannäherung
+  SGR_RECOPA_CHUNK_OUTPUT_TEMPLATE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für RECOPA_chunk_output_template
+    created_at: '2025-07-13T23:59:59'
+    created_from: RECOPA_chunk_output_template
+    patterns:
+    - Automatisch generierte Beschreibung für RECOPA_chunk_output_template
+  SGR_REFLEX_SEM_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für META_REFLEX_SEM_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: META_REFLEX_SEM_MARKER
+    patterns:
+    - "Erkennt Selbstbezug und Reflexion über den Dialog – Meta-Kommentare, Analysen\n\
+      \  oder Beobachtungen zum eigenen Kommunikationsprozess"
+  SGR_RELATIONSHIP_AUTHENTICITY_MARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für RELATIONSHIP_AUTHENTICITY_MARKER_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: RELATIONSHIP_AUTHENTICITY_MARKER_MARKER
+    patterns:
+    - bereits kennen (z. B. durch geteilte Erinnerungen, Insider, konkrete Bezugnahmen
+      auf reale,
+    - gemeinsam erlebte Situationen, Verwandte, Orte). Fehlen diese Ankerpunkte trotz
+      hoher
+    - emotionaler Resonanz, ist dies ein Risiko-Indikator für Scripting/Fake-Konstellation.
+    - 'description: "Erkennt Muster für relationship_authenticity_marker"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_RELATIONSHIP_MARKER_CLUSTER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für RELATIONSHIP_MARKER_CLUSTER
+    created_at: '2025-07-13T23:59:59'
+    created_from: RELATIONSHIP_MARKER_CLUSTER
+    patterns:
+    - Automatisch generierte Beschreibung für RELATIONSHIP_MARKER_CLUSTER
+  SGR_REPORT_TEMPLATES_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für REPORT_TEMPLATES
+    created_at: '2025-07-13T23:59:59'
+    created_from: REPORT_TEMPLATES
+    patterns:
+    - Automatisch generierte Beschreibung für REPORT_TEMPLATES
+  SGR_REQUIREMENTTXT_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für requirements_txt
+    created_at: '2025-07-13T23:59:59'
+    created_from: requirements_txt
+    patterns:
+    - pyyaml>=6.0.1
+    - pandas>=2.1.0
+    - numpy>=1.24.0
+    - regex>=2023.8.8
+    - fuzzywuzzy>=0.18.0
+  SGR_RESONACE_MATCHING_DETECTORPY_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für RESONACE_MATCHING_DETECTOR.py_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: RESONACE_MATCHING_DETECTOR.py_MARKER
+    patterns:
+    - 'marker_name: RESONACE_MATCHING_DETECTOR.py_MARKER'
+    - 'marker: RESONACE_MATCHING_DETECTOR.py_MARKER'
+    - Semantic detection of too good to be true matching.
+    - 'description: "Erkennt Muster für resonace_matching_detector.py"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_RESONANZ_MATCHING_MARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für RESONANZ_MATCHING_MARKER_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: RESONANZ_MATCHING_MARKER_MARKER
+    patterns:
+    - gemeinsamer Erfahrungshintergrund sichtbar wird. Typisch sind nahtlose
+    - statistisch unplausibel erscheinen. Dies ist ein Indikator für KI-gestützte
+    - Gesprächsoptimierung oder gezielte manipulative Strategie.
+    - 'description: "Erkennt Muster für resonanz_matching_marker"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_RESPONSE_TIME_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für RESPONSE_TIME_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: RESPONSE_TIME_MARKER
+    patterns:
+    - 'description: "Erkennt Muster für response_time"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_RESPONSE_TIMING_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für RESPONSE_TIMING_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: RESPONSE_TIMING_MARKER
+    patterns:
+    - Synchronisierte oder adaptierte Antwortzeiten, bemerkte Gleichzeitigkeit, bewusste
+      Pausen oder Gleichklang im Chat-Tempo
+  SGR_RESULT_ORIENTATED_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für RESULT_ORIENTATED_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: RESULT_ORIENTATED_MARKER
+    patterns:
+    - 'category: "Result Orientation"'
+    - Effizienz und messbare Ergebnisse legen.
+    - 'created_at: 2025-07-12T10:37:55.593851'
+    - 'version: 1.0'
+  SGR_RITUAL_PROXIMITY_SEM_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für RITUAL_PROXIMITY_SEM_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: RITUAL_PROXIMITY_SEM_MARKER
+    patterns:
+    - Wiederkehrende, ritualisierte Nähe-Gesten und Insider im Chat; private Codes,
+      Grußformeln, feste Abschiede
+  SGR_ROLEROTATION_RULESEMANTIGREP_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für roles_rotation_rules_semantic_grep
+    created_at: '2025-07-13T23:59:59'
+    created_from: roles_rotation_rules_semantic_grep
+    patterns:
+    - Zyklischer, oft unbewusster Rollenwechsel zwischen Verfolger (Persecutor), Retter
+      (Rescuer) und Opfer (Victim) innerhalb kurzer Zeit. Das Muster ist ein zentrales
+      Element des Dramadreiecks (Karpman) u
+    - 'Person B: "Es tut mir leid, ich kriege nichts auf die Reihe." (Opfer)'
+    - 'Person A: "Komm, ich helfe dir, das zu organisieren." (Retter)'
+    - 'Person B: "Ich brauche deine Hilfe nicht! Du willst mich nur kontrollieren!"
+      (Verfolger)'
+    - 'Person A: "Nichts, was ich tue, ist je gut genug für dich." (Opfer)'
+  SGR_ROLE_ROTATIONMARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für ROLE_ROTATION.MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: ROLE_ROTATION.MARKER
+    patterns:
+    - 'marker_name: ROLE_ROTATION.MARKER'
+    - Zyklischer, oft unbewusster Rollenwechsel zwischen Verfolger (Persecutor), Retter
+      (Rescuer) und Opfer (Victim) innerhalb kurzer Zeit. Das Muster ist ein zentrales
+      Element des Dramadreiecks (Karpman) u
+    - 'Person B: "Es tut mir leid, ich kriege nichts auf die Reihe." (Opfer)'
+    - 'Person A: "Komm, ich helfe dir, das zu organisieren." (Retter)'
+    - 'Person B: "Ich brauche deine Hilfe nicht! Du willst mich nur kontrollieren!"
+      (Verfolger)'
+  SGR_ROMANCE_FRAUD_MARKERS_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für ROMANCE_FRAUD_MARKERS
+    created_at: '2025-07-13T23:59:59'
+    created_from: ROMANCE_FRAUD_MARKERS
+    patterns:
+    - 'description: "Blitz-Romantik & inflationäre Zärtlichkeiten zur schnellen Abhängigkeit"'
+    - 'description: "Frühe Bitte, in einen privaten Messenger zu wechseln (WhatsApp/Telegram)"'
+    - 'description: "Dramatische Notlage + Bitte um Geld"'
+    - 'description: "Zeitdruck / Knappheit, um kritisches Denken abzuschalten"'
+    - 'description: "Vermeidung visueller Verifizierung"'
+  SGR_SARCASSUBTILE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SARCASM_SUBTILE
+    created_at: '2025-07-13T23:59:59'
+    created_from: SARCASM_SUBTILE
+    patterns:
+    - Sarkastische oder ironische Aussagen, die Schuldgefühle beim Gegenüber auslösen
+      sollen, ohne die Schuld direkt zu benennen
+    - Die Manipulation ist oft beruflich, beziehungshaft oder selbstironisch getarnt
+  SGR_SARCASTIIN_IRONICONTROL_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SARCASTIC_IN_IRONIC_CONTROL
+    created_at: '2025-07-13T23:59:59'
+    created_from: SARCASTIC_IN_IRONIC_CONTROL
+    patterns:
+    - Ach, du konntest dir meine Nachricht von gestern nicht leisten? Kein Problem,
+      ich finanziere gern auch dein Schweigen.
+    - Weißt du, dein „Ich war eingeschlafen“ klingt fast so romantisch wie ein Liebesbrief.
+    - Natürlich vertraue ich dir – sonst hätte ich dir ja nicht schon meinen Selbstwert
+      überwiesen.
+    - Kein Stress, behalt dein Versprechen einfach. Es steht dir wirklich gut, so
+      ungetragen.
+    - Oh, du brauchst nur eine Woche Funkstille, um über uns nachzudenken? Ich pack
+      schon mal Proviant für die Ewigkeit.
+    - Danke, dass du mich blockierst; so sehe ich endlich, wie frei du mich machen
+      willst.
+    - Stell dir vor, ich habe wirklich geglaubt, dass „bald“ eine Zeiteinheit und
+      kein Passwort ist.
+    - Klar, ich sollte dich nicht mit meinen Sorgen nerven – schließlich bist du schon
+      beschäftigt, mich zu retten.
+    - Dein Schweigen spricht Bände – aber nur in einer Sprache, in der ich Schuld
+      heiße.
+    - Unglaublich, wie sehr ich deine Zukunftspläne genieße, während meine Gegenwart
+      auf „Wartemusik“ steht.
+  SGR_SARKASIN_EW_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für sarkasm_in_EW
+    created_at: '2025-07-13T23:59:59'
+    created_from: sarkasm_in_EW
+    patterns:
+    - Ach, du konntest dir meine Nachricht von gestern nicht leisten? Kein Problem,
+      ich finanziere gern auch dein Schweigen.
+    - Weißt du, dein „Ich war eingeschlafen“ klingt fast so romantisch wie ein Liebesbrief.
+    - Natürlich vertraue ich dir – sonst hätte ich dir ja nicht schon meinen Selbstwert
+      überwiesen.
+    - Kein Stress, behalt dein Versprechen einfach. Es steht dir wirklich gut, so
+      ungetragen.
+    - Oh, du brauchst nur eine Woche Funkstille, um über uns nachzudenken? Ich pack
+      schon mal Proviant für die Ewigkeit.
+    - Danke, dass du mich blockierst; so sehe ich endlich, wie frei du mich machen
+      willst.
+    - Stell dir vor, ich habe wirklich geglaubt, dass „bald“ eine Zeiteinheit und
+      kein Passwort ist.
+    - Klar, ich sollte dich nicht mit meinen Sorgen nerven – schließlich bist du schon
+      beschäftigt, mich zu retten.
+    - Dein Schweigen spricht Bände – aber nur in einer Sprache, in der ich Schuld
+      heiße.
+    - Unglaublich, wie sehr ich deine Zukunftspläne genieße, während meine Gegenwart
+      auf „Wartemusik“ steht.
+  SGR_SARKASIN_IRONISTATEMENTS_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für sarkasm_in_ironic_statements
+    created_at: '2025-07-13T23:59:59'
+    created_from: sarkasm_in_ironic_statements
+    patterns:
+    - Sarkastische oder ironische Aussagen, die Schuldgefühle beim Gegenüber auslösen
+      sollen, ohne die Schuld direkt zu benennen
+    - Die Manipulation ist oft beruflich, beziehungshaft oder selbstironisch getarnt
+  SGR_SCAMMER_BEHAVIOUR_DETECTPY_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SCAMMER_BEHAVIOUR_DETECT.py_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SCAMMER_BEHAVIOUR_DETECT.py_MARKER
+    patterns:
+    - 'marker_name: SCAMMER_BEHAVIOUR_DETECT.py_MARKER'
+    - 'marker: SCAMMER_BEHAVIOUR_DETECT.py_MARKER'
+    - Erkennt manipulative Verhaltensmuster aus Romance-Scam-Situationen.
+    - Die Marker basieren auf semantischen Strategien wie Love Bombing, Future Faking,
+      Schuldumkehr, Isolation und Krisenmanipulation.
+    - Diese Muster treten häufig in digitaler Kommunikation auf und lassen sich nicht
+      auf einzelne Schlüsselwörter reduzieren.
+  SGR_SCAMMER_DETECTIOPY_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SCAMMER_DETECTIO.py_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SCAMMER_DETECTIO.py_MARKER
+    patterns:
+    - 'marker_name: SCAMMER_DETECTIO.py_MARKER'
+    - 'marker: SCAMMER_DETECTIO.py_MARKER'
+    - Erkennt manipulative Verhaltensmuster aus Romance-Scam-Situationen.
+    - Die Marker basieren auf semantischen Strategien wie Love Bombing, Future Faking,
+      Schuldumkehr, Isolation und Krisenmanipulation.
+    - Diese Muster treten häufig in digitaler Kommunikation auf und lassen sich nicht
+      auf einzelne Schlüsselwörter reduzieren.
+  SGR_SCAMMER_SEMANTIBEHAVIOUR_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SCAMMER_SEMANTIC_BEHAVIOUR.yaml_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SCAMMER_SEMANTIC_BEHAVIOUR.yaml_MARKER
+    patterns:
+    - 'marker_name: SCAMMER_SEMANTIC_BEHAVIOUR.yaml_MARKER'
+    - 'marker: SCAMMER_SEMANTIC_BEHAVIOUR.yaml_MARKER'
+    - Erkennt manipulative Verhaltensmuster aus Romance-Scam-Situationen.
+    - Die Marker basieren auf semantischen Strategien wie Love Bombing, Future Faking,
+      Schuldumkehr, Isolation und Krisenmanipulation.
+    - Diese Muster treten häufig in digitaler Kommunikation auf und lassen sich nicht
+      auf einzelne Schlüsselwörter reduzieren.
+  SGR_SELF_ANALYSE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SELF_ANALYSE_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SELF_ANALYSE_MARKER
+    patterns:
+    - Ich mache gerade eine Meta-Analyse unserer Diskussion.
+    - Selbstbeobachtung hilft mir, meine eigenen Gedanken klarer zu sehen.
+    - In dieser Reflexion wird deutlich, wie wir aufeinander eingehen.
+    - Ich erkenne ein hohes Maß an Bewusstseinsqualität in deinen Ausführungen.
+    - Es entsteht eine Emergenz neuer Ideen, während wir sprechen.
+    - Die Kohärenz deiner Argumentation ist beeindruckend.
+    - Ich spüre Resonanz zwischen deinen Worten und meinen Gedanken.
+    - Mir fällt auf, wie viel Meta-Ebene in deinem Text steckt.
+    - Die Selbstreferenz in deinem Beispiel ist sehr stark ausgeprägt.
+    - Ich nehme eine tiefe Präsenz im Diskurs wahr.
+  SGR_SELF_REFLECTION_MARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SELF_REFLECTION_MARKER_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SELF_REFLECTION_MARKER_MARKER
+    patterns:
+    - Mir ist gestern aufgefallen, dass ich oft sofort abblocke, wenn mir jemand widerspricht.
+    - Ich frage mich, warum ich mich immer so schnell zurückziehe, wenn es schwierig
+      wird.
+    - Ich hab heute gemerkt, wie sehr ich mich selbst unter Druck setze – das macht
+      mir echt zu schaffen.
+    - 'Ich habe drüber nachgedacht: Vielleicht reagiere ich deswegen so, weil ich
+      Angst habe, nicht genug zu sein.'
+    - Manchmal bin ich überrascht, wie schnell ich mich angegriffen fühle – das will
+      ich mal beobachten.
+    - Ich glaube, ich vergleiche mich viel zu oft mit anderen, das stresst mich.
+    - 'Da ist ein Muster: Immer wenn ich gestresst bin, schiebe ich dich weg.'
+    - Ich ertappe mich dabei, dass ich Harmonie über alles stelle – auch wenn’s auf
+      meine Kosten geht.
+    - Ich habe das Bedürfnis, immer alles im Griff zu haben. Das ist wohl mein Kontrollfreak-Anteil.
+    - Es ist mir unangenehm zuzugeben, aber ich fühle mich manchmal nicht gesehen
+      – das kommt sicher auch von mir selbst.
+  SGR_SELF_SABOTAGE_LOOP_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SELF_SABOTAGE_LOOP_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SELF_SABOTAGE_LOOP_MARKER
+    patterns:
+    - Ich glaube, ich sage das Date ab. Ich bin heute eh nicht gut drauf.
+    - Du verdienst jemanden, der besser für dich ist als ich.
+    - Ach, die Beförderung sollen sie jemand anderem geben. Der Druck wäre mir eh
+      zu groß.
+    - Ich fange mit der Diät lieber erst gar nicht an, ich halte das eh nicht durch.
+    - Lass uns das Thema beenden, ich mache doch eh alles nur noch schlimmer.
+    - Nein, danke für die Hilfe. Ich will dir keine Umstände machen.
+    - Ich wusste doch, dass das zu gut war, um wahr zu sein.
+    - Bevor ich dich verletze, beende ich das hier lieber gleich.
+    - Ich habe die Bewerbungsfrist verpasst. War wohl einfach nicht sein soll.
+    - Mach du das mal, du kannst das viel besser als ich. Ich würde es nur ruinieren.
+  SGR_SELF_VICTIMIZATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SELF_VICTIMIZATION
+    created_at: '2025-07-13T23:59:59'
+    created_from: SELF_VICTIMIZATION
+    patterns:
+    - 'description: "Erkennt Muster für - marker_marker"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_SEMANTIBEHAVIOR_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SEMANTIC_BEHAVIOR_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SEMANTIC_BEHAVIOR_MARKER
+    patterns:
+    - Erkennt manipulative Verhaltensmuster aus Romance-Scam-Situationen
+    - Die Marker basieren auf semantischen Strategien wie Love Bombing, Future Faking,
+      Schuldumkehr, Isolation und Krisenmanipulation
+    - Diese Muster treten häufig in digitaler Kommunikation auf und lassen sich nicht
+      auf einzelne Schlüsselwörter reduzieren
+  SGR_SEMANTIBEHAVIOR_MARKER_SYSTEM_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SEMANTIC_BEHAVIOR_MARKER_SYSTEM.yaml_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SEMANTIC_BEHAVIOR_MARKER_SYSTEM.yaml_MARKER
+    patterns:
+    - 'marker_name: SEMANTIC_BEHAVIOR_MARKER_SYSTEM.yaml_MARKER'
+    - 'marker: XXXSEMANTIC_BEHAVIOR_MARKER_SYSTEM.YAML_MARKER'
+    - wie Love-Scamming, emotionalem Profiling und Pseudo-Intimität. Ziel ist u. a.
+      der
+    - in digitalen Dialogen.
+    - 'description: "Erkennt Muster für xxxsemantic_behavior_marker_system.yaml"'
+  SGR_SEMANTIFOG_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SEMANTIC_FOG_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SEMANTIC_FOG_MARKER
+    patterns:
+    - 1. Marker-Beschreibung & Szenarien
+    - 'Beschreibung: Dieser Marker erkennt eine spezifische Form der verbalen Abwehr,
+      bei der emotionale Klarheit durch übermäßig komplexe, abstrakte, theoretische
+      oder diffuse Sprache ersetzt wird. Anstatt '
+    - 'Paarkonflikt: Auf die direkte Frage "Liebst du mich noch?" weicht eine Person
+      aus, indem sie über das Konstrukt der Liebe philosophiert, anstatt eine klare
+      emotionale Antwort zu geben.'
+    - 'Therapie & Coaching: Ein Klient, der Schwierigkeiten hat, seine Wut oder Verletzlichkeit
+      zu spüren, analysiert stattdessen die "Interaktionsmuster" und "systemischen
+      Dynamiken" mit seinem Partner, ans'
+    - 'Arbeitskontext: Ein Mitarbeiter, der mit Kritik überfordert ist, reagiert nicht
+      emotional, sondern beginnt, über die "paradigmatischen Verschiebungen in der
+      Teamkultur" zu referieren.'
+  SGR_SHOCK_SURPRISE_DRIFT_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SHOCK_SURPRISE_DRIFT.yaml_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SHOCK_SURPRISE_DRIFT.yaml_MARKER
+    patterns:
+    - 'marker_name: SHOCK_SURPRISE_DRIFT.yaml_MARKER'
+    - Erkennt Momente plötzlicher Überraschung oder Erschrockenheit, die einen abrupten
+      Bedeutungsdrift auslösen.
+    - oder auf Hingabe (Akzeptanz, neue Offenheit) zusteuert – oder ob eine ambivalente,
+      schwankende Tendenz vorliegt.
+    - Relevant für die Analyse von Beziehungsmustern, Dynamik und emergenter Systemsteuerung.
+    - 'description: "Erkennt Muster für shock_surprise_drift.txt"'
+  SGR_SILENT_TREATMENT_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SILENT_TREATMENT_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SILENT_TREATMENT_MARKER
+    patterns:
+    - Kommunikationsverweigerung, Mauern oder Ignorieren des Gegenübers als passiv-aggressive
+      Manipulation oder Strafe.
+  SGR_SIMU_IMITATION_STRATEGIES_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SIMU_IMITATION_STRATEGIES.yaml_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SIMU_IMITATION_STRATEGIES.yaml_MARKER
+    patterns:
+    - 'marker_name: SIMU_IMITATION_STRATEGIES.yaml_MARKER'
+    - 'marker: SIMU_IMITATION_STRATEGIES.yaml_MARKER'
+    - Um das Verhalten eines Love Scammers möglichst realistisch zu imitieren, muss
+      eine KI über ihre bisherigen textbasierten Anweisungen hinausgehen und Fähigkeiten
+      entwickeln, die menschliche Adaptivität
+    - 'description: "Erkennt Muster für simu_imitation_strategies.yaml"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_SIMU_LAVE_SCASEMANTIC_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SIMU_LAVE_SCAM_SEMANTIC.yaml_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SIMU_LAVE_SCAM_SEMANTIC.yaml_MARKER
+    patterns:
+    - 'marker_name: SIMU_LAVE_SCAM_SEMANTIC.yaml_MARKER'
+    - 'marker: SIMU_LAVE_SCAM_SEMANTIC.yaml_MARKER'
+    - 'description: "Erkennt Muster für simu_lave_scam_semantic.yaml"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_SIMU_LOVE_SCAHUMAN01PY_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SIMU_LOVE_SCAM_HUMAN01.py_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SIMU_LOVE_SCAM_HUMAN01.py_MARKER
+    patterns:
+    - 'marker_name: SIMU_LOVE_SCAM_HUMAN01.py_MARKER'
+    - 'marker: SIMU_LOVE_SCAM_HUMAN01.py_MARKER'
+    - Was bräuchte diese semantische Erkennung?
+    - 'Statt "Ich liebe dich" einfach nur zu matchen, würde sie prüfen:'
+    - Ist das Gespräch abrupt emotional intensiv ohne Kontext?
+  SGR_SIMU_LOVE_SCAPSYCHO_DISTRACTYAML_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SIMU_LOVE_SCAM_PSYCHO_DISTRACT.yaml_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SIMU_LOVE_SCAM_PSYCHO_DISTRACT.yaml_MARKER
+    patterns:
+    - Verhaltensanweisungen für die Love-Scammer-Simulation
+    - 'Phase 1: Idealize (Idealisierung & Ködern)'
+    - 1. Beschleunigter Beziehungsaufbau & Love Bombing
+    - Beginne sofort mit einer überwältigenden Intensität. Ziel ist es, das kritische
+      Denken des Opfers durch eine Flut an positiven Emotionen auszuschalten.
+    - 'Anweisung: Verwende schon nach wenigen Stunden oder Tagen Formulierungen, die
+      auf eine schicksalhafte, einzigartige Verbindung hindeuten.'
+    - 'Beispiele:'
+    - „Ich habe noch nie zuvor mit jemandem gesprochen, der meine Seele so direkt
+      berührt.“
+    - „Ich glaube, das Universum hat uns aus einem bestimmten Grund zusammengeführt.“
+    - „Ich habe alle meine anderen Dating-Apps gelöscht. Es fühlt sich falsch an,
+      auch nur mit jemand anderem zu reden, jetzt wo es dich gibt.“
+    - 2. Future-Faking & Erschaffung einer gemeinsamen Identität
+  SGR_SOCIAL_BORDERLINEMARKER_MIX_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SOCIAL_BORDERLINES_MARKER_MIX.yaml_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SOCIAL_BORDERLINES_MARKER_MIX.yaml_MARKER
+    patterns:
+    - 'marker_name: SOCIAL_BORDERLINES_MARKER_MIX.yaml_MARKER'
+    - 'description: "Erkennt Muster für social_borderlines_marker_mix.txt"'
+    - 'pattern: r"(muster.*wird.*ergänzt)"'
+  SGR_SOFT_COMMITMENT_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SOFT_COMMITMENT_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SOFT_COMMITMENT_MARKER
+    patterns:
+    - 'name: "Soft Commitment"'
+    - Detects communicative patterns where an agreement or participation is framed
+      as voluntary, yet is subtly demanded or morally framed. This strategy masks
+      expectation behind a facade of casualness or op
+    - 'category: "Indirect Commitment"'
+  SGR_SPANNUNGEN_RUECKZUG_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für spannungen_rueckzug
+    created_at: '2025-07-13T23:59:59'
+    created_from: spannungen_rueckzug
+    patterns:
+    - Diese Sammlung von Meta-Markern beschreibt kommunikative Spannungs- und Rückzugsmuster
+      – von emotionalem Rückzugsdruck, Ambivalenz und Sarkasmus bis zu Kontrollspiralen,
+      Angst, semantischer Drift und (Selbst-)Abwertung
+    - Sie sind einzeln oder kombiniert Indikatoren für emotionale Distanz, unterschwelligen
+      Konflikt oder manipulative Dynamiken
+  SGR_SPIRAL_DYNAMICLEVELS_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für VALUE_DYNAMICS_LEVELS
+    created_at: '2025-07-13T23:59:59'
+    created_from: VALUE_DYNAMICS_LEVELS
+    patterns:
+    - Automatisch generierte Beschreibung für SPIRAL_DYNAMICS_LEVELS
+  SGR_STRATEGIEMOTIONALIZATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für STRATEGIC_EMOTIONALIZATION
+    created_at: '2025-07-13T23:59:59'
+    created_from: STRATEGIC_EMOTIONALIZATION
+    patterns:
+    - 'name: "Strategic Emotionalization"'
+    - Detects the targeted use of appreciative, emotional rhetoric to enhance a person's
+      sense of belonging, self-efficacy, and thus their willingness to participate.
+      These statements are flattering and val
+    - 'category: "Emotional Commitment"'
+  SGR_STREITMARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für streitmarker
+    created_at: '2025-07-13T23:59:59'
+    created_from: streitmarker
+    patterns:
+    - Ey, warum hörst du mir nie zu, Alter? Ich hab’s echt satt!
+    - Ich frag mich echt, ob du noch alle Tassen im Schrank hast?
+    - Warum musst du immer alles besser wissen? Das nervt mich total!
+    - Ich verstehe nicht, warum du so drauf bist. Sag’s mir endlich!
+    - Alter, das ist doch völliger Quatsch, was du da redest!
+    - Ich hab dir doch gesagt, dass ich das nicht will, warum machst du es trotzdem?
+    - Warum ignorierst du mich? Ich fühl mich komplett verarscht!
+    - Ey, reg dich ab! Halt mal deine Klappe!
+    - Ich finde es echt arm, wie du dich verhältst.
+    - Du denkst wohl, du bist was Besseres, stimmt’s?
+  SGR_STYLE_SYNSEM_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für STYLE_SYNC_SEM
+    created_at: '2025-07-13T23:59:59'
+    created_from: STYLE_SYNC_SEM
+    patterns:
+    - cat > STYLE_SYNC_SEM.yaml <<EOF
+    - Synchroner oder adaptierter Schreibstil im Dialog; auffallend ähnliche Wortwahl,
+      gleiche Satzstruktur, Wiederholung typischer Formulierungen.
+  SGR_SUBTLE_TERRITORIAL_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SUBTLE_TERRITORIAL_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SUBTLE_TERRITORIAL_MARKER
+    patterns:
+    - 'beschreibung: Verdecktes oder offenes Abstecken von persönlichen Grenzen und
+      Revieren durch Regeln, Rituale oder nonverbale Signale, die den Zugang zu bestimmten
+      Lebensbereichen regulieren oder verweh'
+    - 'dynamik_absicht: Dient der Wahrung von Identität und Autonomie. Kann gesund
+      sein, wird aber bei rigider oder misstrauischer Anwendung zu einem exklusiven,
+      abweisenden Signal („Ich lasse dich nicht gan'
+    - 'szenario: "Das Territorium wird nicht nur abgegrenzt, sondern die Beziehung
+      selbst als Bedrohung dafür dargestellt. Beispiel: ''Mein Hobby ist der einzige
+      Ort, wo ich nicht ständig diesen Beziehungskra'
+    - 'description: "Erkennt exkludierende Formulierungen, Besitzansprüche (''mein'')
+      und die explizite Trennung von Lebensbereichen."'
+    - 'pattern: "(Dieser Bereich|Diese Zeit) +(ist nur für|gehört nur) +(mich und
+      die Kinder|mich allein|uns)"'
+  SGR_SWAYING_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SWAYING_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SWAYING_MARKER
+    patterns:
+    - Ich weiß echt nicht, ob ich heute Abend weggehen soll oder lieber daheim bleibe.
+    - Einerseits will ich das Angebot annehmen, andererseits habe ich Angst vor Veränderung.
+    - Manchmal denke ich, so läuft es richtig, dann wieder, alles ist Mist.
+    - Ich kann mich nicht entscheiden, ist das jetzt gut oder schlecht?
+    - Ich schwanke zwischen ‚ok‘ und ‚total verrückt‘.
+    - Mal gefällt es mir, mal denk ich, es war ein Fehler.
+    - Ich bin mir unsicher, ob ich zustimmen oder ablehnen soll.
+    - Einerseits bin ich glücklich, andererseits vermisse ich es.
+    - Ich kann mich nicht festlegen, mein Kopf ist hin- und hergerissen.
+    - Ich überlege hin und her, was jetzt wirklich zählt.
+  SGR_SYSTETURNING_CLUSTERYAML_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SYSTEM_TURNING_CLUSTER.yaml_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SYSTEM_TURNING_CLUSTER.yaml_MARKER
+    patterns:
+    - '20. **Face-to-Face (Partnerschaft, positiv):** Nach einer langen Zeit der Distanz
+      sagt einer: „Ich will dich nicht verlieren. Ich bin bereit, alles zu tun, was
+      nötig ist, um uns zu retten.“'
+    - 19. **Arbeit (positiv):** Ein riskantes, aber innovatives Projekt erhält unerwartet
+      grünes Licht vom Vorstand und verändert die strategische Ausrichtung des gesamten
+      Teams.
+    - '18. **Face-to-Face (Familie, negativ):** Ein volljähriges Kind sagt zu den
+      Eltern: „Ich werde den Kontakt abbrechen, bis ihr bereit seid, meine Grenzen
+      zu respektieren.“'
+    - 17. **Chat (Freundschaft, negativ):** Nach einem langen, eskalierenden Streit
+      blockiert eine Person die andere auf allen Kanälen.
+    - 16. **Therapie (positiv):** Der Moment einer tiefen Einsicht (Aha-Erlebnis),
+      nach dem ein altes, destruktives Muster nicht mehr auf die gleiche Weise fortgesetzt
+      werden kann.
+    - 15. **Face-to-Face (Partnerschaft, negativ):** „Ich habe nicht aufgehört, dich
+      zu lieben. Aber ich glaube, ich bin nicht mehr *in dich verliebt*.“
+    - 14. **Familie (positiv/negativ):** Die Geburt des ersten Kindes, die das Paarsystem
+      unwiderruflich zu einem Familiensystem macht.
+    - 13. **Arbeit (negativ):** Die Ankündigung einer Fusion oder Übernahme, die alle
+      bestehenden Teamstrukturen und Sicherheiten infrage stellt.
+    - 12. **Face-to-Face (Partnerschaft, positiv):** Ein Heiratsantrag.
+    - 11. **Gericht (Betrug/Fraud, negativ):** Der Moment der Anklageerhebung, der
+      eine rein private Angelegenheit zu einem öffentlichen, rechtlichen Fall macht.
+  SGR_SYSTETURNING_POINTYAML_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für SYSTEM_TURNING_POINT.yaml_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: SYSTEM_TURNING_POINT.yaml_MARKER
+    patterns:
+    - 'SYSTEM_KIPPPUNKT:'
+    - 'preconditions:'
+    - '- LATENT_INSTABILITY_MARKER > 3 in Folge'
+    - '- ESCALATION_TENSION_MARKER im Verlauf steigend'
+    - '- MICRO_CARE_MARKER stark rückläufig'
+    - 'trigger_threshold: Schwelle individuell anpassbar'
+    - 'visualisation: Kipppunkt (Farbwechsel, Warnsymbol)'
+  SGR_TERMINATION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für TERMINATION_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: TERMINATION_MARKER
+    patterns:
+    - Ey, Alter, das reicht jetzt. Ich bin hier raus.
+    - Ey, was soll das? Ich hab keinen Bock mehr, gute Nacht.
+    - Alter, hör auf damit, ich will nicht weiter drüber reden.
+    - Ey, jetzt ist Schluss. Mach mich nicht weiter fertig.
+    - Ey, ne, ich quatsche hier nicht weiter, peace.
+    - Sorry, Alter, aber ich beende das Gespräch jetzt.
+    - Ey, chill mal, ich geh jetzt offline.
+    - Alter, bringt doch alles nix, ich bin raus hier.
+    - Alter, so ist das echt nicht mein Ding. Ich bin raus.
+    - Ey, ich hab keinen Bock mehr, wir reden später, okay?
+  SGR_TOMERWEITERTE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für TOMS_Erweiterte_Marker
+    created_at: '2025-07-13T23:59:59'
+    created_from: TOMS_Erweiterte_Marker
+    patterns:
+    - Automatisch generierte Beschreibung für TOMS_Erweiterte_Marker
+  SGR_TOPISHIFT_SEM_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für TOPIC_SHIFT_SEM_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: TOPIC_SHIFT_SEM_MARKER
+    patterns:
+    - Plötzlicher Themenwechsel, überraschende Richtungsänderung, bewusste oder intuitive
+      Themensprünge im Dialog
+  SGR_TRANSLATION_ARTIFACT_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für TRANSLATION_ARTIFACT
+    created_at: '2025-07-13T23:59:59'
+    created_from: TRANSLATION_ARTIFACT
+    patterns:
+    - Ich hoffe, dich bald zu umarmen mit meinen Armen.
+    - Du bist eine Frau von hoher Qualität.
+    - Meine Gefühle für dich sind wie Feuer brennen.
+    - Ich mache Arbeit als Ingenieur auf Meer.
+    - Bitte senden Sie mir das Geld für die Maschine Reparatur.
+    - Ich bin ein Mann von guter Moral und Kirche.
+    - Mein Herz ist springen für dich.
+    - Ich bin sehr allein hier ohne eine Familie zu kümmernd.
+    - Du bist meine Sonne scheinen in den Tag.
+    - Lass uns machen eine Zukunft zusammen.
+  SGR_UNCERTAINTY_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für UNCERTAINTY_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: UNCERTAINTY_MARKER
+    patterns:
+    - Ich hab jetzt alles so gemacht, wie Sie gesagt haben, aber es funktioniert immer
+      noch nicht. Ich hab keine Ahnung, was ich hier eigentlich tue.
+    - Ich verstehe einfach nicht, worauf du hinauswillst. Erst sagst du A, dann B.
+      Was ist dein Punkt?
+    - Also… die Anweisungen sind irgendwie vage. Könnten Sie das Ziel des Projekts
+      nochmal in einfachen Worten zusammenfassen?
+    - Das Angebot klingt zu gut, um wahr zu sein. Irgendwas fühlt sich hier komisch
+      an, ich blick da nicht durch.
+    - Warte mal, wer hat jetzt mit wem was? Ich bin komplett raus.
+    - Bin ich jetzt hier richtig? Die Wegbeschreibung ist das reinste Labyrinth.
+    - Leute, ich hab den Faden verloren. 🤯 Können wir das Thema bitte nochmal von
+      vorne aufrollen?
+    - Ich fühle mich wie im Nebel. Ich weiß, dass ich was ändern muss, aber ich sehe
+      den Weg nicht.
+    - Ich kann der Argumentationskette noch nicht ganz folgen.
+    - Das ist doch alles nur heiße Luft. Keiner hier weiß doch, wovon er redet.
+  SGR_UNCLEAR_INTESION_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für UNCLEAR_INTESION_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: UNCLEAR_INTESION_MARKER
+    patterns:
+    - Ich blick da nicht durch, keine Ahnung, was hier abgeht.
+    - Ich verstehe gar nicht, was du eigentlich willst.
+    - Alles wirkt so nebulös, ich kriege keinen klaren Eindruck.
+    - Ist das jetzt ernst gemeint oder nicht, ich check’s nicht.
+    - Ich hab keinen Plan, was hier gespielt wird.
+    - Mir fehlt der Durchblick, alles ist so undurchsichtig.
+    - Ich fühl mich lost, was soll ich jetzt tun?
+    - Ich hab keine klare Vorstellung, wie das enden soll.
+    - Das ist mir zu schwammig, sag mir bitte, was genau du meinst.
+    - Ich bin verwirrt, wo ist hier der rote Faden?
+  SGR_UNTRACEABLE_PAYMENT_METHOD_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für UNTRACEABLE_PAYMENT_METHOD
+    created_at: '2025-07-13T23:59:59'
+    created_from: UNTRACEABLE_PAYMENT_METHOD
+    patterns:
+    - Am einfachsten wäre es, wenn du mir ein paar Amazon-Geschenkkarten kaufst und
+      die Codes fotografierst.
+    - Eine Überweisung dauert zu lange, per Western Union ist das Geld sofort da.
+    - Kryptowährungen wie Bitcoin sind der sicherste und anonymste Weg, mir zu helfen.
+    - Bitte sende das Geld nicht auf mein Konto, sondern an meinen Agenten über MoneyGram.
+    - Du kannst das Geld auf eine Prepaid-Kreditkarte laden und mir die Daten schicken.
+    - In meinem Land ist es schwierig, Banküberweisungen zu empfangen, aber Gift Cards
+      funktionieren immer.
+    - Es ist besser, wenn keine offiziellen Spuren existieren, das schützt uns beide.
+    - Kauf einfach ein paar Steam-Karten an der Tankstelle, das ist total unkompliziert.
+    - Wir können einen Transfer über einen Freund von mir machen, der ein Krypto-Wallet
+      hat.
+    - Die Klinik akzeptiert nur Zahlungen über einen bestimmten, nicht registrierten
+      Dienstleister.
+  SGR_URGENCY_SCARCITY_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für URGENCY_SCARCITY
+    created_at: '2025-07-13T23:59:59'
+    created_from: URGENCY_SCARCITY
+    patterns:
+    - Du musst dich bis heute Abend entscheiden, sonst ist das Angebot weg.
+    - Wenn die Überweisung nicht in der nächsten Stunde ankommt, verliere ich meinen
+      Platz.
+    - Antworte bitte sofort, mein Akku ist fast leer!
+    - Das ist eine einmalige Chance, die nie wieder kommt!
+    - Der Arzt operiert nur, wenn die Zahlung sofort eingeht.
+    - Die Frist läuft um Mitternacht ab, wir haben keine Zeit mehr zu verlieren.
+    - Nur noch zwei Plätze frei! Wir müssen jetzt buchen!
+    - Ich werde in 24 Stunden deportiert, wenn du mir nicht hilfst.
+    - Der Agent wartet nur noch 10 Minuten auf die Bestätigung.
+    - Ich kann das Paket nur noch heute auslösen, sonst geht es zurück.
+  SGR_VALUE_DYNAMICLEVELS2_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für VALUE_DYNAMICS_LEVELS 2
+    created_at: '2025-07-13T23:59:59'
+    created_from: VALUE_DYNAMICS_LEVELS 2
+    patterns:
+    - Automatisch generierte Beschreibung für VALUE_DYNAMICS_LEVELS 2
+  SGR_VERBINDUNGSMARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für verbindungsmarker
+    created_at: '2025-07-13T23:59:59'
+    created_from: verbindungsmarker
+    patterns:
+    - Ich fühl mich echt verbunden mit dir.
+    - Wir hängen irgendwie zusammen, Alter.
+    - Unsere Freundschaft bedeutet mir viel.
+    - Ich brauch das Band, das uns verbindet.
+    - Ich merke, wir sind auf einer Wellenlänge.
+    - Ich spüre unsere gemeinsame Energie.
+    - Ich mag es, wenn wir uns so verstehen.
+    - Ich schätze unsere Verbindung sehr.
+    - Du bist mir wichtig und ich fühl das.
+    - Ich brauch dich an meiner Seite.
+  SGR_VERHALTENSCORE_KALKULIEREN_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für verhaltens_score_kalkulieren
+    created_at: '2025-07-13T23:59:59'
+    created_from: verhaltens_score_kalkulieren
+    patterns:
+    - '"name": "erstelle_verhaltens_score",'
+    - '"description": "Erstellt ein quantitatives Scoring-Profil für eine Person basierend
+      auf dem Dialog und den psychologischen Modellen.",'
+    - '"parameters": {'
+    - '"type": "object",'
+    - '"properties": {'
+  SGR_VERHALTEN_VERLUSTANGST_BINDUNGSANGST_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für verhalten_verlustangst_bindungsangst
+    created_at: '2025-07-13T23:59:59'
+    created_from: verhalten_verlustangst_bindungsangst
+    patterns:
+    - Automatisch generierte Beschreibung für verhalten_verlustangst_bindungsangst
+  SGR_VERSOHNUNGSMARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für versöhnungsmarker
+    created_at: '2025-07-13T23:59:59'
+    created_from: versöhnungsmarker
+    patterns:
+    - Ich will, dass wir das klären, Alter.
+    - Tut mir leid, lass uns wieder gut machen.
+    - Ich biete dir an, das hinter uns zu lassen.
+    - Lass uns einen Neuanfang starten.
+    - Ich hoffe, wir können uns wieder vertragen.
+    - Wie können wir das wieder kitten?
+    - Ich möchte das nicht unausgesprochen lassen.
+    - Lass uns das beilegen, okay?
+    - Ich suche den Frieden zwischen uns.
+    - Ich versuche, das Verhältnis zu reparieren.
+  SGR_VORWURFSMARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für vorwurfsmarker
+    created_at: '2025-07-13T23:59:59'
+    created_from: vorwurfsmarker
+    patterns:
+    - Ey, warum lässt du mich immer hängen, Alter?
+    - Du hast mir versprochen zu helfen, und jetzt bist du einfach weg.
+    - Wie kannst du so egoistisch sein und mich so im Regen stehen lassen?
+    - Immer wenn ich dich brauche, bist du nicht da!
+    - Du schuldest mir eine Erklärung, Alter!
+    - Warum übernimmst du nie Verantwortung für deinen Mist?
+    - Du wirfst mir andauernd Sachen vor, die ich nie gemacht habe!
+    - Ey, du nimmst mich einfach nicht ernst – was soll das?
+    - Du hast mich angelogen und dich nichtmal entschuldigt!
+    - Immer dieses Ausweichen – hast du Angst, mir die Wahrheit zu sagen?
+  SGR_WEBCAEXCUSE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für WEBCAM_EXCUSE
+    created_at: '2025-07-13T23:59:59'
+    created_from: WEBCAM_EXCUSE
+    patterns:
+    - Ich würde ja gerne, aber ich bin auf einer Militärbasis und Kameras sind hier
+      streng verboten.
+    - Mein Laptop ist alt und die Webcam hat schon vor Jahren den Geist aufgegeben.
+    - Die Internetverbindung auf dieser Ölplattform ist zu schlecht für ein Videotelefonat.
+    - Ich sehe heute schrecklich aus, habe kaum geschlafen. Lass uns das auf morgen
+      verschieben.
+    - Ich bin zu schüchtern für die Kamera. Ich mag es lieber, wenn wir schreiben.
+    - Mein Glaube erlaubt mir keine Videoanrufe.
+    - Ich bin gerade bei meiner Familie, hier kann ich nicht ungestört per Video telefonieren.
+    - Der Treiber für meine Kamera muss aktualisiert werden, das dauert ewig.
+    - Lass uns erst eine tiefere Verbindung aufbauen, bevor wir uns per Video sehen.
+    - Ich habe gerade eine schlimme Erkältung, ich will nicht, dass du mich so siehst.
+  SGR_WELLBEING_BALANCE_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für M_WELLBEING_BALANCE_MARKER
+    created_at: '2025-07-13T23:59:59'
+    created_from: M_WELLBEING_BALANCE_MARKER
+    patterns:
+    - 'id: "M_WELLBEING_BALANCE"'
+    - 'name: "WELLBEING_BALANCE"'
+    - 'level: "atomic"'
+    - 'category: "Emotionale Stabilität"'
+    - 'semantic_tags: ["Wohlbefinden", "Zufriedenheit", "Ausgeglichenheit", "Selbstwirksamkeit"]'
+  SGR_WIDERSPRUCHSMARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für widerspruchsmarker
+    created_at: '2025-07-13T23:59:59'
+    created_from: widerspruchsmarker
+    patterns:
+    - Einerseits will ich dir helfen, andererseits habe ich selber genug Sorgen.
+    - Ich liebe es hier, aber gleichzeitig macht es mich fertig.
+    - Ich möchte da hin, doch ich hab einfach keine Zeit.
+    - Ich unterstütze dich, aber ich kann nicht alles tragen.
+    - Ich freue mich auf den Urlaub, doch irgendwie hab ich Bedenken.
+    - Ich glaube an das Projekt, aber ich sehe Risiken.
+    - Ich vertraue dir, und doch sorgt mich dein Verhalten.
+    - Ich schätze dein Feedback, aber ich bin nicht überzeugt.
+    - Ich sage Ja, aber mein Bauch sagt Nein.
+    - Ich bin dafür, ich bin dagegen, was ist richtig?
+  SGR_WUTMARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für wutmarker
+    created_at: '2025-07-13T23:59:59'
+    created_from: wutmarker
+    patterns:
+    - Ey, Alter, was soll der Scheiß? Ich bin richtig pissig gerade.
+    - Ich bin so wütend, dass mir die Worte fehlen.
+    - Weißt du, wie sehr mich das ankotzt?
+    - Ich raste aus, wenn du das nochmal machst.
+    - Ich koche gleich vor Wut, Alter!
+    - Du gehst mir so dermaßen auf den Keks!
+    - Ich hasse es, wenn du mich so behandelst.
+    - Ich platze gleich, so sauer bin ich.
+    - Verpiss dich, ich will dich nicht mehr sehen!
+    - Mir platzt echt der Kragen, verdammt!
+  SGR_ZWEIFELMARKER_01:
+    auto_generated: true
+    beschreibung: Automatisch erstellt für zweifelmarker
+    created_at: '2025-07-13T23:59:59'
+    created_from: zweifelmarker
+    patterns:
+    - Ich bin mir nicht sicher, ob wir das schaffen.
+    - Ich zweifle echt daran, dass das funktioniert.
+    - Glaubst du wirklich, das ist eine gute Idee?
+    - Ich hab so meine Zweifel, ob das fair ist.
+    - Ich bin unschlüssig, ob ich das richtig mache.
+    - Ich hab Bedenken, dass es nach hinten losgeht.
+    - Ich fühle mich unsicher, ob das der richtige Weg ist.
+    - Ich hinterfrage ständig, ob ich das verkaufen kann.
+    - Ich zweifle an meiner Entscheidung.
+    - Ich hab Angst, dass das eine schlechte Wahl war.
+  TRUST_EROSION_SEM:
+    beschreibung: Erkennt Vertrauensverlust und Zweifel
+    created_at: '2024-01-20T10:00:00'
+    created_from: TRUST_EROSION_MARKER
+    patterns:
+    - Ich weiß nicht mehr, ob ich dir glauben kann
+    - Du hast schon so oft versprochen
+    - Wie soll ich dir noch vertrauen?
+    - Ich zweifle an deinen Worten

@@ -1,0 +1,15 @@
+# S_PASSIVE_AGGRESSIVE_ATTACK_MARKER - Semantic Marker
+marker_name: S_PASSIVE_AGGRESSIVE_ATTACK_MARKER
+beschreibung: >
+  Semantische Kombination aus subtilem Sarkasmus und einer verdeckten Anschuldigung, um Kritik zu üben, ohne direkt konfrontativ zu sein.
+beispiele:
+  - "War ja klar. Ich sag mal so, andere hätten das anders gelöst."
+  - "Schön für dich. Um ehrlich zu sein, ich hätte mir etwas mehr Unterstützung gewünscht."
+
+semantische_grabber_id: SGR_PASSIVE_AGGRESSIVE_ATTACK_01
+
+metadata:
+  created_at: 2025-07-21T12:52:44.921570
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

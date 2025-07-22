@@ -1,0 +1,39 @@
+# 11. PLAYING_VICTIM_MARKER.yaml
+marker: PLAYING_VICTIM_MARKER
+beschreibung: >
+  Das bewusste oder unbewusste Einnehmen der Opferrolle, um Mitleid, Entlastung oder Verantwortungsverschiebung zu erreichen.
+beispiele:
+  - "Natürlich habe ich wieder Kopfschmerzen. Immer wenn etwas Schönes ansteht, spielt mein Körper verrückt."
+  - "Ich würde ja gerne mitkommen, aber mit meinem schwachen Rücken ist das unmöglich."
+  - "Es ist nicht meine Schuld, dass ich den Job verloren habe. Der Chef hatte mich von Anfang an auf dem Kieker."
+  - "Warum passiert so etwas immer nur mir?"
+  - "Ich kann nichts dafür, ich hatte eine schwere Kindheit."
+  - "Alle erwarten immer so viel von mir, es ist eine Last."
+  - "Klar, tritt ruhig noch nach, wenn ich schon am Boden liege."
+  - "Ich habe alles versucht, aber das Schicksal ist einfach gegen mich."
+  - "Niemand weiß, wie sehr ich wirklich leide."
+  - "Wenn du wüsstest, was ich alles durchgemacht habe, würdest du mich nicht so kritisieren."
+semantic_grab:
+  description: "Erkennt Muster, die darauf abzielen, Mitleid zu erregen oder Verantwortung zu vermeiden, indem die eigene Rolle als Opfer betont wird."
+  patterns:
+    - rule: "BLAME_OTHERS"
+      pattern: r"(nicht meine Schuld|immer passiert es nur mir|alle erwarten so viel von mir|Chef hatte mich auf dem Kieker|Schicksal ist gegen mich)"
+      example: "Es ist nicht meine Schuld, dass ich den Job verloren habe. Der Chef hatte mich von Anfang an auf dem Kieker."
+    - rule: "EXAGGERATE_VICTIMHOOD"
+      pattern: r"(immer Kopfschmerzen|schwere Kindheit|niemand weiß, wie sehr ich leide|alles versucht)"
+      example: "Natürlich habe ich wieder Kopfschmerzen. Immer wenn etwas Schönes ansteht, spielt mein Körper verrückt."
+    - rule: "AVOID_RESPONSIBILITY"
+      pattern: r"(kann nichts dafür|habe alles versucht|Schicksal ist gegen mich|tritt nach, wenn ich am Boden liege)"
+      example: "Klar, tritt ruhig noch nach, wenn ich schon am Boden liege. Ich habe alles versucht, aber das Schicksal ist einfach gegen mich."
+    - rule: "SEEK_SYMPATHY"
+      pattern: r"(warum passiert so etwas immer nur mir|niemand weiß, wie sehr ich wirklich leide|wenn du wüsstest, was ich alles durchgemacht habe)"
+      example: "Warum passiert so etwas immer nur mir? Wenn du wüsstest, was ich alles durchgemacht habe, würdest du mich nicht so kritisieren."
+    - rule: "USE_WEAKNESS"
+      pattern: r"(schwachen Rücken|Kopfschmerzen|schwere Kindheit)"
+      example: "Natürlich habe ich wieder Kopfschmerzen. Immer wenn etwas Schönes ansteht, spielt mein Körper verrückt. Ich würde ja gerne mitkommen, aber mit meinem schwachen Rücken ist das unmöglich."
+    - rule: "PLAY_VICTIM"
+      pattern: r"(ich bin das Opfer|alle sind gegen mich|ich leide so sehr)"
+      example: "Ich bin das Opfer in dieser Situation. Alle sind gegen mich und ich leide so sehr darunter."
+    - rule: "USE_PITY"
+      pattern: r"(fühlst du dich nicht schlecht für mich|ich brauche dein Mitleid|es ist so unfair)"
+      example: "Fühlst du dich nicht schlecht für

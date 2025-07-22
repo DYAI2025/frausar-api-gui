@@ -1,0 +1,31 @@
+---
+# 🔗 Dynamic Knot: Reactive Control Spiral
+reactive_control_spiral:
+  name: "Reactive Control Spiral"
+  description: >
+    A dynamic knot that emerges when self-worth disruptions (e.g. shame, guilt) can't be regulated and shift into covert control dynamics. 
+    The person loses perceived autonomy and compensates through indirect, reactive influence. 
+    This creates a spiral of ambivalence, empathy-activation, and power asymmetry – often unconsciously.
+
+  activated_markers:
+    - EMPATHY_DECOY_MARKER
+    - ANTICIPATED_BEHAVIOUR_MANIPULATION
+    - AMBIVALENT_MARKER
+    - UNCLEAR_MARKER
+    - SHAME_PROFILE
+    - GUILT_MARKER
+
+  trigger_sequence:
+    - Self-worth collapse (e.g. through criticism or distance)
+    - Internal helplessness activates shame or guilt
+    - Ambiguity and ambivalence increase
+    - Reactive control via manipulative strategies begins
+    - Counterparty responds – often with comfort, avoidance, or escalation
+
+  systemic_effect: >
+    The relationship becomes opaque. One loses clarity of action, the other control. Communication turns indirect. 
+    Connection is not built through presence, but through triggered reactions. Exhaustion or rupture often follows.
+
+  integration_suggestion: >
+    Build early detection: Once three markers from this knot appear together, initiate meta-communication. 
+    Example: “I notice a pattern here. Let’s not react – let’s reflect.”

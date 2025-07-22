@@ -1,0 +1,47 @@
+marker: NEW_STRATEGY_ATTEMPT_MARKER_MARKER
+beschreibung: >
+  beschreibung: >
+    Bereitschaft zu Veränderung, neue Routinen und Inn
+beispiele:
+  - "cat > NEW_STRATEGY_ATTEMPT_MARKER.yaml << EOF"
+  - "NEW_STRATEGY_ATTEMPT_MARKER:"
+  - "ovationsversuche im Verhalten."
+  - "beispiele:"
+  - "- "Okay, mein erster Impuls ist jetzt, sauer zu sein. Aber ich versuche mal, erst mal tief durchzuatmen und nachzufragen, wie du das gemeint hast.""
+  - "- "Normalerweise würde ich jetzt schweigen. Aber ich versuche mal, direkt zu sagen, was mich stört.""
+  - "- "Lass uns das mal anders probieren: Statt uns Vorwürfe zu machen, sagt jeder, was er sich wünscht.""
+  - "- "Ich will diesmal bewusst nicht sofort eine Lösung parat haben, sondern die Unsicherheit einfach mal aushalten.""
+  - "- "Ich hab mir vorgenommen, jeden Tag eine Sache aufzuschreiben, die ich an dir schätze, um meinen Fokus zu ändern.""
+  - "- "Okay, das ist ein Experiment: Ich sage jetzt einfach mal ‚Ja‘ zu deinem Vorschlag, obwohl ich skeptisch bin.""
+  - "- "Ich versuche, deine Kritik nicht als Angriff zu sehen, sondern als Information. Mal sehen, ob das klappt.""
+  - "- "Wie wäre es, wenn wir bei unserem nächsten Streit eine 10-minütige Pause machen, bevor wir antworten?""
+  - "- "Ich möchte versuchen, mehr Dankbarkeit zu zeigen. Also: Danke, dass du mir zuhörst.""
+  - "- "Ich zwinge mich jetzt mal dazu, um Hilfe zu bitten, auch wenn es mir schwerfällt.""
+  - "- "Diesmal werde ich das Problem nicht allein lösen, sondern dich bewusst ins Boot holen.""
+  - "- "Ich versuche, das Positive in der Situation zu sehen, statt mich nur auf das Negative zu konzentrieren.""
+  - "- "Okay, Plan A hat nicht geklappt. Statt zu verzweifeln, probieren wir jetzt mal eine ganz verrückte Idee.""
+  - "- "Ich will lernen, deine Meinung einfach stehen zu lassen, ohne dich überzeugen zu müssen. Das ist mein Ziel für dieses Gespräch.""
+  - "- "Ich versuche mal, mit Neugier statt mit Angst auf diese Herausforderung zu reagieren.""
+  - "- "Lass uns für die nächste Woche eine ‚Jammer-freie‘ Zone einrichten und schauen, was passiert.""
+  - "- "Ich möchte versuchen, dir Feedback zu geben, ohne dich zu verletzen. Ich probiere mal die Sandwich-Methode.""
+  - "- "Anstatt dich zu kritisieren, versuche ich es mal mit einer Frage: ‚Was hat dich dazu bewogen, das so zu tun?‘""
+  - "- "Ich trainiere gerade, meine Grenzen freundlicher, aber bestimmter zu setzen. Also: ‚Ich danke dir für das Angebot, aber ich lehne ab.‘""
+  - "- "Ich versuche, diesen Fehler als Lernchance zu sehen. Was kann ich daraus für die Zukunft mitnehmen?""
+  - "semantische_marker:"
+  - "- neue Strategie"
+  - "- Experimentierbereitschaft"
+  - "- Routinen verändern"
+  - "- Verhaltensinnovation"
+  - "- alternatives Handeln"
+  - "- Lernbereitschaft"
+  - "- bewusste Intervention"
+  - "- Muster durchbrechen"
+  - "- Veränderung"
+  - "EOF"
+
+semantic_grab:
+  description: "Erkennt Muster für new_strategy_attempt_marker"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

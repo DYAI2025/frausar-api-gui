@@ -1,0 +1,18 @@
+{
+  "name": "erstelle_verhaltens_score",
+  "description": "Erstellt ein quantitatives Scoring-Profil für eine Person basierend auf dem Dialog und den psychologischen Modellen.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "Der Name der Person, die bewertet werden soll (z.B. 'Ben')."
+      },
+      "analyse_kontext": {
+        "type": "string",
+        "description": "Der Dialog oder die Beschreibung des Verhaltens, das als Grundlage für das Scoring dient."
+      }
+    },
+    "required": ["person_name", "analyse_kontext"]
+  }
+}

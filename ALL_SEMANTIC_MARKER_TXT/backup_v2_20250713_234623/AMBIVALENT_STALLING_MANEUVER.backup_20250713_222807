@@ -1,0 +1,68 @@
+marker: AMBIVALENT_STALLING_MANEUVER
+beschreibung: >
+  Eine Kommunikationsstrategie, die durch vage, unverbindliche oder ausweichende Aussagen gekennzeichnet ist. Ziel ist es, eine andere Person emotional verfügbar und als Option offenzuhalten, ohne eine klare Verpflichtung oder Verbindlichkeit einzugehen.
+szenarien:
+  - Dating-Phase / "Situationships"
+  - Unklare Freundschaften mit romantischem Potenzial
+  - On-Off-Beziehungen
+  - Berufliche Kontexte (z.B. vage Versprechungen für eine Beförderung)
+dynamik_absicht: >
+  Die hinhaltende Person maximiert ihre eigene Freiheit und Optionen (z.B. auf eine "bessere" Gelegenheit zu warten), während sie das emotionale Risiko und die Verantwortung für Entscheidungen minimiert. Dies erzeugt beim Gegenüber ein Machtgefälle, Unsicherheit und zwingt es in die aktive Rolle, ständig um Klarheit und Verbindlichkeit kämpfen zu müssen.
+beispiele:
+  # Bestehende 5 Beispiele
+  - kontext: "Verabredung per Chat (Der Verantwortungs-Schieber)"
+    dialog: |
+      A: "In welches Restaurant gehen wir denn heute Abend?"
+      B: "Ach, such du aus. Mir ist wirklich alles recht, Hauptsache, du bist glücklich."
+    analyse: >
+      Klingt zunächst zuvorkommend, ist aber eine komplette Abgabe der Verantwortung. Person B muss keine Initiative zeigen und kann sich bei einer falschen Wahl des Restaurants darauf berufen, dass es ja die Entscheidung von A war.
+
+  - kontext: "Wochenendplanung am Telefon (Die Gegenfrage-Taktik)"
+    dialog: |
+      A: "Hey, wollen wir am Samstag was zusammen unternehmen?"
+      B: "Ja klar, super Idee! Was schwebt dir denn so vor? Willst du denn was machen?"
+    analyse: >
+      Person B stimmt scheinbar zu, gibt aber sofort die gesamte Initiative und den emotionalen "Einsatz" zurück an A. Indem gefragt wird "Willst du denn?", wird A gezwungen, den Wunsch erneut zu bestätigen und die gesamte Planung zu übernehmen.
+
+  - kontext: "Urlaubsplanung im Gespräch (Das vage Versprechen)"
+    dialog: |
+      A: "Wie sieht's mit unserem Sommerurlaub aus? Sollen wir langsam mal was buchen?"
+      B: "Uhm, ja, unbedingt. Aber August ist noch so lange hin. Lass uns das mal im Auge behalten und dann eher spontan schauen, was geht."
+    analyse: >
+      Die Zustimmung ("ja, unbedingt") wird sofort durch eine vage Zeitangabe ("lange hin") und einen unverbindlichen Vorschlag ("spontan schauen") entwertet. Dies verhindert jede konkrete Handlung und hält alle Optionen offen.
+
+  - kontext: "Treffen nach der Arbeit per WhatsApp (Der unverbindliche Enthusiast)"
+    dialog: |
+      A: "Sehen wir uns dann später noch?"
+      B: "Auf jeden Fall! Freu mich schon riesig. Melde dich einfach, wenn du losfährst! 😊"
+    analyse: >
+      Die Begeisterung ("Auf jeden Fall!", "riesig") maskiert, dass keine feste Zusage gemacht wird. Der Ball liegt wieder bei A ("Melde dich einfach..."). B kann, falls eine bessere Option auftaucht, einfach unerreichbar sein, ohne ein Versprechen gebrochen zu haben.
+
+  - kontext: "Klärung des Beziehungsstatus (Der philosophische Ausweicher)"
+    dialog: |
+      A: "Ich muss wissen, woran ich bin. Was ist das hier eigentlich zwischen uns?"
+      B: "Müssen wir dem immer einen Namen geben? Ich finde, was wir haben, ist besonders, gerade weil es so frei ist. Lass uns den Moment doch einfach genießen, ohne ihn in eine Schublade zu stecken."
+    analyse: >
+      Eine emotional aufgeladene Frage nach Verbindlichkeit wird mit einer abstrakten, philosophischen Gegenfrage gekontert. Der Wunsch nach Klarheit wird als Versuch dargestellt, etwas "Besonderes" zu zerstören, was A in die Defensive drängt.
+      
+  # 20 neue Beispiele
+  - "Ich will nichts versprechen, was ich später vielleicht nicht halten kann. Lass uns mal abwarten."
+  - (Auf die Frage "Sind wir exklusiv?"): "Ich treffe im Moment niemand anderen ernsthaft, wenn du das meinst."
+  - "Ein gemeinsamer Hund? Tolle Idee! Lass uns das mal für nächstes Jahr ins Auge fassen."
+  - (Ein Freund fragt nach Hilfe beim Umzug): "Samstag ist schwierig. Schreib mir mal morgens, dann schau ich, ob ich es für ein Stündchen schaffe."
+  - "Ich melde mich bei dir, sobald ich weiß, wie mein Wochenende aussieht."
+  - "Das klingt super! Behalten wir das mal als Plan B im Hinterkopf, falls nichts anderes dazwischenkommt."
+  - (Manager zu Mitarbeiter bezüglich Beförderung): "Sie sind definitiv unser Top-Kandidat. Wir müssen nur noch die Umstrukturierung abwarten."
+  - "Ich bin einfach nicht so der Typ, der gerne weit im Voraus plant. Ich mag es spontan."
+  - (Auf die Frage "Liebst du mich?"): "Du bist mir unglaublich wichtig, das weißt du doch."
+  - "Ich kann mich heute nicht entscheiden. Mein Kopf ist einfach zu voll mit anderen Dingen."
+  - "Lass uns sehen, wie die Stimmung ist, wenn es so weit ist."
+  - (Auf einen Vorschlag für ein Konzert in zwei Monaten): "Oh, da würde ich total gerne hin! Lass uns kurz vorher nochmal sprechen."
+  - "Ich habe das Gefühl, Druck engt mich ein. Können wir das Thema einfach ruhen lassen?"
+  - "Theoretisch ja, aber praktisch muss man sehen, was das Leben bringt."
+  - "Ich möchte, dass es sich richtig anfühlt und nichts überstürzen."
+  - (Antwort auf "Ich vermisse dich"): "Ich dich auch! War heute ein langer Tag." (Wechselt das Thema subtil)
+  - "Wir können ja mal lose anpeilen, dass wir das machen."
+  - "Lass uns einfach schauen, wohin die Reise geht, ohne Druck."
+  - "Ich bin für alles offen. Überrasch mich einfach!" (Wälzt die komplette Verantwortung ab)
+  - "Ich würde gerne, aber ich muss erst schauen, ob ich da nicht schon was mit meiner Familie vorhabe."

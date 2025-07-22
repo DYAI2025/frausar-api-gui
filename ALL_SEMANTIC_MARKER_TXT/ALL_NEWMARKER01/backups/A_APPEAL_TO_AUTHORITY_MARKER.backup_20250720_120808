@@ -1,0 +1,47 @@
+marker_name: A_APPEAL_TO_AUTHORITY_MARKER
+beschreibung: 'id: A_APPEAL_TO_AUTHORITY
+
+  '
+level: 1
+version: 1.0.0
+author: Schema-Engineer_fo_syst./psych./_markerweights
+created_at: '2025-07-18'
+status: draft
+lang: de
+name: APPELL_AN_AUTORITAET
+description: Erkennt Phrasen, die auf eine Autorität, einen Expertenstatus oder eine
+  offizielle Position verweisen, um Glaubwürdigkeit zu erzeugen.
+atomic_pattern:
+- Experten sagen
+- Offizielle Mitteilung
+- Laut einer Studie
+- Wie Dr. Müller empfiehlt
+- Als Ihr Vorgesetzter
+- wissenschaftlich bewiesen
+semantic_grabber_id: SGR_AUTHORITY_01
+tags:
+- cialdini
+- authority
+- persuasion
+- social_engineering
+- origin_author:Robert_Cialdini
+beispiele:
+- 'examples:'
+- '- Laut einer Studie ist dies die effektivste Methode.'
+semantische_grabber_id: AUTO_SEM_20250718_3122
+metadata:
+  created_at: 2025-07-18 02:32:49.241329
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags:
+  - neu_erstellt
+  - needs_review
+  last_repaired: '2025-07-19T05:25:22.001838'
+  repair_version: '1.0'
+category: UNCATEGORIZED
+examples:
+- AUTO_GENERATED_EXAMPLE_1
+- AUTO_GENERATED_EXAMPLE_2
+- AUTO_GENERATED_EXAMPLE_3
+- AUTO_GENERATED_EXAMPLE_4
+- AUTO_GENERATED_EXAMPLE_5

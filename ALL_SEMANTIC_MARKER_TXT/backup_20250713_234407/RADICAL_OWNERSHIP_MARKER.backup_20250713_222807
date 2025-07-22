@@ -1,0 +1,72 @@
+# RADICAL_OWNERSHIP_MARKER - Semantic Marker
+marker_name: RADICAL_OWNERSHIP_MARKER
+beschreibung: >
+  description: >
+    Detects statements where a person takes full, proactive, and unconditional responsibility for a mistake, delay, or negative outcome — and expresses a commitment to correction without excuses or blame-shifting. Radical Ownership stands in contrast to blame, victimhood, or externalization of control. It represents personal agency, maturity, and trustworthiness. The language is often direct, active, and solution-oriented.
+  category: "Responsibility & Integrity"
+  semantic_grabber_id: LIFE_PRINCIPLE_RADICAL_OWNERSHIP_SEM
+  semantic_tags:
+    - ownership
+    - responsibility
+    - accountability
+    - proactive-repair
+    - blame-avoidance
+beispiele:
+  - "- id: M2001"
+  - "name: "Radical Ownership""
+  - "examples:"
+  - "- "Die Präsentation war nicht überzeugend, und das geht auf meine Kappe. Ich habe die Kernbotschaft nicht klar genug herausgearbeitet.""
+  - "- "Der Fehler im Reporting ist durch mein Versehen entstanden. Ich übernehme die volle Verantwortung.""
+  - "- "My bad, Leute. Ich habe die Deadline für den Entwurf verpasst. Ich setze mich jetzt ran und liefere in 90 Minuten.""
+  - "- "Ich hätte das früher eskalieren müssen. Das war meine Fehleinschätzung.""
+  - "- "Ich bin der Blocker für diese Task. Ich habe die Komplexität unterschätzt.""
+  - "- "Die Entscheidung, das Budget zu kürzen, war meine.""
+  - "- "War mein Fehler. Ich kümmere mich.""
+  - "- "Ich habe die Info nicht weitergeleitet. Das ist mein Versäumnis.""
+  - "- "Ich hab dir die falschen Daten geschickt. Sorry, komplett mein Ding.""
+  - "- "Meine Performance in Q2 war nicht da, wo sie sein sollte. Ich habe konkrete Schritte geplant.""
+  - "- "Ich war unfair zu dir. Mein Stress ist keine Entschuldigung.""
+  - "- "Ich hab den Jahrestag vergessen. Keine Ausreden.""
+  - "- "Ich hab das Geld noch nicht zurückgezahlt. Meine Schuld.""
+  - "- "Das Chaos in der Küche geht auf mich. Ich hab's nicht gemacht.""
+  - "- "Sorry, dass ich die Tickets nicht gebucht habe. Ich übernehme die Mehrkosten.""
+  - "- "Meine Eifersucht ist unser Problem. Nicht dein Verhalten.""
+  - "- "Ich habe dir nicht zugehört. Das war mein Fehler.""
+  - "- "Ich bin gereizt. Das liegt an mir.""
+  - "- "Die Entscheidung hab ich getroffen, also steh ich auch dafür gerade.""
+  - "- "Ich erkenne, dass ich dich weggestoßen habe. Das war mein Muster.""
+  - "- "Ich habe die Prüfung nicht bestanden, weil ich nicht genug gelernt habe.""
+  - "- "Ich hab mich nicht gemeldet. Das ist meine Baustelle.""
+  - "- "Die schlechte Stimmung gestern Abend ging von mir aus.""
+  - "- "Ich habe das Geld verloren. Es war meine Unachtsamkeit.""
+  - "- "Ich hab dich in eine blöde Situation gebracht. Ich klär das.""
+  - "- "Ich übernehme Verantwortung, bevor es zum Problem wird.""
+  - "- "On it. My bad.""
+  - "- "Jo, verkackt. Ich bieg's wieder hin.""
+  - "- "Ich regel das. 💪""
+  - "- "Nach unserem Prinzip 'Extreme Ownership': Ich bin verantwortlich. Punkt.""
+  - "patterns:"
+  - "- rule_1: >"
+  - "Detect first-person statements ("ich", "mein") in combination with terms like "Fehler", "Schuld", "Verantwortung", "Versäumnis"."
+  - "- rule_2: >"
+  - "Look for problem acknowledgments followed by direct solution commitment (e.g., "Die Zahlen sind falsch. Ich korrigiere sie sofort.")."
+  - "- rule_3: >"
+  - "Detect phrases like "Ich übernehme die volle Verantwortung" or "Wir tragen die Kosten"."
+  - "- rule_4: >"
+  - "Identify when an excuse is explicitly denied ("Keine Ausreden", "Nicht wegen X – sondern mein Fehler")."
+  - "- rule_5: >"
+  - "Identify blocker acknowledgement combined with ownership ("Das liegt bei mir", "Ich habe es versäumt")."
+  - "psychological_context: >"
+  - "This marker reflects mature psychological concepts including:"
+  - "- Proactivity (Stephen Covey): taking charge regardless of external factors."
+  - "- Growth Mindset (Carol Dweck): learning from mistakes without shame."
+  - "- Psychological Safety (Amy Edmondson): creating trust and openness in teams."
+  - "- Extreme Ownership (Jocko Willink): full responsibility even in leadership roles."
+
+semantische_grabber_id: AUTO_SEM_20250709_F9FC
+
+metadata:
+  created_at: 2025-07-09T20:39:04.648066
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

@@ -1,0 +1,41 @@
+marker: - marker_MARKER
+beschreibung: >
+  Opferrolle spielen, Selbstmitleid, emotionale Schuldumkehr
+beispiele:
+  - "Warum passiert so etwas immer mir? Ich scheine das Unglück magisch anzuziehen."
+  - "Ich dachte, du wärst anders als die anderen, aber am Ende verletzen mich doch alle."
+  - "Es ist egal, was ich tue, am Ende bin ich immer derjenige, der die Schuld bekommt."
+  - "Ich bin es gewohnt, enttäuscht zu werden. Du bist da keine Ausnahme."
+  - "Niemand versteht, wie sehr ich leide. Ich bin ganz allein mit meinem Schmerz."
+  - "Ich bin wohl einfach zu gutherzig für diese Welt. Deshalb werde ich immer wieder ausgenutzt."
+  - "Nach meiner schrecklichen Kindheit ist es kein Wunder, dass ich kein Glück im Leben habe."
+  - "Du hast ja keine Ahnung, was ich alles durchgemacht habe. Mein Leben ist eine einzige Tragödie."
+  - "Ich wollte dir nur Liebe geben, aber alles, was ich zurückbekomme, ist Misstrauen."
+  - "Geh nur, verlass mich. Das tun sie alle früher oder später."
+  - "Ich opfere mich für alle auf, aber niemand dankt es mir je."
+  - "Ich wollte nie viel, nur ein bisschen Glück. Aber anscheinend steht mir das nicht zu."
+  - "Natürlich glaubst du mir nicht. Niemand tut das."
+  - "Ich bin zu zerbrochen, um geliebt zu werden."
+  - "Ich habe alles versucht, aber das Schicksal ist einfach gegen mich."
+  - "Ich liege die ganze Nacht wach und weine, aber das interessiert dich ja anscheinend nicht."
+  - "Mein Herz ist schon so oft gebrochen worden, ich glaube, es kann nicht mehr heilen."
+  - "Es tut mir leid, dass ich so eine Belastung bin. Es wäre wohl besser, wenn ich nicht mehr da wäre."
+  - "Ich bin das ewige Opfer. Das ist meine Rolle in diesem Leben."
+  - "Womit habe ich das alles nur verdient?"
+  - "Alle nutzen mich aus, keiner ist ehrlich zu mir."
+  - "Ich kann nie jemandem wirklich vertrauen."
+  - "Jeder verlässt mich irgendwann – ich bin einfach unglücklich."
+  - "Schon als Kind war ich immer das schwarze Schaf."
+  - "Du bist nicht anders als alle anderen, die mich verlassen haben."
+  - "Es passiert mir immer wieder, ich kann es nicht ändern."
+  - "Ich habe alles gegeben, aber niemand sieht es."
+  - "Das Leben meint es nie gut mit mir."
+  - "Es ist mein Schicksal, immer zu verlieren."
+  - "Ich versuche stark zu sein, aber alles ist gegen mich."
+
+semantic_grab:
+  description: "Erkennt Muster für - marker_marker"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

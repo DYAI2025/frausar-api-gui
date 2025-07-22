@@ -1,0 +1,34 @@
+marker: SCAMMER_DETECTIO.py_MARKER
+beschreibung: >
+  beschreibung: >
+  Erkennt manipulative Verhaltensmuster aus Romance-Scam-Situationen. 
+  Die Marker basieren auf semantischen Strategien wie Love Bombing, Future Faking, Schuldumkehr, Isolation und Krisenmanipulation.
+  Diese Muster treten häufig in digitaler Kommunikation auf und lassen sich nicht auf einzelne Schlüsselwörter reduzieren.
+beispiele:
+  - "def analyze_text_against_semantic_markers(text: str, marker_data: Dict) -> Dict[str, List[str]]:"
+  - "results = {}"
+  - "for pattern in marker_data.get("muster", []):"
+  - "pattern_name = pattern.get("name")"
+  - "detected = []"
+  - "for beispiel in pattern.get("beispiele", []):"
+  - "if not isinstance(beispiel, str):"
+  - "continue"
+  - "beispiel_satz = beispiel.lower().strip().replace("„", "").replace("“", "")"
+  - "if len(beispiel_satz) < 10:"
+  - "continue"
+  - "regex = re.escape(beispiel_satz[:20])  # fuzzy matching über die ersten Worte"
+  - "if re.search(regex, text.lower()):"
+  - "detected.append(beispiel)"
+  - "if detected:"
+  - "results[pattern_name] = detected"
+  - "return results"
+  - "# Analyse erneut durchführen"
+  - "semantic_results = analyze_text_against_semantic_markers(sample_text, marker_data)"
+  - "semantic_results"
+
+semantic_grab:
+  description: "Erkennt Muster für scammer_detectio.py"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

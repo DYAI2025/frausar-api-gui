@@ -1,0 +1,11 @@
+cat > EMOJI_ALIGNMENT_SEM.yaml <<EOF
+EMOJI_ALIGNMENT_SEM:
+  beschreibung: >
+    Spiegelung und Angleichung im Emoji-Verhalten; identische oder aufeinander folgende Emoji-Nutzung als Zeichen emotionaler Verbundenheit.
+  patterns:
+    - "Wir schicken uns die gleichen Emojis."
+    - "Unsere Emoji-Reihenfolge ist auffällig synchron."
+    - "Beide benutzen ❤️ und 😁 zur selben Zeit."
+    - "Unsere Stimmung zeigt sich in gleichen Symbolen."
+    - "Wir experimentieren gemeinsam mit neuen Emojis."
+EOF

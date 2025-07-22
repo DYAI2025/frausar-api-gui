@@ -1,0 +1,13 @@
+# TOPIC_SHIFT_SEM_MARKER - Semantic Marker
+marker_name: TOPIC_SHIFT_SEM_MARKER
+beschreibung: >
+  Plötzlicher Themenwechsel, überraschende Richtungsänderung, bewusste oder intuitive Themensprünge im Dialog.
+beispiele:
+
+semantische_grabber_id: AUTO_SEM_20250703_428B
+
+metadata:
+  created_at: 2025-07-03T12:02:17.876726
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

@@ -1,0 +1,53 @@
+marker_name: LOVE_SCAM_EARLY_SIGNS
+marker: plattformwechsel_fruehwarnung
+beschreibung: >
+  Sätze, in denen subtil, aber gezielt der Wechsel von einer Dating- oder Social-App auf einen privateren Kanal (z.B. WhatsApp, Signal, Telegram, E-Mail) betrieben wird. Typisches Frühwarnsignal für Romance Scamming oder Social Engineering.
+kategorien:
+  - name: Technische Probleme & mangelhafte App-Funktionen
+    beispiele:
+      - "Magst du mir schnell deine WhatsApp‑Nummer schicken? Hier in der App landen Nachrichten manchmal im Nirwana."
+      - "Diese Plattform loggt mich ständig aus … Lass uns doch fix auf Signal wechseln, dort geht kein Text verloren."
+      - "Die App zeigt mir deine Antworten oft mit großer Verspätung an … willst du kurz auf WhatsApp springen?"
+      - "Komisch, deine letzte Nachricht kam doppelt … Lass uns doch auf Signal wechseln, da passiert das nicht."
+      - "Mir werden hier keine Push-Benachrichtigungen angezeigt, WhatsApp wäre da viel zuverlässiger."
+      - "Die App löscht alte Chats nach einer Weile – gib mir doch deine Nummer, dann bleibt unsere Unterhaltung bestehen."
+      - "Schon mal Probleme gehabt, dass Chats hier einfach verschwinden? Auf Telegram wird alles sicher in der Cloud gespeichert."
+      - "Gerade eben hat die App mich schon wieder ausgeloggt … Schreib mir lieber kurz auf WhatsApp, bevor die Nachricht weg ist."
+  - name: Bessere Features auf anderen Plattformen
+    beispiele:
+      - "Ich schicke dir gleich ein paar schönere Fotos, das geht per Telegram viel besser – was hältst du davon?"
+      - "Kann ich dir eine kurze Sprachnachricht auf WhatsApp schicken? Das Tippen ist hier so umständlich."
+      - "Ich finde Sprachnachrichten viel persönlicher – auf WhatsApp kann ich dir gleich 'Hallo' sagen."
+      - "Der Chat hier filtert anscheinend Links raus; über Telegram kann ich dir das Café zeigen, von dem ich erzählt habe."
+      - "Ich würde dir gern ein kurzes Video schicken; per Mail ist das einfacher – passt das für dich?"
+      - "Diese App hat ein Zeichen-Limit – per Telegram kann ich dir ausführlicher und ohne Unterbrechung antworten."
+      - "Ich würde gern eine Playlist mit dir teilen; WhatsApp macht das viel einfacher. Hast du Lust?"
+      - "Hier kann man keine PDFs schicken – per Mail könnte ich dir meinen liebsten Buchtipp senden."
+      - "Die Plattform stoppt Sprachnachrichten bei 30 Sekunden … Auf Telegram kann ich frei und ohne Limit reden."
+      - "Signal unterstützt HD-Videoanrufe, die Qualität ist viel besser. Wär das was für dich?"
+  - name: Ablaufende Mitgliedschaft & Paywalls
+    beispiele:
+      - "Mein Abo hier läuft heute Abend aus, aber ich würde das Gespräch sehr gern fortsetzen – per E‑Mail vielleicht?"
+      - "Meine Mitgliedschaft endet gleich; magst du den Chat per Mail fortsetzen, damit nichts abbricht?"
+      - "Wenn deine Mitgliedschaft auch bald ausläuft, lass uns lieber direkt per Mail oder Signal verbunden bleiben."
+  - name: Persönliche Präferenz & Bequemlichkeit
+    beispiele:
+      - "Ich bin ehrlich gesagt kaum online hier – schreib mir lieber direkt auf Hangouts, da erwischst du mich sofort."
+      - "Ich antworte meistens von unterwegs – Telegram poppt bei mir zuverlässig auf, hast du das auch?"
+      - "Ich checke diese App nur abends; tagsüber erreichst du mich blitzschnell via WhatsApp."
+      - "Bist du eher Team Signal oder Telegram? Dann springe ich dort schnell rüber."
+      - "Meine Freunde funken alle auf Telegram – wäre cool, dich dort auch als Kontakt zu haben."
+      - "Du klingst sehr sympathisch; dürfen wir den Smalltalk auf eine persönlichere Ebene bei Telegram verlagern?"
+      - "Ich mag direkte Kommunikation – schick mir gern deine Mail, dann geht kein 'Hallo' mehr verloren."
+  - name: Der schmeichelhafte oder dringende Appell
+    beispiele:
+      - "Wenn du magst, adde mich schnell auf Signal – dann können wir auch sicher private Fotos austauschen."
+      - "Falls die Plattform mal wieder spinnt: Hier ist meine Nummer, dann geht unser Kontakt nicht verloren 😊"
+      - "Schick mir kurz deine Mailadresse, dann landet mein Lächeln nicht im Spam-Ordner der Plattform 😉"
+      - "Ich bin gleich in der Bahn ohne gutes Netz … Über WhatsApp klappt die Verbindung auch bei schlechtem Empfang besser."
+      - "Wenn wir uns aus den Augen verlieren sollten, hier meine Nummer – WhatsApp ist sozusagen mein zweites Zuhause."
+      - "Ich reise nächste Woche – E‑Mail wäre perfekt, damit unsere Nachrichten nicht im Daten-Roaming hängen bleiben."
+      - "Notfalls speicher dir schon mal meine Nummer; WhatsApp klappt auch dann noch, wenn diese App mal wieder Wartungsarbeiten hat."
+
+kategorie: UNCATEGORIZED
+tags: [needs_review]

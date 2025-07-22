@@ -1,0 +1,49 @@
+# META_MODERATION_MARKER - Semantic Marker
+marker_name: META_MODERATION_MARKER
+beschreibung: >
+  - id: "M_META_MODERATION"
+  name: "Meta-Moderation"
+  category: "Meta-Kommunikation"
+  semantic_grabber_id: "SGR_META_MOD_01"
+beispiele:
+  - "- "Wie wollen wir’s machen""
+  - "- "Mein Vorschlag""
+  - "- "Du entscheidest, wie es euch lieber ist""
+  - "- "Variante [0-9]:""
+  - "- "Sag einfach, wie es dir am besten passt""
+  - "- "Wie hättest du es gern""
+  - "- "Wollen wir erstmal klären, wie wir vorgehen""
+  - "- "Sollen wir so weitermachen""
+  - "- "Was hältst du davon, wenn wir ...""
+  - "- "Wie möchtest du am liebsten starten""
+  - "- "Wir können es auch anders machen, wenn du magst""
+  - "- "Es gibt mehrere Möglichkeiten, wie wir rangehen können""
+  - "- "Wir können flexibel sein, wie es passt""
+  - "- "Ich kann mich nach dir richten""
+  - "- "Wir können die Reihenfolge auch umdrehen""
+  - "- "Sollen wir das gemeinsam abstimmen""
+  - "example: "Mein Vorschlag: Für ein echtes Interview-Gefühl ist die Schritt-für-Schritt-Variante am ergiebigsten.""
+  - "examples:"
+  - "- "Wie wollen wir’s machen – alles auf einmal oder Frage für Frage?""
+  - "- "Mein Vorschlag: Wir gehen die Punkte nacheinander durch.""
+  - "- "Du entscheidest, wie es euch lieber ist.""
+  - "- "Variante 1: Schritt für Schritt. Variante 2: Alles gesammelt.""
+  - "- "Sag einfach, wie es dir am besten passt!""
+  - "- "Wie hättest du es gern, was ist für dich angenehmer?""
+  - "- "Sollen wir erstmal klären, wie wir vorgehen?""
+  - "- "Was hältst du davon, wenn wir nach jeder Antwort kurz Feedback machen?""
+  - "- "Wie möchtest du am liebsten starten?""
+  - "- "Wir können es auch anders machen, wenn du magst.""
+  - "- "Es gibt verschiedene Wege, wie wir das Gespräch führen können.""
+  - "- "Wir können flexibel sein, wie es dir passt.""
+  - "- "Ich kann mich nach dir richten, alles kein Problem.""
+  - "- "Die Reihenfolge ist mir egal – entscheid du!""
+  - "- "Sollen wir das gemeinsam abstimmen?""
+
+semantische_grabber_id: AUTO_SEM_20250712_51ED
+
+metadata:
+  created_at: 2025-07-12T05:19:00.236364
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

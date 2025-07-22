@@ -1,0 +1,109 @@
+"""
+SemanticGrabberLibrary_MARKER - Semantic Marker
+import yaml
+from sentence_transformers import SentenceTransformer, util
+
+class SemanticGrabberLibrary:
+    def __init__(self, yaml_path: str, model_name: str = 'distiluse-base-multilingual-cased'):
+        # Lade Grabber-Library aus YAML
+        with open(yaml_path, 'r', encoding='utf-8') as f:
+            self.library = yaml.safe_load(f)
+
+        # Lade SentenceTransformer Modell
+        self.model = SentenceTransformer(model_name)
+        self._build_anchor_embeddings()
+
+    def _build_anchor_embeddings(self):
+        self.embeddings = {}
+        for grabber_id, data in self.library.items():
+            patterns = data.get('patterns', [])
+            if patterns:
+                self.embeddings[grabber_id] = self.model.encode(patterns, convert_to_tensor=True)
+
+    def get_grabber_ids(self):
+        return list(self.library.keys())
+
+    def get_patterns_for_id(self, grabber_id):
+        return self.library.get(grabber_id, {}).get('patterns', [])
+
+    def get_description_for_id(self, grabber_id):
+        return self.library.get(grabber_id, {}).get('beschreibung', '')
+
+    def match_text(self, text, threshold=0.7):
+        matches = []
+        text_embedding = self.model.encode(text, convert_to_tensor=True)
+
+        for grabber_id, anchor_embeds in self.embeddings.items():
+            cos_sim = util.cos_sim(text_embedding, anchor_embeds)
+            max_score = cos_sim.max().item()
+            if max_score >= threshold:
+                matches.append((grabber_id, round(max_score, 3)))
+
+        # Sortiere nach Score absteigend
+        matches.sort(key=lambda x: x[1], reverse=True)
+        return matches
+"""
+
+import re
+
+class SemanticGrabberLibrary_MARKER:
+    """
+    import yaml
+from sentence_transformers import SentenceTransformer, util
+
+class SemanticGrabberLibrary:
+    def __init__(self, yaml_path: str, model_name: str = 'distiluse-base-multilingual-cased'):
+        # Lade Grabber-Library aus YAML
+        with open(yaml_path, 'r', encoding='utf-8') as f:
+            self.library = yaml.safe_load(f)
+
+        # Lade SentenceTransformer Modell
+        self.model = SentenceTransformer(model_name)
+        self._build_anchor_embeddings()
+
+    def _build_anchor_embeddings(self):
+        self.embeddings = {}
+        for grabber_id, data in self.library.items():
+            patterns = data.get('patterns', [])
+            if patterns:
+                self.embeddings[grabber_id] = self.model.encode(patterns, convert_to_tensor=True)
+
+    def get_grabber_ids(self):
+        return list(self.library.keys())
+
+    def get_patterns_for_id(self, grabber_id):
+        return self.library.get(grabber_id, {}).get('patterns', [])
+
+    def get_description_for_id(self, grabber_id):
+        return self.library.get(grabber_id, {}).get('beschreibung', '')
+
+    def match_text(self, text, threshold=0.7):
+        matches = []
+        text_embedding = self.model.encode(text, convert_to_tensor=True)
+
+        for grabber_id, anchor_embeds in self.embeddings.items():
+            cos_sim = util.cos_sim(text_embedding, anchor_embeds)
+            max_score = cos_sim.max().item()
+            if max_score >= threshold:
+                matches.append((grabber_id, round(max_score, 3)))
+
+        # Sortiere nach Score absteigend
+        matches.sort(key=lambda x: x[1], reverse=True)
+        return matches
+    """
+    
+    examples = [
+    ]
+    
+    patterns = [
+        re.compile(r"(muster.*wird.*ergänzt)", re.IGNORECASE)
+    ]
+    
+    semantic_grabber_id = "AUTO_GENERATED"
+    
+    def match(self, text):
+        """Prüft ob der Text zum Marker passt"""
+        for pattern in self.patterns:
+            if pattern.search(text):
+                return True
+        return False

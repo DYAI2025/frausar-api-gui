@@ -1,0 +1,69 @@
+marker: FRIENDLY_FLIRTING_MARKER
+beschreibung: >
+  Neue umfangreiche Beispieldaten für die bestehenden Marker
+updated_markers = [
+    {
+        "marker": "FRIENDLY_FLIRTING_MARKER",
+        "beschreibung": "Erkennt kommunikative Muster von freundlich-sympathischem Flirten ohne Grenzüberschreitung. "
+                        "Typisch sind spielerische Komplimente, Humor, harmlose Wortspiele, kleine Grenztests, "
+                        "bei denen Rückzug akzeptiert wird. Kein Drängen, keine Pseudo-Intimität.",
+        "beispiele": [
+beispiele:
+  - "import yaml"
+  - "from pathlib import Path"
+  - "#            "Dein Humor ist wirklich ansteckend, ich hab schon lange nicht mehr so gelacht.","
+  - ""Wow, dein Musikgeschmack ist ja mal 1A. Da kennt sich jemand aus.","
+  - ""Du schreibst total sympathisch. Macht Spaß, mit dir zu chatten.","
+  - ""Ok, du bist also auch ein Fan von Ananas auf Pizza? Ich wusste, dass du ein guter Mensch bist. 😉","
+  - ""Du bringst mich echt zum Nachdenken. Auf eine gute Art und Weise.","
+  - ""So viel Energie so früh am Morgen? Schick mal was davon rüber!","
+  - ""Haha, war das jetzt ein Kompliment? Ich nehme es einfach mal als eins.","
+  - ""Ich glaube, mit dir könnte man gut einen Abend lang über Gott und die Welt philosophieren.","
+  - ""Vorsicht, sonst muss ich dich am Ende noch auf einen Kaffee einladen, um das auszudiskutieren.","
+  - ""Du bist eine interessante Mischung aus witzig und tiefgründig. Gefällt mir.","
+  - ""Na, du scheinst ja heute richtig gut drauf zu sein. Steht dir.","
+  - ""Wenn du so weitermachst, werde ich noch zum Fan von deinen Nachrichten.","
+  - ""Sorry, falls das zu neugierig war. Du erzählst nur so spannend.","
+  - ""Ich finde es cool, wie leidenschaftlich du über dieses Thema sprichst.","
+  - ""Das war jetzt ein sehr charmanter Konter, muss ich zugeben.","
+  - ""Du bist echt eine Ausnahmeerscheinung, im positiven Sinne.","
+  - ""(Nach einem Witz) 'Okay, der war gut. 1:0 für dich.'","
+  - ""Ich glaube, wir sind uns da ziemlich ähnlich.","
+  - ""Darf man fragen, was du am Wochenende so machst, oder ist das zu persönlich?","
+  - ""Deine Art zu denken ist echt erfrischend anders.","
+  - ""Du hast eine sehr angenehme Ausstrahlung, selbst nur über Text.","
+  - ""Haha, ertappt! Ja, das sollte wohl ein Flirtversuch sein.","
+  - ""Mit dir wird es anscheinend nie langweilig, oder?","
+  - ""Ich bin beeindruckt, wie offen du bist.","
+  - ""Das Lächeln auf deinem Profilbild ist wirklich ansteckend.","
+  - ""Ich merke schon, ich muss meine besten Witze auspacken, um hier mitzuhalten.","
+  - ""Das Gespräch mit dir ist definitiv das Highlight meines Tages bisher.","
+  - ""Wenn du jetzt noch sagst, dass du Kaffee magst, ist es perfekt.","
+  - ""Ich bin gespannt, was ich noch alles über dich herausfinde.","
+  - ""Du bist gefährlich... auf die bestmögliche Art. 😉""
+  - "],"
+  - ""kategorie": "SOZIALE_INTERAKTION","
+  - ""tags": ["flirt", "freundlich", "humor", "abgrenzung"],"
+  - ""risk_score": 1"
+  - "}"
+  - "]"
+  - "# Lade die bestehende Datei"
+  - "yaml_path = Path("/mnt/data/ADVANCED_CHAT_MARKERS.yaml")"
+  - "with open(yaml_path, "r", encoding="utf-8") as f:"
+  - "existing_data = yaml.safe_load(f)"
+  - "# Überschreibe den entsprechenden Marker mit neuen Beispielen"
+  - "for updated_marker in updated_markers:"
+  - "for marker in existing_data:"
+  - "if marker["marker"] == updated_marker["marker"]:"
+  - "marker["beispiele"] = updated_marker["beispiele"]"
+  - "# Schreibe die aktualisierte YAML zurück"
+  - "with open(yaml_path, "w", encoding="utf-8") as f:"
+  - "yaml.dump(existing_data, f, allow_unicode=True)"
+  - "yaml_path.name"
+
+semantic_grab:
+  description: "Erkennt Muster für friendly_flirting"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

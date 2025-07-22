@@ -1,0 +1,60 @@
+# -MIRRORED_STYLE_MARKER - Semantic Marker
+marker_name: MIRRORED_STYLE_MARKER
+beschreibung: > Paare spiegeln mit der Zeit ihre Verhalten -und Ausdrucksweisen, sowie den Schreibstil. Wird dieses entdeckt, erstaunt es manchmal
+  
+beispiele:
+  - "Unsere Nachrichten klingen fast gleich mittlerweile."
+  - "Ich schreibe jetzt schon so wie du – fällt dir das auf?"
+  - "Witzig, dass wir oft die gleichen Sätze benutzen."
+  - "Unsere Ausdrucksweise ähnelt sich von Tag zu Tag mehr."
+  - "Wir kopieren irgendwie gegenseitig unsere Formulierungen."
+  - "Immer öfter die gleichen Wörter in unseren Texten."
+  - "Sogar Satzanfänge sehen jetzt identisch aus."
+  - "Unsere Satzlänge ist auffällig ähnlich geworden."
+  - "Beide benutzen auf einmal dieselben Slang-Ausdrücke."
+  - "Wir schreiben im gleichen Rhythmus."
+  - "Unbewusst spiegeln wir unsere Schreibweise."
+  - "Unsere Sprachmelodie ist mittlerweile kaum zu unterscheiden."
+  - "Ich kann nicht mehr unterscheiden, wer welchen Satz geschrieben hat."
+  - "Immer häufiger schicke ich Nachrichten, die du auch schreiben könntest."
+  - "Sogar Tippfehler sind jetzt synchron."
+  - "name: "Emoji-Valence-Echo"
+  - "Wir schicken uns jetzt dieselben Emojis hintereinander."
+  - "Beide verwenden ständig 😁 und ❤️."
+  - "Unsere Chats sind wie Emoji-Spiegelbilder."
+  - "Wir haben neue Emoji-Rituale entwickelt."
+  - "Die gleiche Reihenfolge an Smileys taucht immer auf."
+  - "Nach jeder Liebesbotschaft kommt bei uns beiden ein Herz."
+  - "Manchmal kopieren wir direkt den Emoji des anderen."
+  - "Wir haben eine gemeinsame Emoji-Sprache gefunden."
+  - "Beide nutzen plötzlich das gleiche neue Emoji."
+  - "Unsere Stimmungen sind synchron an den Emojis ablesbar."
+  - "Sogar Traurigkeit wird mit denselben Symbolen markiert."
+  - "Wir wechseln zeitgleich die Emoji-Favoriten."
+  - "Es gibt keinen Tag, wo nicht mindestens ein gleiches Emoji fällt."
+  - "Nach Streit nutzen wir zur Versöhnung immer dasselbe Emoji."
+  - "Unsere Emoji-Kombis sind fast wie ein Insider-Witz."
+  - "name: "Antwortzeit-Resonanz"
+  - "Wir antworten oft im gleichen Moment."
+  - "Unsere Latenzen gleichen sich immer mehr an."
+  - "Wenn du schnell schreibst, reagiere ich sofort – und umgekehrt."
+  - "Unsere Antwortzeiten sind im Einklang."
+  - "Pausen und Reaktionszeiten passen sich an."
+  - "Nach einem langen Tag warten beide mit der Antwort."
+  - "Oft tippen wir parallel."
+  - "Unsere Chats laufen im Ping-Pong-Rhythmus."
+  - "Wir warten absichtlich, damit der andere nicht warten muss."
+  - "Antworten kommen manchmal wie synchron abgesprochen."
+  - "Wenn einer später antwortet, tut’s der andere auch."
+  - "Beide werden schneller oder langsamer – immer im selben Zyklus."
+  - "Nach einer Pause schreiben wir fast gleichzeitig."
+  - "Manchmal vergehen zwischen Antworten keine Sekunden."
+  - "Wir haben eine fast telepathische Antwortfrequenz."
+
+semantische_grabber_id: AUTO_SEM_20250703_393B
+
+metadata:
+  created_at: 2025-07-03T11:58:49.993091
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

@@ -1,0 +1,190 @@
+# -*- coding: utf-8 -*-
+
+# #############################################################################
+# Semantisches Erkennungsskript für psychologische Manipulationstaktiken
+# Version 1.0
+#
+# Zweck:
+# Dieses Skript geht über eine einfache Schlüsselwortsuche hinaus. Es nutzt
+# ein vortrainiertes NLP-Modell (via spaCy), um die semantische Ähnlichkeit
+# zwischen einem gegebenen Text und den in der YAML-Datei definierten
+# Manipulationstaktiken zu bewerten. Das Ziel ist, die zugrunde liegende
+# Bedeutung zu erkennen, auch wenn keine direkten Schlüsselwörter verwendet werden.
+#
+# Abhängigkeiten:
+# Sie müssen die folgenden Python-Bibliotheken installieren:
+# pip install PyYAML spacy
+#
+# Zusätzlich benötigen Sie ein spaCy-Sprachmodell mit Wortvektoren.
+# Für Deutsch wird 'de_core_news_lg' empfohlen:
+# python -m spacy download de_core_news_lg
+# #############################################################################
+
+import yaml
+import spacy
+from typing import Dict, List, Any
+
+# Laden des deutschen spaCy-Modells. 'lg' (large) enthält die notwendigen Wortvektoren.
+try:
+    nlp = spacy.load("de_core_news_lg")
+except IOError:
+    print("Fehler: Das Sprachmodell 'de_core_news_lg' wurde nicht gefunden.")
+    print("Bitte installieren Sie es mit dem Befehl: python -m spacy download de_core_news_lg")
+    exit()
+
+# Der Inhalt der YAML-Datei, die als Wissensbasis dient.
+# In einer realen Anwendung würde dies aus einer .yaml-Datei geladen werden.
+YAML_DATA = """
+manipulation_taktiken:
+  - id: gaslighting
+    name: "Gaslighting"
+    beschreibung: "Systematischer Versuch, die Wahrnehmung, Erinnerung oder den Verstand einer Person zu untergraben, um sie zu desorientieren und von der Einschätzung des Manipulators abhängig zu machen."
+    formel: "Leugnen(Realität) + Infragestellen(Wahrnehmung_Opfer) + Schuldumkehr"
+    semantische_pattern:
+      leugnen: ["habe ich nie gesagt", "das ist nicht passiert", "das bildest du dir ein"]
+      wahrnehmung_infragestellen: ["du bist zu sensibel", "du übertreibst total", "deine Erinnerung ist falsch", "du bist verrückt"]
+      schuldumkehr: ["du hast mich dazu gebracht", "wenn du nicht so wärst, dann..."]
+    beispiele:
+      - szenario: "A: 'Du hast gestern gesagt, du würdest den Müll rausbringen.' B: 'Das habe ich nie gesagt. Das musst du geträumt haben. Du vergisst in letzter Zeit so viel.'"
+        annotation: "Klassisches Gaslighting: Leugnen einer klaren Aussage und Infragestellen der Erinnerung."
+      - szenario: "Nach einem verletzenden Kommentar per SMS: 'Das war doch nur ein Scherz, warum bist du immer so überempfindlich? Man kann mit dir einfach keinen Spaß haben.'"
+        annotation: "Gaslighting durch Herunterspielen und Schuldzuweisung für die Reaktion des Opfers."
+
+  - id: schuldinduktion
+    name: "Schuldinduktion (Guilt Tripping)"
+    beschreibung: "Appell an das Pflicht-, Verantwortungs- oder Mitgefühl einer Person, um sie durch die Erzeugung von Schuldgefühlen zu einem bestimmten Verhalten zu bewegen."
+    formel: "Appell(Pflicht/Liebe) + Implizite_Drohung(Emotionaler_Entzug) + Erzeugung(Schuldgefühle)"
+    semantische_pattern:
+      appell: ["wenn du mich wirklich lieben würdest", "nach allem, was ich für dich getan habe", "ich opfere mich für dich auf"]
+      ergebnis: ["dann würdest du...", "dann könntest du nicht...", "ich bin so enttäuscht von dir"]
+    beispiele:
+      - szenario: "'Natürlich, geh ruhig mit deinen Freunden aus. Ich sitze dann halt allein hier und starre die Wand an. Ist schon in Ordnung, ich bin ja nur deine Mutter.'"
+        annotation: "Klassische Schuldinduktion durch Appell an die familiäre Pflicht und Betonung des eigenen Leidens."
+      - szenario: "Partner A möchte einen Abend für sich. Partner B sagt: 'Wenn du mich wirklich lieben würdest, würdest du mich heute nicht allein lassen wollen, wo ich so einen schweren Tag hatte.'"
+        annotation: "Offener Schuldappell, der Liebe an eine Bedingung knüpft."
+
+  - id: triangulation
+    name: "Triangulation"
+    beschreibung: "Einbeziehung einer dritten Person in eine Zweierbeziehung, um das Gegenüber zu verunsichern, Eifersucht zu erzeugen oder die eigene Position zu stärken."
+    formel: "Positiver_Vergleich(Dritte_Person) + Implizite_Abwertung(Gegenüber) + Erzeugung(Unsicherheit/Eifersucht)"
+    semantische_pattern:
+      vergleich: ["mein Ex hat das immer...", "sogar [Name] sagt, dass..."]
+    beispiele:
+      - szenario: "Im Streit: 'Weißt du, mein Ex-Partner hatte vielleicht seine Fehler, aber er hat immer verstanden, wenn ich Zeit für mich brauchte. Du machst immer so ein Drama.'"
+        annotation: "Klassische Triangulation durch Vergleich mit einem Ex-Partner."
+      - szenario: "Ein Elternteil zum Kind: 'Deine Cousine hat nur Einsen auf dem Zeugnis. Warum kannst du nicht mehr so sein wie sie?'"
+        annotation: "Triangulation in der Familie, um Leistungsdruck zu erzeugen."
+"""
+
+class SemanticManipulatorDetector:
+    """
+    Eine Klasse zur Erkennung von Manipulationstaktiken basierend auf semantischer Ähnlichkeit.
+    """
+    def __init__(self, yaml_data: str):
+        """
+        Initialisiert den Detektor mit der Wissensbasis aus der YAML-Datei.
+        """
+        self.wissensbasis = yaml.safe_load(yaml_data)
+        self.taktiken = self.wissensbasis.get("manipulation_taktiken", [])
+        print("INFO: Semantischer Detektor initialisiert.")
+        print(f"INFO: {len(self.taktiken)} Manipulationstaktiken geladen: {[t['name'] for t in self.taktiken]}")
+        print("-" * 50)
+
+    def analyze_text(self, text: str, threshold: float = 0.75) -> List[Dict[str, Any]]:
+        """
+        Analysiert einen gegebenen Text auf alle bekannten Manipulationstaktiken.
+
+        Args:
+            text (str): Der zu analysierende Text.
+            threshold (float): Der Schwellenwert für die Ähnlichkeit (zwischen 0 und 1),
+                               ab dem eine Taktik als erkannt gilt.
+
+        Returns:
+            List[Dict[str, Any]]: Eine Liste von erkannten Taktiken mit ihrem Ähnlichkeits-Score.
+        """
+        erkannte_taktiken = []
+        input_doc = nlp(text)
+
+        if not input_doc.has_vector:
+            print(f"WARNUNG: Der Eingabetext '{text[:30]}...' konnte nicht in einen Vektor umgewandelt werden. Analyse wird übersprungen.")
+            return erkannte_taktiken
+
+        for taktik in self.taktiken:
+            # Erstelle einen kombinierten semantischen Referenztext für jede Taktik.
+            # Dieser besteht aus der Beschreibung und allen Beispielen.
+            referenztexte = [taktik['beschreibung']] + [b['szenario'] for b in taktik['beispiele']]
+            
+            max_similarity = 0.0
+            best_match_text = ""
+
+            for ref_text in referenztexte:
+                ref_doc = nlp(ref_text)
+                if ref_doc.has_vector:
+                    # Berechne die Kosinus-Ähnlichkeit zwischen dem Vektor des Eingabetextes
+                    # und dem Vektor des Referenztextes.
+                    similarity = input_doc.similarity(ref_doc)
+                    if similarity > max_similarity:
+                        max_similarity = similarity
+                        best_match_text = ref_text
+
+            print(f"DEBUG: Prüfe Taktik '{taktik['name']}'. Höchste Ähnlichkeit: {max_similarity:.2f}")
+
+            if max_similarity > threshold:
+                erkannte_taktiken.append({
+                    "name": taktik['name'],
+                    "id": taktik['id'],
+                    "score": round(max_similarity, 2),
+                    "matched_against": best_match_text
+                })
+
+        # Sortiere die Ergebnisse nach dem höchsten Score
+        erkannte_taktiken.sort(key=lambda x: x['score'], reverse=True)
+        return erkannte_taktiken
+
+def run_demonstration():
+    """
+    Führt eine Demonstration mit verschiedenen Beispieltexten durch.
+    """
+    detector = SemanticManipulatorDetector(YAML_DATA)
+
+    test_faelle = [
+        {
+            "beschreibung": "Ein klarer Fall von Gaslighting (mit Schlüsselwörtern)",
+            "text": "Ich glaube, du bildest dir das nur ein, das ist nie passiert."
+        },
+        {
+            "beschreibung": "Ein semantisch ähnlicher Fall von Gaslighting (ohne Schlüsselwörter)",
+            "text": "Deine Erinnerung spielt dir einen Streich. Die Realität war ganz anders, du scheinst Dinge zu verdrehen."
+        },
+        {
+            "beschreibung": "Ein klarer Fall von Schuldinduktion",
+            "text": "Nach allem, was ich für dich tue, kannst du nicht einmal das für mich machen? Ich bin sehr enttäuscht."
+        },
+        {
+            "beschreibung": "Ein semantisch ähnlicher Fall von Schuldinduktion",
+            "text": "Ich opfere so viel für unsere Familie und du willst einfach gehen? Denk doch mal drüber nach, wie ich mich dann fühle."
+        },
+        {
+            "beschreibung": "Ein Fall von Triangulation",
+            "text": "Mein früherer Partner war in solchen Situationen immer viel verständnisvoller."
+        },
+        {
+            "beschreibung": "Ein neutraler Satz",
+            "text": "Ich gehe heute Abend ins Kino und schaue mir einen neuen Film an."
+        }
+    ]
+
+    for fall in test_faelle:
+        print(f"\n--- Analysiere Fall: '{fall['beschreibung']}' ---")
+        print(f"Input: \"{fall['text']}\"")
+        ergebnisse = detector.analyze_text(fall['text'])
+
+        if ergebnisse:
+            print("\n>>> Ergebnis: Folgende Taktiken wurden erkannt:")
+            for ergebnis in ergebnisse:
+                print(f"  - Taktik: {ergebnis['name']} (Score: {ergebnis['score']})")
+        else:
+            print("\n>>> Ergebnis: Keine Manipulationstaktik über dem Schwellenwert erkannt.")
+
+if __name__ == "__main__":
+    run_demonstration()

@@ -1,0 +1,100 @@
+fraud_markers:
+  # 1 ───────────────────────────────────────────
+  LOVE_BOMBING:
+    description: "Blitz-Romantik & inflationäre Zärtlichkeiten zur schnellen Abhängigkeit"
+    examples:
+      - "Ich habe mich in dich verliebt."  # 2 Wochen nach Erstkontakt :contentReference[oaicite:0]{index=0}
+      - "I love you more each second, my darling!" :contentReference[oaicite:1]{index=1}
+      - "Der beste Tag meines Lebens war, als ich dich traf." :contentReference[oaicite:2]{index=2}
+      - "Meine Liebe zu dir wächst wie zwei große Ozeane." :contentReference[oaicite:3]{index=3}
+      - "Good night, my queen – dream of our wedding." :contentReference[oaicite:4]{index=4}
+
+  # 2 ───────────────────────────────────────────
+  PLATFORM_SWITCH:
+    description: "Frühe Bitte, in einen privaten Messenger zu wechseln (WhatsApp/Telegram)"
+    examples:
+      - "Can we talk on WhatsApp? My membership here expires soon." :contentReference[oaicite:5]{index=5}
+      - "Lass uns auf Telegram wechseln, es ist sicherer." :contentReference[oaicite:6]{index=6}
+      - "Please message me on +44 … – this app is buggy." :contentReference[oaicite:7]{index=7}
+      - "Give me your number so I can hear your sweet voice." :contentReference[oaicite:8]{index=8}
+      - "I’m offshore; WhatsApp is my only stable line." :contentReference[oaicite:9]{index=9}
+
+  # 3 ───────────────────────────────────────────
+  CRISIS_MONEY_REQUEST:
+    description: "Dramatische Notlage + Bitte um Geld"
+    examples:
+      - "Mein Bankkonto ist gesperrt, ich brauche 2 000 € für das Ticket." :contentReference[oaicite:10]{index=10}
+      - "Das Paket hängt beim Zoll, zahl bitte die 350 € Gebühr." :contentReference[oaicite:11]{index=11}
+      - "Mein Sohn wurde operiert, die Klinik verlangt sofort 5 000 €." :contentReference[oaicite:12]{index=12}
+      - "Ich sitze im Gefängnis, nur du kannst mich retten." :contentReference[oaicite:13]{index=13}
+      - "Schatz, sende Western-Union heute noch, sonst verliere ich alles." :contentReference[oaicite:14]{index=14}
+
+  # 4 ───────────────────────────────────────────
+  URGENCY_SCARCITY:
+    description: "Zeitdruck / Knappheit, um kritisches Denken abzuschalten"
+    examples:
+      - "Wenn das Geld bis Mitternacht nicht da ist, bin ich verloren!" :contentReference[oaicite:15]{index=15}
+      - "Nur heute gibt es das Spezialticket, bitte schnell." :contentReference[oaicite:16]{index=16}
+      - "I’ll be deported in 24 h ohne deine Hilfe." :contentReference[oaicite:17]{index=17}
+      - "Der Arzt wartet – überweise jetzt!" :contentReference[oaicite:18]{index=18}
+      - "Meine SIM läuft gleich ab, antworte sofort." :contentReference[oaicite:19]{index=19}
+
+  # 5 ───────────────────────────────────────────
+  WEBCAM_EXCUSE:
+    description: "Vermeidung visueller Verifizierung"
+    examples:
+      - "Meine Kamera ist kaputt." :contentReference[oaicite:20]{index=20}
+      - "Low bandwidth here, Video impossible." :contentReference[oaicite:21]{index=21}
+      - "Security rules verbieten Video-Calls auf der Ölplattform." :contentReference[oaicite:22]{index=22}
+      - "Ich habe Allergien, sehe furchtbar aus – morgen vielleicht." :contentReference[oaicite:23]{index=23}
+      - "UN-Geräte blockieren die Kamera." :contentReference[oaicite:24]{index=24}
+
+  # 6 ───────────────────────────────────────────
+  UNTRACEABLE_PAYMENT_METHOD:
+    description: "Forderung nach nicht rückverfolgbarer Zahlung"
+    examples:
+      - "Kauf 5 × 100 € Apple-Gift-Cards und schick mir die Codes." :contentReference[oaicite:25]{index=25}
+      - "Western Union ist hier der schnellste Weg." :contentReference[oaicite:26]{index=26}
+      - "Bitte sende per MoneyGram an meinen Agenten." :contentReference[oaicite:27]{index=27}
+      - "Crypto ist sicher, überweis mir BTC." :contentReference[oaicite:28]{index=28}
+      - "Mach dich keine Sorgen, Geschenkkarten sind anonym & legal." :contentReference[oaicite:29]{index=29}
+
+  # 7 ───────────────────────────────────────────
+  GASLIGHTING_GUILT:
+    description: "Realitätsverdrehung & Schuldzuweisung, wenn Opfer zweifelt"
+    examples:
+      - "Du hörst dich verrückt an, mir nicht zu vertrauen." :contentReference[oaicite:30]{index=30}
+      - "Du liebst mich wohl nicht, wenn du Geld in Frage stellst." :contentReference[oaicite:31]{index=31}
+      - "Mach aus einer Mücke keinen Elefanten." :contentReference[oaicite:32]{index=32}
+      - "Warum prüfst du mich? Ich dachte, wir sind Schicksal." :contentReference[oaicite:33]{index=33}
+      - "Du zerstörst, was wir haben, mit deinem Misstrauen." :contentReference[oaicite:34]{index=34}
+
+  # 8 ───────────────────────────────────────────
+  TRANSLATION_ARTIFACT:
+    description: "Unnatürliche Grammatik / wörtliche Übersetzung trotz High-Status-Persona"
+    examples:
+      - "Was unseren Körper in die gute Form zu halten." :contentReference[oaicite:35]{index=35}
+      - "Unsere Herze, wie zwei große Ozeane." :contentReference[oaicite:36]{index=36}
+      - "I am his father never see." :contentReference[oaicite:37]{index=37}
+      - "Ich werde jetzt Sie meine Liebe immer nennen." :contentReference[oaicite:38]{index=38}
+      - "My camera broken, no video can doing." :contentReference[oaicite:39]{index=39}
+
+  # 9 ───────────────────────────────────────────
+  FABRICATED_STATUS_ARCHETYPE:
+    description: "Beruf/Status, der Distanz & Notlage glaubhaft macht"
+    examples:
+      - "Ich bin US-Soldat in Syrien, Internet ist streng limitiert." :contentReference[oaicite:40]{index=40}
+      - "Als Ingenieur auf Ölplattform kann ich erst in 3 Monaten fliegen." :contentReference[oaicite:41]{index=41}
+      - "UN-Arzt auf humanitärer Mission – Visa-Probleme halten mich fest." :contentReference[oaicite:42]{index=42}
+      - "Verwitweter Vater, mein Kind braucht eine Mutterfigur." :contentReference[oaicite:43]{index=43}
+      - "Millionärs-Kunsthändler, aber Konto eingefroren." :contentReference[oaicite:44]{index=44}
+
+  # 10 ──────────────────────────────────────────
+  ASYMMETRIC_INFO_MINING:
+    description: "Betrüger fragt >3× so viel wie er preisgibt"
+    examples:
+      - "Erzähl mir alles über deine Familie, Liebling." :contentReference[oaicite:45]{index=45}
+      - "Welche Adresse hast du? Ich will dir Blumen schicken." :contentReference[oaicite:46]{index=46}
+      - "Was ist dein Geburtsdatum und Lieblingsfarbe?" :contentReference[oaicite:47]{index=47}
+      - "Hast du Haustiere? Welche Bank nutzt du?" :contentReference[oaicite:48]{index=48}
+      - "Ich interessiere mich so sehr für dein Leben, erzähl mehr!" :contentReference[oaicite:49]{index=49}

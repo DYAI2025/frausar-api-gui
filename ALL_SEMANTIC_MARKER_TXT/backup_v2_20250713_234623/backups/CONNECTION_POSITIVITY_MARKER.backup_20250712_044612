@@ -1,0 +1,56 @@
+# CONNECTION_POSITIVITY_MARKER - Semantic Marker
+marker_name: CONNECTION_POSITIVITY_MARKER
+beschreibung: >
+  - "Geringe Nutzung von Ironie/Sarkasmus, positive Bezugnahme auf sich und andere, Feedback oder Metakommunikation signalisiert Wohlfühlen in der Verbindung."d: "M_CONNECTION_POSITIVITY"
+  name: "CONNECTION_POSITIVITY"
+  level: "atomic"
+  category: "Soziale Verbundenheit"
+  semantic_tags: ["Verbindung", "Wohlfühlen", "Wertschätzung", "Empathie"]
+  description: |
+    Erkennt sprachliche Marker für ein positives Miteinander, Wertschätzung, gegenseitiges Wahrnehmen, Humor, Vertrauen und Feedback in der Beziehungsgestaltung.
+    Fokus auf gemeinschaftliche Begriffe, empathische Sprache, Metakommunikation und positives Spiegeln.
+  pattern:
+    - RegEx: "(mag.*mit dir|schön.*mit dir|danke.*geteilt|wir|uns|zusammen|gemeinsam|freue mich.*für dich|vertrauen|geht's dir dabei|klingst zufrieden|spiegeln|harmonieren|tut dir gut|locker|empathisch|entspannt)"
+    - Semantik: Formulierungen mit Wertschätzung, Empathie, Humor; positives Nachfragen; Feedback und Metakommunikation über Wohlbefinden.
+beispiele:
+  - "i  examples:"
+  - "- "Ich mag es, mit dir zu schreiben.""
+  - "- "Es ist immer schön, mit dir zu reden.""
+  - "- "Danke, dass du das geteilt hast.""
+  - "- "Wir haben das echt gemeinsam gerockt!""
+  - "- "Wie geht’s dir dabei wirklich?""
+  - "- "Ich habe das Gefühl, du bist heute richtig entspannt.""
+  - "- "Du klingst heute total zufrieden, das freut mich.""
+  - "- "Ich glaube, wir harmonieren gerade ganz gut, oder?""
+  - "- "Wenn du magst, erzähl mehr – kein Druck.""
+  - "- "Mir ging’s auch mal so, danke fürs Teilen.""
+  - "- "Ich finde es toll, wie offen wir miteinander umgehen.""
+  - "- "Ich freue mich immer, wenn wir uns sehen.""
+  - "- "Ich kann mit dir über alles sprechen.""
+  - "- "Unsere Gespräche tun mir jedes Mal gut.""
+  - "- "Es ist schön, dich an meiner Seite zu wissen.""
+  - "- "Mit dir wird’s nie langweilig.""
+  - "- "Danke, dass du zugehört hast.""
+  - "- "Ich vertraue dir total.""
+  - "- "Du bringst mich immer zum Lachen.""
+  - "- "Ich genieße unsere gemeinsamen Momente sehr.""
+  - "- "Wir verstehen uns einfach ohne viele Worte.""
+  - "- "Schön, dass wir uns gegenseitig so unterstützen.""
+  - "- "Ich kann mich auf dich verlassen.""
+  - "- "Du bist für mich wie Familie.""
+  - "- "Danke, dass du immer ehrlich zu mir bist.""
+  - "- "Ich finde, wir sind ein richtig gutes Team.""
+  - "- "Du schaffst es immer, mich aufzumuntern.""
+  - "- "Ich freue mich, dass es dir gut geht.""
+  - "- "Unsere Verbindung fühlt sich sehr besonders an.""
+  - "- "Ich merke, dass wir uns gegenseitig gut tun.""
+  - "semantic_grabber_id: "SGR_CONNECTION_POSITIVITY_01""
+  - "context_rule:"
+
+semantische_grabber_id: AUTO_SEM_20250712_104B
+
+metadata:
+  created_at: 2025-07-12T03:12:29.523397
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]

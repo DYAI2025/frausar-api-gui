@@ -1,0 +1,25 @@
+kategorie: SEMANTIC
+marker:
+  category: Semantic
+  context_rule: []
+  description: Automatisch generierte Beschreibung für zweifelmarker
+  examples:
+  - Ich bin mir nicht sicher, ob wir das schaffen.
+  - Ich zweifle echt daran, dass das funktioniert.
+  - Glaubst du wirklich, das ist eine gute Idee?
+  - Ich hab so meine Zweifel, ob das fair ist.
+  - Ich bin unschlüssig, ob ich das richtig mache.
+  - Ich hab Bedenken, dass es nach hinten losgeht.
+  - Ich fühle mich unsicher, ob das der richtige Weg ist.
+  - Ich hinterfrage ständig, ob ich das verkaufen kann.
+  - Ich zweifle an meiner Entscheidung.
+  - Ich hab Angst, dass das eine schlechte Wahl war.
+  - Ich bin mir nicht mehr sicher, was richtig ist.
+  id: S_ZWEIFELMARKER
+  level: 2
+  name: zweifelmarker
+  pattern: []
+  semantic_grabber_id: AUTO_SEM_20250714_9DDB
+  semantic_tags:
+  - needs_review
+marker_name: zweifelmarker

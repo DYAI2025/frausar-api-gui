@@ -1,0 +1,10 @@
+person_A_verhalten:
+  verlustangst:
+    wert: 0.85
+    basis: "Hoher Wert auf Skala 'Bindungsangst' (BoBi). Indikatoren: Protestverhalten, Sorge um Beziehung."
+  nähevermeidung:
+    wert: 0.20
+    basis: "Niedriger Wert auf Skala 'Bindungsvermeidung' (BoBi). Indikatoren: Sucht Nähe, Unbehagen bei Distanz."
+  intellektualisierung:
+    wert: 0.80
+    basis: "Marker 'meta_überhöhung'. Indikatoren: Hoher Anteil an Wörtern aus LIWC-Kategorie 'kognitive Prozesse'."

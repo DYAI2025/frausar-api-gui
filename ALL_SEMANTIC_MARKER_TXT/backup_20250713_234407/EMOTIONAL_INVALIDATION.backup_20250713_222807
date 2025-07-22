@@ -1,0 +1,58 @@
+- id: M1005
+  name: "Emotional Invalidation"
+  description: >
+    The act of denying, rejecting, or trivializing someone's feelings, which undermines their perception of reality. It implies that a person's emotional reaction is wrong, inappropriate, or baseless. This tactic is a key component of gaslighting and serves to devalue the individual's experience, making them doubt their own sanity and judgment.
+  category: "Gaslighting & Devaluation"
+  semantic_grabber_id: EMOTIONAL_INVALIDATION_SEM
+  semantic_tags:
+    - invalidation
+    - gaslighting
+    - manipulation
+    - devaluation
+    - emotional-abuse
+  examples:
+    - "Das ist doch alles nur in deinem Kopf."
+    - "Wieder mal überreagierst du total."
+    - "Du bist einfach zu empfindlich."
+    - "So schlimm ist es doch gar nicht, stell dich nicht so an."
+    - "Warum nimmst du immer alles persönlich?"
+    - "Sei doch nicht so dramatisch."
+    - "Ach komm, stell dich nicht an, es war nur ein Scherz."
+    - "Andere würden darüber lachen, du machst ein Riesentheater."
+    - "I think you're making mountains out of molehills again."
+    - "Deine Gefühle ändern nichts an den Fakten."
+    - "Du findest immer einen Grund, beleidigt zu sein."
+    - "Stop exaggerating, it's really no big deal."
+    - "Das bildest du dir nur ein."
+    - "Niemand außer dir findet das problematisch."
+    - "Du bist halt zu sensibel für diese Welt."
+    - "Honestly, you're being childish right now."
+    - "Über so was weint man doch nicht."
+    - "Ich glaube, du suchst einfach nach Aufmerksamkeit."
+    - "Kannst du nicht einmal gelassen bleiben?"
+    - "You always twist things into personal attacks."
+    - "Das ist keine echte Angst, das ist nur dein Kopfkino."
+    - "So fühlt man sich nicht, wenn man erwachsen ist."
+    - "Mach kein Drama, das lohnt nicht."
+    - "Es nervt, wie emotional du bist."
+    - "Why do you always overthink everything?"
+    - "Du bist nicht traurig, du willst nur Mitleid."
+    - "Das kann dich unmöglich so sehr verletzen."
+    - "There's no logical reason to feel that way."
+    - (Auf eine Sorge): "Du musst lernen, deine Emotionen besser zu kontrollieren."
+    - "Du interpretierst da viel zu viel hinein."
+    - "Beruhige dich erstmal, dann können wir reden, wenn du wieder rational bist."
+    - "It wasn't an insult, it was a joke. Learn to take one."
+    - "Deine Wahrnehmung ist mal wieder total verzerrt."
+    - "Das ist doch kein Grund, wütend zu sein."
+    - (Chat-Antwort auf eine verletzliche Nachricht): "lol chill"
+    - "Du fühlst dich nur so, weil du müde bist."
+    - "Hör auf, so hysterisch zu sein."
+    - "I get that you *feel* that way, but that's not what *actually* happened."
+    - "Du musst wirklich lernen, nicht alles auf dich zu beziehen."
+    - "Das ist doch objektiv gesehen eine Kleinigkeit."
+    - "Deine Gefühle sind in dieser Situation absolut unangebracht."
+    - "Du bist nicht gestresst, du bist nur unorganisiert."
+    - "Es gibt keinen Grund, sich aufzuregen. Wirklich keinen."
+    - "You're not scared, you just like the drama."
+    - "Anstatt so emotional zu sein, solltest du lieber eine Lösung finden."

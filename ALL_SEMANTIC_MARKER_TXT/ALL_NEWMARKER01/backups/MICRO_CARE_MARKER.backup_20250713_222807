@@ -1,0 +1,14 @@
+marker: MICRO_CARE_MARKER
+beschreibung: >
+  Regelmäßige, kleine Akte der Fürsorge, Aufmerksamkeit und Unterstützung im Alltag.
+    Indikator für Beziehungsrobustheit und Bindungsqualität.
+beispiele:
+  - "MICRO_CARE_MARKER:"
+  - "beispiele: []"
+
+semantic_grab:
+  description: "Erkennt Muster für micro_care"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

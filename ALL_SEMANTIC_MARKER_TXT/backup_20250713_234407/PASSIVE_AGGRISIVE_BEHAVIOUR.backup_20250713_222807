@@ -1,0 +1,58 @@
+- id: M1006
+  name: "Passive-Aggressive Behavior"
+  description: >
+    A pattern of indirectly expressing negative feelings or aggression instead of openly addressing them. [cite_start]This is often achieved through subtle insults, sullen behavior, stubbornness, or a deliberate failure to complete required tasks[cite: 49]. [cite_start]The statements typically carry a hidden accusation or create emotional pressure, forcing the other person to guess the source of the conflict[cite: 50].
+  category: "Covert Manipulation"
+  semantic_grabber_id: PASSIVE_AGGRESSIVE_SEM
+  semantic_tags:
+    - passive-aggressive
+    - covert-conflict
+    - guilt-induction
+    - sarcasm
+    - manipulation
+  examples:
+    - "Ist ja nicht so, als wäre ich wichtig."
+    - "Schon gut, ich verzichte eben."
+    - "Tu, was du willst, mir ist es sowieso egal."
+    - "Na klar, du musst es ja besser wissen."
+    - "Ich sage lieber nichts, sonst heißt es wieder, ich sei schuld."
+    - "Schon seltsam, wie dein Kalender plötzlich voll ist, wenn ich Zeit habe."
+    - "Mach du ruhig dein Ding, ich komme schon klar – irgendwie."
+    - "If forgetting me makes you happy, go for it."
+    - "Interessant, dass deine Nachrichten immer spät kommen, wenn ich warte."
+    - "Ach, ich hätte sowieso nichts Wichtiges beizutragen gehabt."
+    - "Du brauchst meine Meinung ja offensichtlich nicht."
+    - "No worries, I’ll just sit here and guess what you want."
+    - "Schön, dass du es diesmal ganz alleine geschafft hast, bemerkenswert."
+    - "Na, Hauptsache du bist zufrieden, der Rest zählt ja nicht."
+    - "Ich hätte dich begleiten können, aber offenbar war das nicht gefragt."
+    - "Ist schon okay, ich bin ja nur Deko."
+    - "Sure, leave me on read, that's totally fine."
+    - "Ich sag nichts mehr, bringt ja doch nichts."
+    - "Du hast sicher recht, wie immer."
+    - "Great, another plan changed last minute—love that for us."
+    - "Wenn es dir Freude macht, mich zu ignorieren, bitte."
+    - "Ich weiß, meine Bedürfnisse wirken lästig, sorry dafür."
+    - "Toll, dass du mich informierst, nachdem alles entschieden ist."
+    - "Kein Stress, ich räume deine Scherben später weg."
+    - "Natürlich, dein Spaß ist wichtiger als mein Schlaf."
+    - (Antwort auf eine lange Nachricht): "K."
+    - "Oh, du gehst schon? Ich dachte, du bleibst. Aber kein Problem, ich finde schon eine Beschäftigung."
+    - (E-Mail): "As per my last email, the information was already provided. Attaching it again for your convenience."
+    - "Ich will ja keine Umstände machen..." (und macht dann doch welche).
+    - "Ich bin 'fein' damit." (Mit einem Tonfall, der das Gegenteil sagt).
+    - (Sprachnachricht, übertrieben fröhlich): "Hey! Nur zur Info, ich sitze hier seit einer Stunde allein. Aber alles gut, nimm dir Zeit!"
+    - "Ich hab die Spülmaschine ausgeräumt. Ist anscheinend niemanden sonst aufgefallen."
+    - "Don't worry about me. I'm used to figuring things out on my own."
+    - "Ich will dich nicht stören. Du siehst so beschäftigt aus mit deinem Handy."
+    - "Must be nice, so viel Freizeit zu haben."
+    - (Im Gruppenchat, nachdem ein Vorschlag ignoriert wurde): "Okay, anscheinend hat niemand eine Meinung. Dann lassen wir es halt."
+    - "Ich hab dir was zu essen übrig gelassen. Falls du überhaupt noch nach Hause kommst."
+    - "Ich finde es bewundernswert, wie du deine Prioritäten setzt."
+    - "Ich hab's schon erledigt. War ja klar, dass es sonst liegen bleibt."
+    - "The silence is speaking volumes right now."
+    - "Ich bin nicht sauer. Nur... enttäuscht. Aber ist auch egal."
+    - (Hängt den Hörer auf und schreibt dann): "Akku war leer."
+    - "Schön, dass du daran gedacht hast." (Nachdem die Person etwas Offensichtliches vergessen hat).
+    - "Ich wünschte, ich wäre auch so entspannt und könnte einfach mal alles liegen lassen."
+    - "Ah, das war also die Überraschung. Interessant."

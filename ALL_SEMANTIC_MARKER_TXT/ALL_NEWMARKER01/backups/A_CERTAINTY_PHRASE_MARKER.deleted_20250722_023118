@@ -1,0 +1,33 @@
+marker_name: A_CERTAINTY_PHRASE_MARKER
+beschreibung: 'Ausdrücke, die Wissen, Kontrolle oder Sicherheit signalisieren.
+
+  '
+beispiele:
+- I usually know what I want.
+- Ich bin mir echt sicher, dass das klappt 💪.
+- I know exactly how this will go 🔥.
+- Normalerweise hab ich das im Griff 😉.
+- Eigentlich weiß ich ganz genau, was los ist.
+- Usually I’m totally on top of things 👍.
+- Eigentlich weiß ich’s 😏
+semantische_grabber_id: AUTO_SEM_20250721_C61F
+metadata:
+  created_at: 2025-07-21 18:54:03.924529
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags:
+  - neu_erstellt
+  - needs_review
+  last_repaired: '2025-07-22T00:39:57.338408'
+  repair_version: '1.0'
+category: UNCATEGORIZED
+tags:
+- needs_review
+examples:
+- AUTO_GENERATED_EXAMPLE_1
+- AUTO_GENERATED_EXAMPLE_2
+- AUTO_GENERATED_EXAMPLE_3
+- AUTO_GENERATED_EXAMPLE_4
+- AUTO_GENERATED_EXAMPLE_5
+
+kategorie: UNCATEGORIZED

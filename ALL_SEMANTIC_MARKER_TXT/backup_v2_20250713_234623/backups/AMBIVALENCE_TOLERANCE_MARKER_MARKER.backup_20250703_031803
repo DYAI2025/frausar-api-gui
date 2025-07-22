@@ -1,0 +1,14 @@
+marker: AMBIVALENCE_TOLERANCE_MARKER_MARKER
+beschreibung: >
+  Klarheit und Kommunikation eigener Grenzen, Selbstschutz.
+beispiele:
+  - "Hey, ich schaffe es heute Abend nicht."
+  - "Ich möchte über dieses Thema jetzt nicht sprechen."
+  - "Das geht mir zu schnell. Ich brauche mehr Zeit."
+
+semantic_grab:
+  description: "Erkennt Muster für ambivalence_tolerance_marker"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

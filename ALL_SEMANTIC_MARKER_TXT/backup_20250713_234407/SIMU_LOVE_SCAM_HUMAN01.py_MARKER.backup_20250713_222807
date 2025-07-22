@@ -1,0 +1,77 @@
+marker: SIMU_LOVE_SCAM_HUMAN01.py_MARKER
+beschreibung: >
+  Was bräuchte diese semantische Erkennung?
+Statt "Ich liebe dich" einfach nur zu matchen, würde sie prüfen:
+
+Ist das Gespräch abrupt emotional intensiv ohne Kontext?
+nput-Chats mit NLP preprocessen (Sätze, Absätze, Absichten erkennen)
+
+Semantische Struktur und Taktik-Signale clustern
+
+Score berechnen, wie stark ein bestimmtes Verhaltensmuster erkennbar ist
+
+Marker-Trigger auslösen, wenn semantischer Schwellenwert überschritten ist
+
+
+
+Wird Schuld oder Verantwortung subtil auf die andere Person gelenkt?
+
+Gibt es Hinweise auf Rückzug/Nähe-Wechsel?
+
+Tauchen Formulierungen auf, die Vertrauen thematisieren, ohne es konkret zu machen?
+
+Dazu nutzen wir:
+
+Pattern-basierte Logik mit semantischer Nähe (über Satz- und Intentstruktur)
+
+Verhaltenscluster statt Floskeln
+
+Optional: LLM-basiertes Scoring-Modul, das diese Intentionen erkennt (Promptlogik)
+beispiele:
+  - "from typing import List"
+  - "class SemanticPattern:"
+  - "def __init__(self, name: str, description: str, indicators: List[str], logic_hint: str):"
+  - "self.name = name"
+  - "self.description = description"
+  - "self.indicators = indicators  # Beispielhafte Phrasen"
+  - "self.logic_hint = logic_hint  # Erklärung der semantischen Struktur"
+  - "# Beispielmuster:"
+  - "semantic_patterns = ["
+  - "SemanticPattern("
+  - "name="LoveBombing","
+  - "description="Plötzliche emotionale Intensität ohne Beziehungsbasis","
+  - "indicators=["
+  - ""Ich weiß nicht wieso, aber ich spüre etwas bei dir.","
+  - ""Es ist verrückt, aber du gehst mir nicht mehr aus dem Kopf.","
+  - ""Ich glaube, wir sind seelenverwandt.""
+  - "],"
+  - "logic_hint="emotionale Verstärkung + keine gemeinsame Vorgeschichte""
+  - "),"
+  - "SemanticPattern("
+  - "name="GuiltTripping","
+  - "description="Schuldinduktion durch passiv-aggressive Vorwürfe","
+  - "indicators=["
+  - ""Ist okay, du musst dich nicht melden, ich bin ja niemand.","
+  - ""Schon klar, ich bin halt wieder nicht wichtig.","
+  - ""Wusste ich doch, dass ich dir nicht genüge.""
+  - "],"
+  - "logic_hint="rhetorische Entwertung + implizite Verantwortung""
+  - "),"
+  - "SemanticPattern("
+  - "name="AvoidantExcuse","
+  - "description="Thematischer Ausweichreflex bei intimen Fragen","
+  - "indicators=["
+  - ""Warum willst du das wissen?","
+  - ""Können wir bitte über etwas anderes reden?","
+  - ""Das ist nicht so wichtig gerade.""
+  - "],"
+  - "logic_hint="Frageabwehr + Themenwechsel""
+  - ")"
+  - "]"
+
+semantic_grab:
+  description: "Erkennt Muster für simu_love_scam_human01.py"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

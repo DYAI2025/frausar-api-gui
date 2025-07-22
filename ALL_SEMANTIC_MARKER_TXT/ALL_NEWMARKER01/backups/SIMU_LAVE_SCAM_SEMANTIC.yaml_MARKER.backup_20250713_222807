@@ -1,0 +1,24 @@
+marker: SIMU_LAVE_SCAM_SEMANTIC.yaml_MARKER
+beschreibung: >
+  YAML-Struktur fürs semantische Verhalten von SIMULATRO KI bei der Simulation von Scammerns
+beispiele:
+  - "marker: SEMANTIC_BEHAVIOR_MARKER"
+  - "beschreibung: >"
+  - "Erkennt komplexe Ausdrucksformen und Gesprächsdynamiken, die auf manipulative Muster wie Love Bombing, Schuldinduktion oder Ausweichtaktiken hinweisen."
+  - "muster:"
+  - "- name: Love Bombing"
+  - "struktur: emotionale Verstärkung + keine Beziehungshistorie"
+  - "beispiele:"
+  - "- "Ich weiß nicht, warum, aber ich fühle mich dir sofort verbunden.""
+  - "- "Du bist anders als alle anderen, das spüre ich.""
+  - "- name: Guilt Tripping"
+  - "struktur: rhetorische Opferrolle + Schuldprojektion"
+  - "beispiele:"
+  - "- "War ja klar, dass du wieder nicht antwortest.""
+
+semantic_grab:
+  description: "Erkennt Muster für simu_lave_scam_semantic.yaml"
+  patterns:
+    - rule: "AUTO_PATTERN"
+      pattern: r"(muster.*wird.*ergänzt)"
+tags: [neu_erstellt, needs_review]

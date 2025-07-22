@@ -1,0 +1,46 @@
+marker: PERMANENT_POSTPONE_MARKER
+beschreibung: Das wiederholte und oft vage Aufschieben von wichtigen Entscheidungen, klärenden Gesprächen oder notwendigen Integrationsschritten.
+szenarien:
+  - Partnerschaft (Zukunftsplanung, Konfliktlösung)
+  - Patchwork-Familie (Integration des neuen Partners)
+  - Berufsleben (Gehaltsverhandlungen, Beförderungen)
+  - Betrug/Fraud (Hinhaltetaktiken)
+dynamik_absicht: Die Absicht ist meist die Vermeidung von Konfrontation und der damit verbundenen Angst. Es ist eine passive Strategie, um den Status quo zu erhalten. Die Wirkung ist zermürbend und erzeugt ein Gefühl von Stagnation und Ohnmacht.
+beispiele:
+  - "Lass uns das nach dem Urlaub besprechen."
+  - "Jetzt ist gerade wirklich kein guter Zeitpunkt für so ein Thema."
+  - "Das hat noch Zeit, wir müssen nicht alles sofort entscheiden."
+  - "Wir reden da später nochmal drüber, okay?"
+  - "Ich habe im Moment einfach nicht den Kopf dafür."
+  - "Das ist ein zu großes Fass, das wir jetzt aufmachen."
+  - "Lass uns erstmal abwarten, wie sich die Dinge entwickeln."
+  - "Ich verspreche, wir kümmern uns darum, aber nicht heute."
+  - "Ich muss darüber erst einmal eine Nacht schlafen." (und bringt es nie wieder zur Sprache)
+  - "Eine Gehaltserhöhung ist dieses Quartal schwierig, lassen Sie uns das im nächsten Jahr erneut prüfen."
+  - "Lass uns den Abend nicht mit so schweren Themen verderben."
+  - "Sobald der Stress bei der Arbeit nachlässt, widme ich mich voll und ganz diesem Problem."
+  - "Wir sollten das erst angehen, wenn wir beide emotional stabil genug dafür sind."
+  - "Das klären wir, wenn die Kinder größer sind."
+  - "Ich bin noch nicht bereit, darüber zu reden."
+  - "Ich melde mich bei Ihnen, sobald es Neuigkeiten gibt."
+  - "Lass uns das auf nächste Woche vertagen."
+  - "Ich will nichts überstürzen."
+  - "Das ist eine wichtige Entscheidung, die will gut überlegt sein."
+  - "Ich kann das jetzt nicht entscheiden."
+metamarker_kombinationen:
+  - name: "Reaktivierungs-Falle"
+    kombination_mit: BLAME_SHIFT_MARKER
+    szenario: "Das Aufschieben wird mit dem Verhalten des anderen begründet. Beispiel: 'Ich würde ja gerne mit dir reden, aber so wie du jetzt schon wieder geladen bist, hat das keinen Sinn. Lass uns das verschieben, bis du dich beruhigt hast.'"
+semantic_grab:
+  description: "Erkennt Phrasen des Aufschubs, der Vertagung und der Konditionierung an unbestimmte zukünftige Ereignisse."
+  patterns:
+    - rule: "INDEFINITE_POSTPONEMENT"
+      pattern: "(Lass uns) +(später|die Tage|irgendwann|bald) +(darüber reden|das klären)"
+      example: "Lass uns das bald mal besprechen."
+    - rule: "CONDITIONAL_POSTPONEMENT"
+      pattern: "(Wir machen das, wenn|Wir reden darüber, wenn) +([\\w\\s]+)"
+      example: "Wir reden darüber, wenn du dich beruhigt hast."
+psychologischer_hintergrund:
+  - Abwehrmechanismus: Vermeidung, Verleugnung, Passiv-aggressives Verhalten
+  - Theorie: Bindungstheorie (vermeidend-distanzierter Bindungsstil, Deaktivierungsstrategie)
+tags: [vermeidung, konflikt, prokrastination, unentschlossenheit, stagnation]

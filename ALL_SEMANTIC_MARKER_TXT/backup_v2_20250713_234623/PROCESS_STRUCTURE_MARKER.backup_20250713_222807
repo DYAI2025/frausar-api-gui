@@ -1,0 +1,49 @@
+# PROCESS_STRUCTURE_MARKER - Semantic Marker
+marker_name: PROCESS_STRUCTURE_MARKER
+beschreibung: >
+  - id: "M_PROCESS_STRUCTURE"
+  name: "Prozess-Strukturmarker"
+  category: "Meta-Kommunikation"
+  semantic_grabber_id: "SGR_PROCESS_STRUCTURE_01"
+beispiele:
+  - "examples"
+  - "- "Schritt[- ]?für[- ]?Schritt""
+  - "- "Zuerst.*dann""
+  - "- "Danach.*weiter""
+  - "- "Wir machen.*Reihenfolge""
+  - "- "Der Ablauf ist so""
+  - "- "Als Nächstes""
+  - "- "Im ersten Schritt""
+  - "- "Erstmal.*dann""
+  - "- "Ich gebe dir sofort Rückmeldung""
+  - "- "Dann gehen wir weiter""
+  - "- "Wir bauen darauf auf""
+  - "- "Nachdem du geantwortet hast""
+  - "- "Wir arbeiten uns Punkt für Punkt vor""
+  - "- "Erst das eine, dann das andere""
+  - "- "Ich fasse am Ende zusammen""
+  - "example: "Du schickst nur die Antwort auf Frage 4, ich gebe sofort Rückmeldung, dann geht es zu Frage 5.""
+  - "examples:"
+  - "- "Schritt-für-Schritt ist mir am liebsten.""
+  - "- "Zuerst machen wir die erste Frage, dann weiter zur nächsten.""
+  - "- "Wir gehen der Reihe nach vor.""
+  - "- "Ich gebe dir nach jeder Antwort direkt Feedback.""
+  - "- "Danach schauen wir gemeinsam weiter.""
+  - "- "Der Ablauf ist ganz einfach: Frage, Antwort, Rückmeldung.""
+  - "- "Im ersten Schritt besprechen wir Punkt 1.""
+  - "- "Erstmal du, dann ich.""
+  - "- "Nachdem du geantwortet hast, überlege ich kurz.""
+  - "- "Wir arbeiten uns Punkt für Punkt vor.""
+  - "- "Erst das eine, dann das andere.""
+  - "- "Ich fasse alles am Ende nochmal zusammen.""
+  - "- "Jede Frage einzeln, dann wieder Rückmeldung.""
+  - "- "Wir machen das abwechselnd, okay?""
+  - "- "Wir bauen auf jeder Antwort weiter auf.""
+
+semantische_grabber_id: AUTO_SEM_20250712_DCD3
+
+metadata:
+  created_at: 2025-07-12T05:19:45.151948
+  created_by: FRAUSAR_GUI_v2
+  version: 1.0
+  tags: [neu_erstellt, needs_review]
