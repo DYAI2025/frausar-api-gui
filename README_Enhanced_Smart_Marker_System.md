@@ -35,11 +35,31 @@ Das **Enhanced Smart Marker System** ist eine erweiterte GUI-Anwendung für die 
 - **Fehler-Anzeige**: Detaillierte Fehlermeldungen in Echtzeit
 - **Backup-System**: Automatische Backups vor Änderungen
 
-### 📊 **Erweiterte Statistiken**
-- **Marker-Trends**: Entwicklung über Zeit
-- **Kategorie-Analyse**: Verteilung nach Kategorien
-- **Format-Statistiken**: Häufigkeit der Formate
-- **Fehler-Analyse**: Übersicht über Validierungsfehler
+### 📦 **Batch-Import-Funktionen (NEU!)**
+- **Massenverarbeitung**: Mehrere Dateien gleichzeitig importieren
+- **Fortschrittsanzeige**: Echtzeit-Fortschritt der Verarbeitung
+- **Duplikat-Erkennung**: Automatische Erkennung von Duplikaten
+- **Fehlerbehandlung**: Detaillierte Fehlerberichte
+- **Unterstützte Formate**: `.txt`, `.py`, `.json`, `.yaml`, `.yml`, `.md`
+- **Threading**: Nicht-blockierende Verarbeitung
+
+### 📊 **Erweiterte Statistiken (NEU!)**
+- **Umfassende Analytics**: Detaillierte Statistiken über alle Marker
+- **Wachstums-Charts**: Entwicklung der Marker über Zeit
+- **Kategorie-Verteilung**: Pie-Charts für Kategorien
+- **Level-Analyse**: Verteilung nach Schwierigkeitsgraden
+- **Autor-Statistiken**: Top-Autoren und Aktivität
+- **Export-Funktion**: Berichte als Markdown exportieren
+- **Tab-basierte Ansicht**: Übersicht, Kategorien, Wachstum, Aktivität
+
+### 📋 **Marker-Templates (NEU!)**
+- **Vorlagen-System**: Vorgefertigte Marker-Vorlagen
+- **Default-Templates**: Automatisch erstellte Beispiel-Vorlagen
+- **Template-Editor**: Erstellen und Bearbeiten von Vorlagen
+- **Live-Preview**: Sofortige Vorschau der Template-Anwendung
+- **Custom-Values**: Anpassbare Werte für jede Vorlage
+- **Validierung**: Template-Validierung vor Anwendung
+- **Kategorien**: Vorlagen nach Kategorien organisiert
 
 ## 🚀 Installation & Start
 
@@ -80,6 +100,30 @@ python3 enhanced_smart_marker_gui.py
 2. Sofortige Ergebnisse
 3. Filter für präzisere Suche
 
+### 5. **Batch-Import verwenden (NEU!)**
+1. "📦 Batch-Import" Button klicken
+2. Mehrere Dateien auswählen
+3. "🚀 Import starten" klicken
+4. Fortschritt verfolgen
+5. Ergebnisse anzeigen
+
+### 6. **Erweiterte Statistiken anzeigen (NEU!)**
+1. "📊 Erweiterte Statistiken" Button klicken
+2. Verschiedene Tabs durchsuchen:
+   - **Übersicht**: Hauptstatistiken
+   - **Kategorien**: Verteilung nach Kategorien
+   - **Wachstum**: Entwicklung über Zeit
+   - **Aktivität**: Letzte Aktivitäten
+3. "📄 Export" für Bericht
+
+### 7. **Marker-Templates verwenden (NEU!)**
+1. "📋 Marker-Templates" Button klicken
+2. Vorlage aus der Liste auswählen
+3. Custom-Values anpassen (ID, Beschreibung, etc.)
+4. Preview überprüfen
+5. "✅ Template anwenden" klicken
+6. Neuen Template erstellen oder bestehende löschen
+
 ## 🏗️ Projektstruktur
 
 ```
@@ -92,6 +136,9 @@ claude_curser/
 ├── marker_import_bridge.py            # Import Bridge
 ├── test_integration.py                # Integration Tests
 ├── test_inline_editor.py              # Inline-Editor Tests (NEU!)
+├── test_batch_import.py               # Batch-Import Tests (NEU!)
+├── test_statistics.py                 # Statistiken Tests (NEU!)
+├── test_templates.py                  # Template Tests (NEU!)
 ├── README_Enhanced_Smart_Marker_System.md
 └── _STARTING_/
     └── start_enhanced_smart_marker_gui.command
@@ -109,12 +156,30 @@ python3 test_integration.py
 python3 test_inline_editor.py
 ```
 
+### Batch-Import Tests (NEU!)
+```bash
+python3 test_batch_import.py
+```
+
+### Statistiken Tests (NEU!)
+```bash
+python3 test_statistics.py
+```
+
+### Template Tests (NEU!)
+```bash
+python3 test_templates.py
+```
+
 ## 📊 Performance
 
 - **GUI-Start**: < 2 Sekunden
 - **Import Bridge**: < 500ms pro Marker
 - **Live-Suche**: < 100ms (Fuzzy-Matching)
 - **Inline-Editor**: < 200ms für Validierung
+- **Batch-Import**: < 1s pro Datei (abhängig von Größe)
+- **Statistiken**: < 500ms für vollständige Analyse
+- **Template-Anwendung**: < 100ms pro Template
 
 ## 🔧 Konfiguration
 
