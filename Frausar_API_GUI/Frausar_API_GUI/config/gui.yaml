@@ -1,0 +1,4 @@
+auto_save: true
+log_level: INFO
+theme: default
+window_size: 800x600

@@ -1,0 +1,4 @@
+max_file_size: 104857600
+result_dir: data/results
+temp_dir: data/temp
+upload_dir: data/uploads
