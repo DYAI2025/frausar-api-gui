@@ -338,6 +338,91 @@ class MarkerManager:
             ]
         
         return filtered_markers
+    
+    def smart_parse_text(self, text: str) -> Dict[str, Any]:
+        """Intelligente Text-Parsing mit automatischer Korrektur"""
+        lines = text.strip().split('\n')
+        marker_data = {}
+        
+        # ID wird später gesetzt, wenn gefunden
+        marker_id_found = False
+        
+        current_key = None
+        examples = []
+        
+        for line in lines:
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue
+            
+            # Zuerst nach Marker-ID suchen (erste Zeile in Großbuchstaben)
+            if not marker_id_found and line.upper() == line and len(line) > 3 and not ':' in line:
+                marker_data['id'] = line
+                marker_id_found = True
+                continue
+            
+            # Verschiedene Formate erkennen und korrigieren
+            if ':' in line:
+                key, value = line.split(':', 1)
+                key = key.strip().lower()
+                value = value.strip().strip('"\'')
+                
+                # Schlüssel-Mapping
+                key_mapping = {
+                    'level': 'level',
+                    'beschreibung': 'description',
+                    'description': 'description',
+                    'kategorie': 'category',
+                    'category': 'category',
+                    'beispiele': 'examples',
+                    'examples': 'examples'
+                }
+                
+                if key in key_mapping:
+                    current_key = key_mapping[key]
+                    if current_key == 'examples':
+                        examples.append(value)
+                    else:
+                        marker_data[current_key] = value
+                elif key.upper() == key and not marker_id_found:  # ID in Großbuchstaben
+                    marker_data['id'] = value
+                    marker_id_found = True
+                else:
+                    marker_data[key] = value
+            
+            elif current_key == 'examples' and line.startswith('-'):
+                examples.append(line[1:].strip())
+            
+            elif 'level' in line.lower():
+                # Level aus verschiedenen Formaten extrahieren
+                level_match = re.search(r'level\s*:?\s*(\d+)', line.lower())
+                if level_match:
+                    marker_data['level'] = int(level_match.group(1))
+            
+            elif 'beschreibung' in line.lower() or 'description' in line.lower():
+                # Beschreibung extrahieren
+                desc_match = re.search(r'(?:beschreibung|description)\s*:?\s*(.+)', line.lower())
+                if desc_match:
+                    marker_data['description'] = desc_match.group(1).strip()
+        
+        # Automatische ID-Generierung falls keine gefunden
+        if 'id' not in marker_data:
+            marker_data['id'] = f"marker_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        
+        # Standardwerte setzen
+        if 'level' not in marker_data:
+            marker_data['level'] = 1
+        
+        if 'description' not in marker_data:
+            marker_data['description'] = f"Marker {marker_data['id']}"
+        
+        if 'category' not in marker_data:
+            marker_data['category'] = 'general'
+        
+        if examples:
+            marker_data['examples'] = examples
+        
+        return marker_data
 
 
 # Test-Funktion
