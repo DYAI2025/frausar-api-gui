@@ -347,6 +347,15 @@ class MarkerManager:
         # ID wird später gesetzt, wenn gefunden
         marker_id_found = False
         
+        # Versuche zuerst, eine explizite ID zu finden
+        for line in lines:
+            if ':' in line:
+                key, value = line.split(':', 1)
+                if key.strip().lower() == 'id':
+                    marker_data['id'] = value.strip().strip('"\'')
+                    marker_id_found = True
+                    break
+        
         current_key = None
         examples = []
         
@@ -355,7 +364,7 @@ class MarkerManager:
             if not line or line.startswith('#'):
                 continue
             
-            # Zuerst nach Marker-ID suchen (erste Zeile in Großbuchstaben)
+            # Zuerst nach Marker-ID suchen (erste Zeile in Großbuchstaben), falls noch nicht gefunden
             if not marker_id_found and line.upper() == line and len(line) > 3 and not ':' in line:
                 marker_data['id'] = line
                 marker_id_found = True
@@ -384,6 +393,9 @@ class MarkerManager:
                         examples.append(value)
                     else:
                         marker_data[current_key] = value
+                elif key == 'id':
+                    # ID wurde bereits behandelt
+                    pass
                 elif key.upper() == key and not marker_id_found:  # ID in Großbuchstaben
                     marker_data['id'] = value
                     marker_id_found = True
