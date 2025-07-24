@@ -19,6 +19,7 @@ import re
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any, Optional
+import json
 
 # Eigene Module importieren
 from marker_manager import MarkerManager
@@ -34,6 +35,378 @@ try:
     IMPORT_BRIDGE_AVAILABLE = True
 except ImportError:
     IMPORT_BRIDGE_AVAILABLE = False
+
+
+class InlineEditor:
+    """Inline-Editor für Marker-Bearbeitung."""
+    
+    def __init__(self, parent, marker_data, original_file=None):
+        """Initialisiert den Inline-Editor."""
+        self.parent = parent
+        self.marker_data = marker_data.copy()
+        self.original_file = original_file
+        self.backup_data = marker_data.copy()
+        
+        # Editor-Fenster
+        self.editor_window = tk.Toplevel(parent)
+        self.editor_window.title(f"✏️ Marker bearbeiten: {marker_data.get('id', 'Unbekannt')}")
+        self.editor_window.geometry("800x600")
+        self.editor_window.resizable(True, True)
+        
+        # Zentriere das Fenster
+        self.editor_window.transient(parent)
+        self.editor_window.grab_set()
+        
+        # Variablen
+        self.validation_errors = []
+        self.is_modified = False
+        
+        # GUI-Setup
+        self.setup_ui()
+        self.load_marker_data()
+        
+        # Event-Bindings
+        self.editor_window.protocol("WM_DELETE_WINDOW", self.on_close)
+        
+    def setup_ui(self):
+        """Erstellt die Editor-Benutzeroberfläche."""
+        # Haupt-Container
+        main_frame = ttk.Frame(self.editor_window, padding="10")
+        main_frame.pack(fill=tk.BOTH, expand=True)
+        
+        # Titel
+        title = ttk.Label(main_frame, text="✏️ Marker Inline-Editor", 
+                         font=("Arial", 16, "bold"))
+        title.pack(pady=(0, 10))
+        
+        # Editor-Bereich
+        editor_frame = ttk.LabelFrame(main_frame, text="📝 YAML-Editor", padding="10")
+        editor_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
+        
+        # YAML-Textfeld
+        self.yaml_text = scrolledtext.ScrolledText(
+            editor_frame, 
+            wrap=tk.NONE,
+            font=("Consolas", 12),
+            background="#f8f9fa",
+            foreground="#212529",
+            insertbackground="#212529"
+        )
+        self.yaml_text.pack(fill=tk.BOTH, expand=True)
+        
+        # Syntax-Highlighting
+        self.setup_syntax_highlighting()
+        
+        # Validierung und Status
+        status_frame = ttk.Frame(main_frame)
+        status_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        # Validierungs-Status
+        self.validation_label = ttk.Label(status_frame, text="✅ Validierung OK", 
+                                         foreground="green")
+        self.validation_label.pack(side=tk.LEFT)
+        
+        # Änderungs-Status
+        self.modified_label = ttk.Label(status_frame, text="", 
+                                      foreground="blue")
+        self.modified_label.pack(side=tk.RIGHT)
+        
+        # Fehler-Anzeige
+        self.error_frame = ttk.LabelFrame(main_frame, text="⚠️ Validierungsfehler", padding="5")
+        self.error_text = scrolledtext.ScrolledText(self.error_frame, height=4, 
+                                                  font=("Consolas", 10),
+                                                  background="#fff3cd",
+                                                  foreground="#856404")
+        self.error_text.pack(fill=tk.BOTH, expand=True)
+        
+        # Button-Bereich
+        button_frame = ttk.Frame(main_frame)
+        button_frame.pack(fill=tk.X, pady=(10, 0))
+        
+        # Speichern-Button
+        self.save_button = ttk.Button(button_frame, text="💾 Speichern", 
+                                     command=self.save_marker, style="Accent.TButton")
+        self.save_button.pack(side=tk.RIGHT, padx=(5, 0))
+        
+        # Abbrechen-Button
+        ttk.Button(button_frame, text="❌ Abbrechen", 
+                  command=self.cancel_edit).pack(side=tk.RIGHT, padx=(5, 0))
+        
+        # Zurücksetzen-Button
+        ttk.Button(button_frame, text="🔄 Zurücksetzen", 
+                  command=self.reset_changes).pack(side=tk.RIGHT, padx=(5, 0))
+        
+        # Vorschau-Button
+        ttk.Button(button_frame, text="👁️ Vorschau", 
+                  command=self.show_preview).pack(side=tk.LEFT)
+        
+        # Event-Bindings für Live-Validierung
+        self.yaml_text.bind('<KeyRelease>', self.on_text_change)
+        self.yaml_text.bind('<Control-s>', lambda e: self.save_marker())
+        self.yaml_text.bind('<Control-z>', lambda e: self.reset_changes())
+        
+    def setup_syntax_highlighting(self):
+        """Richtet Syntax-Highlighting für YAML ein."""
+        # YAML-Schlüsselwörter
+        yaml_keywords = [
+            'id', 'level', 'description', 'version', 'status', 'author',
+            'created', 'updated', 'tags', 'category', 'priority', 'examples'
+        ]
+        
+        # Tag-Konfiguration
+        for keyword in yaml_keywords:
+            self.yaml_text.tag_configure(f"keyword_{keyword}", 
+                                       foreground="#007bff", 
+                                       font=("Consolas", 12, "bold"))
+        
+        # Allgemeine Tags
+        self.yaml_text.tag_configure("comment", foreground="#6c757d", 
+                                   font=("Consolas", 12, "italic"))
+        self.yaml_text.tag_configure("string", foreground="#28a745")
+        self.yaml_text.tag_configure("number", foreground="#fd7e14")
+        
+    def load_marker_data(self):
+        """Lädt die Marker-Daten in den Editor."""
+        try:
+            # Konvertiere zu YAML
+            yaml_str = yaml.dump(self.marker_data, default_flow_style=False, 
+                               allow_unicode=True, sort_keys=False)
+            
+            # Füge Kommentar hinzu
+            header = f"# Marker: {self.marker_data.get('id', 'Unbekannt')}\n"
+            header += f"# Bearbeitet: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+            header += "# Änderungen werden automatisch validiert\n\n"
+            
+            self.yaml_text.delete("1.0", tk.END)
+            self.yaml_text.insert("1.0", header + yaml_str)
+            
+            # Validiere initial
+            self.validate_yaml()
+            
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Fehler beim Laden der Marker-Daten: {str(e)}")
+    
+    def on_text_change(self, event=None):
+        """Wird bei Text-Änderungen aufgerufen."""
+        self.is_modified = True
+        self.modified_label.config(text="📝 Geändert")
+        self.validate_yaml()
+        
+        # Verzögerte Validierung (debouncing)
+        if hasattr(self, '_validation_timer'):
+            self.editor_window.after_cancel(self._validation_timer)
+        self._validation_timer = self.editor_window.after(500, self.validate_yaml)
+    
+    def validate_yaml(self):
+        """Validiert das YAML und zeigt Fehler an."""
+        try:
+            yaml_content = self.yaml_text.get("1.0", tk.END)
+            
+            # Entferne Kommentare für Validierung
+            lines = yaml_content.split('\n')
+            clean_lines = []
+            for line in lines:
+                if not line.strip().startswith('#'):
+                    clean_lines.append(line)
+            
+            clean_yaml = '\n'.join(clean_lines)
+            
+            # Parse YAML
+            parsed_data = yaml.safe_load(clean_yaml)
+            
+            if parsed_data is None:
+                self.validation_errors = ["Leeres YAML-Dokument"]
+            else:
+                # Validiere mit Import Bridge falls verfügbar
+                if IMPORT_BRIDGE_AVAILABLE:
+                    from marker_import_bridge import MarkerValidator
+                    validator = MarkerValidator()
+                    _, errors = validator.validate(clean_yaml)
+                    self.validation_errors = errors if errors else []
+                else:
+                    # Einfache Validierung
+                    self.validation_errors = []
+                    if not parsed_data.get('id'):
+                        self.validation_errors.append("ID ist erforderlich")
+                    if not parsed_data.get('description'):
+                        self.validation_errors.append("Beschreibung ist erforderlich")
+            
+            # Update UI
+            self.update_validation_display()
+            
+        except yaml.YAMLError as e:
+            self.validation_errors = [f"YAML-Syntax-Fehler: {str(e)}"]
+            self.update_validation_display()
+        except Exception as e:
+            self.validation_errors = [f"Validierungsfehler: {str(e)}"]
+            self.update_validation_display()
+    
+    def update_validation_display(self):
+        """Aktualisiert die Validierungs-Anzeige."""
+        if not self.validation_errors:
+            self.validation_label.config(text="✅ Validierung OK", foreground="green")
+            self.error_frame.pack_forget()
+            self.save_button.config(state="normal")
+        else:
+            self.validation_label.config(text=f"❌ {len(self.validation_errors)} Fehler", 
+                                       foreground="red")
+            self.error_frame.pack(fill=tk.X, pady=(0, 10))
+            
+            # Zeige Fehler an
+            self.error_text.delete("1.0", tk.END)
+            for i, error in enumerate(self.validation_errors, 1):
+                self.error_text.insert(tk.END, f"{i}. {error}\n")
+            
+            self.save_button.config(state="disabled")
+    
+    def save_marker(self):
+        """Speichert den bearbeiteten Marker."""
+        if self.validation_errors:
+            messagebox.showerror("Validierungsfehler", 
+                               "Bitte beheben Sie alle Validierungsfehler vor dem Speichern!")
+            return
+        
+        try:
+            # Parse YAML
+            yaml_content = self.yaml_text.get("1.0", tk.END)
+            lines = yaml_content.split('\n')
+            clean_lines = []
+            for line in lines:
+                if not line.strip().startswith('#'):
+                    clean_lines.append(line)
+            
+            clean_yaml = '\n'.join(clean_lines)
+            new_data = yaml.safe_load(clean_yaml)
+            
+            if not new_data:
+                messagebox.showerror("Fehler", "Leere Marker-Daten!")
+                return
+            
+            # Erstelle Backup
+            self.create_backup()
+            
+            # Speichere neue Daten
+            if self.original_file:
+                # Überschreibe Original-Datei
+                with open(self.original_file, 'w', encoding='utf-8') as f:
+                    yaml.dump(new_data, f, default_flow_style=False, 
+                             allow_unicode=True, sort_keys=False)
+                
+                self.update_status(f"✅ Marker gespeichert: {new_data.get('id', 'Unbekannt')}")
+            else:
+                # Erstelle neue Datei
+                marker_id = new_data.get('id', 'UNKNOWN')
+                filename = f"{marker_id}.yaml"
+                filepath = Path.cwd() / "markers" / filename
+                
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    yaml.dump(new_data, f, default_flow_style=False, 
+                             allow_unicode=True, sort_keys=False)
+                
+                self.update_status(f"✅ Neuer Marker erstellt: {filename}")
+            
+            # Update Parent
+            if hasattr(self.parent, 'load_existing_markers'):
+                self.parent.load_existing_markers()
+            
+            self.is_modified = False
+            self.modified_label.config(text="✅ Gespeichert")
+            
+            messagebox.showinfo("Erfolg", "Marker erfolgreich gespeichert!")
+            self.editor_window.destroy()
+            
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Fehler beim Speichern: {str(e)}")
+    
+    def create_backup(self):
+        """Erstellt ein Backup der ursprünglichen Daten."""
+        try:
+            backup_dir = Path.cwd() / "backups"
+            backup_dir.mkdir(exist_ok=True)
+            
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            marker_id = self.marker_data.get('id', 'unknown')
+            backup_file = backup_dir / f"{marker_id}_{timestamp}.yaml"
+            
+            with open(backup_file, 'w', encoding='utf-8') as f:
+                yaml.dump(self.backup_data, f, default_flow_style=False, 
+                         allow_unicode=True, sort_keys=False)
+            
+        except Exception as e:
+            print(f"Backup-Fehler: {e}")
+    
+    def reset_changes(self):
+        """Setzt alle Änderungen zurück."""
+        if self.is_modified:
+            result = messagebox.askyesno("Bestätigung", 
+                                       "Möchten Sie alle Änderungen verwerfen?")
+            if result:
+                self.load_marker_data()
+                self.is_modified = False
+                self.modified_label.config(text="")
+    
+    def show_preview(self):
+        """Zeigt eine Vorschau des Markers an."""
+        try:
+            yaml_content = self.yaml_text.get("1.0", tk.END)
+            lines = yaml_content.split('\n')
+            clean_lines = []
+            for line in lines:
+                if not line.strip().startswith('#'):
+                    clean_lines.append(line)
+            
+            clean_yaml = '\n'.join(clean_lines)
+            preview_data = yaml.safe_load(clean_yaml)
+            
+            if preview_data:
+                preview_window = tk.Toplevel(self.editor_window)
+                preview_window.title("👁️ Marker-Vorschau")
+                preview_window.geometry("600x400")
+                
+                preview_text = scrolledtext.ScrolledText(preview_window, 
+                                                       font=("Consolas", 12))
+                preview_text.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+                
+                # Formatiere Vorschau
+                preview_str = f"ID: {preview_data.get('id', 'N/A')}\n"
+                preview_str += f"Level: {preview_data.get('level', 'N/A')}\n"
+                preview_str += f"Beschreibung: {preview_data.get('description', 'N/A')}\n"
+                preview_str += f"Version: {preview_data.get('version', 'N/A')}\n"
+                preview_str += f"Status: {preview_data.get('status', 'N/A')}\n"
+                preview_str += f"Autor: {preview_data.get('author', 'N/A')}\n\n"
+                
+                if 'examples' in preview_data:
+                    preview_str += "Beispiele:\n"
+                    for i, example in enumerate(preview_data['examples'], 1):
+                        preview_str += f"{i}. {example}\n"
+                
+                preview_text.insert("1.0", preview_str)
+                preview_text.config(state="disabled")
+            else:
+                messagebox.showwarning("Warnung", "Keine gültigen Daten für Vorschau!")
+                
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Fehler bei Vorschau: {str(e)}")
+    
+    def cancel_edit(self):
+        """Bricht die Bearbeitung ab."""
+        if self.is_modified:
+            result = messagebox.askyesno("Bestätigung", 
+                                       "Möchten Sie die Bearbeitung wirklich abbrechen?\n"
+                                       "Alle Änderungen gehen verloren!")
+            if not result:
+                return
+        
+        self.editor_window.destroy()
+    
+    def on_close(self):
+        """Wird beim Schließen des Fensters aufgerufen."""
+        self.cancel_edit()
+    
+    def update_status(self, message):
+        """Aktualisiert die Status-Anzeige im Parent-Fenster."""
+        if hasattr(self.parent, 'update_status'):
+            self.parent.update_status(message)
 
 
 class EnhancedSmartMarkerGUI:
@@ -567,8 +940,8 @@ Technischer Fehler: {str(e)}"""
             messagebox.showinfo("Info", "Bitte wählen Sie einen Marker aus!")
             return
         
-        # TODO: Inline-Editor implementieren
-        messagebox.showinfo("Info", "Inline-Editor wird in Phase 1.2 implementiert!")
+        # Erstelle InlineEditor-Instanz
+        InlineEditor(self.root, self.selected_marker, self.selected_marker.get('source_file'))
     
     def delete_marker(self):
         """Löscht den ausgewählten Marker."""
