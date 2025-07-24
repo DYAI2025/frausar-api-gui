@@ -24,6 +24,17 @@ from typing import List, Dict, Any, Optional
 from marker_manager import MarkerManager
 from search_engine import SearchEngine
 
+# Import Bridge Integration
+import sys
+import subprocess
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
+try:
+    from marker_import_bridge import YAMLBlockSplitter, MarkerValidator, MarkerWriter, HistoryLogger
+    IMPORT_BRIDGE_AVAILABLE = True
+except ImportError:
+    IMPORT_BRIDGE_AVAILABLE = False
+
 
 class EnhancedSmartMarkerGUI:
     """Erweiterte Smart Marker GUI mit allen Features."""
@@ -38,9 +49,25 @@ class EnhancedSmartMarkerGUI:
         self.marker_dir = Path.cwd() / "markers"
         self.marker_dir.mkdir(exist_ok=True)
         
+        # Import Bridge Verzeichnisse
+        self.json_dir = Path.cwd() / "markers_json"
+        self.json_dir.mkdir(exist_ok=True)
+        
         # Manager und Engine
         self.marker_manager = MarkerManager()
         self.search_engine = SearchEngine()
+        
+        # Import Bridge Komponenten
+        if IMPORT_BRIDGE_AVAILABLE:
+            self.yaml_splitter = YAMLBlockSplitter()
+            self.marker_validator = MarkerValidator()
+            self.marker_writer = MarkerWriter(self.marker_dir, self.json_dir)
+            self.history_logger = HistoryLogger(Path("import_history.json"))
+        else:
+            self.yaml_splitter = None
+            self.marker_validator = None
+            self.marker_writer = None
+            self.history_logger = None
         
         # Marker-Daten
         self.all_markers = []
@@ -217,7 +244,17 @@ Beispiele:
         ttk.Button(buttons_frame, text="🚀 Alle Marker erstellen", 
                   command=self.create_markers, style="Accent.TButton").pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
         ttk.Button(buttons_frame, text="🗑️ Text löschen", 
-                  command=self.clear_text).pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(5, 0))
+                  command=self.clear_text).pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(5, 5))
+        
+        # Import Bridge Buttons
+        if IMPORT_BRIDGE_AVAILABLE:
+            ttk.Button(buttons_frame, text="🔗 Import Bridge", 
+                      command=self.use_import_bridge).pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
+            ttk.Button(buttons_frame, text="📁 Datei importieren", 
+                      command=self.import_from_file).pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 0))
+        else:
+            ttk.Button(buttons_frame, text="⚠️ Import Bridge nicht verfügbar", 
+                      state="disabled").pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
         
         # Demo-Button
         ttk.Button(middle_frame, text="🎯 Demo-Marker laden", 
@@ -567,6 +604,122 @@ Technischer Fehler: {str(e)}"""
     def clear_text(self):
         """Löscht den Eingabe-Text."""
         self.text_widget.delete("1.0", tk.END)
+    
+    def use_import_bridge(self):
+        """Verwendet die Import Bridge für die Marker-Erstellung."""
+        if not IMPORT_BRIDGE_AVAILABLE:
+            messagebox.showerror("Fehler", "Import Bridge ist nicht verfügbar!")
+            return
+        
+        text = self.text_widget.get("1.0", tk.END).strip()
+        if not text:
+            messagebox.showwarning("Warnung", "Kein Text zum Importieren vorhanden!")
+            return
+        
+        try:
+            # Verwende Import Bridge
+            blocks = self.yaml_splitter.split(text)
+            imported_count = 0
+            failed_count = 0
+            
+            for block in blocks:
+                if not block.strip():
+                    continue
+                
+                # Validiere Marker
+                data, errors = self.marker_validator.validate(block)
+                
+                if errors:
+                    # Versuche Reparatur
+                    from marker_repair_engine import MarkerRepairEngine
+                    repairer = MarkerRepairEngine({})
+                    data, _ = repairer.repair(data)
+                    
+                    # Validiere erneut
+                    from io import StringIO
+                    yaml = YAML()
+                    stream = StringIO()
+                    yaml.dump(data, stream)
+                    yaml_str = stream.getvalue()
+                    data, errors = self.marker_validator.validate(yaml_str)
+                    
+                    if errors:
+                        failed_count += 1
+                        self.history_logger.append({
+                            "status": "failed", 
+                            "errors": errors, 
+                            "snippet": block
+                        })
+                        continue
+                    else:
+                        status = "fixed"
+                else:
+                    status = "imported"
+                
+                # Schreibe Marker
+                yaml_path, json_path = self.marker_writer.write(data)
+                self.history_logger.append({
+                    "status": status, 
+                    "id": data["id"],
+                    "paths": {
+                        "yaml": str(yaml_path),
+                        "json": str(json_path)
+                    }
+                })
+                imported_count += 1
+            
+            # Aktualisiere GUI
+            self.load_existing_markers()
+            
+            # Zeige Ergebnis
+            if failed_count == 0:
+                messagebox.showinfo("Erfolg", f"✅ {imported_count} Marker erfolgreich importiert!")
+            else:
+                messagebox.showwarning("Teilweise erfolgreich", 
+                                     f"✅ {imported_count} Marker importiert\n❌ {failed_count} Marker fehlgeschlagen")
+            
+            self.update_status(f"Import Bridge: {imported_count} importiert, {failed_count} fehlgeschlagen")
+            
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Import Bridge Fehler: {str(e)}")
+            self.update_status(f"❌ Import Bridge Fehler: {str(e)}")
+    
+    def import_from_file(self):
+        """Importiert Marker aus einer Datei."""
+        if not IMPORT_BRIDGE_AVAILABLE:
+            messagebox.showerror("Fehler", "Import Bridge ist nicht verfügbar!")
+            return
+        
+        file_path = filedialog.askopenfilename(
+            title="Marker-Datei auswählen",
+            filetypes=[
+                ("Alle Dateien", "*.*"),
+                ("Text-Dateien", "*.txt"),
+                ("YAML-Dateien", "*.yaml;*.yml"),
+                ("JSON-Dateien", "*.json")
+            ]
+        )
+        
+        if not file_path:
+            return
+        
+        try:
+            # Lade Datei
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # Zeige Inhalt im Text-Widget
+            self.text_widget.delete("1.0", tk.END)
+            self.text_widget.insert("1.0", content)
+            
+            # Verwende Import Bridge
+            self.use_import_bridge()
+            
+            self.update_status(f"📁 Datei importiert: {Path(file_path).name}")
+            
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Fehler beim Laden der Datei: {str(e)}")
+            self.update_status(f"❌ Datei-Lade-Fehler: {str(e)}")
     
     def load_demo(self):
         """Lädt Demo-Marker."""

@@ -122,7 +122,13 @@ def process_blocks(blocks: List[str], cfg: Dict[str, Any]) -> int:
         status = "imported"
         if errors:
             data, _ = repairer.repair(data)
-            data, errors = validator.validate(YAML().dump(data))
+            # Konvertiere data zurück zu YAML-String für Validierung
+            yaml = YAML()
+            from io import StringIO
+            stream = StringIO()
+            yaml.dump(data, stream)
+            yaml_str = stream.getvalue()
+            data, errors = validator.validate(yaml_str)
             status = "fixed"
         if errors:
             logger.append({"status": "failed", "errors": errors, "snippet": block})
