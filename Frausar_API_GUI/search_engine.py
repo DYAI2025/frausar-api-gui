@@ -285,6 +285,11 @@ class SearchEngine:
             else:
                 stats['valid_markers'] += 1
         
+        # Füge zusammengefasste Statistiken hinzu
+        stats['unique_categories'] = len(stats['categories'])
+        stats['unique_formats'] = len(stats['formats'])
+        stats['unique_levels'] = len(stats['levels'])
+        
         return stats
     
     def get_search_suggestions(self, query: str, markers: List[Dict[str, Any]]) -> List[str]:
