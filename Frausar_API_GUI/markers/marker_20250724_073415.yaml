@@ -1,0 +1,18 @@
+id: marker_20250724_073415
+'- id': AI_BOT_SCAM_MARKER
+level: '1'
+version: 0.1.0
+author: assistant
+created_at: '2025-07-22'
+status: draft
+lang: de
+name: AI_BOT_SCAM_MARKER
+description: '|'
+category: general
+examples:
+- ''
+- '"Guaranteed 20 % daily profit - click here!"'
+- '"Our AI trades for you while you sleep."'
+- '"Limited slots, verify wallet now."'
+- '"Instant payout, zero risk."'
+- '"Join VIP bot channel to earn big."'
