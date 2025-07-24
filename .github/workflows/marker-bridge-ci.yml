@@ -1,0 +1,33 @@
+name: marker-bridge-ci
+on:
+  push:
+    paths:
+      - '**.py'
+      - '.github/workflows/marker-bridge-ci.yml'
+      - 'tests/**'
+      - 'requirements.txt'
+  pull_request:
+    paths:
+      - '**.py'
+      - '.github/workflows/marker-bridge-ci.yml'
+      - 'tests/**'
+      - 'requirements.txt'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -r requirements.txt
+      - run: pytest --cov
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: import-history
+          path: import_history.json
