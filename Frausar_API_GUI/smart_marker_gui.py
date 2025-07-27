@@ -10,6 +10,7 @@ Benutzerfreundliche GUI mit automatischer Fehlerbehebung
 - Mehrere Marker auf einmal
 - Marker-Übersicht
 - Beispiele hinzufügen
+- Marker bearbeiten und speichern
 """
 
 import tkinter as tk
@@ -19,15 +20,16 @@ import os
 import re
 from pathlib import Path
 from datetime import datetime
+import uuid
 
 class SmartMarkerGUI:
     def __init__(self):
         self.root = tk.Tk()
         self.root.title("🎯 Smart Marker-Erstellung - Einfach & Benutzerfreundlich")
-        self.root.geometry("1200x800")
+        self.root.geometry("1400x900")
         
         # Responsive Design: Minimum-Größe setzen
-        self.root.minsize(800, 600)
+        self.root.minsize(1000, 700)
         
         # Marker-Verzeichnis
         self.marker_dir = Path.cwd() / "markers"
@@ -35,6 +37,7 @@ class SmartMarkerGUI:
         
         # Ausgewählter Marker für Beispiele
         self.selected_marker = None
+        self.editing_marker = None
         
         # Status-Tracking
         self.status_var = tk.StringVar(value="✅ System bereit")
@@ -100,66 +103,31 @@ class SmartMarkerGUI:
         input_frame = ttk.LabelFrame(parent, text="✏️ Marker-Text eingeben (beliebiges Format)", padding="10")
         input_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 15))
         
-        # Hilfetext
-        help_text = ttk.Label(input_frame, 
-                            text="💡 Tipp: Mehrere Marker mit '---' oder '###' trennen",
-                            font=("Arial", 10, "italic"))
-        help_text.pack(pady=(0, 10))
+        # Text-Widget mit Scrollbar
+        text_frame = ttk.Frame(input_frame)
+        text_frame.pack(fill=tk.BOTH, expand=True)
         
-        # Textfeld
-        self.text_widget = scrolledtext.ScrolledText(input_frame, height=20, 
-                                                   wrap=tk.WORD, font=("Consolas", 12))
-        self.text_widget.pack(fill=tk.BOTH, expand=True)
+        self.text_widget = scrolledtext.ScrolledText(text_frame, height=15, wrap=tk.WORD,
+                                                   font=("Consolas", 10))
+        self.text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         
-        # Beispiel-Text einfügen
-        example_text = """Beispiel für mehrere Marker:
-
-ABBRUCHMARKER
-Level: 1
-Beschreibung: Marker für Abbruch-Erkennung
-Kategorie: system
-
----
-
-FEHLER_MARKER
-Level: 2
-Beschreibung: Marker für Fehler-Erkennung
-Kategorie: error
-
----
-
-TEST_MARKER
-Level 1
-Test-Marker"""
+        # Button-Frame
+        button_frame = ttk.Frame(input_frame)
+        button_frame.pack(fill=tk.X, pady=(10, 0))
         
-        self.text_widget.insert("1.0", example_text)
+        # Buttons
+        ttk.Button(button_frame, text="🗑️ Löschen", command=self.clear_text).pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Button(button_frame, text="📋 Demo laden", command=self.load_demo).pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Button(button_frame, text="🎯 Marker erstellen", command=self.create_markers,
+                  style="Accent.TButton").pack(side=tk.RIGHT)
         
-        # Button-Bereich
-        button_frame = ttk.Frame(parent)
-        button_frame.pack(fill=tk.X, pady=(15, 0))
+        # Status-Bar
+        status_frame = ttk.Frame(parent)
+        status_frame.pack(fill=tk.X, pady=(10, 0))
         
-        create_button = ttk.Button(button_frame, text="🚀 Alle Marker erstellen", 
-                                 command=self.create_markers, style="Accent.TButton")
-        create_button.pack(side=tk.LEFT, padx=(0, 10))
-        
-        clear_button = ttk.Button(button_frame, text="🗑️ Leeren", command=self.clear_text)
-        clear_button.pack(side=tk.LEFT, padx=(0, 10))
-        
-        demo_button = ttk.Button(button_frame, text="📋 Demo laden", command=self.load_demo)
-        demo_button.pack(side=tk.LEFT)
-        
-        # Status-Bereich
-        status_frame = ttk.LabelFrame(parent, text="📊 Status", padding="8")
-        status_frame.pack(fill=tk.X, pady=(15, 0))
-        
-        self.status_label = ttk.Label(status_frame, text="✅ Bereit - Geben Sie Text ein")
-        self.status_label.pack(anchor=tk.W)
-        
-        # Fehler-Bereich (versteckt)
-        self.error_frame = ttk.LabelFrame(parent, text="⚠️ Hinweise", padding="8")
-        self.error_text = scrolledtext.ScrolledText(self.error_frame, height=4, 
-                                                  wrap=tk.WORD, font=("Arial", 10))
-        self.error_text.pack(fill=tk.BOTH, expand=True)
+        self.status_label = ttk.Label(status_frame, textvariable=self.status_var,
+                                     font=("Arial", 10))
+        self.status_label.pack(side=tk.LEFT)
     
     def setup_overview_section(self, parent):
         # Titel
@@ -167,84 +135,103 @@ Test-Marker"""
                          font=("Arial", 14, "bold"))
         title.pack(pady=(0, 10))
         
-        # Button-Bereich
+        # Button-Frame
         button_frame = ttk.Frame(parent)
         button_frame.pack(fill=tk.X, pady=(0, 10))
         
-        refresh_button = ttk.Button(button_frame, text="🔄 Aktualisieren", command=self.refresh_marker_list)
-        refresh_button.pack(side=tk.LEFT, padx=(0, 5))
-        
-        examples_button = ttk.Button(button_frame, text="📝 Beispiele hinzufügen", command=self.add_examples)
-        examples_button.pack(side=tk.LEFT)
+        ttk.Button(button_frame, text="🔄 Aktualisieren", command=self.refresh_marker_list).pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Button(button_frame, text="📝 Beispiele", command=self.add_examples).pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Button(button_frame, text="✏️ Bearbeiten", command=self.edit_marker).pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Button(button_frame, text="💾 Speichern", command=self.save_edited_marker).pack(side=tk.LEFT)
         
         # Marker-Liste
-        list_frame = ttk.LabelFrame(parent, text="📁 Verfügbare Marker", padding="8")
-        list_frame.pack(fill=tk.BOTH, expand=True)
+        list_frame = ttk.LabelFrame(parent, text="📁 Verfügbare Marker", padding="5")
+        list_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
         
         # Treeview für Marker
         columns = ("ID", "Level", "Kategorie", "Beschreibung")
-        self.marker_tree = ttk.Treeview(list_frame, columns=columns, show="headings", height=15)
+        self.marker_tree = ttk.Treeview(list_frame, columns=columns, show="headings", height=8)
         
         # Spalten konfigurieren
         for col in columns:
             self.marker_tree.heading(col, text=col)
             self.marker_tree.column(col, width=100)
         
-        # Scrollbar
-        scrollbar = ttk.Scrollbar(list_frame, orient=tk.VERTICAL, command=self.marker_tree.yview)
-        self.marker_tree.configure(yscrollcommand=scrollbar.set)
+        # Scrollbar für Treeview
+        tree_scroll = ttk.Scrollbar(list_frame, orient=tk.VERTICAL, command=self.marker_tree.yview)
+        self.marker_tree.configure(yscrollcommand=tree_scroll.set)
         
         self.marker_tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        tree_scroll.pack(side=tk.RIGHT, fill=tk.Y)
         
-        # Doppelklick-Event
-        self.marker_tree.bind("<Double-1>", self.on_marker_select)
+        # Marker-Auswahl Event
+        self.marker_tree.bind("<<TreeviewSelect>>", self.on_marker_select)
         
-        # Marker-Details
-        details_frame = ttk.LabelFrame(parent, text="📄 Marker-Details", padding="8")
-        details_frame.pack(fill=tk.BOTH, expand=True, pady=(10, 0))
+        # Details-Bereich
+        details_frame = ttk.LabelFrame(parent, text="📄 Marker-Details", padding="5")
+        details_frame.pack(fill=tk.BOTH, expand=True)
         
-        self.details_text = scrolledtext.ScrolledText(details_frame, height=8, 
-                                                    wrap=tk.WORD, font=("Consolas", 10))
+        self.details_text = scrolledtext.ScrolledText(details_frame, height=10, wrap=tk.WORD,
+                                                    font=("Consolas", 9))
         self.details_text.pack(fill=tk.BOTH, expand=True)
     
     def change_directory(self):
-        directory = filedialog.askdirectory(title="Marker-Verzeichnis wählen")
-        if directory:
-            self.marker_dir = Path(directory)
-            self.dir_label.config(text=f"{self.marker_dir}")
-            self.update_status("Verzeichnis geändert")
+        """Ändert das Marker-Verzeichnis"""
+        new_dir = filedialog.askdirectory(title="Marker-Verzeichnis wählen",
+                                        initialdir=str(self.marker_dir))
+        if new_dir:
+            self.marker_dir = Path(new_dir)
+            self.marker_dir.mkdir(exist_ok=True)
+            self.dir_label.config(text=str(self.marker_dir))
             self.refresh_marker_list()
+            self.update_status(f"Verzeichnis geändert: {self.marker_dir}")
     
     def clear_text(self):
+        """Löscht den Eingabe-Text"""
         self.text_widget.delete("1.0", tk.END)
-        self.hide_errors()
-        self.update_status("Textfeld geleert")
+        self.update_status("Text gelöscht")
     
     def load_demo(self):
-        demo_text = """ABBRUCHMARKER
-Level: 1
-Beschreibung: Marker für Abbruch-Erkennung
-Kategorie: system
+        """Lädt Demo-Marker"""
+        demo_text = """SEXUAL_TENSION
+Level: 3
+Kategorie: romance
+Beschreibung: Marker für sexuelle Spannung zwischen Charakteren
+Beispiele:
+- "Ihre Augen trafen sich über den Tisch hinweg"
+- "Die Spannung war greifbar zwischen ihnen"
+- "Ein elektrischer Moment der Anziehung"
 
----
-
-FEHLER_MARKER
+FLIRTING
 Level: 2
-Beschreibung: Marker für Fehler-Erkennung
-Kategorie: error"""
-        
+Kategorie: romance
+Beschreibung: Spielerisches Flirten und Annäherung
+Beispiele:
+- "Er warf ihr einen verführerischen Blick zu"
+- "Sie neckte ihn mit einem süßen Lächeln"
+- "Die Chemie zwischen ihnen war unübersehbar"
+
+CONFLICT
+Level: 4
+Kategorie: drama
+Beschreibung: Konflikte und Spannungen zwischen Charakteren
+Beispiele:
+- "Ihre Stimmen wurden lauter"
+- "Die Atmosphäre war angespannt"
+- "Ein Streit bahnte sich an"
+"""
         self.text_widget.delete("1.0", tk.END)
         self.text_widget.insert("1.0", demo_text)
         self.update_status("Demo-Marker geladen")
     
     def hide_errors(self):
-        self.error_frame.pack_forget()
+        """Versteckt Fehlermeldungen"""
+        self.error_label.pack_forget()
     
     def show_errors(self, message):
-        self.error_text.delete("1.0", tk.END)
-        self.error_text.insert("1.0", message)
-        self.error_frame.pack(fill=tk.X, pady=(10, 0))
+        """Zeigt Fehlermeldungen an"""
+        self.error_label.config(text=message)
+        self.error_label.pack()
     
     def update_status(self, message):
         """Aktualisiert den Status mit verbesserter Fehlerbehandlung"""
@@ -260,25 +247,16 @@ Kategorie: error"""
     def on_resize(self, event):
         """Behandelt Resize-Events für Responsive Design"""
         try:
-            # Nur bei signifikanten Größenänderungen reagieren
             if hasattr(self, '_last_size'):
                 if abs(event.width - self._last_size[0]) < 10 and abs(event.height - self._last_size[1]) < 10:
                     return
-            
             self._last_size = (event.width, event.height)
-            
-            # UI-Elemente anpassen
-            if hasattr(self, 'text_widget'):
-                # Text-Widget-Größe anpassen
-                pass
-            
             print(f"🔄 Resize: {event.width}x{event.height}")
-            
         except Exception as e:
             print(f"❌ Fehler beim Resize: {str(e)}")
     
     def refresh_marker_list(self):
-        """Aktualisiert die Marker-Liste"""
+        """Aktualisiert die Marker-Liste mit verbesserter ID-Anzeige"""
         # Liste leeren
         for item in self.marker_tree.get_children():
             self.marker_tree.delete(item)
@@ -291,14 +269,27 @@ Kategorie: error"""
                         marker_data = yaml.safe_load(f)
                     
                     if marker_data:
+                        # ID korrekt anzeigen
+                        marker_id = marker_data.get('id', 'Unbekannt')
+                        if marker_id == 'Unbekannt':
+                            # Versuche ID aus Dateinamen zu extrahieren
+                            marker_id = yaml_file.stem
+                        
                         self.marker_tree.insert("", "end", values=(
-                            marker_data.get('id', 'Unbekannt'),
+                            marker_id,
                             marker_data.get('level', '?'),
                             marker_data.get('category', 'general'),
                             marker_data.get('description', 'Keine Beschreibung')[:50] + "..."
                         ))
                 except Exception as e:
                     print(f"Fehler beim Laden von {yaml_file}: {e}")
+                    # Zeige Datei auch bei Fehler an
+                    self.marker_tree.insert("", "end", values=(
+                        yaml_file.stem,
+                        '?',
+                        'error',
+                        f'Fehler beim Laden: {str(e)[:30]}...'
+                    ))
         
         self.update_status(f"{len(self.marker_tree.get_children())} Marker geladen")
     
@@ -310,6 +301,7 @@ Kategorie: error"""
             marker_id = item['values'][0]
             self.show_marker_details(marker_id)
             self.selected_marker = marker_id
+            self.editing_marker = None  # Bearbeitung zurücksetzen
     
     def show_marker_details(self, marker_id):
         """Zeigt Details eines Markers an"""
@@ -333,6 +325,67 @@ Kategorie: error"""
         else:
             self.details_text.delete("1.0", tk.END)
             self.details_text.insert("1.0", f"Marker {marker_id} nicht gefunden")
+    
+    def edit_marker(self):
+        """Aktiviert Bearbeitung des ausgewählten Markers"""
+        if not self.selected_marker:
+            messagebox.showinfo("Info", "Bitte wählen Sie zuerst einen Marker aus!")
+            return
+        
+        marker_file = self.marker_dir / f"{self.selected_marker}.yaml"
+        if marker_file.exists():
+            try:
+                with open(marker_file, 'r', encoding='utf-8') as f:
+                    self.editing_marker = yaml.safe_load(f)
+                
+                # YAML in Text-Widget laden
+                yaml_content = yaml.dump(self.editing_marker, default_flow_style=False, 
+                                       allow_unicode=True, sort_keys=False)
+                
+                self.text_widget.delete("1.0", tk.END)
+                self.text_widget.insert("1.0", yaml_content)
+                
+                self.update_status(f"Marker '{self.selected_marker}' zum Bearbeiten geladen")
+                
+            except Exception as e:
+                messagebox.showerror("Fehler", f"Fehler beim Laden des Markers: {str(e)}")
+        else:
+            messagebox.showerror("Fehler", f"Marker-Datei nicht gefunden: {marker_file}")
+    
+    def save_edited_marker(self):
+        """Speichert den bearbeiteten Marker"""
+        if not self.editing_marker or not self.selected_marker:
+            messagebox.showinfo("Info", "Kein Marker zum Speichern ausgewählt!")
+            return
+        
+        try:
+            # YAML aus Text-Widget parsen
+            yaml_text = self.text_widget.get("1.0", tk.END).strip()
+            updated_marker = yaml.safe_load(yaml_text)
+            
+            if not updated_marker:
+                messagebox.showerror("Fehler", "Ungültiges YAML-Format!")
+                return
+            
+            # ID beibehalten
+            updated_marker['id'] = self.selected_marker
+            
+            # Datei speichern
+            marker_file = self.marker_dir / f"{self.selected_marker}.yaml"
+            with open(marker_file, 'w', encoding='utf-8') as f:
+                yaml.dump(updated_marker, f, default_flow_style=False, 
+                         allow_unicode=True, sort_keys=False)
+            
+            # UI aktualisieren
+            self.refresh_marker_list()
+            self.show_marker_details(self.selected_marker)
+            self.editing_marker = None
+            
+            self.update_status(f"Marker '{self.selected_marker}' erfolgreich gespeichert")
+            messagebox.showinfo("Erfolg", f"Marker '{self.selected_marker}' wurde gespeichert!")
+            
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Fehler beim Speichern: {str(e)}")
     
     def add_examples(self):
         """Öffnet Dialog zum Hinzufügen von Beispielen"""
@@ -381,12 +434,16 @@ Kategorie: error"""
                 
                 # Datei speichern
                 with open(marker_file, 'w', encoding='utf-8') as f:
-                    yaml.dump(marker_data, f, default_flow_style=False, allow_unicode=True)
+                    yaml.dump(marker_data, f, default_flow_style=False, 
+                             allow_unicode=True, sort_keys=False)
                 
-                messagebox.showinfo("Erfolg", f"{len(new_examples)} Beispiele gespeichert!")
-                dialog.destroy()
+                # UI aktualisieren
                 self.refresh_marker_list()
                 self.show_marker_details(self.selected_marker)
+                
+                dialog.destroy()
+                self.update_status(f"{len(new_examples)} Beispiele für '{self.selected_marker}' gespeichert")
+                messagebox.showinfo("Erfolg", f"{len(new_examples)} Beispiele gespeichert!")
                 
             except Exception as e:
                 messagebox.showerror("Fehler", f"Fehler beim Speichern: {str(e)}")
@@ -395,11 +452,11 @@ Kategorie: error"""
         button_frame = ttk.Frame(dialog)
         button_frame.pack(fill=tk.X, padx=10, pady=10)
         
-        ttk.Button(button_frame, text="💾 Speichern", command=save_examples).pack(side=tk.RIGHT, padx=(5, 0))
-        ttk.Button(button_frame, text="❌ Abbrechen", command=dialog.destroy).pack(side=tk.RIGHT)
+        ttk.Button(button_frame, text="❌ Abbrechen", command=dialog.destroy).pack(side=tk.LEFT)
+        ttk.Button(button_frame, text="💾 Speichern", command=save_examples).pack(side=tk.RIGHT)
     
     def smart_parse_text(self, text):
-        """Intelligente Text-Parsing mit automatischer Korrektur"""
+        """Intelligente Text-Parsing mit verbesserter ID-Generierung"""
         lines = text.strip().split('\n')
         marker_data = {}
         
@@ -464,9 +521,17 @@ Kategorie: error"""
                 if desc_match:
                     marker_data['description'] = desc_match.group(1).strip()
         
-        # Automatische ID-Generierung falls keine gefunden
+        # Verbesserte ID-Generierung falls keine gefunden
         if 'id' not in marker_data:
-            marker_data['id'] = f"marker_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+            # Versuche ID aus erstem Wort zu extrahieren
+            first_line = lines[0].strip().upper()
+            if first_line and len(first_line) > 3 and not ':' in first_line:
+                marker_data['id'] = first_line
+            else:
+                # Generiere eindeutige ID
+                timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+                unique_id = str(uuid.uuid4())[:8]
+                marker_data['id'] = f"MARKER_{timestamp}_{unique_id}"
         
         # Standardwerte setzen
         if 'level' not in marker_data:
@@ -584,49 +649,30 @@ Kategorie: error"""
 ⚠️ Fehlgeschlagene Marker ({len(failed_markers)}):
 {chr(10).join([f"  • {error}" for error in failed_markers])}"""
                 
-                messagebox.showinfo("Erfolg!", success_message)
-                self.update_status(f"{len(created_markers)} Marker erstellt, {len(failed_markers)} Fehler")
+                messagebox.showinfo("Erfolg", success_message)
+                self.update_status(f"{len(created_markers)} Marker erstellt")
                 
-                # Textfeld leeren und Liste aktualisieren
-                self.text_widget.delete("1.0", tk.END)
-                self.hide_errors()
+                # UI aktualisieren
                 self.refresh_marker_list()
+                self.clear_text()
+                
             else:
-                error_message = f"""❌ Keine Marker konnten erstellt werden.
+                error_message = f"""❌ Keine Marker erstellt!
 
-Fehlerdetails:
-{chr(10).join([f"  • {error}" for error in failed_markers])}
-
-💡 Tipps:
-- Überprüfen Sie die Textformatierung
-- Stellen Sie sicher, dass Sie Schreibrechte haben
-- Versuchen Sie es mit einem einfacheren Text"""
+Fehler:
+{chr(10).join([f"  • {error}" for error in failed_markers])}"""
                 
                 messagebox.showerror("Fehler", error_message)
-                self.update_status("Keine Marker erstellt")
-                self.show_errors(f"Fehler beim Erstellen:\n{chr(10).join(failed_markers)}")
-            
+                self.update_status("Marker-Erstellung fehlgeschlagen")
+                
         except Exception as e:
-            # Verbesserte Fehlermeldung
-            error_message = f"""❌ Kritischer Fehler beim Erstellen der Marker.
-
-🔧 Was wir versucht haben:
-- Ihren Text zu verstehen und zu verarbeiten
-- Marker-Daten zu validieren
-- Dateien zu speichern
-
-💡 Mögliche Lösungen:
-- Überprüfen Sie die Textformatierung
-- Stellen Sie sicher, dass das Verzeichnis existiert
-- Versuchen Sie es mit einem einfacheren Text
-
-Technischer Fehler: {str(e)}"""
-            
-            messagebox.showerror("Kritischer Fehler", error_message)
-            self.update_status("Kritischer Fehler")
-            self.show_errors(f"Kritischer Fehler: {str(e)}\n\nVersuchen Sie es mit einem einfacheren Text.")
+            error_msg = f"Unerwarteter Fehler: {str(e)}"
+            messagebox.showerror("Systemfehler", error_msg)
+            print(f"❌ Systemfehler: {str(e)}")
+            self.update_status("Systemfehler aufgetreten")
     
     def run(self):
+        """Startet die GUI"""
         self.root.mainloop()
 
 def main():
