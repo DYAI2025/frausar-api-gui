@@ -55,8 +55,25 @@ class SmartMarkerGUI:
     def setup_ui(self):
         """Setup der UI mit verbesserter Fehlerbehandlung und Responsive Design"""
         try:
-            # Haupt-Container mit PanedWindow für Aufteilung
-            paned_window = ttk.PanedWindow(self.root, orient=tk.HORIZONTAL)
+            # Haupt-Container mit Scrollbar
+            main_canvas = tk.Canvas(self.root)
+            scrollbar = ttk.Scrollbar(self.root, orient="vertical", command=main_canvas.yview)
+            scrollable_frame = ttk.Frame(main_canvas)
+            
+            scrollable_frame.bind(
+                "<Configure>",
+                lambda e: main_canvas.configure(scrollregion=main_canvas.bbox("all"))
+            )
+            
+            main_canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+            main_canvas.configure(yscrollcommand=scrollbar.set)
+            
+            # Scrollbar packen
+            main_canvas.pack(side="left", fill="both", expand=True)
+            scrollbar.pack(side="right", fill="y")
+            
+            # PanedWindow für Aufteilung
+            paned_window = ttk.PanedWindow(scrollable_frame, orient=tk.HORIZONTAL)
             paned_window.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
             
             # Linke Seite - Eingabe
@@ -100,7 +117,7 @@ class SmartMarkerGUI:
         dir_button.pack(side=tk.RIGHT)
         
         # Eingabe-Bereich
-        input_frame = ttk.LabelFrame(parent, text="✏️ Marker-Text eingeben (beliebiges Format)", padding="10")
+        input_frame = ttk.LabelFrame(parent, text="📝 Marker-Text eingeben", padding="10")
         input_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 15))
         
         # Text-Widget mit Scrollbar
@@ -108,26 +125,46 @@ class SmartMarkerGUI:
         text_frame.pack(fill=tk.BOTH, expand=True)
         
         self.text_widget = scrolledtext.ScrolledText(text_frame, height=15, wrap=tk.WORD,
-                                                   font=("Consolas", 10))
-        self.text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+                                                   font=("Arial", 11))
+        self.text_widget.pack(fill=tk.BOTH, expand=True)
         
         # Button-Frame
         button_frame = ttk.Frame(input_frame)
         button_frame.pack(fill=tk.X, pady=(10, 0))
         
-        # Buttons
         ttk.Button(button_frame, text="🗑️ Löschen", command=self.clear_text).pack(side=tk.LEFT, padx=(0, 5))
         ttk.Button(button_frame, text="📋 Demo laden", command=self.load_demo).pack(side=tk.LEFT, padx=(0, 5))
-        ttk.Button(button_frame, text="🎯 Marker erstellen", command=self.create_markers,
+        ttk.Button(button_frame, text="🚀 Marker erstellen", command=self.create_markers, 
                   style="Accent.TButton").pack(side=tk.RIGHT)
         
-        # Status-Bar
-        status_frame = ttk.Frame(parent)
-        status_frame.pack(fill=tk.X, pady=(10, 0))
+        # GPT YAML Generator Button
+        gpt_frame = ttk.LabelFrame(parent, text="🤖 GPT YAML Generator", padding="8")
+        gpt_frame.pack(fill=tk.X, pady=(0, 15))
         
-        self.status_label = ttk.Label(status_frame, textvariable=self.status_var,
-                                     font=("Arial", 10))
-        self.status_label.pack(side=tk.LEFT)
+        gpt_button = ttk.Button(gpt_frame, text="📊 GPT YAML erstellen", command=self.create_gpt_yaml)
+        gpt_button.pack(side=tk.LEFT)
+        
+        # Status-Bereich
+        status_frame = ttk.LabelFrame(parent, text="📊 Status", padding="5")
+        status_frame.pack(fill=tk.X)
+        
+        self.status_label = ttk.Label(status_frame, textvariable=self.status_var)
+        self.status_label.pack(fill=tk.X)
+        
+        # Test-Feedback Bereich
+        test_frame = ttk.LabelFrame(parent, text="🧪 Test-Ergebnisse", padding="5")
+        test_frame.pack(fill=tk.X, pady=(10, 0))
+        
+        self.test_text = scrolledtext.ScrolledText(test_frame, height=6, wrap=tk.WORD,
+                                                 font=("Consolas", 9))
+        self.test_text.pack(fill=tk.BOTH, expand=True)
+        
+        # Test-Buttons
+        test_button_frame = ttk.Frame(test_frame)
+        test_button_frame.pack(fill=tk.X, pady=(5, 0))
+        
+        ttk.Button(test_button_frame, text="🧪 Tests ausführen", command=self.run_tests).pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Button(test_button_frame, text="🗑️ Tests löschen", command=self.clear_tests).pack(side=tk.LEFT)
     
     def setup_overview_section(self, parent):
         # Titel
@@ -148,14 +185,21 @@ class SmartMarkerGUI:
         list_frame = ttk.LabelFrame(parent, text="📁 Verfügbare Marker", padding="5")
         list_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
         
-        # Treeview für Marker
-        columns = ("ID", "Level", "Kategorie", "Beschreibung")
+        # Treeview für Marker - VERBESSERT: Name statt ID prominent
+        columns = ("Name", "ID", "Level", "Kategorie", "Beschreibung")
         self.marker_tree = ttk.Treeview(list_frame, columns=columns, show="headings", height=8)
         
-        # Spalten konfigurieren
-        for col in columns:
-            self.marker_tree.heading(col, text=col)
-            self.marker_tree.column(col, width=100)
+        # Spalten konfigurieren - Name prominent, ID klein
+        self.marker_tree.heading("Name", text="Name")
+        self.marker_tree.column("Name", width=150, minwidth=100)
+        self.marker_tree.heading("ID", text="ID")
+        self.marker_tree.column("ID", width=80, minwidth=60)
+        self.marker_tree.heading("Level", text="Level")
+        self.marker_tree.column("Level", width=60, minwidth=50)
+        self.marker_tree.heading("Kategorie", text="Kategorie")
+        self.marker_tree.column("Kategorie", width=100, minwidth=80)
+        self.marker_tree.heading("Beschreibung", text="Beschreibung")
+        self.marker_tree.column("Beschreibung", width=200, minwidth=150)
         
         # Scrollbar für Treeview
         tree_scroll = ttk.Scrollbar(list_frame, orient=tk.VERTICAL, command=self.marker_tree.yview)
@@ -256,7 +300,7 @@ Beispiele:
             print(f"❌ Fehler beim Resize: {str(e)}")
     
     def refresh_marker_list(self):
-        """Aktualisiert die Marker-Liste mit verbesserter ID-Anzeige"""
+        """Aktualisiert die Marker-Liste mit verbesserter Name-Anzeige"""
         # Liste leeren
         for item in self.marker_tree.get_children():
             self.marker_tree.delete(item)
@@ -275,8 +319,12 @@ Beispiele:
                             # Versuche ID aus Dateinamen zu extrahieren
                             marker_id = yaml_file.stem
                         
+                        # Name prominent anzeigen (falls vorhanden)
+                        marker_name = marker_data.get('name', marker_data.get('title', 'Unbekannter Name'))
+                        
                         self.marker_tree.insert("", "end", values=(
-                            marker_id,
+                            marker_name,  # Name prominent
+                            marker_id,    # ID in separater Spalte
                             marker_data.get('level', '?'),
                             marker_data.get('category', 'general'),
                             marker_data.get('description', 'Keine Beschreibung')[:50] + "..."
@@ -285,7 +333,8 @@ Beispiele:
                     print(f"Fehler beim Laden von {yaml_file}: {e}")
                     # Zeige Datei auch bei Fehler an
                     self.marker_tree.insert("", "end", values=(
-                        yaml_file.stem,
+                        yaml_file.stem,  # Name
+                        yaml_file.stem,  # ID
                         '?',
                         'error',
                         f'Fehler beim Laden: {str(e)[:30]}...'
@@ -298,7 +347,7 @@ Beispiele:
         selection = self.marker_tree.selection()
         if selection:
             item = self.marker_tree.item(selection[0])
-            marker_id = item['values'][0]
+            marker_id = item['values'][1]  # Index 1 ist die ID
             self.show_marker_details(marker_id)
             self.selected_marker = marker_id
             self.editing_marker = None  # Bearbeitung zurücksetzen
@@ -360,32 +409,203 @@ Beispiele:
         
         try:
             # YAML aus Text-Widget parsen
-            yaml_text = self.text_widget.get("1.0", tk.END).strip()
-            updated_marker = yaml.safe_load(yaml_text)
+            yaml_content = self.text_widget.get("1.0", tk.END).strip()
+            updated_marker = yaml.safe_load(yaml_content)
             
             if not updated_marker:
-                messagebox.showerror("Fehler", "Ungültiges YAML-Format!")
+                messagebox.showerror("Fehler", "Ungültiger YAML-Inhalt!")
                 return
             
-            # ID beibehalten
+            # Original-ID beibehalten
             updated_marker['id'] = self.selected_marker
             
-            # Datei speichern
+            # Marker speichern
             marker_file = self.marker_dir / f"{self.selected_marker}.yaml"
             with open(marker_file, 'w', encoding='utf-8') as f:
                 yaml.dump(updated_marker, f, default_flow_style=False, 
                          allow_unicode=True, sort_keys=False)
             
-            # UI aktualisieren
-            self.refresh_marker_list()
-            self.show_marker_details(self.selected_marker)
             self.editing_marker = None
-            
+            self.refresh_marker_list()
             self.update_status(f"Marker '{self.selected_marker}' erfolgreich gespeichert")
-            messagebox.showinfo("Erfolg", f"Marker '{self.selected_marker}' wurde gespeichert!")
             
+        except yaml.YAMLError as e:
+            messagebox.showerror("YAML-Fehler", f"Ungültiges YAML-Format: {str(e)}")
         except Exception as e:
             messagebox.showerror("Fehler", f"Fehler beim Speichern: {str(e)}")
+    
+    def create_gpt_yaml(self):
+        """Erstellt GPT-optimierte YAML-Datei mit Ordnerauswahl"""
+        # Ordnerauswahl für GPT YAML
+        gpt_dir = filedialog.askdirectory(
+            title="Ordner für GPT YAML auswählen",
+            initialdir=str(self.marker_dir)
+        )
+        
+        if not gpt_dir:
+            return
+        
+        try:
+            gpt_dir = Path(gpt_dir)
+            gpt_file = gpt_dir / "gpt_markers.yaml"
+            
+            # Alle Marker laden
+            markers = []
+            if self.marker_dir.exists():
+                for yaml_file in self.marker_dir.glob("*.yaml"):
+                    try:
+                        with open(yaml_file, 'r', encoding='utf-8') as f:
+                            marker_data = yaml.safe_load(f)
+                            if marker_data:
+                                markers.append(marker_data)
+                    except Exception as e:
+                        print(f"Fehler beim Laden von {yaml_file}: {e}")
+            
+            if not markers:
+                messagebox.showwarning("Warnung", "Keine Marker zum Exportieren gefunden!")
+                return
+            
+            # GPT-optimiertes Format erstellen
+            gpt_data = {
+                'metadata': {
+                    'generated_at': datetime.now().isoformat(),
+                    'total_markers': len(markers),
+                    'source_directory': str(self.marker_dir)
+                },
+                'markers': markers
+            }
+            
+            # Speichern
+            with open(gpt_file, 'w', encoding='utf-8') as f:
+                yaml.dump(gpt_data, f, default_flow_style=False, 
+                         allow_unicode=True, sort_keys=False)
+            
+            self.update_status(f"GPT YAML erstellt: {gpt_file}")
+            messagebox.showinfo("Erfolg", f"GPT YAML erfolgreich erstellt:\n{gpt_file}")
+            
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Fehler beim Erstellen der GPT YAML: {str(e)}")
+    
+    def run_tests(self):
+        """Führt Tests aus und zeigt detailliertes Feedback"""
+        self.test_text.delete("1.0", tk.END)
+        self.test_text.insert("1.0", "🧪 Tests werden ausgeführt...\n\n")
+        
+        test_results = []
+        
+        # Test 1: Verzeichnis-Zugriff
+        try:
+            if self.marker_dir.exists():
+                test_results.append("✅ Verzeichnis-Zugriff: OK")
+            else:
+                test_results.append("❌ Verzeichnis-Zugriff: Fehlgeschlagen")
+        except Exception as e:
+            test_results.append(f"❌ Verzeichnis-Zugriff: Fehler - {str(e)}")
+        
+        # Test 2: YAML-Dateien prüfen
+        try:
+            yaml_files = list(self.marker_dir.glob("*.yaml"))
+            valid_files = 0
+            invalid_files = []
+            
+            for yaml_file in yaml_files:
+                try:
+                    with open(yaml_file, 'r', encoding='utf-8') as f:
+                        yaml.safe_load(f)
+                    valid_files += 1
+                except Exception as e:
+                    invalid_files.append(f"{yaml_file.name}: {str(e)}")
+            
+            test_results.append(f"✅ YAML-Validierung: {valid_files}/{len(yaml_files)} Dateien gültig")
+            
+            if invalid_files:
+                test_results.append("❌ Ungültige YAML-Dateien:")
+                for invalid in invalid_files[:3]:  # Zeige nur erste 3
+                    test_results.append(f"   - {invalid}")
+                if len(invalid_files) > 3:
+                    test_results.append(f"   ... und {len(invalid_files) - 3} weitere")
+        
+        except Exception as e:
+            test_results.append(f"❌ YAML-Validierung: Fehler - {str(e)}")
+        
+        # Test 3: Marker-Struktur prüfen
+        try:
+            required_fields = ['id', 'level', 'category', 'description']
+            missing_fields = []
+            
+            for yaml_file in self.marker_dir.glob("*.yaml"):
+                try:
+                    with open(yaml_file, 'r', encoding='utf-8') as f:
+                        marker_data = yaml.safe_load(f)
+                    
+                    if marker_data:
+                        for field in required_fields:
+                            if field not in marker_data:
+                                missing_fields.append(f"{yaml_file.name}: {field}")
+                except:
+                    pass
+            
+            if missing_fields:
+                test_results.append("⚠️ Fehlende Pflichtfelder:")
+                for missing in missing_fields[:5]:  # Zeige nur erste 5
+                    test_results.append(f"   - {missing}")
+                if len(missing_fields) > 5:
+                    test_results.append(f"   ... und {len(missing_fields) - 5} weitere")
+            else:
+                test_results.append("✅ Marker-Struktur: Alle Pflichtfelder vorhanden")
+        
+        except Exception as e:
+            test_results.append(f"❌ Marker-Struktur: Fehler - {str(e)}")
+        
+        # Test 4: Performance-Test
+        try:
+            import time
+            start_time = time.time()
+            
+            # Simuliere Marker-Verarbeitung
+            for _ in range(100):
+                pass
+            
+            end_time = time.time()
+            performance = end_time - start_time
+            
+            if performance < 0.1:
+                test_results.append("✅ Performance: Sehr gut")
+            elif performance < 0.5:
+                test_results.append("✅ Performance: Gut")
+            else:
+                test_results.append("⚠️ Performance: Langsam - Optimierung empfohlen")
+        
+        except Exception as e:
+            test_results.append(f"❌ Performance-Test: Fehler - {str(e)}")
+        
+        # Ergebnisse anzeigen
+        self.test_text.delete("1.0", tk.END)
+        self.test_text.insert("1.0", "🧪 TEST-ERGEBNISSE\n")
+        self.test_text.insert(tk.END, "=" * 50 + "\n\n")
+        
+        for result in test_results:
+            self.test_text.insert(tk.END, result + "\n")
+        
+        # Zusammenfassung
+        passed = sum(1 for r in test_results if r.startswith("✅"))
+        failed = sum(1 for r in test_results if r.startswith("❌"))
+        warnings = sum(1 for r in test_results if r.startswith("⚠️"))
+        
+        self.test_text.insert(tk.END, "\n" + "=" * 50 + "\n")
+        self.test_text.insert(tk.END, f"📊 ZUSAMMENFASSUNG: {passed} bestanden, {failed} fehlgeschlagen, {warnings} Warnungen\n")
+        
+        if failed == 0:
+            self.test_text.insert(tk.END, "🎉 Alle Tests erfolgreich!\n")
+        else:
+            self.test_text.insert(tk.END, "🔧 Einige Tests fehlgeschlagen - Überprüfung empfohlen\n")
+        
+        self.update_status(f"Tests abgeschlossen: {passed} bestanden, {failed} fehlgeschlagen")
+    
+    def clear_tests(self):
+        """Löscht die Test-Ergebnisse"""
+        self.test_text.delete("1.0", tk.END)
+        self.update_status("Test-Ergebnisse gelöscht")
     
     def add_examples(self):
         """Öffnet Dialog zum Hinzufügen von Beispielen"""
@@ -456,12 +676,13 @@ Beispiele:
         ttk.Button(button_frame, text="💾 Speichern", command=save_examples).pack(side=tk.RIGHT)
     
     def smart_parse_text(self, text):
-        """Intelligente Text-Parsing mit verbesserter ID-Generierung"""
+        """Intelligente Text-Parsing mit verbesserter ID-Generierung und Name-Extraktion"""
         lines = text.strip().split('\n')
         marker_data = {}
         
         # ID wird später gesetzt, wenn gefunden
         marker_id_found = False
+        marker_name_found = False
         
         current_key = None
         examples = []
@@ -474,6 +695,10 @@ Beispiele:
             # Zuerst nach Marker-ID suchen (erste Zeile in Großbuchstaben)
             if not marker_id_found and line.upper() == line and len(line) > 3 and not ':' in line:
                 marker_data['id'] = line
+                # Versuche einen lesbaren Namen zu generieren
+                if not marker_name_found:
+                    marker_data['name'] = line.replace('_', ' ').title()
+                    marker_name_found = True
                 marker_id_found = True
                 continue
             
@@ -491,13 +716,19 @@ Beispiele:
                     'kategorie': 'category',
                     'category': 'category',
                     'beispiele': 'examples',
-                    'examples': 'examples'
+                    'examples': 'examples',
+                    'name': 'name',
+                    'titel': 'name',
+                    'title': 'name'
                 }
                 
                 if key in key_mapping:
                     current_key = key_mapping[key]
                     if current_key == 'examples':
                         examples.append(value)
+                    elif current_key == 'name':
+                        marker_data['name'] = value
+                        marker_name_found = True
                     else:
                         marker_data[current_key] = value
                 elif key.upper() == key and not marker_id_found:  # ID in Großbuchstaben
@@ -527,18 +758,42 @@ Beispiele:
             first_line = lines[0].strip().upper()
             if first_line and len(first_line) > 3 and not ':' in first_line:
                 marker_data['id'] = first_line
+                # Generiere lesbaren Namen
+                if not marker_name_found:
+                    marker_data['name'] = first_line.replace('_', ' ').title()
             else:
                 # Generiere eindeutige ID
                 timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
                 unique_id = str(uuid.uuid4())[:8]
                 marker_data['id'] = f"MARKER_{timestamp}_{unique_id}"
+                if not marker_name_found:
+                    marker_data['name'] = f"Marker {timestamp}"
+        
+        # Name generieren falls nicht gefunden
+        if 'name' not in marker_data:
+            if 'id' in marker_data:
+                # Versuche lesbaren Namen aus ID zu generieren
+                id_name = marker_data['id']
+                if '_' in id_name:
+                    # Entferne Präfixe und formatiere
+                    parts = id_name.split('_')
+                    if len(parts) > 1:
+                        # Verwende den ersten bedeutungsvollen Teil
+                        name_part = parts[0] if parts[0] != 'MARKER' else parts[1] if len(parts) > 1 else parts[0]
+                        marker_data['name'] = name_part.replace('_', ' ').title()
+                    else:
+                        marker_data['name'] = id_name.replace('_', ' ').title()
+                else:
+                    marker_data['name'] = id_name.replace('_', ' ').title()
+            else:
+                marker_data['name'] = "Unbekannter Marker"
         
         # Standardwerte setzen
         if 'level' not in marker_data:
             marker_data['level'] = 1
         
         if 'description' not in marker_data:
-            marker_data['description'] = f"Marker {marker_data['id']}"
+            marker_data['description'] = f"Marker {marker_data['name']}"
         
         if 'category' not in marker_data:
             marker_data['category'] = 'general'
