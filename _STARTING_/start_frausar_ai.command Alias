@@ -1,0 +1,4 @@
+#!/bin/zsh
+# Alias für Frausar AI-Integration
+cd "$(dirname "$0")"
+./start_frausar_ai.command 

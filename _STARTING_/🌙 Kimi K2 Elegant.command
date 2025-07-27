@@ -1,0 +1,1 @@
+../K2_cli/start_kimi_elegant.command

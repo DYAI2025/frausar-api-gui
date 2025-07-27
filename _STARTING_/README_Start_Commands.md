@@ -49,6 +49,14 @@ Dieses Verzeichnis enthält alle One-Click-Start-Commands für das Frausar-Syste
 
 - **`🌙 Kimi K2 Elegant.command`** - Elegante Kimi K2 Version
 
+### Marker Validator Convert (NEU)
+- **`start_marker_validator_convert.command`** - Startet den Marker Validator Convert
+  - GUI-basierte Marker-Validierung und -Konvertierung
+  - Drag & Drop Interface
+  - Automatische Reparaturen
+  - Format-Konvertierung (YAML ↔ JSON)
+  - Batch-Verarbeitung
+
 ### Aliase
 - **`start_cockpit.command Alias`** - Alias für ME_Test_cockpit
 - **`start_frausar.command Alias`** - Alias für ursprüngliche Frausar GUI
@@ -84,6 +92,7 @@ Doppelklick auf einen der `.command`-Dateien startet das entsprechende System.
 ./start_frausar_gui.command
 ./start_frausar_api_gui.command
 ./start_kimi.command
+./start_marker_validator_convert.command
 ```
 
 ## 🚨 Berechtigungsprobleme beheben

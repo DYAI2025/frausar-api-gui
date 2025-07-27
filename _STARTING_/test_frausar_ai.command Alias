@@ -1,0 +1,4 @@
+#!/bin/zsh
+# Alias für Frausar AI-Integration Tests
+cd "$(dirname "$0")"
+./test_frausar_ai.command 

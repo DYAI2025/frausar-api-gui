@@ -1,0 +1,1 @@
+/Users/benjaminpoersch/:Users:benjaminpoersch:claude/Frausar_API_GUI/start_ai_tests.command
