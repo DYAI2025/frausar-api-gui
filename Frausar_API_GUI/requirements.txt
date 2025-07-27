@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas
+numpy
+openpyxl
+pyyaml
+requests
+ruamel.yaml
+pydantic 

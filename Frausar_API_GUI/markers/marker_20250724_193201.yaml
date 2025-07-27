@@ -1,0 +1,22 @@
+id: marker_20250724_193201
+name: ABBRUCHMARKER
+description: '|'
+level: 1
+category: general
+version: 0.1.0
+status: draft
+language: de
+examples:
+- … egal, bin weg.
+- Muss los. Tschau.
+- Keine Zeit, später vielleicht.
+- '*geht offline*'
+- Stop. Anderes Thema.
+metadata:
+  created_at: '2025-07-22'
+  created_by: assistant
+  version: 0.1.0
+  tags:
+  - repaired
+  - standardized
+  last_modified: '2025-07-27T04:20:12.686153'

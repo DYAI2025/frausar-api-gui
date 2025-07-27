@@ -167,7 +167,8 @@ class FrausarAIIntegration:
                 elif choice == "3":
                     self._show_data_status()
                 elif choice == "4":
-                    self._run_demo_cleaning()
+                    import asyncio
+                    asyncio.run(self._run_demo_cleaning())
                 elif choice == "5":
                     self.shutdown()
                     break

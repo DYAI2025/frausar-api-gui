@@ -2380,7 +2380,19 @@ Beispiele:
                 original_id = marker_data['id']
                 counter = 1
                 while marker_data['id'] in used_ids:
-                    marker_data['id'] = f"{original_id}_{counter}"
+                    # Intelligente Nummerierung basierend auf Beschreibung
+                    if 'description' in marker_data and counter == 1:
+                        desc_words = marker_data['description'].split()[:3]
+                        if desc_words:
+                            suffix = '_'.join(word[:3].upper() for word in desc_words if len(word) >= 3)
+                            if suffix:
+                                marker_data['id'] = f"{original_id}_{suffix}"
+                            else:
+                                marker_data['id'] = f"{original_id}_{counter}"
+                        else:
+                            marker_data['id'] = f"{original_id}_{counter}"
+                    else:
+                        marker_data['id'] = f"{original_id}_{counter}"
                     counter += 1
                 used_ids.add(marker_data['id'])
                 

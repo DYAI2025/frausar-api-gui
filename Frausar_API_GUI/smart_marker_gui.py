@@ -26,6 +26,9 @@ class SmartMarkerGUI:
         self.root.title("🎯 Smart Marker-Erstellung - Einfach & Benutzerfreundlich")
         self.root.geometry("1200x800")
         
+        # Responsive Design: Minimum-Größe setzen
+        self.root.minsize(800, 600)
+        
         # Marker-Verzeichnis
         self.marker_dir = Path.cwd() / "markers"
         self.marker_dir.mkdir(exist_ok=True)
@@ -33,24 +36,43 @@ class SmartMarkerGUI:
         # Ausgewählter Marker für Beispiele
         self.selected_marker = None
         
-        self.setup_ui()
-        self.refresh_marker_list()
+        # Status-Tracking
+        self.status_var = tk.StringVar(value="✅ System bereit")
+        
+        # Setup UI mit verbesserter Fehlerbehandlung
+        try:
+            self.setup_ui()
+            self.refresh_marker_list()
+            self.update_status("✅ GUI erfolgreich geladen")
+        except Exception as e:
+            messagebox.showerror("Initialisierungsfehler", f"Fehler beim Laden der GUI: {str(e)}")
+            self.root.destroy()
+            raise
     
     def setup_ui(self):
-        # Haupt-Container mit PanedWindow für Aufteilung
-        paned_window = ttk.PanedWindow(self.root, orient=tk.HORIZONTAL)
-        paned_window.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
-        
-        # Linke Seite - Eingabe
-        left_frame = ttk.Frame(paned_window)
-        paned_window.add(left_frame, weight=2)
-        
-        # Rechte Seite - Übersicht
-        right_frame = ttk.Frame(paned_window)
-        paned_window.add(right_frame, weight=1)
-        
-        self.setup_input_section(left_frame)
-        self.setup_overview_section(right_frame)
+        """Setup der UI mit verbesserter Fehlerbehandlung und Responsive Design"""
+        try:
+            # Haupt-Container mit PanedWindow für Aufteilung
+            paned_window = ttk.PanedWindow(self.root, orient=tk.HORIZONTAL)
+            paned_window.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+            
+            # Linke Seite - Eingabe
+            left_frame = ttk.Frame(paned_window)
+            paned_window.add(left_frame, weight=2)
+            
+            # Rechte Seite - Übersicht
+            right_frame = ttk.Frame(paned_window)
+            paned_window.add(right_frame, weight=1)
+            
+            # Responsive Design: Bind resize events
+            self.root.bind('<Configure>', self.on_resize)
+            
+            self.setup_input_section(left_frame)
+            self.setup_overview_section(right_frame)
+            
+        except Exception as e:
+            print(f"❌ Fehler beim Setup der UI: {str(e)}")
+            raise
     
     def setup_input_section(self, parent):
         # Titel
@@ -225,7 +247,35 @@ Kategorie: error"""
         self.error_frame.pack(fill=tk.X, pady=(10, 0))
     
     def update_status(self, message):
-        self.status_label.config(text=f"✅ {message}")
+        """Aktualisiert den Status mit verbesserter Fehlerbehandlung"""
+        try:
+            if hasattr(self, 'status_label'):
+                self.status_label.config(text=f"✅ {message}")
+            if hasattr(self, 'status_var'):
+                self.status_var.set(f"✅ {message}")
+            print(f"📊 Status: {message}")
+        except Exception as e:
+            print(f"❌ Fehler beim Status-Update: {str(e)}")
+    
+    def on_resize(self, event):
+        """Behandelt Resize-Events für Responsive Design"""
+        try:
+            # Nur bei signifikanten Größenänderungen reagieren
+            if hasattr(self, '_last_size'):
+                if abs(event.width - self._last_size[0]) < 10 and abs(event.height - self._last_size[1]) < 10:
+                    return
+            
+            self._last_size = (event.width, event.height)
+            
+            # UI-Elemente anpassen
+            if hasattr(self, 'text_widget'):
+                # Text-Widget-Größe anpassen
+                pass
+            
+            print(f"🔄 Resize: {event.width}x{event.height}")
+            
+        except Exception as e:
+            print(f"❌ Fehler beim Resize: {str(e)}")
     
     def refresh_marker_list(self):
         """Aktualisiert die Marker-Liste"""
@@ -434,6 +484,7 @@ Kategorie: error"""
         return marker_data
     
     def create_markers(self):
+        """Erstellt Marker mit verbesserter Fehlerbehandlung und Validierung"""
         text = self.text_widget.get("1.0", tk.END).strip()
         
         if not text:
@@ -441,6 +492,20 @@ Kategorie: error"""
             return
         
         try:
+            # Verzeichnis-Validierung
+            if not self.marker_dir.exists():
+                try:
+                    self.marker_dir.mkdir(parents=True, exist_ok=True)
+                    print(f"✅ Verzeichnis erstellt: {self.marker_dir}")
+                except PermissionError:
+                    error_msg = f"Keine Berechtigung zum Erstellen des Verzeichnisses: {self.marker_dir}"
+                    messagebox.showerror("Berechtigungsfehler", error_msg)
+                    return
+                except Exception as e:
+                    error_msg = f"Fehler beim Erstellen des Verzeichnisses: {str(e)}"
+                    messagebox.showerror("Verzeichnisfehler", error_msg)
+                    return
+            
             # Text in Marker-Blöcke aufteilen
             separators = ['---', '###', '***']
             blocks = [text]
@@ -454,7 +519,12 @@ Kategorie: error"""
             # Leere Blöcke entfernen
             blocks = [block.strip() for block in blocks if block.strip()]
             
+            if not blocks:
+                messagebox.showwarning("Warnung", "Keine gültigen Marker-Blöcke gefunden!")
+                return
+            
             created_markers = []
+            failed_markers = []
             used_ids = set()
             
             for i, block in enumerate(blocks):
@@ -471,7 +541,7 @@ Kategorie: error"""
                     
                     used_ids.add(marker_data['id'])
                     
-                    # Datei speichern
+                    # Datei speichern mit verbesserter Fehlerbehandlung
                     filename = f"{marker_data['id']}.yaml"
                     filepath = self.marker_dir / filename
                     
@@ -479,49 +549,82 @@ Kategorie: error"""
                     yaml_content = yaml.dump(marker_data, default_flow_style=False, 
                                            allow_unicode=True, sort_keys=False)
                     
-                    with open(filepath, 'w', encoding='utf-8') as f:
-                        f.write(yaml_content)
-                    
-                    created_markers.append(marker_data['id'])
+                    # Datei schreiben mit Fehlerbehandlung
+                    try:
+                        with open(filepath, 'w', encoding='utf-8') as f:
+                            f.write(yaml_content)
+                        created_markers.append(marker_data['id'])
+                        print(f"✅ Marker gespeichert: {filename}")
+                    except PermissionError:
+                        error_msg = f"Keine Berechtigung zum Speichern: {filename}"
+                        failed_markers.append(f"Block {i+1}: {error_msg}")
+                        print(f"❌ Berechtigungsfehler: {filename}")
+                    except Exception as e:
+                        error_msg = f"Fehler beim Speichern: {str(e)}"
+                        failed_markers.append(f"Block {i+1}: {error_msg}")
+                        print(f"❌ Speicherfehler: {filename} - {str(e)}")
                     
                 except Exception as e:
-                    print(f"Fehler beim Erstellen von Marker {i+1}: {e}")
+                    error_msg = f"Fehler beim Verarbeiten von Block {i+1}: {str(e)}"
+                    failed_markers.append(error_msg)
+                    print(f"❌ Verarbeitungsfehler Block {i+1}: {str(e)}")
             
-            # Erfolgsmeldung
+            # Detaillierte Erfolgsmeldung
             if created_markers:
                 success_message = f"""✅ {len(created_markers)} Marker erfolgreich erstellt!
 
 📁 Erstellte Marker:
 {chr(10).join([f"  • {marker_id}" for marker_id in created_markers])}
 
-Die Marker wurden automatisch korrekt formatiert und gespeichert."""
+💾 Speicherort: {self.marker_dir}"""
+                
+                if failed_markers:
+                    success_message += f"""
+
+⚠️ Fehlgeschlagene Marker ({len(failed_markers)}):
+{chr(10).join([f"  • {error}" for error in failed_markers])}"""
                 
                 messagebox.showinfo("Erfolg!", success_message)
-                self.update_status(f"{len(created_markers)} Marker erstellt")
+                self.update_status(f"{len(created_markers)} Marker erstellt, {len(failed_markers)} Fehler")
                 
                 # Textfeld leeren und Liste aktualisieren
                 self.text_widget.delete("1.0", tk.END)
                 self.hide_errors()
                 self.refresh_marker_list()
             else:
-                messagebox.showwarning("Warnung", "Keine Marker konnten erstellt werden.")
+                error_message = f"""❌ Keine Marker konnten erstellt werden.
+
+Fehlerdetails:
+{chr(10).join([f"  • {error}" for error in failed_markers])}
+
+💡 Tipps:
+- Überprüfen Sie die Textformatierung
+- Stellen Sie sicher, dass Sie Schreibrechte haben
+- Versuchen Sie es mit einem einfacheren Text"""
+                
+                messagebox.showerror("Fehler", error_message)
+                self.update_status("Keine Marker erstellt")
+                self.show_errors(f"Fehler beim Erstellen:\n{chr(10).join(failed_markers)}")
             
         except Exception as e:
-            # Benutzerfreundliche Fehlermeldung
-            error_message = f"""❌ Ups! Da ist etwas schiefgegangen.
+            # Verbesserte Fehlermeldung
+            error_message = f"""❌ Kritischer Fehler beim Erstellen der Marker.
 
 🔧 Was wir versucht haben:
-- Ihren Text zu verstehen
-- Automatisch zu korrigieren
-- Als Marker zu speichern
+- Ihren Text zu verstehen und zu verarbeiten
+- Marker-Daten zu validieren
+- Dateien zu speichern
 
-💡 Versuchen Sie es nochmal mit einem einfacheren Text.
+💡 Mögliche Lösungen:
+- Überprüfen Sie die Textformatierung
+- Stellen Sie sicher, dass das Verzeichnis existiert
+- Versuchen Sie es mit einem einfacheren Text
 
 Technischer Fehler: {str(e)}"""
             
-            messagebox.showerror("Fehler", error_message)
-            self.update_status("Fehler beim Erstellen")
-            self.show_errors(f"Fehler: {str(e)}\n\nVersuchen Sie es mit einem einfacheren Text.")
+            messagebox.showerror("Kritischer Fehler", error_message)
+            self.update_status("Kritischer Fehler")
+            self.show_errors(f"Kritischer Fehler: {str(e)}\n\nVersuchen Sie es mit einem einfacheren Text.")
     
     def run(self):
         self.root.mainloop()

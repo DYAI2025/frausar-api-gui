@@ -417,9 +417,25 @@ class MarkerManager:
                 if desc_match:
                     marker_data['description'] = desc_match.group(1).strip()
         
-        # Automatische ID-Generierung falls keine gefunden
+        # Intelligente ID-Generierung falls keine gefunden
         if 'id' not in marker_data:
-            marker_data['id'] = f"marker_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+            # Versuche ID aus Beschreibung zu generieren
+            if 'description' in marker_data:
+                desc = marker_data['description']
+                # Erste 3-5 Wörter als ID verwenden
+                words = desc.split()[:5]
+                if words:
+                    # Nur alphanumerische Zeichen, Großbuchstaben
+                    id_base = ''.join(c for c in ' '.join(words) if c.isalnum() or c.isspace()).strip()
+                    id_base = id_base.replace(' ', '_').upper()
+                    # Länge begrenzen
+                    if len(id_base) > 20:
+                        id_base = id_base[:20]
+                    marker_data['id'] = id_base
+                else:
+                    marker_data['id'] = f"marker_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+            else:
+                marker_data['id'] = f"marker_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
         
         # Standardwerte setzen
         if 'level' not in marker_data:

@@ -287,7 +287,20 @@ author: demo_user"""
                 
                 # Marker-ID generieren falls fehlend
                 if 'id' not in marker_data:
-                    marker_data['id'] = f"auto_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{created_count}"
+                    # Intelligente ID aus Beschreibung generieren
+                    if 'description' in marker_data:
+                        desc = marker_data['description']
+                        words = desc.split()[:3]
+                        if words:
+                            id_base = ''.join(c for c in ' '.join(words) if c.isalnum() or c.isspace()).strip()
+                            id_base = id_base.replace(' ', '_').upper()
+                            if len(id_base) > 15:
+                                id_base = id_base[:15]
+                            marker_data['id'] = id_base
+                        else:
+                            marker_data['id'] = f"auto_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{created_count}"
+                    else:
+                        marker_data['id'] = f"auto_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{created_count}"
                 
                 # Datei speichern
                 filename = f"{marker_data['id']}.yaml"
