@@ -1,0 +1,25 @@
+id: S_OLD_STYLE_MARKER
+level: 2
+version: 1.0.0
+author: Migration
+created_at: '2025-07-28'
+status: draft
+lang: de
+name: OLD_STYLE_MARKER
+description: Description for OLD_STYLE_MARKER
+category: SEMANTIC
+scoring:
+  weight: 1.0
+  priority: mid
+tags:
+- old
+- legacy
+semantic_grabber_id: SGR_OLD_STYLE_MARKER_01
+examples:
+- Altes Beispiel 1
+- Altes Beispiel 2
+- Example 3
+- Example 4
+- Example 5
+composed_of: []
+rules: {}

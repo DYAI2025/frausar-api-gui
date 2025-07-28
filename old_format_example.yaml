@@ -1,0 +1,10 @@
+id: OLD_STYLE_MARKER
+level: "2"
+beschreibung: "Ein alter Marker im alten Format"
+kategorie: "emotional" 
+examples:
+  - "Altes Beispiel 1"
+  - "Altes Beispiel 2"
+tags:
+  - "old"
+  - "legacy"
