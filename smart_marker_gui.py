@@ -219,19 +219,17 @@ class SmartMarkerGUI:
         list_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
         
         # Treeview für Marker-Liste
-        columns = ("Name", "ID", "Level", "Kategorie")
-        self.marker_tree = ttk.Treeview(list_frame, columns=columns, show="headings", height=15)
-        
+        columns = ("Name", "Kategorie")
+        self.marker_tree = ttk.Treeview(
+            list_frame, columns=columns, show="headings", height=15
+        )
+
         # Spalten konfigurieren
         self.marker_tree.heading("Name", text="Name")
-        self.marker_tree.heading("ID", text="ID")
-        self.marker_tree.heading("Level", text="Level")
         self.marker_tree.heading("Kategorie", text="Kategorie")
-        
-        self.marker_tree.column("Name", width=150)
-        self.marker_tree.column("ID", width=100)
-        self.marker_tree.column("Level", width=50)
-        self.marker_tree.column("Kategorie", width=80)
+
+        self.marker_tree.column("Name", width=200)
+        self.marker_tree.column("Kategorie", width=100)
         
         # Scrollbar für Treeview
         tree_scrollbar = ttk.Scrollbar(list_frame, orient=tk.VERTICAL, command=self.marker_tree.yview)
@@ -436,35 +434,38 @@ class SmartMarkerGUI:
         if self.marker_dir.exists():
             for file_path in self.marker_dir.glob("*.yaml"):
                 try:
-                    with open(file_path, 'r', encoding='utf-8') as f:
+                    with open(file_path, "r", encoding="utf-8") as f:
                         data = yaml.safe_load(f)
-                    
-                    if data:
-                        # Name aus name-Feld oder intelligent aus ID generieren
-                        name = data.get('name', '')
-                        if not name and 'id' in data:
-                            name = data['id'].replace('_', ' ').title()
-                        
-                        # ID aus id-Feld oder Dateiname
-                        marker_id = data.get('id', file_path.stem)
-                        
-                        # Level und Kategorie
-                        level = data.get('level', '')
-                        kategorie = data.get('kategorie', data.get('category', ''))
-                        
-                        self.marker_tree.insert("", tk.END, values=(name, marker_id, level, kategorie))
-                        
-                except Exception as e:
+
+                    if data is None:
+                        data = {}
+
+                    marker_id = data.get("id", file_path.stem)
+                    kategorie = data.get("kategorie", data.get("category", ""))
+
+                    # Datei anzeigen
+                    self.marker_tree.insert(
+                        "",
+                        tk.END,
+                        iid=marker_id,
+                        values=(file_path.name, kategorie),
+                    )
+
+                except Exception:
                     # Fehlerhafte Datei anzeigen
-                    self.marker_tree.insert("", tk.END, values=(f"Fehler: {file_path.stem}", file_path.stem, "", ""))
+                    self.marker_tree.insert(
+                        "",
+                        tk.END,
+                        iid=file_path.stem,
+                        values=(f"Fehler: {file_path.name}", ""),
+                    )
         
         self.update_status(f"{len(self.marker_tree.get_children())} Marker geladen")
     
     def on_marker_select(self, event):
         selection = self.marker_tree.selection()
         if selection:
-            item = self.marker_tree.item(selection[0])
-            marker_id = item['values'][1]  # ID ist in der zweiten Spalte
+            marker_id = selection[0]
             self.show_marker_details(marker_id)
     
     def show_marker_details(self, marker_id):
@@ -492,8 +493,7 @@ class SmartMarkerGUI:
             messagebox.showwarning("Warnung", "Bitte wähle einen Marker zum Bearbeiten aus.")
             return
         
-        item = self.marker_tree.item(selection[0])
-        marker_id = item['values'][1]
+        marker_id = selection[0]
         
         # Marker-Datei laden und in Textfeld einfügen
         marker_file = self.marker_dir / f"{marker_id}.yaml"
@@ -519,8 +519,7 @@ class SmartMarkerGUI:
             messagebox.showwarning("Warnung", "Bitte wähle einen Marker zum Speichern aus.")
             return
         
-        item = self.marker_tree.item(selection[0])
-        marker_id = item['values'][1]
+        marker_id = selection[0]
         
         # Text aus Textfeld parsen
         text = self.text_widget.get(1.0, tk.END).strip()
@@ -554,7 +553,7 @@ class SmartMarkerGUI:
         
         item = self.marker_tree.item(selection[0])
         marker_name = item['values'][0]
-        marker_id = item['values'][1]
+        marker_id = selection[0]
         
         if messagebox.askyesno("Bestätigung", f"Möchtest du den Marker '{marker_name}' wirklich löschen?"):
             marker_file = self.marker_dir / f"{marker_id}.yaml"
@@ -640,10 +639,10 @@ class SmartMarkerGUI:
             # Alle Marker sammeln
             markers = []
             for item in self.marker_tree.get_children():
-                values = self.marker_tree.item(item)['values']
-                marker_id = values[1]
+                marker_id = item
+                values = self.marker_tree.item(item)["values"]
                 marker_name = values[0]
-                
+
                 marker_file = self.marker_dir / f"{marker_id}.yaml"
                 if marker_file.exists():
                     with open(marker_file, 'r', encoding='utf-8') as f:
