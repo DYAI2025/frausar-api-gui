@@ -21,13 +21,17 @@ import re
 import uuid
 from pathlib import Path
 from datetime import datetime
+from marker_v3_1_manager import MarkerV31Manager
 
 class SmartMarkerGUI:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("🎯 Smart Marker-Erstellung - Einfach & Benutzerfreundlich")
+        self.root.title("🎯 Smart Marker-Erstellung v3.1 - Lean-Deep Enhanced")
         self.root.geometry("1400x900")
         self.root.minsize(1000, 700)
+        
+        # Initialize v3.1 manager
+        self.v31_manager = MarkerV31Manager()
         
         # Marker-Verzeichnis
         self.marker_dir = Path.cwd() / "markers"
@@ -74,15 +78,76 @@ class SmartMarkerGUI:
     
     def setup_input_section(self, parent):
         # Titel
-        title = ttk.Label(parent, text="🎯 Smart Marker-Erstellung", 
+        title = ttk.Label(parent, text="🎯 Smart Marker-Erstellung v3.1", 
                          font=("Arial", 16, "bold"))
         title.pack(pady=(0, 10))
         
         # Untertitel
         subtitle = ttk.Label(parent, 
-                           text="Einfach Text eingeben - wir machen den Rest!",
+                           text="Lean-Deep v3.1 / MEWT Enhanced Schema - Alle Marker folgen dem neuen Standard!",
                            font=("Arial", 11))
         subtitle.pack(pady=(0, 15))
+        
+        # v3.1 Schema Info
+        schema_frame = ttk.LabelFrame(parent, text="📋 v3.1 Schema Anforderungen", padding="8")
+        schema_frame.pack(fill=tk.X, pady=(0, 15))
+        
+        schema_info = ttk.Label(schema_frame, 
+                              text="✓ Vier-Seiten-Frame (signal, concept, pragmatics, narrative)\n"
+                                   "✓ Ein Strukturblock (pattern | composed_of | detect_class)\n"
+                                   "✓ Logistic Scoring (base/weight/decay)\n"
+                                   "✓ Klare Aktivierung (ANY 1, SUM(weight)>=0.7 WITHIN 48h)\n"
+                                   "✓ Mindestens 5 variantenreiche Beispiele",
+                              font=("Arial", 10))
+        schema_info.pack(anchor=tk.W)
+        
+        # Template-Erstellung
+        template_frame = ttk.LabelFrame(parent, text="🛠️ Template-Generator", padding="10")
+        template_frame.pack(fill=tk.X, pady=(0, 15))
+        
+        # Level-Auswahl
+        level_frame = ttk.Frame(template_frame)
+        level_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        ttk.Label(level_frame, text="Level:").pack(side=tk.LEFT, padx=(0, 5))
+        self.level_var = tk.StringVar(value="1")
+        level_combo = ttk.Combobox(level_frame, textvariable=self.level_var, 
+                                 values=["1 - Atomic", "2 - Semantic", "3 - Cluster", "4 - Meta"],
+                                 state="readonly", width=20)
+        level_combo.pack(side=tk.LEFT, padx=(0, 10))
+        level_combo.bind("<<ComboboxSelected>>", self.on_level_change)
+        
+        # Marker Name
+        name_frame = ttk.Frame(template_frame)
+        name_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        ttk.Label(name_frame, text="Name (UPPER_SNAKE_CASE):").pack(side=tk.LEFT, padx=(0, 5))
+        self.name_var = tk.StringVar()
+        name_entry = ttk.Entry(name_frame, textvariable=self.name_var, width=30)
+        name_entry.pack(side=tk.LEFT, padx=(0, 10))
+        
+        # Author
+        author_frame = ttk.Frame(template_frame)
+        author_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        ttk.Label(author_frame, text="Author:").pack(side=tk.LEFT, padx=(0, 5))
+        self.author_var = tk.StringVar(value="Your Name")
+        author_entry = ttk.Entry(author_frame, textvariable=self.author_var, width=30)
+        author_entry.pack(side=tk.LEFT, padx=(0, 10))
+        
+        # Auto-Fill Info
+        self.category_label = ttk.Label(template_frame, text="Category: ATOMIC (auto)", 
+                                      font=("Arial", 10, "italic"))
+        self.category_label.pack(anchor=tk.W, pady=(0, 10))
+        
+        # Template-Buttons
+        template_button_frame = ttk.Frame(template_frame)
+        template_button_frame.pack(fill=tk.X)
+        
+        ttk.Button(template_button_frame, text="🚀 Template erstellen", 
+                  command=self.create_template).pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Button(template_button_frame, text="🔄 v3.1 konvertieren", 
+                  command=self.convert_to_v31).pack(side=tk.LEFT, padx=5)
         
         # Verzeichnis-Anzeige
         dir_frame = ttk.LabelFrame(parent, text="📁 Speicherort", padding="8")
@@ -95,12 +160,12 @@ class SmartMarkerGUI:
         dir_button.pack(side=tk.RIGHT)
         
         # Eingabe-Bereich
-        input_frame = ttk.LabelFrame(parent, text="✏️ Marker-Text eingeben (beliebiges Format)", padding="10")
+        input_frame = ttk.LabelFrame(parent, text="✏️ Marker-YAML (v3.1 Format)", padding="10")
         input_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 15))
         
         # Hilfetext
         help_text = ttk.Label(input_frame, 
-                            text="💡 Tipp: Mehrere Marker mit '---' oder '###' trennen",
+                            text="💡 Verwende Template-Generator oder bearbeite YAML direkt. Mehrere Marker mit '---' trennen.",
                             font=("Arial", 10, "italic"))
         help_text.pack(pady=(0, 10))
         
@@ -109,36 +174,21 @@ class SmartMarkerGUI:
                                                    wrap=tk.WORD, font=("Consolas", 12))
         self.text_widget.pack(fill=tk.BOTH, expand=True)
         
-        # Beispiel-Text einfügen
-        example_text = """Beispiel für mehrere Marker:
-
-A_ISOLATION_MARKER
-Level: 1
-Beschreibung: Marker für Isolation-Erkennung
-Kategorie: system
-
----
-
-A_LOVE_SCANMARKER
-Level: 2
-Beschreibung: Marker für Liebes-Scanning
-Kategorie: emotion"""
-
-        self.text_widget.insert(tk.END, example_text)
-        
         # Button-Bereich
         button_frame = ttk.Frame(input_frame)
         button_frame.pack(fill=tk.X, pady=(10, 0))
         
         ttk.Button(button_frame, text="🚀 Marker erstellen", 
                   command=self.create_markers).pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Button(button_frame, text="✅ Validieren", 
+                  command=self.validate_current_yaml).pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="🗑️ Löschen", 
                   command=self.clear_text).pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="📋 Demo laden", 
                   command=self.load_demo).pack(side=tk.LEFT, padx=5)
         
         # Test-Ergebnisse
-        test_frame = ttk.LabelFrame(parent, text="🧪 Test-Ergebnisse", padding="10")
+        test_frame = ttk.LabelFrame(parent, text="🧪 Validierungs-Ergebnisse", padding="10")
         test_frame.pack(fill=tk.X, pady=(0, 15))
         
         self.test_text = scrolledtext.ScrolledText(test_frame, height=8, wrap=tk.WORD)
@@ -147,15 +197,15 @@ Kategorie: emotion"""
         test_button_frame = ttk.Frame(test_frame)
         test_button_frame.pack(fill=tk.X, pady=(5, 0))
         
-        ttk.Button(test_button_frame, text="🧪 Tests ausführen", 
+        ttk.Button(test_button_frame, text="🧪 Volltest", 
                   command=self.run_tests).pack(side=tk.LEFT, padx=(0, 5))
-        ttk.Button(test_button_frame, text="🗑️ Tests löschen", 
+        ttk.Button(test_button_frame, text="🗑️ Löschen", 
                   command=lambda: self.test_text.delete(1.0, tk.END)).pack(side=tk.LEFT, padx=5)
         ttk.Button(test_button_frame, text="📁 GPT YAML erstellen", 
                   command=self.create_gpt_yaml).pack(side=tk.LEFT, padx=5)
         
         # Status
-        self.status_label = ttk.Label(parent, text="Bereit", font=("Arial", 10))
+        self.status_label = ttk.Label(parent, text="Bereit für v3.1", font=("Arial", 10))
         self.status_label.pack(pady=(5, 0))
     
     def setup_overview_section(self, parent):
@@ -221,33 +271,157 @@ Kategorie: emotion"""
             self.dir_label.config(text=f"{self.marker_dir}")
             self.refresh_marker_list()
     
+    def on_level_change(self, event=None):
+        """Handle level selection change to update category."""
+        level_text = self.level_var.get()
+        level = int(level_text.split(' - ')[0]) if level_text else 1
+        category = self.v31_manager.level_categories.get(level, "ATOMIC")
+        self.category_label.config(text=f"Category: {category} (auto)")
+    
+    def create_template(self):
+        """Create a v3.1 template based on user input."""
+        # Get level
+        level_text = self.level_var.get()
+        level = int(level_text.split(' - ')[0]) if level_text else 1
+        
+        # Get marker name
+        marker_name = self.name_var.get().strip()
+        if not marker_name:
+            messagebox.showwarning("Warnung", "Bitte gib einen Marker-Namen ein!")
+            return
+        
+        # Get author
+        author = self.author_var.get().strip() or "Your Name"
+        
+        try:
+            # Create template
+            template = self.v31_manager.create_marker_template(level, marker_name, author)
+            
+            # Convert to YAML and insert into text widget
+            yaml_content = yaml.dump(template, default_flow_style=False, allow_unicode=True, sort_keys=False)
+            
+            self.text_widget.delete(1.0, tk.END)
+            self.text_widget.insert(tk.END, yaml_content)
+            
+            self.update_status(f"v3.1 Template für Level {level} erstellt")
+            messagebox.showinfo("Erfolg", f"Template für '{template['id']}' erstellt!\n\n"
+                                         f"Vergiss nicht, mindestens 5 Beispiele hinzuzufügen.")
+            
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Fehler beim Erstellen des Templates: {str(e)}")
+    
+    def convert_to_v31(self):
+        """Convert current YAML content to v3.1 format."""
+        text = self.text_widget.get(1.0, tk.END).strip()
+        if not text:
+            messagebox.showwarning("Warnung", "Bitte gib YAML-Inhalt ein zum Konvertieren!")
+            return
+        
+        try:
+            # Parse existing YAML
+            old_data = yaml.safe_load(text)
+            if not old_data:
+                raise ValueError("Ungültiges YAML-Format")
+            
+            # Convert to v3.1
+            new_data = self.v31_manager.convert_old_marker_to_v31(old_data)
+            
+            # Convert back to YAML
+            yaml_content = yaml.dump(new_data, default_flow_style=False, allow_unicode=True, sort_keys=False)
+            
+            self.text_widget.delete(1.0, tk.END)
+            self.text_widget.insert(tk.END, yaml_content)
+            
+            self.update_status("Zu v3.1 konvertiert")
+            messagebox.showinfo("Erfolg", f"Marker zu v3.1 konvertiert!\n\n"
+                                         f"ID: {new_data['id']}\n"
+                                         f"Level: {new_data['level']}\n"
+                                         f"Category: {new_data['category']}")
+            
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Fehler bei der Konvertierung: {str(e)}")
+    
+    def validate_current_yaml(self):
+        """Validate current YAML content against v3.1 schema."""
+        text = self.text_widget.get(1.0, tk.END).strip()
+        if not text:
+            messagebox.showwarning("Warnung", "Bitte gib YAML-Inhalt ein zum Validieren!")
+            return
+        
+        self.test_text.delete(1.0, tk.END)
+        self.test_text.insert(tk.END, "🧪 Validiere gegen v3.1 Schema...\n\n")
+        
+        try:
+            # Split multiple markers
+            marker_blocks = re.split(r'\n\s*---\s*\n', text)
+            marker_blocks = [block.strip() for block in marker_blocks if block.strip()]
+            
+            all_valid = True
+            
+            for i, block in enumerate(marker_blocks):
+                self.test_text.insert(tk.END, f"--- Marker {i+1} ---\n")
+                
+                try:
+                    data = yaml.safe_load(block)
+                    if not data:
+                        self.test_text.insert(tk.END, "❌ Leeres YAML\n\n")
+                        all_valid = False
+                        continue
+                    
+                    # Validate with v3.1 schema
+                    is_valid, errors = self.v31_manager.validate_marker_schema(data)
+                    
+                    if is_valid:
+                        self.test_text.insert(tk.END, f"✅ {data.get('id', 'Unknown')} - VALID\n")
+                        
+                        # Additional info
+                        level = data.get('level', 'Unknown')
+                        category = data.get('category', 'Unknown') 
+                        examples_count = len(data.get('examples', []))
+                        self.test_text.insert(tk.END, f"   Level: {level}, Category: {category}, Examples: {examples_count}\n")
+                    else:
+                        self.test_text.insert(tk.END, f"❌ {data.get('id', 'Unknown')} - INVALID\n")
+                        for error in errors[:5]:  # Show first 5 errors
+                            self.test_text.insert(tk.END, f"   • {error}\n")
+                        all_valid = False
+                    
+                except yaml.YAMLError as e:
+                    self.test_text.insert(tk.END, f"❌ YAML Parse Error: {str(e)}\n")
+                    all_valid = False
+                
+                self.test_text.insert(tk.END, "\n")
+            
+            # Summary
+            status = "✅ ALLE MARKER VALID" if all_valid else "❌ EINIGE MARKER INVALID"
+            self.test_text.insert(tk.END, f"🎯 Ergebnis: {status}\n")
+            
+            self.update_status(f"Validierung: {len(marker_blocks)} Marker geprüft")
+            
+        except Exception as e:
+            self.test_text.insert(tk.END, f"❌ Unerwarteter Fehler: {str(e)}\n")
+            self.update_status("Validierungsfehler")
+    
     def clear_text(self):
         self.text_widget.delete(1.0, tk.END)
         self.update_status("Text gelöscht")
     
     def load_demo(self):
-        demo_text = """A_ISOLATION_MARKER
-Level: 1
-Beschreibung: Marker für Isolation-Erkennung
-Kategorie: system
-
----
-
-A_LOVE_SCANMARKER
-Level: 2
-Beschreibung: Marker für Liebes-Scanning
-Kategorie: emotion
-
----
-
-A_SEXUAL_TENSION
-Level: 3
-Beschreibung: Marker für sexuelle Spannung
-Kategorie: relationship"""
+        """Load a v3.1 demo template."""
+        demo_template = self.v31_manager.create_marker_template(1, "DEMO_MARKER", "Demo Author")
+        demo_template["description"] = "Demo marker for testing v3.1 schema"
+        demo_template["examples"] = [
+            "Demo example 1 - basic usage pattern",
+            "Demo example 2 - alternative expression", 
+            "Demo example 3 - edge case handling",
+            "Demo example 4 - complex scenario test",
+            "Demo example 5 - boundary condition check"
+        ]
+        
+        yaml_content = yaml.dump(demo_template, default_flow_style=False, allow_unicode=True, sort_keys=False)
         
         self.text_widget.delete(1.0, tk.END)
-        self.text_widget.insert(tk.END, demo_text)
-        self.update_status("Demo geladen")
+        self.text_widget.insert(tk.END, yaml_content)
+        self.update_status("v3.1 Demo geladen")
     
     def update_status(self, message):
         self.status_label.config(text=f"Status: {message}")
@@ -561,13 +735,14 @@ Kategorie: relationship"""
         return data
     
     def create_markers(self):
+        """Create markers using v3.1 schema validation."""
         text = self.text_widget.get(1.0, tk.END).strip()
         if not text:
-            messagebox.showwarning("Warnung", "Bitte gib Text ein!")
+            messagebox.showwarning("Warnung", "Bitte gib YAML-Inhalt ein!")
             return
         
-        # Marker mit '---' oder '###' trennen
-        marker_blocks = re.split(r'\n\s*---\s*\n|\n\s*###\s*\n', text)
+        # Marker mit '---' trennen
+        marker_blocks = re.split(r'\n\s*---\s*\n', text)
         marker_blocks = [block.strip() for block in marker_blocks if block.strip()]
         
         created_markers = []
@@ -575,42 +750,63 @@ Kategorie: relationship"""
         
         for i, block in enumerate(marker_blocks):
             try:
-                data = self.smart_parse_text(block)
-                if data:
-                    # Datei speichern
-                    filename = f"{data['id']}.yaml"
-                    filepath = self.marker_dir / filename
-                    
-                    with open(filepath, 'w', encoding='utf-8') as f:
-                        yaml.dump(data, f, default_flow_style=False, allow_unicode=True)
-                    
-                    created_markers.append({
-                        'name': data.get('name', data['id']),
-                        'id': data['id'],
-                        'filename': filename
-                    })
-                    
+                # Parse YAML
+                data = yaml.safe_load(block)
+                if not data:
+                    errors.append(f"Block {i+1}: Leeres YAML")
+                    continue
+                
+                # Validate with v3.1 schema
+                is_valid, validation_errors = self.v31_manager.validate_marker_schema(data)
+                
+                if not is_valid:
+                    error_msg = f"Block {i+1} ({data.get('id', 'Unknown')}): " + ", ".join(validation_errors[:3])
+                    errors.append(error_msg)
+                    continue
+                
+                # Generate correct filename
+                filename = self.v31_manager.generate_filename(data['id'])
+                filepath = self.marker_dir / filename
+                
+                # Save with sorted keys for consistency
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    yaml.dump(data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+                
+                created_markers.append({
+                    'name': data.get('name', data['id']),
+                    'id': data['id'],
+                    'filename': filename,
+                    'level': data.get('level', 'Unknown'),
+                    'category': data.get('category', 'Unknown')
+                })
+                
+            except yaml.YAMLError as e:
+                errors.append(f"Block {i+1}: YAML-Fehler - {str(e)}")
             except Exception as e:
-                errors.append(f"Block {i+1}: {e}")
+                errors.append(f"Block {i+1}: {str(e)}")
         
         # Ergebnisse anzeigen
         if created_markers:
-            success_msg = f"Marker erfolgreich erstellt!\n\n📁 Erstellte Marker:\n"
+            success_msg = f"✅ {len(created_markers)} v3.1 Marker erfolgreich erstellt!\n\n📁 Erstellte Marker:\n"
             for marker in created_markers:
-                success_msg += f"• {marker['name']} ({marker['filename']})\n"
+                success_msg += f"• {marker['name']} (Level {marker['level']}, {marker['category']})\n"
+                success_msg += f"  📄 {marker['filename']}\n"
             
             if errors:
-                success_msg += f"\n⚠️ Fehler:\n"
-                for error in errors:
+                success_msg += f"\n⚠️ Fehler ({len(errors)}):\n"
+                for error in errors[:5]:  # Show max 5 errors
                     success_msg += f"• {error}\n"
+                if len(errors) > 5:
+                    success_msg += f"... und {len(errors)-5} weitere\n"
             
             messagebox.showinfo("Erfolg", success_msg)
-            self.update_status(f"{len(created_markers)} Marker erstellt")
+            self.update_status(f"{len(created_markers)} v3.1 Marker erstellt")
             self.refresh_marker_list()
         else:
-            error_msg = "Keine Marker erstellt!\n\nFehler:\n"
+            error_msg = "❌ Keine Marker erstellt!\n\nFehler:\n"
             for error in errors:
                 error_msg += f"• {error}\n"
+            error_msg += "\n💡 Tipp: Verwende Template-Generator oder validiere YAML zuerst."
             messagebox.showerror("Fehler", error_msg)
     
     def run(self):

@@ -1,0 +1,23 @@
+id: C_ISOLATION_DETECTOR
+level: 3
+version: 1.0.0
+author: DYAI2025
+created_at: '2025-07-28'
+status: draft
+lang: de
+name: ISOLATION_DETECTOR
+description: Description for ISOLATION_DETECTOR
+category: CLUSTER
+scoring:
+  weight: 1.0
+  priority: mid
+tags: []
+semantic_grabber_id: SGR_ISOLATION_DETECTOR_01
+examples:
+- Example 1 - basic usage
+- Example 2 - alternative form
+- Example 3 - edge case
+- Example 4 - complex scenario
+- Example 5 - boundary condition
+composed_of: []
+activation_logic: ANY 1

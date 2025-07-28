@@ -20,9 +20,7 @@ langgraph>=0.2.74
 plotly>=5.17.0
 
 # Async und Threading
-asyncio
-threading
-multiprocessing
+# asyncio, threading, multiprocessing are built-in modules
 
 # Testing
 pytest>=7.4.0
