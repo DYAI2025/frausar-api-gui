@@ -1,0 +1,22 @@
+id: A_OLD_CONVERSION_TEST
+level: 1
+version: 1.0.0
+author: Migration
+created_at: '2025-07-30'
+status: draft
+lang: de
+name: OLD_CONVERSION_TEST
+description: Description for OLD_CONVERSION_TEST
+category: ATOMIC
+scoring:
+  weight: 1.0
+  priority: mid
+tags: []
+semantic_grabber_id: SGR_OLD_CONVERSION_TEST_01
+examples:
+- Old example 1
+- Old example 2
+- Example 3
+- Example 4
+- Example 5
+atomic_pattern: []
