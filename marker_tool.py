@@ -484,9 +484,9 @@ class MarkerTool:
         if isinstance(identifier, Path):
             return identifier
         
-        # If it's already a full path
+        # If it's already a full path, return as-is
         path = Path(identifier)
-        if path.is_absolute() and path.exists():
+        if path.is_absolute():
             return path
         
         # Try as filename in marker directory
