@@ -223,4 +223,4 @@ The v3.1 implementation includes:
 - Automatic conversion from old formats
 - Template generation for all levels
 - CLI and GUI tools for easy usage
-- Comprehensive test suite
+- Comprehensive test suite for validation
