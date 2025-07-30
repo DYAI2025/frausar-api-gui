@@ -1,0 +1,28 @@
+activation:
+  rule: ANY 2 IN 48h
+composed_of:
+- S_AMBIVALENT_ATTACHMENT_SPEECH
+- S_SOFT_WITHDRAWAL
+examples:
+- '[cite_start]"Ich vermisse dich … aber ich brauche Abstand." [cite: 277]'
+- '[cite_start]"Du bist mir wichtig – aber ich weiß nicht, ob ich bereit bin." [cite:
+  278]'
+- '# --- Neu generierte Beispiele ---'
+- '"Nähe/Distanz-Kontraste ... aber irgendwie bin ich unsicher."'
+- '"Einerseits Nähe/Distanz-Kontraste, andererseits weiß ich nicht."'
+frame:
+  concept: Bindungsambivalenz
+  narrative: loop
+  pragmatics: Destabilisierung
+  signal:
+  - Nähe/Distanz-Kontraste
+id: C_RELATIONAL_DESTABILIZATION_LOOP
+scoring:
+  base: 2.0
+  decay: 0.01
+  formula: logistic
+  weight: 1.6
+tags:
+- beziehung
+- ambivalenz
+- loop
