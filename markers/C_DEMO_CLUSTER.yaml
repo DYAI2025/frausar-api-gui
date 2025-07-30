@@ -1,0 +1,23 @@
+id: C_DEMO_CLUSTER
+level: 3
+version: 1.0.0
+author: Demo Creator
+created_at: '2025-07-30'
+status: draft
+lang: de
+name: DEMO_CLUSTER
+description: Cluster marker showing aggregation of multiple semantic patterns
+category: CLUSTER
+scoring:
+  weight: 1.0
+  priority: mid
+tags: []
+semantic_grabber_id: SGR_DEMO_CLUSTER_01
+examples:
+- Multi-pattern cluster example 1
+- Aggregated detection example 2
+- Combined signal example 3
+- Threshold-based example 4
+- Ensemble pattern example 5
+composed_of: []
+activation_logic: ANY 1

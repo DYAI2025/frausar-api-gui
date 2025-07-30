@@ -1,0 +1,23 @@
+id: S_DEMO_SEMANTIC
+level: 2
+version: 1.0.0
+author: Demo Creator
+created_at: '2025-07-30'
+status: draft
+lang: de
+name: DEMO_SEMANTIC
+description: Semantic level marker demonstrating higher-level pattern recognition
+category: SEMANTIC
+scoring:
+  weight: 1.0
+  priority: mid
+tags: []
+semantic_grabber_id: SGR_DEMO_SEMANTIC_01
+examples:
+- Semantic context example 1
+- Meaning extraction example 2
+- Context-aware example 3
+- Language understanding example 4
+- Conceptual mapping example 5
+composed_of: []
+rules: {}

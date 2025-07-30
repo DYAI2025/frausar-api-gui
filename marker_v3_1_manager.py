@@ -339,6 +339,136 @@ class MarkerV31Manager:
         
         return new_data
     
+    def adapt_marker_to_v31_with_report(self, marker_data: Dict[str, Any]) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+        """
+        Adapts a marker to v3.1 format with detailed change reporting.
+        
+        Args:
+            marker_data: Original marker data
+            
+        Returns:
+            Tuple of (adapted_data, changes_report)
+        """
+        original_data = marker_data.copy()
+        changes_report = {
+            "added": [],
+            "removed": [],
+            "modified": [],
+            "preserved": [],
+            "warnings": []
+        }
+        
+        # Start with conversion
+        adapted_data = self.convert_old_marker_to_v31(marker_data)
+        
+        # Analyze changes
+        original_keys = set(original_data.keys())
+        adapted_keys = set(adapted_data.keys())
+        
+        # Track added fields
+        added_keys = adapted_keys - original_keys
+        for key in added_keys:
+            changes_report["added"].append({
+                "field": key,
+                "value": adapted_data[key],
+                "reason": f"Required by v3.1 schema"
+            })
+        
+        # Track removed fields
+        removed_keys = original_keys - adapted_keys
+        for key in removed_keys:
+            changes_report["removed"].append({
+                "field": key,
+                "value": original_data[key],
+                "reason": f"Not part of v3.1 schema"
+            })
+        
+        # Track modified fields
+        common_keys = original_keys & adapted_keys
+        for key in common_keys:
+            original_value = original_data[key]
+            adapted_value = adapted_data[key]
+            
+            if original_value != adapted_value:
+                changes_report["modified"].append({
+                    "field": key,
+                    "original_value": original_value,
+                    "new_value": adapted_value,
+                    "reason": f"Adapted to v3.1 requirements"
+                })
+            else:
+                changes_report["preserved"].append({
+                    "field": key,
+                    "value": original_value
+                })
+        
+        # Add specific warnings for content preservation
+        if "examples" in adapted_data:
+            original_examples = original_data.get("examples", [])
+            adapted_examples = adapted_data["examples"]
+            
+            if len(adapted_examples) > len(original_examples):
+                changes_report["warnings"].append(
+                    f"Added {len(adapted_examples) - len(original_examples)} placeholder examples to meet minimum requirement"
+                )
+        
+        # Check for old German field names
+        german_fields = ["kategorie", "beschreibung", "erstellungsdatum"]
+        for field in german_fields:
+            if field in original_data:
+                changes_report["warnings"].append(
+                    f"German field '{field}' was converted to English equivalent"
+                )
+        
+        return adapted_data, changes_report
+    
+    def validate_content_boundaries(self, marker_data: Dict[str, Any]) -> List[str]:
+        """
+        Validates content boundaries and structure integrity.
+        
+        Args:
+            marker_data: Marker data to validate
+            
+        Returns:
+            List of boundary validation warnings
+        """
+        warnings = []
+        
+        # Check for content completeness
+        required_content_fields = ["description", "examples"]
+        for field in required_content_fields:
+            if field not in marker_data or not marker_data[field]:
+                warnings.append(f"Missing or empty required content field: {field}")
+            elif isinstance(marker_data[field], str) and len(marker_data[field].strip()) < 10:
+                warnings.append(f"Content field '{field}' appears incomplete (too short)")
+        
+        # Check examples quality
+        if "examples" in marker_data:
+            examples = marker_data["examples"]
+            if isinstance(examples, list):
+                for i, example in enumerate(examples):
+                    if not isinstance(example, str) or len(example.strip()) < 5:
+                        warnings.append(f"Example {i+1} appears incomplete or too short")
+                    elif example.strip().lower() in ["example", "todo", "tbd", "placeholder"]:
+                        warnings.append(f"Example {i+1} appears to be a placeholder")
+        
+        # Check for consistent field types
+        expected_types = {
+            "level": int,
+            "version": str,
+            "created_at": str,
+            "tags": list,
+            "examples": list,
+            "scoring": dict
+        }
+        
+        for field, expected_type in expected_types.items():
+            if field in marker_data:
+                if not isinstance(marker_data[field], expected_type):
+                    warnings.append(f"Field '{field}' has incorrect type: expected {expected_type.__name__}")
+        
+        return warnings
+    
     def _is_valid_semver(self, version: str) -> bool:
         """Check if version string is valid semver format."""
         try:

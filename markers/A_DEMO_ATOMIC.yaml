@@ -1,0 +1,22 @@
+id: A_DEMO_ATOMIC
+level: 1
+version: 1.0.0
+author: Demo Creator
+created_at: '2025-07-30'
+status: draft
+lang: de
+name: DEMO_ATOMIC
+description: This is a demonstration atomic marker for testing the robust GUI
+category: ATOMIC
+scoring:
+  weight: 1.0
+  priority: mid
+tags: []
+semantic_grabber_id: SGR_DEMO_ATOMIC_01
+examples:
+- Atomic pattern detection example 1
+- Simple matching case example 2
+- Edge case boundary example 3
+- Complex scenario example 4
+- Integration test example 5
+atomic_pattern: []
