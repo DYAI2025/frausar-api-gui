@@ -197,12 +197,8 @@ class SmartMarkerGUI:
         test_button_frame = ttk.Frame(test_frame)
         test_button_frame.pack(fill=tk.X, pady=(5, 0))
         
-        ttk.Button(test_button_frame, text="🧪 Volltest", 
-                  command=self.run_tests).pack(side=tk.LEFT, padx=(0, 5))
-        ttk.Button(test_button_frame, text="🗑️ Löschen", 
-                  command=lambda: self.test_text.delete(1.0, tk.END)).pack(side=tk.LEFT, padx=5)
-        ttk.Button(test_button_frame, text="📁 GPT YAML erstellen", 
-                  command=self.create_gpt_yaml).pack(side=tk.LEFT, padx=5)
+        ttk.Button(test_button_frame, text="🗑️ Löschen",
+                  command=lambda: self.test_text.delete(1.0, tk.END)).pack(side=tk.LEFT, padx=(0, 5))
         
         # Status
         self.status_label = ttk.Label(parent, text="Bereit für v3.1", font=("Arial", 10))
@@ -568,113 +564,6 @@ class SmartMarkerGUI:
             except Exception as e:
                 messagebox.showerror("Fehler", f"Fehler beim Löschen: {e}")
     
-    def run_tests(self):
-        self.test_text.delete(1.0, tk.END)
-        self.test_text.insert(tk.END, "🧪 Führe Tests aus...\n\n")
-        
-        results = []
-        
-        # Test 1: Verzeichnis-Zugriff
-        try:
-            if self.marker_dir.exists():
-                results.append("✅ Verzeichnis-Zugriff: OK")
-            else:
-                results.append("❌ Verzeichnis-Zugriff: Fehlgeschlagen")
-        except Exception as e:
-            results.append(f"❌ Verzeichnis-Zugriff: {e}")
-        
-        # Test 2: YAML-Validierung
-        try:
-            text = self.text_widget.get(1.0, tk.END).strip()
-            if text:
-                yaml.safe_load(text)
-                results.append("✅ YAML-Validierung: OK")
-            else:
-                results.append("⚠️ YAML-Validierung: Kein Text zum Testen")
-        except Exception as e:
-            results.append(f"❌ YAML-Validierung: {e}")
-        
-        # Test 3: Marker-Struktur
-        try:
-            text = self.text_widget.get(1.0, tk.END).strip()
-            if text:
-                data = yaml.safe_load(text)
-                if data and isinstance(data, dict):
-                    if 'id' in data or 'name' in data:
-                        results.append("✅ Marker-Struktur: OK")
-                    else:
-                        results.append("⚠️ Marker-Struktur: Keine ID/Name gefunden")
-                else:
-                    results.append("❌ Marker-Struktur: Ungültige Struktur")
-            else:
-                results.append("⚠️ Marker-Struktur: Kein Text zum Testen")
-        except Exception as e:
-            results.append(f"❌ Marker-Struktur: {e}")
-        
-        # Test 4: Performance
-        try:
-            marker_count = len(self.marker_tree.get_children())
-            if marker_count < 100:
-                results.append("✅ Performance: OK")
-            elif marker_count < 1000:
-                results.append("⚠️ Performance: Viele Marker ({marker_count})")
-            else:
-                results.append("❌ Performance: Zu viele Marker ({marker_count})")
-        except Exception as e:
-            results.append(f"❌ Performance: {e}")
-        
-        # Ergebnisse anzeigen
-        for result in results:
-            self.test_text.insert(tk.END, f"{result}\n")
-        
-        self.test_text.insert(tk.END, "\n🎯 Tests abgeschlossen!")
-        self.update_status("Tests ausgeführt")
-    
-    def create_gpt_yaml(self):
-        output_dir = filedialog.askdirectory(title="Ausgabe-Verzeichnis für GPT-YAML wählen")
-        if not output_dir:
-            return
-        
-        try:
-            # Alle Marker sammeln
-            markers = []
-            for item in self.marker_tree.get_children():
-                marker_id = item
-                values = self.marker_tree.item(item)["values"]
-                marker_name = values[0]
-
-                marker_file = self.marker_dir / f"{marker_id}.yaml"
-                if marker_file.exists():
-                    with open(marker_file, 'r', encoding='utf-8') as f:
-                        data = yaml.safe_load(f)
-                        if data:
-                            data['name'] = marker_name
-                            markers.append(data)
-            
-            if not markers:
-                messagebox.showwarning("Warnung", "Keine Marker zum Exportieren gefunden.")
-                return
-            
-            # GPT-YAML erstellen
-            gpt_data = {
-                'metadata': {
-                    'generated_at': datetime.now().isoformat(),
-                    'total_markers': len(markers),
-                    'source_directory': str(self.marker_dir)
-                },
-                'markers': markers
-            }
-            
-            # Datei speichern
-            output_file = Path(output_dir) / f"gpt_markers_{datetime.now().strftime('%Y%m%d_%H%M%S')}.yaml"
-            with open(output_file, 'w', encoding='utf-8') as f:
-                yaml.dump(gpt_data, f, default_flow_style=False, allow_unicode=True)
-            
-            messagebox.showinfo("Erfolg", f"GPT-YAML erfolgreich erstellt:\n{output_file}")
-            self.update_status(f"GPT-YAML erstellt: {len(markers)} Marker")
-            
-        except Exception as e:
-            messagebox.showerror("Fehler", f"Fehler beim Erstellen der GPT-YAML: {e}")
     
     def smart_parse_text(self, text):
         """Intelligente Text-Parsing mit verbesserter ID-Generierung"""
