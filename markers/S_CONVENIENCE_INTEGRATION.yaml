@@ -1,0 +1,23 @@
+id: S_CONVENIENCE_INTEGRATION
+level: 2
+version: 1.0.0
+author: Test
+created_at: '2025-07-30'
+status: draft
+lang: de
+name: CONVENIENCE_INTEGRATION
+description: Description for CONVENIENCE_INTEGRATION
+category: SEMANTIC
+scoring:
+  weight: 1.0
+  priority: mid
+tags: []
+semantic_grabber_id: SGR_CONVENIENCE_INTEGRATION_01
+examples:
+- Example 1 - basic usage
+- Example 2 - alternative form
+- Example 3 - edge case
+- Example 4 - complex scenario
+- Example 5 - boundary condition
+composed_of: []
+rules: {}
