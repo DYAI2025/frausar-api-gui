@@ -1,0 +1,51 @@
+id: MM_AGENT_EMOTIONAL_ANALYZER
+level: 4
+version: 1.0.0
+author: DYAI2025
+created_at: '2025-01-27'
+status: released
+lang: de
+name: AGENT_EMOTIONAL_ANALYZER
+description: Meta-Marker für emotionale Analyse-Agenten und deren Fähigkeiten
+category: META
+scoring:
+  weight: 2.0
+  priority: high
+tags:
+  - agent_profile
+  - emotional_analysis
+  - meta_system
+semantic_grabber_id: SGR_AGENT_EMOTIONAL_ANALYZER_01
+examples:
+  - "Agent erkennt emotionale Belastung in Texten"
+  - "Analyse von Stress-Indikatoren in Kommunikation"
+  - "Automatische Kategorisierung emotionaler Zustände"
+  - "Monitoring von Verhaltensmustern über Zeit"
+  - "Integration mit anderen Analyse-Systemen"
+composed_of:
+  - S_EMOTIONAL_ANALYSIS
+  - A_LITTLE_TIME
+  - C_ISOLATION_DETECTOR
+trigger_threshold: 3
+semantic_relationships:
+  - MM_PROJECT_EMOTIONAL_INTELLIGENCE
+  - S_EMOTIONAL_ANALYSIS
+project_context:
+  project_id: emotional_intelligence
+  domain: emotional_analysis
+  scope: "Agent-Definition für emotionale Analysefähigkeiten"
+agent_metadata:
+  agent_type: analyzer
+  capabilities:
+    - pattern_detection
+    - emotional_analysis
+    - stress_monitoring
+    - behavioral_tracking
+  access_level: standard
+knowledge_domain: system_meta
+semantic_weight: 2.5
+discovery_tags:
+  - agent_definition
+  - emotional_ai
+  - pattern_analyzer
+  - behavioral_science

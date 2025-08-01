@@ -23,6 +23,7 @@ from typing import Dict, List, Any, Tuple, Optional, Union
 from datetime import datetime
 
 from marker_v3_1_manager import MarkerV31Manager
+from knowledge_registry import KnowledgeRegistry
 
 
 class MarkerTool:
@@ -41,6 +42,7 @@ class MarkerTool:
             marker_directory: Directory to store marker files (default: "./markers")
         """
         self.manager = MarkerV31Manager()
+        self.knowledge_registry = KnowledgeRegistry(marker_directory)
         self.marker_dir = Path(marker_directory)
         self.marker_dir.mkdir(exist_ok=True)
         
@@ -495,6 +497,174 @@ class MarkerTool:
         
         # Try as marker ID
         return self.marker_dir / f"{identifier}.yaml"
+    
+    def enhance_marker_semantically(self, marker_id: str, 
+                                  knowledge_domain: str = None,
+                                  project_context: Dict[str, str] = None,
+                                  agent_metadata: Dict[str, Any] = None,
+                                  semantic_relationships: List[str] = None,
+                                  discovery_tags: List[str] = None,
+                                  save: bool = True) -> Dict[str, Any]:
+        """
+        Enhance an existing marker with semantic metadata.
+        
+        Args:
+            marker_id: Marker ID to enhance
+            knowledge_domain: Knowledge domain classification
+            project_context: Project context information
+            agent_metadata: Agent-specific metadata
+            semantic_relationships: Related marker IDs
+            discovery_tags: Additional discovery tags
+            save: Whether to save changes
+            
+        Returns:
+            Enhanced marker data
+        """
+        try:
+            # Load existing marker
+            marker_data = self.load_marker(marker_id)
+            
+            # Add semantic enhancements
+            if knowledge_domain:
+                marker_data["knowledge_domain"] = knowledge_domain
+            
+            if project_context:
+                marker_data["project_context"] = {
+                    "project_id": project_context.get("project_id", ""),
+                    "domain": project_context.get("domain", ""),
+                    "scope": project_context.get("scope", "")
+                }
+            
+            if agent_metadata:
+                marker_data["agent_metadata"] = {
+                    "agent_type": agent_metadata.get("agent_type", ""),
+                    "capabilities": agent_metadata.get("capabilities", []),
+                    "access_level": agent_metadata.get("access_level", "standard")
+                }
+            
+            if semantic_relationships:
+                marker_data["semantic_relationships"] = semantic_relationships
+            
+            if discovery_tags:
+                marker_data["discovery_tags"] = discovery_tags
+            
+            # Validate enhanced marker
+            is_valid, errors = self.validate_marker(marker_data)
+            if not is_valid:
+                raise RuntimeError(f"Enhanced marker validation failed: {', '.join(errors)}")
+            
+            # Save if requested
+            if save:
+                self.save_marker(marker_data)
+                # Update knowledge registry
+                self.knowledge_registry.rebuild_index()
+            
+            return marker_data
+            
+        except Exception as e:
+            self.stats['errors'] += 1
+            raise RuntimeError(f"Failed to enhance marker semantically: {str(e)}")
+    
+    def search_markers_semantically(self, query: str, 
+                                  knowledge_domain: str = None,
+                                  agent_type: str = None,
+                                  project_id: str = None) -> List[Dict[str, Any]]:
+        """
+        Search markers using semantic criteria.
+        
+        Args:
+            query: Search query
+            knowledge_domain: Filter by knowledge domain
+            agent_type: Filter by agent type
+            project_id: Filter by project ID
+            
+        Returns:
+            List of matching markers with semantic information
+        """
+        try:
+            domains = [knowledge_domain] if knowledge_domain else None
+            agent_types = [agent_type] if agent_type else None
+            
+            results = self.knowledge_registry.search_markers(
+                query, 
+                domains=domains,
+                agent_types=agent_types
+            )
+            
+            # Filter by project if specified
+            if project_id:
+                filtered_results = []
+                for result in results:
+                    try:
+                        marker_data = self.load_marker(result["id"])
+                        marker_project = marker_data.get("project_context", {}).get("project_id", "")
+                        if marker_project == project_id:
+                            filtered_results.append(result)
+                    except:
+                        continue
+                results = filtered_results
+            
+            return results
+            
+        except Exception as e:
+            self.stats['errors'] += 1
+            raise RuntimeError(f"Semantic search failed: {str(e)}")
+    
+    def get_marker_relationships(self, marker_id: str) -> Dict[str, List[Dict[str, Any]]]:
+        """
+        Get semantic relationships for a marker.
+        
+        Args:
+            marker_id: Marker ID
+            
+        Returns:
+            Dictionary with relationship types and related markers
+        """
+        try:
+            related_markers = self.knowledge_registry.find_related_markers(marker_id)
+            
+            # Group by relationship type
+            relationships = {}
+            for marker in related_markers:
+                rel_type = marker.get("relationship_type", "related")
+                if rel_type not in relationships:
+                    relationships[rel_type] = []
+                relationships[rel_type].append(marker)
+            
+            return relationships
+            
+        except Exception as e:
+            self.stats['errors'] += 1
+            raise RuntimeError(f"Failed to get marker relationships: {str(e)}")
+    
+    def generate_knowledge_documentation(self, agent_id: str = None) -> str:
+        """
+        Generate documentation for agents about the knowledge base.
+        
+        Args:
+            agent_id: Optional agent ID for personalized documentation
+            
+        Returns:
+            Generated documentation string
+        """
+        try:
+            return self.knowledge_registry.generate_agent_documentation(agent_id)
+        except Exception as e:
+            self.stats['errors'] += 1
+            raise RuntimeError(f"Failed to generate documentation: {str(e)}")
+    
+    def rebuild_knowledge_index(self) -> Dict[str, Any]:
+        """
+        Rebuild the knowledge registry index.
+        
+        Returns:
+            Rebuild statistics
+        """
+        try:
+            return self.knowledge_registry.rebuild_index()
+        except Exception as e:
+            self.stats['errors'] += 1
+            raise RuntimeError(f"Failed to rebuild knowledge index: {str(e)}")
 
 
 # Convenience functions for easy usage

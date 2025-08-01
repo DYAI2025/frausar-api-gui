@@ -1,0 +1,51 @@
+id: C_KNOWLEDGE_DOMAIN_ORGANIZER
+level: 3
+version: 1.0.0
+author: DYAI2025
+created_at: '2025-01-27'
+status: released
+lang: de
+name: KNOWLEDGE_DOMAIN_ORGANIZER
+description: Cluster-Marker für semantische Organisation von Wissensbereichen
+category: CLUSTER
+scoring:
+  weight: 2.0
+  priority: high
+tags:
+  - knowledge_organization
+  - semantic_clustering
+  - domain_classification
+semantic_grabber_id: SGR_KNOWLEDGE_DOMAIN_ORGANIZER_01
+examples:
+  - "Automatische Gruppierung ähnlicher Marker"
+  - "Erkennung thematischer Zusammenhänge"
+  - "Klassifikation in Wissensdomänen"
+  - "Semantische Ähnlichkeitsanalyse"
+  - "Hierarchische Wissensstrukturierung"
+composed_of:
+  - S_EMOTIONAL_ANALYSIS
+  - MM_BEHAVIOR_PATTERN
+  - A_LITTLE_TIME
+activation_logic: "SUM(semantic_weight)>=2.0 WITHIN 24h"
+semantic_relationships:
+  - MM_PROJECT_EMOTIONAL_INTELLIGENCE
+  - MM_AGENT_EMOTIONAL_ANALYZER
+project_context:
+  project_id: knowledge_organization
+  domain: system_meta
+  scope: "Semantische Organisation des gesamten Wissensspeichers"
+agent_metadata:
+  agent_type: classifier
+  capabilities:
+    - semantic_classification
+    - domain_detection
+    - knowledge_structuring
+    - pattern_clustering
+  access_level: standard
+knowledge_domain: system_meta
+semantic_weight: 2.0
+discovery_tags:
+  - semantic_ai
+  - knowledge_graphs
+  - classification
+  - domain_modeling

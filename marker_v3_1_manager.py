@@ -61,6 +61,16 @@ class MarkerV31Manager:
         
         # Valid languages
         self.valid_languages = ["de", "en"]
+        
+        # Semantic enhancement fields (optional for extensibility)
+        self.semantic_enhancement_fields = [
+            "semantic_relationships",  # Links to related markers
+            "project_context",         # Project/domain information
+            "agent_metadata",          # Agent-specific information
+            "knowledge_domain",        # Knowledge domain classification
+            "semantic_weight",         # Semantic importance scoring
+            "discovery_tags"           # Additional tags for discovery
+        ]
     
     def create_marker_template(self, level: int, marker_name: str, author: str = "Your Name") -> Dict[str, Any]:
         """
@@ -124,6 +134,22 @@ class MarkerV31Manager:
         elif level == 4:  # Meta
             template["composed_of"] = []
             template["trigger_threshold"] = 1
+        
+        # Add semantic enhancement fields (optional, for extensibility)
+        template["semantic_relationships"] = []
+        template["project_context"] = {
+            "project_id": "",
+            "domain": "",
+            "scope": ""
+        }
+        template["agent_metadata"] = {
+            "agent_type": "",
+            "capabilities": [],
+            "access_level": "standard"
+        }
+        template["knowledge_domain"] = ""
+        template["semantic_weight"] = 1.0
+        template["discovery_tags"] = []
         
         return template
     
