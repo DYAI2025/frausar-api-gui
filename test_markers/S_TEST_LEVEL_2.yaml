@@ -21,3 +21,15 @@ examples:
 - Example 5 - boundary condition
 composed_of: []
 rules: {}
+semantic_relationships: []
+project_context:
+  project_id: ''
+  domain: ''
+  scope: ''
+agent_metadata:
+  agent_type: ''
+  capabilities: []
+  access_level: standard
+knowledge_domain: ''
+semantic_weight: 1.0
+discovery_tags: []
