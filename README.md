@@ -104,3 +104,26 @@ docs = tool.generate_knowledge_documentation("emotional_analyzer")
 Das v3.1 Schema sowie Hilfestellungen findest du in `marker_v3_1_manager.py` und der Datei `LEAN_DEEP_V3_1_GUIDE.md`.
 
 Die semantischen Erweiterungen sind vollständig rückwärtskompatibel - alle bestehenden Marker funktionieren weiterhin ohne Änderungen.
+
+## 🚀 Automatisierte Repository-Synchronisation
+
+Dieses Repository enthält einen fortschrittlichen **Auto-Sync Workflow** für die automatische Synchronisation zwischen Development- und Deploy-Repositories.
+
+### Schnellstart Sync-Workflow
+
+```bash
+# Lokalen Test durchführen
+./test-sync-local.sh
+
+# Workflow manuell über GitHub Actions starten
+# Actions → Auto-Sync to Deploy Repository → Run workflow
+```
+
+**Hauptmerkmale:**
+- ✅ Sichere Token-basierte Authentifizierung
+- ✅ Automatisches Rollback bei Fehlern  
+- ✅ Bedingte Synchronisation (nur bei Änderungen)
+- ✅ Multiple Trigger (Push, Schedule, Manual)
+- ✅ Detaillierte Logs und Status-Reports
+
+Vollständige Dokumentation: **[SYNC_WORKFLOW_GUIDE.md](SYNC_WORKFLOW_GUIDE.md)**
