@@ -1,0 +1,192 @@
+name: 🚀 Auto-Sync to Deploy Repository
+
+on:
+  # Trigger on push to main branch
+  push:
+    branches: [ main ]
+  
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      force_sync:
+        description: 'Force sync even if no changes detected'
+        required: false
+        default: 'false'
+        type: boolean
+      source_branch:
+        description: 'Source branch to sync from'
+        required: false
+        default: 'main'
+        type: string
+  
+  # Scheduled sync (daily at 2 AM UTC)
+  schedule:
+    - cron: '0 2 * * *'
+
+env:
+  SOURCE_REPO: 'DYAI2025/_1-_MEWT-backend'
+  DEPLOY_REPO: 'DYAI2025/ME_CORE_Backend-mar-spar'
+  DEPLOY_BRANCH: 'main'
+
+jobs:
+  sync-to-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🔍 Checkout current repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+
+    - name: 🔧 Setup Git configuration
+      run: |
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "actions@github.com"
+        git config --global init.defaultBranch main
+
+    - name: 📥 Clone source repository
+      run: |
+        echo "🔍 Cloning source repository: ${{ env.SOURCE_REPO }}"
+        git clone https://github.com/${{ env.SOURCE_REPO }}.git source-repo
+        cd source-repo
+        
+        # Get source branch (from input or default to main)
+        SOURCE_BRANCH="${{ github.event.inputs.source_branch || 'main' }}"
+        echo "📍 Checking out branch: $SOURCE_BRANCH"
+        git checkout $SOURCE_BRANCH
+        
+        # Get latest commit info for logging
+        LATEST_COMMIT=$(git rev-parse HEAD)
+        COMMIT_MESSAGE=$(git log -1 --pretty=format:"%s")
+        echo "SOURCE_COMMIT=$LATEST_COMMIT" >> $GITHUB_ENV
+        echo "SOURCE_COMMIT_MESSAGE=$COMMIT_MESSAGE" >> $GITHUB_ENV
+        echo "✅ Source repository ready. Latest commit: $LATEST_COMMIT"
+
+    - name: 📥 Clone deploy repository
+      run: |
+        echo "🔍 Cloning deploy repository: ${{ env.DEPLOY_REPO }}"
+        git clone https://github.com/${{ env.DEPLOY_REPO }}.git deploy-repo
+        cd deploy-repo
+        git checkout ${{ env.DEPLOY_BRANCH }}
+        
+        # Get current commit for comparison
+        CURRENT_DEPLOY_COMMIT=$(git rev-parse HEAD)
+        echo "DEPLOY_COMMIT=$CURRENT_DEPLOY_COMMIT" >> $GITHUB_ENV
+        echo "✅ Deploy repository ready. Current commit: $CURRENT_DEPLOY_COMMIT"
+
+    - name: 🔄 Synchronize files
+      run: |
+        echo "🚀 Starting file synchronization..."
+        
+        # Create backup of current deploy state
+        cp -r deploy-repo deploy-repo-backup
+        
+        # Sync files using rsync with exclusions
+        rsync -av --delete \
+          --exclude='.git' \
+          --exclude='.github' \
+          --exclude='node_modules' \
+          --exclude='.env*' \
+          --exclude='*.log' \
+          --exclude='.DS_Store' \
+          --exclude='Thumbs.db' \
+          --exclude='.vscode' \
+          --exclude='.idea' \
+          --exclude='__pycache__' \
+          --exclude='*.pyc' \
+          --exclude='dist' \
+          --exclude='build' \
+          source-repo/ deploy-repo/
+        
+        echo "✅ File synchronization completed"
+
+    - name: 🔍 Check for changes
+      id: check_changes
+      run: |
+        cd deploy-repo
+        
+        # Check if there are any changes
+        if git diff --quiet && git diff --cached --quiet; then
+          echo "No changes detected"
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+        else
+          echo "Changes detected"
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+          
+          # Show what changed
+          echo "📋 Changes summary:"
+          git status --porcelain
+          
+          # Count changes
+          ADDED=$(git diff --name-only --diff-filter=A | wc -l)
+          MODIFIED=$(git diff --name-only --diff-filter=M | wc -l)
+          DELETED=$(git diff --name-only --diff-filter=D | wc -l)
+          
+          echo "📊 Statistics: +$ADDED files, ~$MODIFIED files, -$DELETED files"
+        fi
+
+    - name: 💾 Commit and push changes
+      if: steps.check_changes.outputs.has_changes == 'true' || github.event.inputs.force_sync == 'true'
+      run: |
+        cd deploy-repo
+        
+        # Stage all changes
+        git add .
+        
+        # Create comprehensive commit message
+        COMMIT_MSG="🚀 Auto-sync from ${{ env.SOURCE_REPO }}
+        
+        Source commit: ${{ env.SOURCE_COMMIT }}
+        Source message: ${{ env.SOURCE_COMMIT_MESSAGE }}
+        Sync triggered by: ${{ github.event_name }}
+        Workflow run: ${{ github.run_number }}
+        
+        Synced at: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+        
+        # Commit changes
+        git commit -m "$COMMIT_MSG" || {
+          echo "⚠️ Commit failed - possibly no changes to commit"
+          exit 0
+        }
+        
+        # Push changes
+        echo "📤 Pushing changes to deploy repository..."
+        git push origin ${{ env.DEPLOY_BRANCH }}
+        
+        # Get new commit hash
+        NEW_COMMIT=$(git rev-parse HEAD)
+        echo "✅ Successfully deployed! New commit: $NEW_COMMIT"
+
+    - name: 🚨 Rollback on failure
+      if: failure()
+      run: |
+        echo "❌ Deployment failed! Attempting rollback..."
+        
+        if [ -d "deploy-repo-backup" ]; then
+          cd deploy-repo
+          
+          # Reset to backup state
+          git reset --hard ${{ env.DEPLOY_COMMIT }}
+          
+          echo "🔄 Rollback completed. Repository restored to previous state."
+        else
+          echo "⚠️ No backup found. Manual intervention may be required."
+        fi
+
+    - name: 📊 Summary Report
+      if: always()
+      run: |
+        echo "## 📋 Sync Summary Report" >> $GITHUB_STEP_SUMMARY
+        echo "- **Source Repository:** ${{ env.SOURCE_REPO }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Deploy Repository:** ${{ env.DEPLOY_REPO }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Source Commit:** ${{ env.SOURCE_COMMIT }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Trigger:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Status:** ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Timestamp:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ steps.check_changes.outputs.has_changes }}" == "true" ]; then
+          echo "- **Changes:** ✅ Changes detected and synced" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "- **Changes:** ℹ️ No changes detected" >> $GITHUB_STEP_SUMMARY
+        fi

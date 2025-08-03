@@ -36,3 +36,6 @@ dist/
 # Generated registry files
 knowledge_registry.json
 agent_knowledge_docs.md
+
+# Sync test directories
+/tmp/sync-test-*
