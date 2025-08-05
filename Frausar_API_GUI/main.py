@@ -59,27 +59,6 @@ class FrausarMainGUI:
                                  command=self.start_smart_marker_gui, style="Accent.TButton")
         marker_button.pack(anchor=tk.W)
         
-        # GPT-YAML Generator
-        gpt_frame = ttk.Frame(functions_frame)
-        gpt_frame.pack(fill=tk.X, pady=(0, 15))
-        
-        gpt_title = ttk.Label(gpt_frame, text="🤖 GPT-YAML Generator", 
-                            font=("Arial", 16, "bold"))
-        gpt_title.pack(anchor=tk.W)
-        
-        gpt_desc = ttk.Label(gpt_frame, 
-                           text="Exportiert Marker für GPT-Kompatibilität\n"
-                                "• Marker-Format-Konvertierung\n"
-                                "• Batch-Export-Funktionalität\n"
-                                "• Benutzerdefinierte Formatierung\n"
-                                "• Validierung vor Export",
-                           font=("Arial", 11))
-        gpt_desc.pack(anchor=tk.W, pady=(5, 10))
-        
-        gpt_button = ttk.Button(gpt_frame, text="🤖 GPT-YAML Generator starten", 
-                              command=self.start_gpt_yaml_generator)
-        gpt_button.pack(anchor=tk.W)
-        
         # Trenner
         separator = ttk.Separator(functions_frame, orient='horizontal')
         separator.pack(fill=tk.X, pady=15)
@@ -147,22 +126,6 @@ class FrausarMainGUI:
                 messagebox.showinfo("Info", "Smart Marker-Erstellung wird gestartet...")
             else:
                 messagebox.showerror("Fehler", "Smart Marker GUI nicht gefunden!")
-                
-        except Exception as e:
-            messagebox.showerror("Fehler", f"Fehler beim Starten: {str(e)}")
-    
-    def start_gpt_yaml_generator(self):
-        """Startet den GPT-YAML Generator"""
-        try:
-            # GPT-YAML Generator starten
-            script_path = Path(__file__).parent / "gpt_yaml_generator.py"
-            
-            if script_path.exists():
-                subprocess.Popen([sys.executable, str(script_path)])
-                self.update_status("GPT-YAML Generator gestartet")
-                messagebox.showinfo("Info", "GPT-YAML Generator wird gestartet...")
-            else:
-                messagebox.showerror("Fehler", "GPT-YAML Generator nicht gefunden!")
                 
         except Exception as e:
             messagebox.showerror("Fehler", f"Fehler beim Starten: {str(e)}")

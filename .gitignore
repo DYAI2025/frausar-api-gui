@@ -183,3 +183,4 @@ env.*
 # Project specific
 test_output/
 temp_files/ 
+node_modules
