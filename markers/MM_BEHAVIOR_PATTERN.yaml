@@ -1,0 +1,23 @@
+id: MM_BEHAVIOR_PATTERN
+level: 4
+version: 1.0.0
+author: DYAI2025
+created_at: '2025-07-28'
+status: draft
+lang: de
+name: BEHAVIOR_PATTERN
+description: Description for BEHAVIOR_PATTERN
+category: META
+scoring:
+  weight: 1.0
+  priority: mid
+tags: []
+semantic_grabber_id: SGR_BEHAVIOR_PATTERN_01
+examples:
+- Example 1 - basic usage
+- Example 2 - alternative form
+- Example 3 - edge case
+- Example 4 - complex scenario
+- Example 5 - boundary condition
+composed_of: []
+trigger_threshold: 1

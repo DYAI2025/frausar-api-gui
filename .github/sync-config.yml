@@ -1,0 +1,42 @@
+# Auto-Sync Workflow Configuration
+# This file contains common configuration options for the sync workflow
+
+# Repository Configuration
+SOURCE_REPO: "DYAI2025/_1-_MEWT-backend"
+DEPLOY_REPO: "DYAI2025/ME_CORE_Backend-mar-spar"
+DEFAULT_BRANCH: "main"
+
+# Sync Schedule (Cron format)
+# Default: Daily at 2 AM UTC
+SYNC_SCHEDULE: "0 2 * * *"
+
+# File Exclusion Patterns
+# These patterns will be excluded from synchronization
+EXCLUDE_PATTERNS:
+  - ".git"
+  - ".github"
+  - "node_modules"
+  - ".env*"
+  - "*.log"
+  - ".DS_Store" 
+  - "Thumbs.db"
+  - ".vscode"
+  - ".idea"
+  - "__pycache__"
+  - "*.pyc"
+  - "dist"
+  - "build"
+  - "*.tmp"
+  - "*.temp"
+
+# Advanced Options
+FORCE_SYNC_DEFAULT: false
+CREATE_BACKUP: true
+ENABLE_ROLLBACK: true
+MAX_RETRY_ATTEMPTS: 3
+
+# Notification Settings (for future extensions)
+ENABLE_NOTIFICATIONS: false
+NOTIFICATION_CHANNELS:
+  - email
+  - slack

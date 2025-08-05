@@ -1,0 +1,35 @@
+id: C_TEST_LEVEL_3
+level: 3
+version: 1.0.0
+author: Test Author
+created_at: '2025-08-03'
+status: draft
+lang: de
+name: TEST_LEVEL_3
+description: Description for TEST_LEVEL_3
+category: CLUSTER
+scoring:
+  weight: 1.0
+  priority: mid
+tags: []
+semantic_grabber_id: SGR_TEST_LEVEL_3_01
+examples:
+- Example 1 - basic usage
+- Example 2 - alternative form
+- Example 3 - edge case
+- Example 4 - complex scenario
+- Example 5 - boundary condition
+composed_of: []
+activation_logic: ANY 1
+semantic_relationships: []
+project_context:
+  project_id: ''
+  domain: ''
+  scope: ''
+agent_metadata:
+  agent_type: ''
+  capabilities: []
+  access_level: standard
+knowledge_domain: ''
+semantic_weight: 1.0
+discovery_tags: []

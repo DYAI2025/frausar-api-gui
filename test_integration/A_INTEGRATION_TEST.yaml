@@ -1,0 +1,22 @@
+id: A_INTEGRATION_TEST
+level: 1
+version: 1.0.0
+author: Test
+created_at: '2025-07-30'
+status: draft
+lang: de
+name: INTEGRATION_TEST
+description: Description for INTEGRATION_TEST
+category: ATOMIC
+scoring:
+  weight: 1.0
+  priority: mid
+tags: []
+semantic_grabber_id: SGR_INTEGRATION_TEST_01
+examples:
+- Example 1 - basic usage
+- Example 2 - alternative form
+- Example 3 - edge case
+- Example 4 - complex scenario
+- Example 5 - boundary condition
+atomic_pattern: []

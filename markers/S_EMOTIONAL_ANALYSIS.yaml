@@ -1,0 +1,51 @@
+id: S_EMOTIONAL_ANALYSIS
+level: 2
+version: 1.1.0
+author: DYAI2025
+created_at: '2025-07-28'
+status: released
+lang: de
+name: EMOTIONAL_ANALYSIS
+description: Semantischer Marker für emotionale Analyse und Stimmungserkennung
+category: SEMANTIC
+scoring:
+  weight: 1.5
+  priority: high
+tags:
+  - emotion
+  - psychology
+  - analysis
+semantic_grabber_id: SGR_EMOTIONAL_ANALYSIS_01
+examples:
+  - "Traurigkeit in Textnachrichten erkennen"
+  - "Stress-Indikatoren in Sprache identifizieren"
+  - "Positive Emotionen in Feedback analysieren"
+  - "Angst-Muster in Verhaltensweisen"
+  - "Emotionale Entwicklung über Zeit verfolgen"
+composed_of:
+  - A_LITTLE_TIME
+rules:
+  emotional_context: "Berücksichtigung emotionaler Nuancen"
+  cultural_sensitivity: "Kulturelle Unterschiede in emotionaler Expression"
+semantic_relationships:
+  - MM_AGENT_EMOTIONAL_ANALYZER
+  - C_ISOLATION_DETECTOR
+  - MM_PROJECT_EMOTIONAL_INTELLIGENCE
+project_context:
+  project_id: emotional_intelligence
+  domain: emotional_analysis
+  scope: "Kernkomponente für emotionale Mustererkennung"
+agent_metadata:
+  agent_type: analyzer
+  capabilities:
+    - emotion_detection
+    - sentiment_analysis
+    - mood_tracking
+  access_level: standard
+knowledge_domain: emotional_analysis
+semantic_weight: 1.8
+discovery_tags:
+  - nlp
+  - sentiment
+  - psychology
+  - behavioral_analysis
